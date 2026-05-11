@@ -1,5 +1,7 @@
 # QML Molecular Property Benchmark
 
+**Author:** Şahin Atakan Emre
+
 Klasik makine öğrenmesi, saf kuantum makine öğrenmesi ve hibrit kuantum-klasik modellerin ilaç adaylarına ait moleküler veriler üzerinde karşılaştırmalı değerlendirmesi.
 
 Bu çalışma BACE, BBBP ve ClinTox veri setlerinde moleküler özellik tahmini problemine odaklanır. Amaç, güçlü klasik taban modeller ile kuantum ve hibrit kuantum yaklaşımlarını aynı veri ayrımları, aynı seed politikası ve aynı metrik ailesi altında değerlendirmektir.

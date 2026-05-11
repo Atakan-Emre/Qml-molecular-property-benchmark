@@ -3,7 +3,8 @@ message: "Bu çalışmayı kullanırsanız lütfen tez çalışmasını ve bu ya
 title: "QML Molecular Property Benchmark"
 type: software
 authors:
-  - name: "Project contributors"
+  - family-names: "Emre"
+    given-names: "Şahin Atakan"
 abstract: "BACE, BBBP ve ClinTox veri setleri üzerinde klasik, saf kuantum ve hibrit kuantum-klasik makine öğrenmesi modellerinin karşılaştırmalı değerlendirmesi."
 keywords:
   - quantum machine learning
