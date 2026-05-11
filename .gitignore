@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# Runtime outputs
+results_runtime/
+outputs_runtime/
+
+# Heavy training artifacts
+results/checkpoints/
+results/logs/
+results/figures/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# TensorBoard
+events.out.tfevents.*
+**/tensorboard/
+
+# Local legacy/archive material kept for audit, not for publication
+docs/archive/
+data/data/
+data/source_copy_backup/
+data/scripts/*_legacy.py
+provenance/legacy_quantum_benchmark/
+results/analysis/manifests/legacy_full_benchmark/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.log

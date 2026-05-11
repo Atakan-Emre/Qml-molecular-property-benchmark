@@ -1,0 +1,77 @@
+{
+  "generated_at_utc": "2026-05-05T17:57:20.686513+00:00",
+  "source_root": "E:\\QUANTUM",
+  "bundle_root": "E:\\QUANTUM\\molecular",
+  "copy_policy": "copy-only; no source move/delete performed",
+  "molecular_experiment_rows": 49,
+  "tasks": {
+    "bace": 23,
+    "bbbp": 13,
+    "clintox": 13
+  },
+  "categories": {
+    "classical_graph": 6,
+    "classical_ablation": 6,
+    "classical_descriptor": 6,
+    "quantum_graph": 3,
+    "quantum_data_ablation": 3,
+    "quantum_descriptor": 23,
+    "quantum_ablation": 2
+  },
+  "seed_count_distribution": {
+    "5": 49
+  },
+  "paper_figure_count": 42,
+  "analysis_figure_count": 19,
+  "sections": {
+    "source": {
+      "files": 90,
+      "size_bytes": 45910951,
+      "size_mb": 43.78
+    },
+    "data": {
+      "files": 50,
+      "size_bytes": 45676807,
+      "size_mb": 43.56
+    },
+    "results/logs": {
+      "files": 3477,
+      "size_bytes": 23648691,
+      "size_mb": 22.55
+    },
+    "results/figures": {
+      "files": 1990,
+      "size_bytes": 115724630,
+      "size_mb": 110.36
+    },
+    "results/tables": {
+      "files": 312,
+      "size_bytes": 764099,
+      "size_mb": 0.73
+    },
+    "results/analysis": {
+      "files": 67,
+      "size_bytes": 9793337,
+      "size_mb": 9.34
+    },
+    "results/checkpoints": {
+      "files": 722,
+      "size_bytes": 1193801672,
+      "size_mb": 1138.5
+    },
+    "docs": {
+      "files": 0,
+      "size_bytes": 0,
+      "size_mb": 0.0
+    },
+    "provenance": {
+      "files": 4,
+      "size_bytes": 132720,
+      "size_mb": 0.13
+    }
+  },
+  "filtered_files": {
+    "benchmark_summary": "results\\analysis\\molecular_benchmark_summary.csv",
+    "leaderboard": "results\\analysis\\molecular_leaderboard.csv"
+  }
+}

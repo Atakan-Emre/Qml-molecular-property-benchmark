@@ -1,0 +1,28 @@
+from .plots import (
+    plot_training_curves,
+    plot_confusion_matrix,
+    plot_roc_curves,
+    plot_pr_curves,
+    plot_calibration_curve,
+    plot_model_comparison_bar,
+    plot_qubit_depth_heatmap,
+    plot_data_regime_lines,
+    plot_pareto_front,
+    plot_radar_chart,
+    plot_boxplot_seeds,
+    plot_learning_rate_schedule,
+    plot_metric_correlation,
+    plot_class_distribution,
+    plot_embedding_tsne,
+    save_all_experiment_plots,
+)
+from .gradcam import (
+    GradCAM1D,
+    GradCAM2D,
+    compute_saliency,
+    plot_ecg_gradcam,
+    plot_retina_gradcam,
+    plot_retina_saliency,
+    plot_epoch_times,
+    generate_interpretability_plots,
+)

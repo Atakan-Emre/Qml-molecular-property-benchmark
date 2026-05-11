@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Bu çalışmayı kullanırsanız lütfen tez çalışmasını ve bu yazılım deposunu atıfla belirtin."
+title: "QML Molecular Property Benchmark"
+type: software
+authors:
+  - name: "Project contributors"
+abstract: "BACE, BBBP ve ClinTox veri setleri üzerinde klasik, saf kuantum ve hibrit kuantum-klasik makine öğrenmesi modellerinin karşılaştırmalı değerlendirmesi."
+keywords:
+  - quantum machine learning
+  - molecular property prediction
+  - drug discovery
+  - MoleculeNet
+  - hybrid quantum-classical learning
+license: MIT
+date-released: 2026-05-11

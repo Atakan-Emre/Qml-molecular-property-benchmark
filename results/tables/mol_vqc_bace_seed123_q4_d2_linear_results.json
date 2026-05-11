@@ -1,0 +1,99 @@
+{
+  "metrics": {
+    "train": {
+      "accuracy": 0.615,
+      "balanced_accuracy": 0.6194284546885703,
+      "f1": 0.5755237045203969,
+      "precision": 0.6726804123711341,
+      "recall": 0.5028901734104047,
+      "mcc": 0.24490770680851423,
+      "auroc": 0.6679765581499685,
+      "pr_auc": 0.6442647021305843,
+      "sensitivity": 0.5028901734104047,
+      "specificity": 0.735966735966736,
+      "ece": 0.02907421875000003,
+      "eval_time_sec": 1.449
+    },
+    "val": {
+      "accuracy": 0.543046357615894,
+      "balanced_accuracy": 0.5298692117355956,
+      "f1": 0.4297520661157025,
+      "precision": 0.5,
+      "recall": 0.37681159420289856,
+      "mcc": 0.06262762747267367,
+      "auroc": 0.5631848709791446,
+      "pr_auc": 0.48830029767923244,
+      "sensitivity": 0.37681159420289856,
+      "specificity": 0.6829268292682927,
+      "ece": 0.0910078642384106,
+      "eval_time_sec": 0.233
+    },
+    "test": {
+      "accuracy": 0.6118421052631579,
+      "balanced_accuracy": 0.5993539374890868,
+      "f1": 0.5203252032520326,
+      "precision": 0.5925925925925926,
+      "recall": 0.463768115942029,
+      "mcc": 0.20671345829609997,
+      "auroc": 0.6554915313427624,
+      "pr_auc": 0.5793547852239659,
+      "sensitivity": 0.463768115942029,
+      "specificity": 0.7349397590361446,
+      "ece": 0.058670847039473686,
+      "eval_time_sec": 0.237
+    }
+  },
+  "quantum_info": {
+    "n_qubits": 4,
+    "circuit_depth": 2,
+    "entanglement": "linear",
+    "feature_map": "ZZFeatureMap",
+    "ansatz": "RealAmplitudes",
+    "optimizer": "COBYLA",
+    "maxiter": 200,
+    "circuit_metrics": {
+      "n_qubits": 4,
+      "raw_depth": 26,
+      "raw_gate_count": 52,
+      "raw_ops": {
+        "u": 22,
+        "cx": 18,
+        "r": 12
+      },
+      "n_parameters": 16,
+      "transpiled_depth": 39,
+      "transpiled_gate_count": 104,
+      "transpiled_ops": {
+        "rz": 54,
+        "sx": 32,
+        "cx": 18
+      },
+      "cx_count": 18
+    },
+    "pca_summary": {
+      "n_components": 4,
+      "scale_range": [
+        0,
+        3.141592653589793
+      ],
+      "explained_variance_ratio": [
+        0.034192536026239395,
+        0.022313354536890984,
+        0.020435042679309845,
+        0.017577797174453735
+      ],
+      "total_explained_variance": 0.09451872855424881
+    },
+    "backend": {
+      "backend": "aer_statevector",
+      "device": "CPU",
+      "max_parallel_threads": 32,
+      "shots": 0,
+      "sampling_mode": "exact_statevector"
+    }
+  },
+  "timing": {
+    "vqc_train_sec": 165.7348701953888,
+    "total_train_sec": 165.7348701953888
+  }
+}

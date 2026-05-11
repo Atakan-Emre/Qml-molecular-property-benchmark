@@ -1,0 +1,16 @@
+# Text normalization
+* text=auto
+
+# Binary scientific artifacts are intentionally stored without Git LFS because
+# the target GitHub repository does not have LFS enabled. Heavy runtime outputs
+# remain excluded by .gitignore.
+*.npy binary
+*.npz binary
+*.pt binary
+*.pth binary
+*.ckpt binary
+*.onnx binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gz binary

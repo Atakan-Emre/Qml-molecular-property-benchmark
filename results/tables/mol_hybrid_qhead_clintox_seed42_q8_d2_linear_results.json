@@ -1,0 +1,53 @@
+﻿{
+  "metrics": {
+    "best_val_metrics": {
+      "loss": 0.9618962705135345,
+      "accuracy": 0.8918918918918919,
+      "balanced_accuracy": 0.774386197743862,
+      "f1": 0.4666666666666667,
+      "precision": 0.3684210526315789,
+      "recall": 0.6363636363636364,
+      "mcc": 0.4303058276284944,
+      "auroc": 0.802919708029197,
+      "pr_auc": 0.4208135219971076,
+      "sensitivity": 0.6363636363636364,
+      "specificity": 0.9124087591240876,
+      "ece": 0.09480949994680049,
+      "binary_eval_threshold": 0.705
+    },
+    "test": {
+      "loss": 0.6472880393266678,
+      "accuracy": 0.9054054054054054,
+      "balanced_accuracy": 0.7398805573988055,
+      "f1": 0.46153846153846156,
+      "precision": 0.4,
+      "recall": 0.5454545454545454,
+      "mcc": 0.4169751956457313,
+      "auroc": 0.900464499004645,
+      "pr_auc": 0.4655573250805699,
+      "sensitivity": 0.5454545454545454,
+      "specificity": 0.9343065693430657,
+      "ece": 0.08308074925396897
+    }
+  },
+  "timing": {
+    "embedding_extract_sec": 0.009,
+    "head_training_sec": 48.11,
+    "inference_time_sec": 0.333,
+    "encoder_device": "cuda",
+    "head_device": "cpu"
+  },
+  "quantum_info": {
+    "n_qubits": 8,
+    "circuit_depth": 2,
+    "backend": {
+      "backend": "lightning.qubit",
+      "diff_method": "adjoint",
+      "torch_device": "cpu"
+    },
+    "encoder_model": "mlp",
+    "encoder_checkpoint": "results/checkpoints/mol_mlp_clintox/mol_mlp_clintox_seed0/checkpoint_epoch0003_score0.3899.pt",
+    "embedding_dim": 128
+  }
+}
+
