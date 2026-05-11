@@ -65,10 +65,7 @@ molecular/
 ├── LICENSE
 ├── .gitattributes
 ├── docs/
-│   ├── molecular_report_tr.md
-│   ├── tez_icindekiler.md
-│   ├── tez_yapisi.md
-│   └── release_checklist.md
+│   └── molecular_report_tr.md
 ├── source/
 │   ├── molecule/
 │   │   ├── classical/
@@ -248,12 +245,9 @@ Tez ve makale için seçilmiş figürler:
 
 ![ClinTox tüm yöntem-parametre özeti](results/analysis/paper_figures/molecule_clintox_all_methods_parameters.png)
 
-## Tez Dokümantasyonu
+## Dokümantasyon
 
 - [Moleküler deney raporu](docs/molecular_report_tr.md)
-- [Tez içindekiler taslağı](docs/tez_icindekiler.md)
-- [Projeye göre tez yapısı](docs/tez_yapisi.md)
-- [Yayın öncesi kontrol listesi](docs/release_checklist.md)
 
 ## Tekrar Üretilebilirlik
 
