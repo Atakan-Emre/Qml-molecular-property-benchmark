@@ -14,11 +14,6 @@ Yayın adresi:
 
 [https://atakan-emre.github.io/Qml-molecular-property-benchmark/](https://atakan-emre.github.io/Qml-molecular-property-benchmark/)
 
-Seminer sayfası `frontend/` klasöründeki statik dosyalardan oluşur. Sayfa tek ekranda pazarlama metni sunmak yerine doğrudan seminer anlatımını verir: veri setleri, SMILES/ECFP/graf/kubit temsil akışı, klasik modeller, kuantum kavramları, model mimarileri, CSV tabanlı bulgular, hibrit ablasyonlar, seed kararlılığı ve kanıt galerisi aynı tek sayfa içinde okunur.
-
-Sayfa Türkçe ve İngilizce çalışır. Üst sağdaki dil seçimi ile akademik Türkçe ve akademik İngilizce metinler dinamik olarak değiştirilir. Görseller JavaScript canvas tabanlıdır; bit-kubit anlatımı, veri temsili, deney matrisi, kubit-derinlik kapasitesi ve seed dağılımı tarayıcı içinde üretilir.
-
-GitHub Pages yayını `.github/workflows/deploy-pages.yml` ile yapılır. `main` veya `master` branch'e push geldiğinde workflow `frontend/` klasörünü GitHub Pages artifact olarak yükler ve deploy eder. Repository ayarlarında **Settings > Pages > Source** değeri **GitHub Actions** seçili olmalıdır.
 
 ## Tez Başlığı
 
