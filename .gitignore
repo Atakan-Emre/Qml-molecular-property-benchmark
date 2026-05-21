@@ -39,6 +39,7 @@ events.out.tfevents.*
 **/tensorboard/
 
 # Local legacy/archive material kept for audit, not for publication
+thesis/
 docs/archive/
 data/data/
 data/source_copy_backup/

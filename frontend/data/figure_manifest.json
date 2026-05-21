@@ -1,0 +1,490 @@
+[
+  {
+    "src": "assets/analysis_figures/molecule_bace_comparison.png",
+    "task": "bace",
+    "model": "all",
+    "kind": "comparison",
+    "title": "Bace Comparison",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_bace_data_regime.png",
+    "task": "bace",
+    "model": "all",
+    "kind": "data",
+    "title": "Bace Data Regime",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_bace_hybrid_qhead_linear_heatmap.png",
+    "task": "bace",
+    "model": "hybrid_qhead",
+    "kind": "heatmap",
+    "title": "Bace Hybrid Qhead Linear Heatmap",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_bace_qsvm_linear_heatmap.png",
+    "task": "bace",
+    "model": "qsvm",
+    "kind": "heatmap",
+    "title": "Bace Qsvm Linear Heatmap",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_bace_radar.png",
+    "task": "bace",
+    "model": "all",
+    "kind": "radar",
+    "title": "Bace Radar",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_bace_seed_boxplot.png",
+    "task": "bace",
+    "model": "all",
+    "kind": "stability",
+    "title": "Bace Seed Boxplot",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_bace_vqc_linear_heatmap.png",
+    "task": "bace",
+    "model": "vqc",
+    "kind": "heatmap",
+    "title": "Bace Vqc Linear Heatmap",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_bbbp_comparison.png",
+    "task": "bbbp",
+    "model": "all",
+    "kind": "comparison",
+    "title": "Bbbp Comparison",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_bbbp_hybrid_qhead_linear_heatmap.png",
+    "task": "bbbp",
+    "model": "hybrid_qhead",
+    "kind": "heatmap",
+    "title": "Bbbp Hybrid Qhead Linear Heatmap",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_bbbp_qsvm_linear_heatmap.png",
+    "task": "bbbp",
+    "model": "qsvm",
+    "kind": "heatmap",
+    "title": "Bbbp Qsvm Linear Heatmap",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_bbbp_radar.png",
+    "task": "bbbp",
+    "model": "all",
+    "kind": "radar",
+    "title": "Bbbp Radar",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_bbbp_seed_boxplot.png",
+    "task": "bbbp",
+    "model": "all",
+    "kind": "stability",
+    "title": "Bbbp Seed Boxplot",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_bbbp_vqc_linear_heatmap.png",
+    "task": "bbbp",
+    "model": "vqc",
+    "kind": "heatmap",
+    "title": "Bbbp Vqc Linear Heatmap",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_clintox_comparison.png",
+    "task": "clintox",
+    "model": "all",
+    "kind": "comparison",
+    "title": "Clintox Comparison",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_clintox_hybrid_qhead_linear_heatmap.png",
+    "task": "clintox",
+    "model": "hybrid_qhead",
+    "kind": "heatmap",
+    "title": "Clintox Hybrid Qhead Linear Heatmap",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_clintox_qsvm_linear_heatmap.png",
+    "task": "clintox",
+    "model": "qsvm",
+    "kind": "heatmap",
+    "title": "Clintox Qsvm Linear Heatmap",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_clintox_radar.png",
+    "task": "clintox",
+    "model": "all",
+    "kind": "radar",
+    "title": "Clintox Radar",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_clintox_seed_boxplot.png",
+    "task": "clintox",
+    "model": "all",
+    "kind": "stability",
+    "title": "Clintox Seed Boxplot",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/analysis_figures/molecule_clintox_vqc_linear_heatmap.png",
+    "task": "clintox",
+    "model": "vqc",
+    "kind": "heatmap",
+    "title": "Clintox Vqc Linear Heatmap",
+    "group": "analysis"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bace_all_methods_parameters.png",
+    "task": "bace",
+    "model": "all",
+    "kind": "parameter",
+    "title": "Bace All Methods Parameters",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bace_gat_parameter_scores.png",
+    "task": "bace",
+    "model": "gat",
+    "kind": "parameter",
+    "title": "Bace Gat Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bace_gat_training_curves.png",
+    "task": "bace",
+    "model": "gat",
+    "kind": "training",
+    "title": "Bace Gat Training Curves",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bace_gnn_parameter_scores.png",
+    "task": "bace",
+    "model": "gnn",
+    "kind": "parameter",
+    "title": "Bace Gnn Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bace_gnn_training_curves.png",
+    "task": "bace",
+    "model": "gnn",
+    "kind": "training",
+    "title": "Bace Gnn Training Curves",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bace_hybrid_qhead_parameter_scores.png",
+    "task": "bace",
+    "model": "hybrid_qhead",
+    "kind": "parameter",
+    "title": "Bace Hybrid Qhead Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bace_hybrid_qhead_training_curves.png",
+    "task": "bace",
+    "model": "hybrid_qhead",
+    "kind": "training",
+    "title": "Bace Hybrid Qhead Training Curves",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bace_mlp_parameter_scores.png",
+    "task": "bace",
+    "model": "mlp",
+    "kind": "parameter",
+    "title": "Bace Mlp Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bace_mlp_training_curves.png",
+    "task": "bace",
+    "model": "mlp",
+    "kind": "training",
+    "title": "Bace Mlp Training Curves",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bace_qgnn_parameter_scores.png",
+    "task": "bace",
+    "model": "qgnn",
+    "kind": "parameter",
+    "title": "Bace Qgnn Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bace_qgnn_training_curves.png",
+    "task": "bace",
+    "model": "qgnn",
+    "kind": "training",
+    "title": "Bace Qgnn Training Curves",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bace_qsvm_parameter_scores.png",
+    "task": "bace",
+    "model": "qsvm",
+    "kind": "parameter",
+    "title": "Bace Qsvm Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bace_svm_parameter_scores.png",
+    "task": "bace",
+    "model": "svm",
+    "kind": "parameter",
+    "title": "Bace Svm Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bace_vqc_parameter_scores.png",
+    "task": "bace",
+    "model": "vqc",
+    "kind": "parameter",
+    "title": "Bace Vqc Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bbbp_all_methods_parameters.png",
+    "task": "bbbp",
+    "model": "all",
+    "kind": "parameter",
+    "title": "Bbbp All Methods Parameters",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bbbp_gat_parameter_scores.png",
+    "task": "bbbp",
+    "model": "gat",
+    "kind": "parameter",
+    "title": "Bbbp Gat Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bbbp_gat_training_curves.png",
+    "task": "bbbp",
+    "model": "gat",
+    "kind": "training",
+    "title": "Bbbp Gat Training Curves",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bbbp_gnn_parameter_scores.png",
+    "task": "bbbp",
+    "model": "gnn",
+    "kind": "parameter",
+    "title": "Bbbp Gnn Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bbbp_gnn_training_curves.png",
+    "task": "bbbp",
+    "model": "gnn",
+    "kind": "training",
+    "title": "Bbbp Gnn Training Curves",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bbbp_hybrid_qhead_parameter_scores.png",
+    "task": "bbbp",
+    "model": "hybrid_qhead",
+    "kind": "parameter",
+    "title": "Bbbp Hybrid Qhead Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bbbp_hybrid_qhead_training_curves.png",
+    "task": "bbbp",
+    "model": "hybrid_qhead",
+    "kind": "training",
+    "title": "Bbbp Hybrid Qhead Training Curves",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bbbp_mlp_parameter_scores.png",
+    "task": "bbbp",
+    "model": "mlp",
+    "kind": "parameter",
+    "title": "Bbbp Mlp Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bbbp_mlp_training_curves.png",
+    "task": "bbbp",
+    "model": "mlp",
+    "kind": "training",
+    "title": "Bbbp Mlp Training Curves",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bbbp_qgnn_parameter_scores.png",
+    "task": "bbbp",
+    "model": "qgnn",
+    "kind": "parameter",
+    "title": "Bbbp Qgnn Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bbbp_qgnn_training_curves.png",
+    "task": "bbbp",
+    "model": "qgnn",
+    "kind": "training",
+    "title": "Bbbp Qgnn Training Curves",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bbbp_qsvm_parameter_scores.png",
+    "task": "bbbp",
+    "model": "qsvm",
+    "kind": "parameter",
+    "title": "Bbbp Qsvm Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bbbp_svm_parameter_scores.png",
+    "task": "bbbp",
+    "model": "svm",
+    "kind": "parameter",
+    "title": "Bbbp Svm Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_bbbp_vqc_parameter_scores.png",
+    "task": "bbbp",
+    "model": "vqc",
+    "kind": "parameter",
+    "title": "Bbbp Vqc Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_clintox_all_methods_parameters.png",
+    "task": "clintox",
+    "model": "all",
+    "kind": "parameter",
+    "title": "Clintox All Methods Parameters",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_clintox_gat_parameter_scores.png",
+    "task": "clintox",
+    "model": "gat",
+    "kind": "parameter",
+    "title": "Clintox Gat Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_clintox_gat_training_curves.png",
+    "task": "clintox",
+    "model": "gat",
+    "kind": "training",
+    "title": "Clintox Gat Training Curves",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_clintox_gnn_parameter_scores.png",
+    "task": "clintox",
+    "model": "gnn",
+    "kind": "parameter",
+    "title": "Clintox Gnn Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_clintox_gnn_training_curves.png",
+    "task": "clintox",
+    "model": "gnn",
+    "kind": "training",
+    "title": "Clintox Gnn Training Curves",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_clintox_hybrid_qhead_parameter_scores.png",
+    "task": "clintox",
+    "model": "hybrid_qhead",
+    "kind": "parameter",
+    "title": "Clintox Hybrid Qhead Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_clintox_hybrid_qhead_training_curves.png",
+    "task": "clintox",
+    "model": "hybrid_qhead",
+    "kind": "training",
+    "title": "Clintox Hybrid Qhead Training Curves",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_clintox_mlp_parameter_scores.png",
+    "task": "clintox",
+    "model": "mlp",
+    "kind": "parameter",
+    "title": "Clintox Mlp Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_clintox_mlp_training_curves.png",
+    "task": "clintox",
+    "model": "mlp",
+    "kind": "training",
+    "title": "Clintox Mlp Training Curves",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_clintox_qgnn_parameter_scores.png",
+    "task": "clintox",
+    "model": "qgnn",
+    "kind": "parameter",
+    "title": "Clintox Qgnn Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_clintox_qgnn_training_curves.png",
+    "task": "clintox",
+    "model": "qgnn",
+    "kind": "training",
+    "title": "Clintox Qgnn Training Curves",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_clintox_qsvm_parameter_scores.png",
+    "task": "clintox",
+    "model": "qsvm",
+    "kind": "parameter",
+    "title": "Clintox Qsvm Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_clintox_svm_parameter_scores.png",
+    "task": "clintox",
+    "model": "svm",
+    "kind": "parameter",
+    "title": "Clintox Svm Parameter Scores",
+    "group": "paper"
+  },
+  {
+    "src": "assets/paper_figures/molecule_clintox_vqc_parameter_scores.png",
+    "task": "clintox",
+    "model": "vqc",
+    "kind": "parameter",
+    "title": "Clintox Vqc Parameter Scores",
+    "group": "paper"
+  }
+]

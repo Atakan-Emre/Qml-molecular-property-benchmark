@@ -1,13 +1,13 @@
 {
-  "generated_at_utc": "2026-05-05T17:57:20.686513+00:00",
+  "generated_at_utc": "2026-05-19T20:00:51.337040+00:00",
   "source_root": "E:\\QUANTUM",
   "bundle_root": "E:\\QUANTUM\\molecular",
   "copy_policy": "copy-only; no source move/delete performed",
-  "molecular_experiment_rows": 49,
+  "molecular_experiment_rows": 67,
   "tasks": {
-    "bace": 23,
-    "bbbp": 13,
-    "clintox": 13
+    "bace": 29,
+    "bbbp": 19,
+    "clintox": 19
   },
   "categories": {
     "classical_graph": 6,
@@ -16,10 +16,11 @@
     "quantum_graph": 3,
     "quantum_data_ablation": 3,
     "quantum_descriptor": 23,
-    "quantum_ablation": 2
+    "quantum_ablation": 2,
+    "hybrid_quantum_descriptor": 18
   },
   "seed_count_distribution": {
-    "5": 49
+    "5": 67
   },
   "paper_figure_count": 42,
   "analysis_figure_count": 19,

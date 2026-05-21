@@ -1,14 +1,28 @@
-# QML Molecular Property Benchmark
+# MEDİKAL VERİ ANALİZİNDE KLASİK VE KUANTUM MAKİNE ÖĞRENMESİ MODELLERİNİN İNCELENMESİ
 
 **Author:** Şahin Atakan Emre
+
+**Repository:** QML Molecular Property Benchmark
 
 Klasik makine öğrenmesi, saf kuantum makine öğrenmesi ve hibrit kuantum-klasik modellerin ilaç adaylarına ait moleküler veriler üzerinde karşılaştırmalı değerlendirmesi.
 
 Bu çalışma BACE, BBBP ve ClinTox veri setlerinde moleküler özellik tahmini problemine odaklanır. Amaç, güçlü klasik taban modeller ile kuantum ve hibrit kuantum yaklaşımlarını aynı veri ayrımları, aynı seed politikası ve aynı metrik ailesi altında değerlendirmektir.
 
+## GitHub Pages Seminer Sayfası
+
+Yayın adresi:
+
+[https://atakan-emre.github.io/Qml-molecular-property-benchmark/](https://atakan-emre.github.io/Qml-molecular-property-benchmark/)
+
+Seminer sayfası `frontend/` klasöründeki statik dosyalardan oluşur. Sayfa tek ekranda pazarlama metni sunmak yerine doğrudan seminer anlatımını verir: veri setleri, SMILES/ECFP/graf/kubit temsil akışı, klasik modeller, kuantum kavramları, model mimarileri, CSV tabanlı bulgular, hibrit ablasyonlar, seed kararlılığı ve kanıt galerisi aynı tek sayfa içinde okunur.
+
+Sayfa Türkçe ve İngilizce çalışır. Üst sağdaki dil seçimi ile akademik Türkçe ve akademik İngilizce metinler dinamik olarak değiştirilir. Görseller JavaScript canvas tabanlıdır; bit-kubit anlatımı, veri temsili, deney matrisi, kubit-derinlik kapasitesi ve seed dağılımı tarayıcı içinde üretilir.
+
+GitHub Pages yayını `.github/workflows/deploy-pages.yml` ile yapılır. `main` veya `master` branch'e push geldiğinde workflow `frontend/` klasörünü GitHub Pages artifact olarak yükler ve deploy eder. Repository ayarlarında **Settings > Pages > Source** değeri **GitHub Actions** seçili olmalıdır.
+
 ## Tez Başlığı
 
-**İlaç Adaylarına Ait Moleküler Verilerde Klasik, Saf Kuantum ve Hibrit Kuantum Makine Öğrenmesi Yöntemlerinin Karşılaştırmalı Analizi**
+**MEDİKAL VERİ ANALİZİNDE KLASİK VE KUANTUM MAKİNE ÖĞRENMESİ MODELLERİNİN İNCELENMESİ**
 
 Kısa başlık önerisi:
 
@@ -59,11 +73,20 @@ Genel gözlem: klasik descriptor modeller hâlâ çok güçlüdür. Buna karşı
 ## Repo Yapısı
 
 ```text
-molecular/
+Qml-molecular-property-benchmark/
 ├── README.md
 ├── requirements.txt
 ├── LICENSE
 ├── .gitattributes
+├── .github/
+│   └── workflows/
+│       └── deploy-pages.yml
+├── frontend/
+│   ├── index.html
+│   ├── styles.css
+│   ├── script.js
+│   ├── data/
+│   └── assets/
 ├── docs/
 │   └── molecular_report_tr.md
 ├── source/
@@ -89,6 +112,8 @@ molecular/
 ```
 
 Yerel doğrulama amacıyla tutulan ağır eğitim çıktıları `results/checkpoints/`, `results/logs/` ve `results/figures/` altında kalır. Bu klasörler silinmemiştir; Git geçmişini büyütmemek için `.gitignore` kapsamındadır.
+
+`thesis/` klasörü yerel seminer/tez çalışma alanı olarak korunur ve GitHub'a aktarılmaması için `.gitignore` içindedir.
 
 ## Kurulum
 
