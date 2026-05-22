@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260521-visuals-v1">
+  <link rel="stylesheet" href="styles.css?v=20260522-qml-v11">
 </head>
 <body>
   <canvas id="quantumField" aria-hidden="true"></canvas>
@@ -27,6 +27,7 @@
         <a href="#modeller">Modeller</a>
         <a href="#klasik-akis">Klasik</a>
         <a href="#kuantum-temelleri">Kuantum</a>
+        <a href="#quantum-ml-akisi">QML</a>
         <a href="#mimari">Mimariler</a>
         <a href="#veri-kokpiti">Yöntem</a>
         <a href="#deney-matrisi">Matris</a>
@@ -53,7 +54,7 @@
         <p class="eyebrow">Yüksek Lisans Semineri - Şahin Atakan Emre</p>
         <h1>Medikal Veri Analizinde Klasik ve Kuantum Makine Öğrenmesi Modellerinin İncelenmesi</h1>
         <p class="hero-text">
-          BACE, BBBP ve ClinTox veri setleri üzerinde klasik descriptor tabanlı modeller,
+          BACE, BBBP ve ClinTox veri setleri üzerinde tanımlayıcı (descriptor) tabanlı modeller,
           moleküler grafik ağları, saf kuantum yöntemler ve hibrit kuantum-klasik
           başlık mimarisi aynı deneysel zeminde karşılaştırıldı.
         </p>
@@ -97,7 +98,7 @@
       <div class="thesis-points">
         <div class="point">
           <span>01</span>
-          <p>Klasik descriptor tabanlı modeller küçük ve orta ölçekli moleküler verilerde güçlü referanstır.</p>
+          <p>Tanımlayıcı (descriptor) tabanlı klasik modeller küçük ve orta ölçekli moleküler verilerde güçlü referanstır.</p>
         </div>
         <div class="point">
           <span>02</span>
@@ -113,11 +114,37 @@
     <section id="veri" class="section-band">
       <div class="section-heading">
         <p class="section-kicker">Materyal</p>
-        <h2>Üç ilaç keşfi görevi, tek deneysel zemin</h2>
+        <h2>Üç ilaç keşfi görevi, ortak deneysel protokol</h2>
         <p>
-          Moleküller SMILES dizgeleri üzerinden işlendi; descriptor tabanlı modeller için
+          Moleküller SMILES dizgeleri üzerinden işlendi; tanımlayıcı (descriptor) tabanlı modeller için
           ECFP/Morgan parmak izleri, grafik modeller için atom-bağ yapıları kullanıldı.
         </p>
+      </div>
+      <div class="material-source-grid" aria-label="Veri kaynağı, kullanım amacı ve içerik özeti">
+        <article class="material-source-card">
+          <span>Kaynak</span>
+          <h3>MoleculeNet/DeepChem kaynaklı standart görevler</h3>
+          <p>
+            BACE, BBBP ve ClinTox veri setleri MoleculeNet/DeepChem çizgisinden alınan
+            moleküler özellik tahmini görevleridir. Her kayıt SMILES dizgesi ve ikili sınıf etiketiyle başlar.
+          </p>
+        </article>
+        <article class="material-source-card">
+          <span>Ne için kullanıldı?</span>
+          <h3>Klasik ve kuantum modeller için ortak zemin</h3>
+          <p>
+            Aynı veri ayrımları üzerinde klasik, grafik, saf kuantum, kuantum grafik ve hibrit modeller
+            karşılaştırıldı; amaç kuantum üstünlüğü varsaymak değil, hangi koşulda sinyal oluştuğunu ölçmektir.
+          </p>
+        </article>
+        <article class="material-source-card">
+          <span>Verinin içinde neler var?</span>
+          <h3>SMILES, etiket, temsil ve ayrım bilgisi</h3>
+          <p>
+            Geçerli SMILES kayıtları RDKit ile işlenir; ECFP/Morgan parmak izi, atom-bağ grafı,
+            sınıf etiketi, eğitim-doğrulama-test ayrımı ve değerlendirme metrikleri bu hattan üretilir.
+          </p>
+        </article>
       </div>
       <div class="dataset-grid" id="datasetCards"></div>
       <div class="data-table-wrap">
@@ -166,7 +193,7 @@
     <section id="veri-anlami" class="section-band visual-analysis-section data-meaning-section">
       <div class="section-heading">
         <p class="section-kicker">Verinin anlamı</p>
-        <h2>BACE, BBBP ve ClinTox aynı boyutta değil, aynı soruda da değil</h2>
+        <h2>BACE, BBBP ve ClinTox aynı büyüklükte değildir ve aynı biyomedikal görevi temsil etmez</h2>
         <p>
           Veri setleri yalnızca satır sayısı olarak okunmadı. BACE enzim inhibisyonunu,
           BBBP kan-beyin bariyeri geçişini, ClinTox ise klinik toksisite sinyalini temsil eder.
@@ -217,16 +244,16 @@
     <section id="yolculuk" class="section-band molecule-journey">
       <div class="section-heading">
         <p class="section-kicker">Molekül yolculuğu</p>
-        <h2>SMILES dizgesinden kuantum ölçümüne kadar bütün hat tek sahnede</h2>
+        <h2>SMILES dizgesinden model kararına kadar deney hattı tek sahnede</h2>
         <p>
           Bu görsel, seminerdeki deney hattını adım adım gösterir: molekül önce RDKit ile işlenir,
-          ECFP parmak izine çevrilir, PCA veya kodlayıcı ile sıkıştırılır, kubitlere kodlanır ve
-          ölçümden sonra klasik metriklerle değerlendirilir.
+          ECFP parmak izine çevrilir, klasik, grafik, saf kuantum ve hibrit kollara ayrılır;
+          kuantum kolda ölçümden sonra, tüm kollarda ise klasik metriklerle değerlendirilir.
         </p>
       </div>
       <div class="journey-layout">
         <div class="journey-stage">
-          <canvas id="moleculeJourneyCanvas" width="1200" height="620" aria-label="SMILES'tan kuantum ölçümüne molekül yolculuğu"></canvas>
+          <canvas id="moleculeJourneyCanvas" width="1200" height="620" aria-label="SMILES'tan model kararına molekül yolculuğu"></canvas>
         </div>
         <aside class="journey-note" id="journeyNote"></aside>
       </div>
@@ -235,7 +262,7 @@
     <section id="modeller" class="section-band">
       <div class="section-heading">
         <p class="section-kicker">Yöntem aileleri</p>
-        <h2>Klasik çizgi, grafik öğrenme, saf kuantum ve hibrit başlık aynı sahnede</h2>
+        <h2>Klasik referanslar, grafik öğrenme, saf kuantum ve hibrit başlık aynı sahnede</h2>
       </div>
       <div class="model-grid" id="modelFamilies"></div>
     </section>
@@ -280,6 +307,26 @@
       </div>
     </section>
 
+    <section id="quantum-ml-akisi" class="section-band quantum-model-section">
+      <div class="section-heading">
+        <p class="section-kicker">Kuantum makine öğrenmesi nasıl çalışır?</p>
+        <h2>Veri kuantum özellik uzayına taşınır; ölçüm klasik karara döner</h2>
+        <p>
+          Bu sahne, seminerdeki kuantum modellerin ortak çalışma fikrini gösterir:
+          moleküler veri önce sayısal temsile çevrilir, kubitlere kodlanır,
+          devrede etkileşime sokulur, ölçüm istatistiği alınır ve sonuç AUROC gibi
+          klasik metriklerle raporlanır.
+        </p>
+      </div>
+      <div class="quantum-model-layout">
+        <div class="result-controls quantum-model-tabs" id="quantumModelTabs" aria-label="Kuantum makine öğrenmesi model seçimi"></div>
+        <div class="quantum-model-stage">
+          <canvas id="quantumModelFlowCanvas" width="1200" height="680" aria-label="Kuantum makine öğrenmesi modellerinin veri, devre, ölçüm ve sonuç çalışma akışı"></canvas>
+        </div>
+        <aside class="quantum-model-note" id="quantumModelNote"></aside>
+      </div>
+    </section>
+
     <section id="mimari" class="section-band architecture-section">
       <div class="section-heading">
         <p class="section-kicker">Model mimarileri</p>
@@ -301,11 +348,12 @@
 
     <section id="kuantum-akis" class="quantum-flow section-band">
       <div class="flow-copy">
-        <p class="section-kicker">Kuantum anlatımı</p>
-        <h2>ECFP uzayından kubitlere, kubitlerden karar sınırına</h2>
+        <p class="section-kicker">Kuantum deney hattı</p>
+        <h2>Saf kuantum ve hibrit başlık aynı devre mantığında ayrışır</h2>
         <p>
-          Saf kuantum descriptor hattında ECFP vektörleri PCA ile kubit sayısına
-          indirgenir ve ZZFeatureMap üzerinden kuantum özellik uzayına taşınır.
+          Bu bölüm, genel kuantum makine öğrenmesi fikrinden sonra çalışmadaki iki deneysel
+          kuantum yolunu ayırır. Saf kuantum tanımlayıcı hattında ECFP vektörleri PCA ile
+          kubit sayısına indirgenir ve ZZFeatureMap üzerinden kuantum özellik uzayına taşınır.
           Hibrit yaklaşımda ise dondurulmuş MLP kodlayıcı daha kompakt bir gömme temsil üretir;
           Quantum Head bu temsil üzerinde parametrik devreyle karar katmanı kurar.
         </p>
@@ -318,7 +366,11 @@
         </ol>
       </div>
       <div class="circuit-stage">
+        <div class="result-controls quantum-run-tabs" id="quantumRunModelTabs" aria-label="Kuantum model seçimi"></div>
+        <div class="result-controls small quantum-run-tabs" id="quantumRunTaskTabs" aria-label="Kuantum veri seti seçimi"></div>
+        <div class="result-controls micro quantum-experiment-tabs" id="quantumExperimentTabs" aria-label="Deney satırı seçimi"></div>
         <canvas id="circuitCanvas" width="900" height="520" aria-label="Animasyonlu kuantum devre görselleştirmesi"></canvas>
+        <div class="quantum-run-note" id="quantumRunNote"></div>
       </div>
     </section>
 
@@ -420,6 +472,19 @@
       </div>
     </section>
 
+    <section id="clintox-okumasi" class="section-band imbalance-section">
+      <div class="imbalance-copy">
+        <p class="section-kicker">ClinTox okuması</p>
+        <h2>Yüksek AUROC, dengesiz veri setinde tek başına karar değildir.</h2>
+        <p>
+          ClinTox test ayrımında pozitif sınıf çok azdır. Bu nedenle MLP ve Hybrid QHead
+          AUROC bakımından neredeyse aynı görünse bile F1, MCC, duyarlılık ve özgüllük
+          değerleri model davranışını değiştiren kritik kanıtlar sağlar.
+        </p>
+      </div>
+      <div class="metric-compare" id="clintoxCompare"></div>
+    </section>
+
     <section id="hibrit" class="section-band hybrid-section">
       <div class="section-heading">
         <p class="section-kicker">Hibrit ablasyon</p>
@@ -469,8 +534,9 @@
         <p class="section-kicker">Kuantum ablasyon küpü</p>
         <h2>Kubit sayısı, devre derinliği ve model ailesi aynı yüzeyde</h2>
         <p>
-          Hybrid QHead, QSVM ve VQC için q/d ayarları veri setine göre farklı davranır.
-          Bu panel daha fazla kubit veya daha fazla derinliğin otomatik olarak daha iyi olmadığını gösterir.
+          Hybrid QHead, QSVM, VQC ve QGNN için CSV'de bulunan q/d kayıtları veri setine göre
+          farklı davranır. Bu panel daha fazla kubit veya daha fazla derinliğin otomatik olarak
+          daha iyi olmadığını gösterir.
         </p>
       </div>
       <div class="ablation-layout">
@@ -521,19 +587,6 @@
           <div class="visual-note-list" id="seedDistributionNote"></div>
         </aside>
       </div>
-    </section>
-
-    <section class="section-band imbalance-section">
-      <div class="imbalance-copy">
-        <p class="section-kicker">ClinTox okuması</p>
-        <h2>Yüksek AUROC, dengesiz veri setinde tek başına karar değildir.</h2>
-        <p>
-          ClinTox test ayrımında pozitif sınıf çok azdır. Bu nedenle MLP ve Hybrid QHead
-          AUROC bakımından neredeyse aynı görünse bile F1, MCC, duyarlılık ve özgüllük
-          değerleri model davranışını değiştiren kritik kanıtlar sağlar.
-        </p>
-      </div>
-      <div class="metric-compare" id="clintoxCompare"></div>
     </section>
 
     <section id="kanit" class="section-band evidence-section">
@@ -606,6 +659,6 @@
     <span>BACE · BBBP · ClinTox · QSVM · VQC · QGNN · Hybrid QHead</span>
   </footer>
 
-  <script src="script.js?v=20260521-visuals-v1"></script>
+  <script src="script.js?v=20260522-qml-v11"></script>
 </body>
 </html>

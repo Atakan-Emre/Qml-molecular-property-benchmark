@@ -390,6 +390,43 @@ a {
   gap: 1rem;
 }
 
+.material-source-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.material-source-card {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 12px 36px rgba(15, 17, 21, 0.06);
+}
+
+.material-source-card span {
+  display: block;
+  color: var(--cyan);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.material-source-card h3 {
+  margin: 0.45rem 0 0;
+  font-size: clamp(1rem, 1.35vw, 1.28rem);
+  line-height: 1.25;
+}
+
+.material-source-card p {
+  margin: 0.65rem 0 0;
+  color: #30343a;
+  font-weight: 650;
+}
+
 .dataset-card,
 .model-card {
   overflow: hidden;
@@ -422,6 +459,7 @@ a {
 .metric-pill {
   display: inline-flex;
   align-items: center;
+  max-width: 100%;
   min-height: 28px;
   padding: 0.25rem 0.5rem;
   border-radius: 5px;
@@ -430,6 +468,13 @@ a {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.78rem;
   font-weight: 800;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.data-table .metric-pill {
+  max-width: 12rem;
 }
 
 .dataset-card:nth-child(1) {
@@ -616,7 +661,8 @@ a {
 }
 
 .concept-stage,
-.architecture-stage {
+.architecture-stage,
+.quantum-model-stage {
   min-height: 430px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -626,44 +672,51 @@ a {
 }
 
 #quantumConceptCanvas,
-#modelArchitectureCanvas {
+#modelArchitectureCanvas,
+#quantumModelFlowCanvas {
   display: block;
   width: 100%;
   height: auto;
 }
 
 .concept-note,
-.architecture-note {
+.architecture-note,
+.quantum-model-note {
   padding: 1rem;
 }
 
 .concept-note h3,
-.architecture-note h3 {
+.architecture-note h3,
+.quantum-model-note h3 {
   margin: 0 0 0.7rem;
   font-size: 1.3rem;
 }
 
 .concept-note p,
-.architecture-note p {
+.architecture-note p,
+.quantum-model-note p {
   margin: 0.65rem 0;
   color: #30343a;
 }
 
 .concept-facts,
-.architecture-facts {
+.architecture-facts,
+.quantum-model-facts {
   display: grid;
   gap: 0.6rem;
   margin-top: 1rem;
 }
 
 .concept-fact,
-.architecture-fact {
+.architecture-fact,
+.quantum-model-fact {
   padding-top: 0.65rem;
   border-top: 1px solid var(--line);
 }
 
 .concept-fact span,
-.architecture-fact span {
+.architecture-fact span,
+.quantum-model-fact span {
   display: block;
   color: var(--ink-soft);
   font-size: 0.82rem;
@@ -671,11 +724,86 @@ a {
 }
 
 .concept-fact strong,
-.architecture-fact strong {
+.architecture-fact strong,
+.quantum-model-fact strong {
   display: block;
   margin-top: 0.18rem;
   font-family: "JetBrains Mono", monospace;
   font-size: 0.9rem;
+}
+
+.quantum-model-section {
+  color: #fff;
+  background: rgba(15, 17, 21, 0.95);
+  overflow: hidden;
+  scroll-margin-top: 132px;
+}
+
+.quantum-model-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, rgba(0, 166, 200, 0.17), transparent 40%),
+    linear-gradient(290deg, rgba(123, 97, 255, 0.16), transparent 44%),
+    linear-gradient(180deg, transparent, rgba(224, 161, 0, 0.08));
+}
+
+.quantum-model-section > * {
+  position: relative;
+}
+
+.quantum-model-section .section-kicker {
+  color: #7ee6ff;
+}
+
+.quantum-model-section .section-heading {
+  max-width: 1040px;
+}
+
+.quantum-model-section .section-heading h2 {
+  max-width: 1040px;
+  font-size: clamp(2.25rem, 4.6vw, 4.9rem);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.quantum-model-section .section-heading p {
+  max-width: 900px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.68;
+}
+
+.quantum-model-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.55fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.quantum-model-tabs {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+.quantum-model-stage {
+  min-width: 0;
+  border-color: rgba(255, 255, 255, 0.14);
+  background: #101216;
+}
+
+.quantum-model-note {
+  color: var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow);
+  overflow-wrap: anywhere;
+}
+
+.quantum-model-note .metric-pill {
+  margin-bottom: 0.5rem;
 }
 
 .architecture-section {
@@ -1071,6 +1199,27 @@ a {
   background: rgba(255, 255, 255, 0.94);
 }
 
+.ablation-variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.8rem;
+}
+
+.ablation-variants span {
+  min-height: 28px;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #eef2f2;
+  color: var(--ink);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
 .stability-section {
   background: rgba(247, 248, 244, 0.98);
 }
@@ -1215,9 +1364,9 @@ a {
 
 .quantum-flow {
   display: grid;
-  grid-template-columns: minmax(340px, 0.85fr) minmax(0, 1.15fr);
-  gap: clamp(1rem, 4vw, 3rem);
-  align-items: center;
+  grid-template-columns: minmax(260px, 0.54fr) minmax(0, 1.46fr);
+  gap: clamp(0.85rem, 2.8vw, 2rem);
+  align-items: start;
   background: rgba(15, 17, 21, 0.94);
   color: #fff;
 }
@@ -1240,39 +1389,87 @@ a {
   color: #7ee6ff;
 }
 
+.flow-copy {
+  max-width: 500px;
+}
+
+.quantum-flow h2 {
+  margin-bottom: 0.7rem;
+  font-size: clamp(1.45rem, 2.35vw, 2.35rem);
+  line-height: 1.12;
+}
+
 .quantum-flow p {
   color: rgba(255, 255, 255, 0.82);
 }
 
+.flow-copy > p:not(.section-kicker) {
+  margin-bottom: 0;
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
 .pipeline-list {
   display: grid;
-  gap: 0.65rem;
-  margin: 1.5rem 0 0;
+  gap: 0.35rem;
+  margin: 1rem 0 0;
   padding: 0;
   list-style: none;
 }
 
 .pipeline-list li {
   display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 0.75rem;
-  padding: 0.7rem 0;
+  grid-template-columns: 92px 1fr;
+  gap: 0.55rem;
+  padding: 0.48rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   color: rgba(255, 255, 255, 0.83);
+  font-size: 0.9rem;
 }
 
 .pipeline-list span {
   color: #7ee6ff;
   font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
   font-weight: 800;
 }
 
 .circuit-stage {
   min-height: 420px;
+  min-width: 0;
+  padding: clamp(0.75rem, 1.8vw, 1rem);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
   overflow: hidden;
+}
+
+.quantum-flow .result-controls {
+  gap: 0.45rem;
+  margin-bottom: 0.45rem;
+}
+
+.quantum-flow .tab-button {
+  min-height: 32px;
+  padding: 0.42rem 0.62rem;
+  border-color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.86rem;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.quantum-flow .result-controls.micro .tab-button {
+  min-height: 28px;
+  padding: 0.3rem 0.44rem;
+  font-size: 0.72rem;
+}
+
+.quantum-flow .tab-button[aria-pressed="true"] {
+  color: #071014;
+  background: #7ee6ff;
+  border-color: #7ee6ff;
 }
 
 #circuitCanvas,
@@ -1280,6 +1477,98 @@ a {
   display: block;
   width: 100%;
   height: auto;
+}
+
+#circuitCanvas {
+  margin-top: 0.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: #101216;
+}
+
+.quantum-run-note {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+  gap: 0.5rem;
+  margin-top: 0.58rem;
+}
+
+.quantum-run-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.quantum-run-summary div,
+.quantum-run-guidance,
+.quantum-run-item {
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.quantum-run-summary div {
+  padding: 0.5rem;
+}
+
+.quantum-run-summary span,
+.quantum-run-item span {
+  display: block;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.quantum-run-summary strong,
+.quantum-run-item strong {
+  display: block;
+  margin-top: 0.2rem;
+  color: #fff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  overflow-wrap: anywhere;
+}
+
+.quantum-run-guidance {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.45rem;
+  padding: 0.5rem;
+}
+
+.quantum-run-guidance p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.78rem;
+  line-height: 1.38;
+}
+
+.quantum-run-list {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  gap: 0.42rem;
+  max-height: 126px;
+  overflow: auto;
+  padding-right: 0.15rem;
+}
+
+.quantum-run-item {
+  padding: 0.48rem;
+}
+
+.quantum-run-item[aria-current="true"] {
+  border-color: #7ee6ff;
+  background: rgba(126, 230, 255, 0.13);
+}
+
+.quantum-run-item small {
+  display: block;
+  margin-top: 0.2rem;
+  color: rgba(255, 255, 255, 0.66);
+  font-weight: 750;
+  overflow-wrap: anywhere;
 }
 
 .result-controls {
@@ -1311,6 +1600,16 @@ a {
 .result-controls.small .tab-button {
   min-height: 34px;
   font-size: 0.9rem;
+}
+
+.result-controls.micro {
+  gap: 0.45rem;
+}
+
+.result-controls.micro .tab-button {
+  min-height: 30px;
+  padding: 0.38rem 0.52rem;
+  font-size: 0.78rem;
 }
 
 .results-layout,
@@ -1589,6 +1888,7 @@ a {
   }
 
   .hero-metrics,
+  .material-source-grid,
   .dataset-grid,
   .model-grid,
   .figure-grid,
@@ -1596,6 +1896,7 @@ a {
   .cockpit-grid,
   .classical-visual-layout,
   .concept-layout,
+  .quantum-model-layout,
   .architecture-layout,
   .visual-layout,
   .visual-layout.reverse,
@@ -1616,9 +1917,32 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .quantum-run-summary {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .flow-copy {
+    max-width: none;
+  }
+
+  .pipeline-list {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .pipeline-list li {
+    grid-template-columns: 1fr;
+    gap: 0.22rem;
+    padding: 0.55rem 0.45rem 0.1rem 0;
+  }
+
+  .quantum-run-note {
+    grid-template-columns: 1fr;
+  }
+
   .ablation-layout > .result-controls,
   .stability-layout > .result-controls,
-  .classical-visual-layout > .result-controls {
+  .classical-visual-layout > .result-controls,
+  .quantum-model-layout > .result-controls {
     grid-column: auto;
   }
 
@@ -1628,6 +1952,15 @@ a {
 
   .visual-stage {
     min-height: 440px;
+  }
+
+  .quantum-model-section {
+    scroll-margin-top: 148px;
+  }
+
+  .quantum-model-section .section-heading h2 {
+    font-size: clamp(2rem, 6.2vw, 3.2rem);
+    line-height: 1.16;
   }
 
   .cockpit-stage {
@@ -1659,6 +1992,7 @@ a {
   }
 
   .hero-metrics,
+  .material-source-grid,
   .heatmap,
   .lab-mini-grid {
     grid-template-columns: 1fr;
@@ -1678,6 +2012,91 @@ a {
 
   .hero {
     min-height: 820px;
+  }
+
+  .quantum-model-section {
+    scroll-margin-top: 156px;
+  }
+
+  .quantum-model-section .section-heading h2 {
+    font-size: clamp(1.95rem, 9vw, 2.75rem);
+    line-height: 1.18;
+  }
+
+  .quantum-model-section .section-heading p {
+    font-size: 1rem;
+    line-height: 1.62;
+  }
+
+  .quantum-flow {
+    gap: 0.85rem;
+  }
+
+  .quantum-flow > *,
+  .quantum-run-note,
+  .pipeline-list,
+  .quantum-run-summary,
+  .quantum-run-guidance,
+  .quantum-run-list {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .flow-copy > p:not(.section-kicker) {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  .pipeline-list {
+    display: flex;
+    grid-template-columns: none;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+  }
+
+  .pipeline-list li {
+    flex: 0 0 min(160px, 44vw);
+    padding: 0.48rem;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 6px;
+  }
+
+  .circuit-stage {
+    padding: 0.6rem;
+  }
+
+  .quantum-flow .result-controls {
+    gap: 0.35rem;
+  }
+
+  .quantum-run-summary,
+  .quantum-run-guidance,
+  .quantum-run-list {
+    display: flex;
+    grid-template-columns: none;
+    width: 100%;
+    overflow-x: auto;
+    max-height: none;
+    padding-bottom: 0.2rem;
+  }
+
+  .quantum-run-summary div {
+    flex: 0 0 148px;
+  }
+
+  .quantum-run-guidance p {
+    flex: 0 0 188px;
+  }
+
+  .quantum-run-guidance {
+    display: none;
+  }
+
+  .quantum-run-item {
+    flex: 0 0 150px;
   }
 
   .hero::before {

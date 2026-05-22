@@ -25,7 +25,8 @@ const i18n = {
     "Kapasite": "Capacity",
     "Seed": "Seed",
     "Yüksek Lisans Semineri - Şahin Atakan Emre": "Graduate Seminar - Şahin Atakan Emre",
-    "BACE, BBBP ve ClinTox veri setleri üzerinde klasik descriptor tabanlı modeller, moleküler grafik ağları, saf kuantum yöntemler ve hibrit kuantum-klasik başlık mimarisi aynı deneysel zeminde karşılaştırıldı.": "Classical descriptor-based models, molecular graph networks, purely quantum methods, and a hybrid quantum-classical head architecture were compared on the same experimental basis across the BACE, BBBP, and ClinTox datasets.",
+    "BACE, BBBP ve ClinTox veri setleri üzerinde klasik descriptor tabanlı modeller, moleküler grafik ağları, saf kuantum yöntemler ve hibrit kuantum-klasik başlık mimarisi aynı deneysel zeminde karşılaştırıldı.": "Classical descriptor-based models, molecular graph networks, purely quantum methods, and a hybrid quantum-classical head architecture were compared under the same experimental protocol across the BACE, BBBP, and ClinTox datasets.",
+    "BACE, BBBP ve ClinTox veri setleri üzerinde tanımlayıcı (descriptor) tabanlı modeller, moleküler grafik ağları, saf kuantum yöntemler ve hibrit kuantum-klasik başlık mimarisi aynı deneysel zeminde karşılaştırıldı.": "Descriptor-based classical models, molecular graph networks, purely quantum methods, and a hybrid quantum-classical head architecture were compared under the same experimental protocol across the BACE, BBBP, and ClinTox datasets.",
     "Hızlı bağlantılar": "Quick links",
     "Bulguları İncele": "Inspect Findings",
     "Kuantum Nedir?": "What Is Quantum?",
@@ -38,11 +39,24 @@ const i18n = {
     "Kuantum avantajı varsayılmadı; güçlü klasik referanslarla ölçüldü.": "Quantum advantage was not assumed; it was evaluated against strong classical baselines.",
     "Seminerin temel sorusu, kuantum modellerin moleküler özellik tahmininde hangi koşullarda anlamlı sinyal ürettiğidir. Bu nedenle SVM ve MLP gibi güçlü klasik yöntemler zayıflatılmadan korunmuş, QSVM, VQC, QGNN ve Hybrid QHead sonuçları aynı veri ayrımları ve aynı metrik ailesiyle değerlendirilmiştir.": "The central question of the seminar is under which conditions quantum models produce meaningful signal in molecular property prediction. Therefore, strong classical methods such as SVM and MLP were preserved without weakening, while QSVM, VQC, QGNN, and Hybrid QHead results were evaluated with the same data splits and metric family.",
     "Klasik descriptor tabanlı modeller küçük ve orta ölçekli moleküler verilerde güçlü referanstır.": "Classical descriptor-based models constitute strong baselines for small- and medium-scale molecular data.",
+    "Tanımlayıcı (descriptor) tabanlı klasik modeller küçük ve orta ölçekli moleküler verilerde güçlü referanstır.": "Descriptor-based classical models constitute strong baselines for small- and medium-scale molecular data.",
     "QSVM, VQC'ye göre daha kararlı saf kuantum sinyali üretmiştir.": "QSVM produced a more stable purely quantum signal than VQC.",
     "Hibrit kuantum başlık, bazı görevlerde klasik modellerle aynı performans bölgesine yaklaşmıştır.": "The hybrid quantum head approached the performance region of classical models in selected tasks.",
     "Materyal": "Material",
-    "Üç ilaç keşfi görevi, tek deneysel zemin": "Three drug discovery tasks on a common experimental basis",
+    "Üç ilaç keşfi görevi, tek deneysel zemin": "Three drug discovery tasks under one experimental protocol",
+    "Üç ilaç keşfi görevi, ortak deneysel protokol": "Three drug discovery tasks under a shared experimental protocol",
     "Moleküller SMILES dizgeleri üzerinden işlendi; descriptor tabanlı modeller için ECFP/Morgan parmak izleri, grafik modeller için atom-bağ yapıları kullanıldı.": "Molecules were processed through SMILES strings; ECFP/Morgan fingerprints were used for descriptor-based models, and atom-bond structures were used for graph models.",
+    "Moleküller SMILES dizgeleri üzerinden işlendi; tanımlayıcı (descriptor) tabanlı modeller için ECFP/Morgan parmak izleri, grafik modeller için atom-bağ yapıları kullanıldı.": "Molecules were processed through SMILES strings; ECFP/Morgan fingerprints were used for descriptor-based models, and atom-bond structures were used for graph models.",
+    "Veri kaynağı, kullanım amacı ve içerik özeti": "Data source, purpose, and content summary",
+    "Kaynak": "Source",
+    "MoleculeNet/DeepChem kaynaklı standart görevler": "Standard tasks sourced from MoleculeNet/DeepChem",
+    "BACE, BBBP ve ClinTox veri setleri MoleculeNet/DeepChem çizgisinden alınan moleküler özellik tahmini görevleridir. Her kayıt SMILES dizgesi ve ikili sınıf etiketiyle başlar.": "The BACE, BBBP, and ClinTox datasets are molecular property prediction tasks sourced from the MoleculeNet/DeepChem line. Each record starts with a SMILES string and a binary class label.",
+    "Ne için kullanıldı?": "What was it used for?",
+    "Klasik ve kuantum modeller için ortak zemin": "A common ground for classical and quantum models",
+    "Aynı veri ayrımları üzerinde klasik, grafik, saf kuantum, kuantum grafik ve hibrit modeller karşılaştırıldı; amaç kuantum üstünlüğü varsaymak değil, hangi koşulda sinyal oluştuğunu ölçmektir.": "Classical, graph, purely quantum, quantum-graph, and hybrid models were compared on the same data splits; the goal is not to assume quantum advantage, but to measure under which conditions signal appears.",
+    "Verinin içinde neler var?": "What is inside the data?",
+    "SMILES, etiket, temsil ve ayrım bilgisi": "SMILES, labels, representations, and split information",
+    "Geçerli SMILES kayıtları RDKit ile işlenir; ECFP/Morgan parmak izi, atom-bağ grafı, sınıf etiketi, eğitim-doğrulama-test ayrımı ve değerlendirme metrikleri bu hattan üretilir.": "Valid SMILES records are processed with RDKit; ECFP/Morgan fingerprints, atom-bond graphs, class labels, train-validation-test splits, and evaluation metrics are produced through this pipeline.",
     "Ön işleme sonrası kullanılan veri ayrımları": "Data splits used after preprocessing",
     "Veri seti": "Dataset",
     "Görev": "Task",
@@ -57,7 +71,8 @@ const i18n = {
     "Pozitif sınıf baskın": "Positive-class dominant",
     "Belirgin sınıf dengesizliği": "Pronounced class imbalance",
     "Verinin anlamı": "Data meaning",
-    "BACE, BBBP ve ClinTox aynı boyutta değil, aynı soruda da değil": "BACE, BBBP, and ClinTox do not have the same size or the same scientific question",
+    "BACE, BBBP ve ClinTox aynı boyutta değil, aynı soruda da değil": "BACE, BBBP, and ClinTox do not have the same size or represent the same biomedical task",
+    "BACE, BBBP ve ClinTox aynı büyüklükte değildir ve aynı biyomedikal görevi temsil etmez": "BACE, BBBP, and ClinTox differ in size and represent distinct biomedical tasks",
     "Veri setleri yalnızca satır sayısı olarak okunmadı. BACE enzim inhibisyonunu, BBBP kan-beyin bariyeri geçişini, ClinTox ise klinik toksisite sinyalini temsil eder. Sınıf dağılımı ve biyomedikal soru, model yorumunu doğrudan değiştirir.": "The datasets were not interpreted only as row counts. BACE represents enzyme inhibition, BBBP represents blood-brain barrier penetration, and ClinTox represents clinical toxicity signal. Class distribution and the biomedical question directly change model interpretation.",
     "Veri setlerinin biyomedikal anlam ve sınıf dağılım haritası": "Biomedical meaning and class-distribution map of the datasets",
     "Veri okuma kuralı": "Rule for reading the data",
@@ -96,11 +111,15 @@ const i18n = {
     "Kararlılık okuması": "Stability reading",
     "SVM gibi deterministik çizgilerde std sıfıra yakındır. QGNN ve bazı kuantum ayarlarında std büyüdükçe aynı ortalama daha dikkatli yorumlanmalıdır.": "For deterministic lines such as SVM, std is close to zero. As std increases for QGNN and some quantum settings, the same mean should be interpreted more cautiously.",
     "Molekül yolculuğu": "Molecular pipeline",
-    "SMILES dizgesinden kuantum ölçümüne kadar bütün hat tek sahnede": "The complete route from SMILES string to quantum measurement in a single scene",
-    "Bu görsel, seminerdeki deney hattını adım adım gösterir: molekül önce RDKit ile işlenir, ECFP parmak izine çevrilir, PCA veya kodlayıcı ile sıkıştırılır, kubitlere kodlanır ve ölçümden sonra klasik metriklerle değerlendirilir.": "This visual presents the seminar's experimental pipeline step by step: the molecule is first processed with RDKit, converted into an ECFP fingerprint, compressed with PCA or an encoder, encoded into qubits, and evaluated with classical metrics after measurement.",
-    "SMILES'tan kuantum ölçümüne molekül yolculuğu": "Molecular journey from SMILES to quantum measurement",
+    "SMILES dizgesinden kuantum ölçümüne kadar bütün hat tek sahnede": "The complete route from SMILES string to model decision in a single scene",
+    "SMILES dizgesinden model kararına kadar deney hattı tek sahnede": "The experimental pipeline from SMILES string to model decision in a single scene",
+    "Bu görsel, seminerdeki deney hattını adım adım gösterir: molekül önce RDKit ile işlenir, ECFP parmak izine çevrilir, PCA veya kodlayıcı ile sıkıştırılır, kubitlere kodlanır ve ölçümden sonra klasik metriklerle değerlendirilir.": "This visual presents the seminar's experimental pipeline step by step: the molecule is first processed with RDKit, converted into an ECFP fingerprint, branched into classical, graph, purely quantum, and hybrid routes, and evaluated with classical metrics.",
+    "Bu görsel, seminerdeki deney hattını adım adım gösterir: molekül önce RDKit ile işlenir, ECFP parmak izine çevrilir, klasik, grafik, saf kuantum ve hibrit kollara ayrılır; kuantum kolda ölçümden sonra, tüm kollarda ise klasik metriklerle değerlendirilir.": "This visual presents the seminar's experimental pipeline step by step: the molecule is first processed with RDKit, converted into an ECFP fingerprint, branched into classical, graph, purely quantum, and hybrid routes, and then evaluated with classical metrics; the quantum route also passes through measurement.",
+    "SMILES'tan kuantum ölçümüne molekül yolculuğu": "Molecular journey from SMILES to model decision",
+    "SMILES'tan model kararına molekül yolculuğu": "Molecular journey from SMILES to model decision",
     "Yöntem aileleri": "Method families",
     "Klasik çizgi, grafik öğrenme, saf kuantum ve hibrit başlık aynı sahnede": "Classical baselines, graph learning, purely quantum models, and the hybrid head in one view",
+    "Klasik referanslar, grafik öğrenme, saf kuantum ve hibrit başlık aynı sahnede": "Classical baselines, graph learning, purely quantum models, and the hybrid head in one view",
     "Klasik ve grafik yöntemler nasıl çalışır?": "How do classical and graph-based methods operate?",
     "SVM, MLP, GNN ve GAT için dinamik karar akışı": "Dynamic decision flow for SVM, MLP, GNN, and GAT",
     "Seminerde klasik taraf iki çizgide ilerler: ECFP/Morgan parmak izleri üzerinde SVM ve MLP; moleküler grafik üzerinde GNN ve GAT. Molekül görüntü olarak değil, atom-bağ grafiği olarak işlendiği için bu bölümde CNN yerine GNN/GAT akışı anlatılır.": "The classical side of the seminar proceeds along two routes: SVM and MLP on ECFP/Morgan fingerprints, and GNN and GAT on molecular graphs. Because the molecule is processed as an atom-bond graph rather than as an image, this section explains the GNN/GAT flow rather than presenting CNN as an experimental model.",
@@ -111,19 +130,100 @@ const i18n = {
     "Kuantum hesaplama, klasik bitlerden farklı olarak kubit durumları üzerinde çalışır. Bu bölüm, seminerde kullanılan QML akışının arkasındaki kubit, süperpozisyon, dolanıklık, ölçüm ve devre derinliği kavramlarını hareketli grafikle açar.": "Unlike classical computing over bits, quantum computing operates on qubit states. This section uses motion graphics to unpack the qubit, superposition, entanglement, measurement, and circuit-depth concepts behind the QML pipeline used in the seminar.",
     "Kuantum kavram seçimi": "Quantum concept selection",
     "Kuantum kavramlarını anlatan dinamik görsel": "Dynamic visual explaining quantum concepts",
+    "Quantum ML nasıl çalışır?": "How does quantum machine learning work?",
+    "Kuantum makine öğrenmesi nasıl çalışır?": "How does quantum machine learning work?",
+    "Veri kuantum özellik uzayına taşınır, ölçüm klasik karara döner": "Data is mapped into a quantum feature space, and measurement returns a classical decision",
+    "Veri kuantum özellik uzayına taşınır; ölçüm klasik karara döner": "Data is mapped into a quantum feature space; measurement returns a classical decision",
+    "Bu sahne, seminerdeki kuantum modellerin ortak çalışma fikrini gösterir: moleküler veri önce sayısal temsile çevrilir, kubitlere kodlanır, devrede etkileşime sokulur, ölçüm istatistiği alınır ve sonuç AUROC gibi klasik metriklerle raporlanır.": "This scene shows the common operating idea behind the quantum models in the seminar: molecular data is first converted into a numerical representation, encoded into qubits, made to interact inside the circuit, measured as statistics, and reported with classical metrics such as AUROC.",
+    "Quantum ML model seçimi": "Quantum ML model selection",
+    "Kuantum makine öğrenmesi model seçimi": "Quantum machine learning model selection",
+    "Quantum ML modellerinin veri, devre, ölçüm ve sonuç çalışma akışı": "Data, circuit, measurement, and result workflow of quantum machine learning models",
+    "Kuantum makine öğrenmesi modellerinin veri, devre, ölçüm ve sonuç çalışma akışı": "Data, circuit, measurement, and result workflow of quantum machine learning models",
+    "Kuantum ML sahnesi": "Quantum ML scene",
+    "Klasik veri devreye girer, kuantum dönüşümden sonra ölçüm tekrar klasik karara çevrilir.": "Classical data enters the circuit; after the quantum transformation, measurement is converted back into a classical decision.",
+    "Veri kodlama": "Data encoding",
+    "Kuantum dönüşüm": "Quantum transformation",
+    "Ölçüm istatistiği": "Measurement statistics",
+    "Klasik karar": "Classical decision",
+    "Kuantum özellik uzayı": "Quantum feature space",
+    "çekirdek matrisi": "kernel matrix",
+    "parametrik ansatz": "parametric ansatz",
+    "kuantum mesaj geçirme": "quantum message passing",
+    "dondurulmuş encoder": "frozen encoder",
+    "ölçüm -> olasılık": "measurement -> probability",
+    "sonuç paneli": "result panel",
+    "ECFP -> PCA -> q boyut": "ECFP -> PCA -> q dimension",
+    "ECFP -> frozen MLP -> q temsil": "ECFP -> frozen MLP -> q representation",
+    "Veri girişi": "Data input",
+    "Devre fikri": "Circuit idea",
+    "Çıktı": "Output",
+    "Seminer bulgusu": "Seminar finding",
+    "ECFP + PCA ile q boyutlu veri, ZZFeatureMap ile kuantum özellik uzayına taşınır; çekirdek matrisi ölçülen benzerliklerden hesaplanır.": "q-dimensional data produced by ECFP + PCA is mapped into a quantum feature space with ZZFeatureMap; the kernel matrix is computed from measured similarities.",
+    "Özellik haritası veriyi devreye kodlar; eğitilebilir ansatz ölçümden gelen kayıp üzerinden optimize edilir.": "The feature map encodes data into the circuit; the trainable ansatz is optimized through the loss obtained from measurement.",
+    "Moleküler grafikten gelen düğüm mesajları kuantum katman fikriyle yeniden ağırlıklandırılır.": "Node messages from the molecular graph are reweighted through the idea of a quantum layer.",
+    "Dondurulmuş MLP kodlayıcı kompakt temsil üretir; Quantum Head bu temsili parametrik devrede işler.": "The frozen MLP encoder produces a compact representation; the Quantum Head processes that representation in a parametric circuit.",
+    "Kuantum çekirdek + klasik SVM": "Quantum kernel + classical SVM",
+    "Ansatz + klasik optimizer": "Ansatz + classical optimizer",
+    "Graf mesajları + kuantum katman sinyali": "Graph messages + quantum-layer signal",
+    "Klasik encoder + parametrik quantum head": "Classical encoder + parametric quantum head",
+    "Klasik kodlayıcı + parametrik kuantum başlık": "Classical encoder + parametric quantum head",
+    "graf + kuantum katman sinyali": "graph + quantum-layer signal",
+    "ölçüm skoru": "measurement score",
+    "Çekirdek ölçümü": "Kernel measurement",
+    "Kij": "Kij",
+    "1-K": "1-K",
+    "QSVM, VQC'ye göre daha kararlı saf kuantum çizgi verdi.": "QSVM produced a more stable purely quantum line than VQC.",
+    "VQC öğretici fakat küçük veri rejiminde daha değişken kaldı.": "VQC is instructive, but remained more variable in the small-data regime.",
+    "QGNN bazı görevlerde sinyal verdi; genel üstünlük iddiası için olgun değil.": "QGNN produced signal on some tasks, but is not mature enough for a general superiority claim.",
+    "Hybrid QHead BACE ve ClinTox üzerinde klasik çizgiye en çok yaklaşan kuantum-klasik yapı oldu.": "Hybrid QHead was the quantum-classical structure that came closest to the classical baselines on BACE and ClinTox.",
+    "Hybrid QHead BACE ve ClinTox üzerinde klasik referanslara en çok yaklaşan kuantum-klasik yapı oldu.": "Hybrid QHead was the quantum-classical structure that came closest to the classical baselines on BACE and ClinTox.",
     "Model mimarileri": "Model architectures",
     "Seminerde kullanılan bütün modeller aynı görsel dilde açılıyor": "All models used in the seminar are explained in a shared visual language",
     "Her sekme, modelin veri girişinden karar skoruna kadar izlediği yolu dinamik olarak çizer. Klasik makine öğrenmesi, grafik öğrenme, saf kuantum ve hibrit yapıların farkı böylece doğrudan okunabilir.": "Each tab dynamically draws the route followed by a model from data input to decision score. The differences between classical machine learning, graph learning, purely quantum, and hybrid structures can therefore be read directly.",
     "Model mimarisi seçimi": "Model architecture selection",
     "Model mimarilerini anlatan dinamik görsel": "Dynamic visual explaining model architectures",
     "Kuantum anlatımı": "Quantum narrative",
+    "Kuantum deney hattı": "Quantum experimental pipeline",
     "ECFP uzayından kubitlere, kubitlerden karar sınırına": "From ECFP space to qubits, and from qubits to the decision boundary",
+    "Saf kuantum ve hibrit başlık aynı devre mantığında ayrışır": "Purely quantum and hybrid-head routes diverge within the same circuit logic",
     "Saf kuantum descriptor hattında ECFP vektörleri PCA ile kubit sayısına indirgenir ve ZZFeatureMap üzerinden kuantum özellik uzayına taşınır. Hibrit yaklaşımda ise dondurulmuş MLP kodlayıcı daha kompakt bir gömme temsil üretir; Quantum Head bu temsil üzerinde parametrik devreyle karar katmanı kurar.": "In the purely quantum descriptor pipeline, ECFP vectors are reduced to the qubit dimension with PCA and mapped into a quantum feature space through ZZFeatureMap. In the hybrid approach, the frozen MLP encoder produces a more compact embedding; the Quantum Head builds a parametric-circuit decision layer on that representation.",
+    "Bu bölüm, genel kuantum makine öğrenmesi fikrinden sonra çalışmadaki iki deneysel kuantum yolunu ayırır. Saf kuantum tanımlayıcı hattında ECFP vektörleri PCA ile kubit sayısına indirgenir ve ZZFeatureMap üzerinden kuantum özellik uzayına taşınır. Hibrit yaklaşımda ise dondurulmuş MLP kodlayıcı daha kompakt bir gömme temsil üretir; Quantum Head bu temsil üzerinde parametrik devreyle karar katmanı kurar.": "After the general quantum machine learning idea, this section separates the two experimental quantum routes in the study. In the purely quantum descriptor route, ECFP vectors are reduced to the qubit count with PCA and mapped into a quantum feature space through ZZFeatureMap. In the hybrid route, the frozen MLP encoder produces a more compact embedding representation; Quantum Head builds a parametric-circuit decision layer on that representation.",
     "Moleküler yapı metinsel gösterim olarak alınır.": "The molecular structure is taken as a textual representation.",
     "Radius 2, 1024 bit Morgan parmak izi üretilir.": "A radius-2, 1024-bit Morgan fingerprint is generated.",
     "Klasik özellik uzayı kubit sayısına veya gömme uzayına indirgenir.": "The classical feature space is reduced to the qubit dimension or embedding space.",
     "Parametrik kuantum devre temsil üzerinde dönüşüm uygular.": "The parametric quantum circuit transforms the representation.",
     "Sonuçlar çoklu metriklerle raporlanır.": "Results are reported with multiple metrics.",
+    "Kuantum model seçimi": "Quantum model selection",
+    "Kuantum veri seti seçimi": "Quantum dataset selection",
+    "Deney satırı seçimi": "Experiment-row selection",
+    "Seçili deney": "Selected experiment",
+    "CSV kapsamı": "CSV coverage",
+    "En iyi satır": "Best row",
+    "Ayar listesi": "Configuration list",
+    "Deney": "Experiment",
+    "satır": "rows",
+    "q/d kaydı": "q/d records",
+    "Tüm veri": "Full data",
+    "Veri fraksiyonu": "Data fraction",
+    "Kategori": "Category",
+    "Seed": "Seed",
+    "Devre şeması notu": "Circuit-diagram note",
+    "q0-qn eşit aralıkla çizilir; bu fiziksel mesafe veya özellik büyüklüğü değil, devredeki kubit tellerini gösteren standart şemadır. Kapı sırası soldan sağa okunur.": "q0-qn are drawn with equal spacing; this is not a physical distance or feature magnitude, but the standard schematic layout of qubit wires. Gate order is read from left to right.",
+    "q0-qn eşit aralık devre teli gösterimidir; fiziksel mesafe değildir.": "Equal q0-qn spacing is a circuit-wire convention, not physical distance.",
+    "Bu sekmeler liderlik CSV'sindeki bütün kuantum model satırlarını görev ve model ailesine göre açar; q/d ayarı, veri fraksiyonu ve AUROC birlikte izlenir.": "These tabs expose all quantum-model rows in the leaderboard CSV by task and model family; the q/d setting, data fraction, and AUROC are read together.",
+    "Sekmeler CSV'deki deney satırlarını açar; q/d, veri fraksiyonu ve AUROC birlikte okunur.": "Tabs open the experiment rows in the CSV; q/d, data fraction, and AUROC are read together.",
+    "Kuantum özellik akışı": "Quantum feature flow",
+    "Klasik kodlayıcı": "Classical encoder",
+    "Özellik haritası": "Feature map",
+    "Kuantum çekirdek": "Quantum kernel",
+    "Mesaj geçirme": "Message passing",
+    "Graf": "Graph",
+    "Okuma": "Readout",
+    "Ölçüm": "Measurement",
+    "Metrik": "Metric",
+    "q0-qn eşit aralıkla çizilir; fiziksel mesafe değil devre teli düzenidir.": "q0-qn are drawn with equal spacing; this is circuit-wire layout, not physical distance.",
+    "Yeşil akış q arttıkça daha yoğun/kalın, d arttıkça biraz daha hızlı çizilir; bu fiziksel hız değil görsel kapasite göstergesidir.": "The green flow becomes denser/thicker as q increases and slightly faster as d increases; this is a visual capacity indicator, not physical speed.",
+    "Yeşil akış q ile yoğunlaşır, d ile hızlanır; fiziksel hız değil kapasite göstergesidir.": "The green flow gets denser with q and faster with d; it is a capacity indicator, not physical speed.",
     "Animasyonlu kuantum devre görselleştirmesi": "Animated quantum circuit visualization",
     "Deneysel yöntem ve CSV veri katmanı": "Experimental method and CSV data layer",
     "Analiz CSV'lerinden beslenen araştırma paneli": "Research panel driven by analysis CSV files",
@@ -152,12 +252,17 @@ const i18n = {
     "Kuantum ablasyon küpü": "Quantum ablation cube",
     "Kubit sayısı, devre derinliği ve model ailesi aynı yüzeyde": "Qubit count, circuit depth, and model family on the same surface",
     "Hybrid QHead, QSVM ve VQC için q/d ayarları veri setine göre farklı davranır. Bu panel daha fazla kubit veya daha fazla derinliğin otomatik olarak daha iyi olmadığını gösterir.": "q/d settings for Hybrid QHead, QSVM, and VQC behave differently by dataset. This panel shows that more qubits or greater depth are not automatically better.",
+    "Hybrid QHead, QSVM, VQC ve QGNN için CSV'de bulunan q/d kayıtları veri setine göre farklı davranır. Bu panel daha fazla kubit veya daha fazla derinliğin otomatik olarak daha iyi olmadığını gösterir.": "The q/d records available in the CSV for Hybrid QHead, QSVM, VQC, and QGNN behave differently by dataset. This panel shows that more qubits or greater depth are not automatically better.",
+    "Bu panel benchmark CSV'sindeki mevcut q/d varyasyonlarını çizer; QGNN için kayıt tek q4-d2 ise tek hücre olarak gösterilir.": "This panel draws the available q/d variations in the benchmark CSV; if QGNN has only a single q4-d2 record, it is shown as a single cell.",
+    "Küp benzersiz q/d hücrelerini çizer; aşağıdaki liste CSV'deki bütün deney satırlarını gösterir. Veri fraksiyonu deneyleri q8-d2 f0.25 gibi ayrıca yazılır.": "The cube draws unique q/d cells; the list below shows all experiment rows in the CSV. Data-fraction experiments are written separately, such as q8-d2 f0.25.",
+    "Bu model için CSV'de tek q/d kaydı bulundu; panel bunu tek hücre olarak gösterir.": "Only one q/d record was found in the CSV for this model; the panel shows it as a single cell.",
+    "Yüzey, kubit sayısı ve derinlik arttıkça başarının her zaman artmadığını gösterir. Veri seti ile devre kapasitesi arasında görev bazlı uyum gerekir.": "The surface shows that performance does not always increase as qubit count and depth grow. A task-specific fit is required between the dataset and circuit capacity.",
     "Ablasyon model seçimi": "Ablation model selection",
     "Ablasyon veri seti seçimi": "Ablation dataset selection",
     "Kuantum ablasyon yüzeyi": "Quantum ablation surface",
     "Seed/tekrar kararlılığı": "Seed/repetition stability",
     "En yüksek skor kadar standart sapma da kararın parçası": "Standard deviation is part of the decision, not only the highest score",
-    "Beş farklı seed ile tekrarlanan deneylerde standart sapma model kararlılığını gösterir. QGNN ve bazı kuantum ayarlarında değişkenlik artarken, hibrit ve klasik çizgide daha kontrollü davranışlar görülebilir.": "In experiments repeated with five different seeds, the standard deviation indicates model stability. Variability increases for QGNN and some quantum settings, whereas more controlled behavior can be observed in the hybrid and classical lines.",
+    "Beş farklı seed ile tekrarlanan deneylerde standart sapma model kararlılığını gösterir. QGNN ve bazı kuantum ayarlarında değişkenlik artarken, hibrit ve klasik çizgide daha kontrollü davranışlar görülebilir.": "In experiments repeated with five different seeds, the standard deviation indicates model stability. Variability increases for QGNN and some quantum settings, whereas more controlled behavior can be observed in the hybrid and classical baseline families.",
     "Kararlılık veri seti seçimi": "Stability dataset selection",
     "Seed ve tekrar kararlılığı grafiği": "Seed and repetition stability chart",
     "ClinTox okuması": "ClinTox interpretation",
@@ -172,7 +277,7 @@ const i18n = {
     "BBBP - tüm yöntem ve parametre varyasyonları": "BBBP - all method and parameter variations",
     "ClinTox - tüm yöntem ve parametre varyasyonları": "ClinTox - all method and parameter variations",
     "Sınırlılıklar ve araştırma dürüstlüğü": "Limitations and research integrity",
-    "Bu çalışma kuantum üstünlüğü iddiası değil, dengeli karşılaştırma sunar": "This study does not claim quantum supremacy; it presents a balanced comparison",
+    "Bu çalışma kuantum üstünlüğü iddiası değil, dengeli karşılaştırma sunar": "This study does not claim quantum advantage; it presents a balanced comparison",
     "Seminerin akademik gücü, güçlü klasik referansları korumasından ve dengesiz veri setlerinde tek metrikle karar vermemesinden gelir.": "The academic strength of the seminar comes from preserving strong classical baselines and avoiding single-metric decisions on imbalanced datasets.",
     "Seminer sonucu": "Seminar conclusion",
     "Kuantum modeller güçlü klasik referanslarla birlikte okunmalıdır.": "Quantum models should be interpreted together with strong classical baselines.",
@@ -181,6 +286,7 @@ const i18n = {
     "SVM en güçlü, hibrit GNN ile rekabetçi.": "SVM is strongest, while the hybrid model is competitive with GNN.",
     "Hibrit ve MLP AUROC yakın; eşik metrikleri belirleyici.": "Hybrid and MLP AUROC values are close; threshold-dependent metrics are decisive.",
     "Klasik descriptor tabanlı": "Classical descriptor-based",
+    "Tanımlayıcı (descriptor) tabanlı klasik": "Descriptor-based classical",
     "Klasik grafik": "Classical graph",
     "Saf kuantum descriptor hattı": "Pure quantum descriptor pipeline",
     "Kuantum grafik": "Quantum graph",
@@ -194,6 +300,7 @@ const i18n = {
     "Ana metrik AUROC'tur; dengesiz görevlerde PR-AUC, F1, MCC, duyarlılık ve özgüllük birlikte yorumlanır.": "The primary metric is AUROC; in imbalanced tasks, PR-AUC, F1, MCC, sensitivity, and specificity are interpreted together.",
     "SVM: marj tabanlı karar sınırı": "SVM: margin-based decision boundary",
     "MLP: doğrusal olmayan descriptor temsili": "MLP: nonlinear descriptor representation",
+    "MLP: doğrusal olmayan tanımlayıcı temsili": "MLP: nonlinear descriptor representation",
     "BACE ve BBBP için güçlü ana karşılaştırma": "Strong primary comparison for BACE and BBBP",
     "GNN: komşuluk mesajları": "GNN: neighborhood messages",
     "GAT: öğrenilebilir dikkat katsayıları": "GAT: learnable attention coefficients",
@@ -209,6 +316,8 @@ const i18n = {
     "SVM sonuçları deterministik değerlerdir": "SVM results are deterministic values",
     "descriptor tabanlı klasik çizgi": "descriptor-based classical line",
     "descriptor tabanlı sinir ağı": "descriptor-based neural network",
+    "tanımlayıcı tabanlı sinir ağı": "descriptor-based neural network",
+    "SVM ve MLP, radius 2 ve 1024 bit ECFP/Morgan parmak izleri üzerinde güçlü klasik referans ailesini oluşturur.": "SVM and MLP form the strong classical baseline family on radius-2, 1024-bit ECFP/Morgan fingerprints.",
     "klasik grafik öğrenme": "classical graph learning",
     "dikkat tabanlı grafik öğrenme": "attention-based graph learning",
     "SVM: ECFP uzayında en geniş marjı bulur": "SVM: finds the widest margin in ECFP space",
@@ -282,6 +391,8 @@ const i18n = {
     "Değerlendirme": "Evaluation",
     "Aynı veri ayrımı ve metrik ailesiyle karşılaştırma": "Comparison with the same data split and metric family",
     "klasik descriptor tabanlı": "classical descriptor-based",
+    "tanımlayıcı (descriptor) tabanlı klasik": "descriptor-based classical",
+    "tanımlayıcı tabanlı klasik referans": "descriptor-based classical baseline",
     "klasik grafik": "classical graph",
     "saf kuantum": "pure quantum",
     "saf kuantum descriptor hattı": "pure quantum descriptor pipeline",
@@ -291,6 +402,7 @@ const i18n = {
     "hibrit kuantum-klasik": "hybrid quantum-classical",
     "ECFP/Morgan parmak izleri üzerinde marj tabanlı karar sınırı kurar ve küçük-orta veri rejiminde güçlü referans üretir.": "It builds a margin-based decision boundary on ECFP/Morgan fingerprints and provides a strong baseline in small- to medium-data regimes.",
     "ECFP vektörünü yoğun katmanlardan geçirerek doğrusal olmayan descriptor temsili öğrenir.": "It learns a nonlinear descriptor representation by passing the ECFP vector through dense layers.",
+    "ECFP vektörünü yoğun katmanlardan geçirerek doğrusal olmayan tanımlayıcı temsili öğrenir.": "It learns a nonlinear descriptor representation by passing the ECFP vector through dense layers.",
     "Molekülü atom düğümleri ve bağ kenarları olarak işler; komşuluk mesajlarını toplayarak grafik temsili üretir.": "It processes the molecule as atom nodes and bond edges, producing a graph representation by aggregating neighborhood messages.",
     "GNN çizgisini dikkat katsayılarıyla genişletir; her komşunun katkısını öğrenilebilir ağırlıklarla ayarlar.": "It extends the GNN line with attention coefficients, adjusting each neighbor's contribution with learnable weights.",
     "ECFP özellikleri PCA ile kubit boyutuna indirilir; kuantum özellik haritası ile çekirdek matrisi hesaplanır.": "ECFP features are reduced to the qubit dimension with PCA, and the kernel matrix is computed with a quantum feature map.",
@@ -317,16 +429,22 @@ const i18n = {
     "Havuzlama": "Pooling",
     "MLP kodlayıcı": "MLP encoder",
     "Dondurulmuş temsil": "Frozen representation",
+    "Dondurulmuş MLP + QHead": "Frozen MLP + QHead",
     "Yapı": "Structure",
+    "Seminer rolü": "Seminar role",
     "Marj maksimizasyonu": "Margin maximization",
     "BBBP için en güçlü ana referans": "Strongest primary baseline for BBBP",
+    "Radius 2 Morgan parmak izi": "Radius-2 Morgan fingerprint",
     "Sabit uzunluklu descriptor": "Fixed-length descriptor",
     "Çok katmanlı algılayıcı": "Multilayer perceptron",
-    "BACE ve ClinTox için güçlü klasik çizgi": "Strong classical line for BACE and ClinTox",
+    "BACE ve ClinTox için güçlü klasik çizgi": "Strong classical baseline for BACE and ClinTox",
     "Atom-bağ grafiği": "Atom-bond graph",
     "Komşuluk mesajları": "Neighborhood messages",
+    "BBBP ve ClinTox için anlamlı grafik sinyali": "Meaningful graph signal for BBBP and ClinTox",
     "Öğrenilebilir dikkat": "Learnable attention",
+    "ClinTox üzerinde güçlü grafik alternatifi": "Strong graph alternative on ClinTox",
     "PCA ile q boyutlu descriptor": "q-dimensional descriptor after PCA",
+    "PCA ile q boyutlu tanımlayıcı": "q-dimensional descriptor after PCA",
     "VQC'ye göre daha kararlı saf kuantum çizgi": "More stable pure-quantum line than VQC",
     "Kubit sayısına indirgenmiş özellik": "Feature reduced to the qubit count",
     "Parametrik kuantum devre": "Parametric quantum circuit",
@@ -471,7 +589,7 @@ const i18n = {
     "dondurulmuş kodlayıcı": "frozen encoder",
     "kuantum başlık": "quantum head",
     "SMILES -> RDKit -> ECFP -> PCA/Kodlayıcı -> Kubitler -> Metrikler": "SMILES -> RDKit -> ECFP -> PCA/Encoder -> Qubits -> Metrics",
-    "Aynı molekül kaydı klasik çizgide SVM/MLP/GNN'e, kuantum çizgide QSVM/VQC/QGNN'e, hibrit çizgide dondurulmuş MLP + Quantum Head'e ayrılır.": "The same molecular record branches into SVM/MLP/GNN in the classical line, QSVM/VQC/QGNN in the quantum line, and frozen MLP + Quantum Head in the hybrid line.",
+    "Aynı molekül kaydı klasik çizgide SVM/MLP/GNN'e, kuantum çizgide QSVM/VQC/QGNN'e, hibrit çizgide dondurulmuş MLP + Quantum Head'e ayrılır.": "The same molecular record branches into SVM/MLP/GNN in the classical baseline route, QSVM/VQC/QGNN in the quantum route, and frozen MLP + Quantum Head in the hybrid route.",
     "Bir kubit ölçülmeden önce Bloch küresi üzerinde bir yön gibi düşünülebilir. Yön değiştikçe ölçüm olasılıkları değişir.": "Before measurement, a qubit can be interpreted as a direction on the Bloch sphere. As the direction changes, measurement probabilities change.",
     "Süperpozisyon olasılıkların basit toplamı değil; genlik ve faz birlikte devre içindeki girişimi belirler.": "Superposition is not a simple sum of probabilities; amplitude and phase jointly determine interference inside the circuit.",
     "Modelin sonundaki ölçüm, kuantum durumunu sınıflandırıcıya aktarılabilir klasik istatistiğe çevirir.": "Measurement at the end of the model converts the quantum state into classical statistics that can be transferred to the classifier.",
@@ -671,8 +789,10 @@ function updateLanguageButtons() {
 function redrawLanguageCanvases() {
   drawHeroQuantumCanvas();
   drawQuantumConceptCanvas();
+  drawQuantumModelFlowCanvas();
   drawClassicalVisualCanvas();
   drawModelArchitectureCanvas();
+  drawCircuitCanvas();
   drawDatasetMeaningCanvas();
   drawDataRepresentationCanvas();
   drawExperimentMatrixCanvas();
@@ -722,6 +842,8 @@ function rerenderLocalizedContent() {
   renderDataCockpit();
   renderExperimentMatrixNote();
   renderQuantumConcepts();
+  renderQuantumModelScene();
+  renderQuantumRun();
   renderModelArchitecture();
   renderJourneyNote();
   renderResults();
@@ -765,11 +887,11 @@ const datasets = {
 
 const modelFamilies = [
   {
-    title: "Klasik descriptor tabanlı",
+    title: "Tanımlayıcı (descriptor) tabanlı klasik",
     tag: "ECFP",
     color: "#00a6c8",
-    text: "SVM ve MLP, radius 2 ve 1024 bit ECFP/Morgan parmak izleri üzerinde güçlü klasik referans çizgisini oluşturur.",
-    points: ["SVM: marj tabanlı karar sınırı", "MLP: doğrusal olmayan descriptor temsili", "BACE ve BBBP için güçlü ana karşılaştırma"],
+    text: "SVM ve MLP, radius 2 ve 1024 bit ECFP/Morgan parmak izleri üzerinde güçlü klasik referans ailesini oluşturur.",
+    points: ["SVM: marj tabanlı karar sınırı", "MLP: doğrusal olmayan tanımlayıcı temsili", "BACE ve BBBP için güçlü ana karşılaştırma"],
   },
   {
     title: "Klasik grafik",
@@ -812,7 +934,7 @@ const classicalVisuals = [
   {
     key: "svm",
     label: "SVM",
-    family: "descriptor tabanlı klasik çizgi",
+    family: "tanımlayıcı tabanlı klasik referans",
     color: "#00a6c8",
     title: "SVM: ECFP uzayında en geniş marjı bulur",
     summary: "SMILES verisi Morgan/ECFP parmak izine çevrilir. SVM bu yüksek boyutlu vektörde iki sınıfı ayıran karar sınırını ve destek vektörlerini kullanır.",
@@ -825,7 +947,7 @@ const classicalVisuals = [
   {
     key: "mlp",
     label: "MLP",
-    family: "descriptor tabanlı sinir ağı",
+    family: "tanımlayıcı tabanlı sinir ağı",
     color: "#00a6c8",
     title: "MLP: sabit descriptor vektöründen karar fonksiyonu öğrenir",
     summary: "ECFP vektörü yoğun katmanlardan geçer; aktivasyon ve dropout ile doğrusal olmayan bir temsil oluşur, son katman sınıf skorunu üretir.",
@@ -938,11 +1060,54 @@ const quantumConcepts = [
   },
 ];
 
+const quantumModelScenes = [
+  {
+    key: "qsvm",
+    label: "QSVM",
+    color: "#7b61ff",
+    input: "ECFP + PCA ile q boyutlu veri, ZZFeatureMap ile kuantum özellik uzayına taşınır; çekirdek matrisi ölçülen benzerliklerden hesaplanır.",
+    circuit: "Kuantum çekirdek + klasik SVM",
+    output: "çekirdek matrisi",
+    finding: "QSVM, VQC'ye göre daha kararlı saf kuantum çizgi verdi.",
+    models: ["qsvm"],
+  },
+  {
+    key: "vqc",
+    label: "VQC",
+    color: "#7b61ff",
+    input: "Özellik haritası veriyi devreye kodlar; eğitilebilir ansatz ölçümden gelen kayıp üzerinden optimize edilir.",
+    circuit: "Ansatz + klasik optimizer",
+    output: "ölçüm -> olasılık",
+    finding: "VQC öğretici fakat küçük veri rejiminde daha değişken kaldı.",
+    models: ["vqc"],
+  },
+  {
+    key: "qgnn",
+    label: "QGNN",
+    color: "#c93d8d",
+    input: "Moleküler grafikten gelen düğüm mesajları kuantum katman fikriyle yeniden ağırlıklandırılır.",
+    circuit: "Graf mesajları + kuantum katman sinyali",
+    output: "graf + kuantum katman sinyali",
+    finding: "QGNN bazı görevlerde sinyal verdi; genel üstünlük iddiası için olgun değil.",
+    models: ["qgnn"],
+  },
+  {
+    key: "hybrid_qhead",
+    label: "Hybrid QHead",
+    color: "#e0a100",
+    input: "Dondurulmuş MLP kodlayıcı kompakt temsil üretir; Quantum Head bu temsili parametrik devrede işler.",
+    circuit: "Klasik kodlayıcı + parametrik kuantum başlık",
+    output: "ölçüm skoru",
+    finding: "Hybrid QHead BACE ve ClinTox üzerinde klasik referanslara en çok yaklaşan kuantum-klasik yapı oldu.",
+    models: ["hybrid_qhead"],
+  },
+];
+
 const architectureModels = [
   {
     key: "svm",
     label: "SVM",
-    family: "klasik descriptor tabanlı",
+    family: "tanımlayıcı (descriptor) tabanlı klasik",
     color: "#00a6c8",
     summary: "ECFP/Morgan parmak izleri üzerinde marj tabanlı karar sınırı kurar ve küçük-orta veri rejiminde güçlü referans üretir.",
     blocks: ["SMILES", "ECFP 1024", "Ölçekleme", "SVM marjı", "Karar skoru"],
@@ -951,9 +1116,9 @@ const architectureModels = [
   {
     key: "mlp",
     label: "MLP",
-    family: "klasik descriptor tabanlı",
+    family: "tanımlayıcı (descriptor) tabanlı klasik",
     color: "#00a6c8",
-    summary: "ECFP vektörünü yoğun katmanlardan geçirerek doğrusal olmayan descriptor temsili öğrenir.",
+    summary: "ECFP vektörünü yoğun katmanlardan geçirerek doğrusal olmayan tanımlayıcı temsili öğrenir.",
     blocks: ["SMILES", "ECFP 1024", "Yoğun katman + aktivasyon", "Dropout", "Sigmoid"],
     facts: [["Girdi", "Sabit uzunluklu descriptor"], ["Yapı", "Çok katmanlı algılayıcı"], ["Seminer rolü", "BACE ve ClinTox için güçlü klasik çizgi"]],
   },
@@ -982,7 +1147,7 @@ const architectureModels = [
     color: "#7b61ff",
     summary: "ECFP özellikleri PCA ile kubit boyutuna indirilir; kuantum özellik haritası ile çekirdek matrisi hesaplanır.",
     blocks: ["ECFP", "PCA q", "ZZFeatureMap", "Kuantum çekirdek", "SVM"],
-    facts: [["Girdi", "PCA ile q boyutlu descriptor"], ["Yapı", "Kuantum çekirdek"], ["Seminer rolü", "VQC'ye göre daha kararlı saf kuantum çizgi"]],
+    facts: [["Girdi", "PCA ile q boyutlu tanımlayıcı"], ["Yapı", "Kuantum çekirdek"], ["Seminer rolü", "VQC'ye göre daha kararlı saf kuantum çizgi"]],
   },
   {
     key: "vqc",
@@ -1093,7 +1258,7 @@ const dataSources = {
 };
 
 const categoryLabels = {
-  classical_descriptor: "klasik descriptor tabanlı",
+  classical_descriptor: "tanımlayıcı (descriptor) tabanlı klasik",
   classical_graph: "klasik grafik",
   classical_ablation: "klasik veri ablasyonu",
   quantum_descriptor: "saf kuantum descriptor hattı",
@@ -1114,6 +1279,12 @@ const experimentMatrixModels = [
   { key: "vqc", label: "VQC", family: "quantum" },
   { key: "qgnn", label: "QGNN", family: "quantumGraph" },
   { key: "hybrid_qhead", label: "Hybrid", family: "hybrid" },
+];
+const quantumRunModels = [
+  { key: "hybrid_qhead", label: "Hybrid QHead", color: "#e0a100" },
+  { key: "qsvm", label: "QSVM", color: "#7b61ff" },
+  { key: "vqc", label: "VQC", color: "#00a6c8" },
+  { key: "qgnn", label: "QGNN", color: "#c93d8d" },
 ];
 const representativeSeedOffsets = [-0.92, -0.42, 0.05, 0.48, 0.88];
 
@@ -1151,6 +1322,10 @@ const limitations = [
 let selectedDataset = "bace";
 let selectedHybrid = "bace";
 let selectedConcept = "qubit";
+let selectedQuantumModel = "qsvm";
+let selectedQuantumRunModel = "hybrid_qhead";
+let selectedQuantumRunTask = "bace";
+let selectedQuantumExperimentId = "";
 let selectedClassicalVisual = "svm";
 let selectedArchitecture = "svm";
 let selectedMetricLabModel = "hybrid";
@@ -1165,6 +1340,7 @@ let conceptFrame = 0;
 let classicalFrame = 0;
 let architectureFrame = 0;
 let extendedFrame = 0;
+let circuitFrame = 0;
 let benchmarkRows = [];
 let liveLeaderboardRows = [];
 let figureManifest = [];
@@ -1176,6 +1352,12 @@ function formatMetric(value, digits = 4) {
 function toNumber(value, fallback = 0) {
   const n = Number(value);
   return Number.isFinite(n) ? n : fallback;
+}
+
+function maybeNumber(value) {
+  if (value === undefined || value === null || String(value).trim() === "") return null;
+  const n = Number(value);
+  return Number.isFinite(n) ? n : null;
 }
 
 async function fetchText(path) {
@@ -1279,15 +1461,91 @@ function getBenchmarkRows({ task, model, category } = {}) {
   });
 }
 
+function quantumModelLabel(model) {
+  return quantumRunModels.find((item) => item.key === model)?.label || modelLabelFromRow({ model });
+}
+
+function quantumModelColor(model) {
+  return quantumRunModels.find((item) => item.key === model)?.color || "#7ee6ff";
+}
+
+function quantumMetricValue(row) {
+  return toNumber(row?.primary_metric_mean || row?.auroc_mean);
+}
+
+function quantumMetricStd(row) {
+  return toNumber(row?.primary_metric_std || row?.auroc_std);
+}
+
+function quantumDataFraction(row) {
+  const direct = maybeNumber(row?.data_fraction);
+  if (direct !== null && direct > 0 && direct < 1) return direct;
+  const match = String(row?.experiment_id || "").match(/frac([0-9.]+)/);
+  if (!match) return null;
+  const inferred = Number(match[1]);
+  return Number.isFinite(inferred) && inferred > 0 && inferred < 1 ? inferred : null;
+}
+
+function quantumExperimentKey(row, index = 0) {
+  return row?.experiment_id || [
+    row?.task || selectedQuantumRunTask,
+    row?.model || selectedQuantumRunModel,
+    row?.n_qubits || "q",
+    row?.circuit_depth || "d",
+    quantumDataFraction(row) ?? "full",
+    index,
+  ].join("-");
+}
+
+function quantumExperimentLabel(row) {
+  const q = row?.n_qubits || "-";
+  const depth = row?.circuit_depth || "-";
+  const fraction = quantumDataFraction(row);
+  return fraction ? `q${q}-d${depth} f${fraction}` : `q${q}-d${depth}`;
+}
+
+function quantumExperimentMeta(row) {
+  const parts = [
+    tx(categoryLabels[row?.category] || row?.category || "kuantum"),
+    quantumDataFraction(row) ? `${tx("Veri fraksiyonu")} ${quantumDataFraction(row)}` : tx("Tüm veri"),
+    `${tx("Seed")} ${row?.seed_count || "-"}`,
+  ];
+  return parts.join(" · ");
+}
+
+function getQuantumRunRows({ task = selectedQuantumRunTask, model = selectedQuantumRunModel } = {}) {
+  const source = benchmarkRows.length ? benchmarkRows : liveLeaderboardRows;
+  return source
+    .filter((row) => row.task === task && row.model === model && row.n_qubits && row.circuit_depth)
+    .sort((a, b) => quantumMetricValue(b) - quantumMetricValue(a));
+}
+
+function selectedQuantumRunRows() {
+  return getQuantumRunRows({ task: selectedQuantumRunTask, model: selectedQuantumRunModel });
+}
+
+function getSelectedQuantumRunRow() {
+  const rows = selectedQuantumRunRows();
+  if (!rows.length) return null;
+  const selectedIndex = rows.findIndex((row, index) => quantumExperimentKey(row, index) === selectedQuantumExperimentId);
+  const index = selectedIndex >= 0 ? selectedIndex : 0;
+  selectedQuantumExperimentId = quantumExperimentKey(rows[index], index);
+  return rows[index];
+}
+
+function countLabel(count, trLabel, enSingular, enPlural = `${enSingular}s`) {
+  return currentLanguage === "en" ? `${count} ${count === 1 ? enSingular : enPlural}` : `${count} ${trLabel}`;
+}
+
 function taskLabel(task) {
   return datasets[task]?.label || task.toUpperCase();
 }
 
-function fitCanvas(canvas, heightRatio = 0.54, minHeight = 320) {
+function fitCanvas(canvas, heightRatio = 0.54, minHeight = 320, maxHeight = Infinity) {
   const rect = canvas.getBoundingClientRect();
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
   const width = Math.max(320, rect.width);
-  const height = Math.max(minHeight, width * heightRatio);
+  const height = Math.min(maxHeight, Math.max(minHeight, width * heightRatio));
   const pixelWidth = Math.floor(width * dpr);
   const pixelHeight = Math.floor(height * dpr);
   if (canvas.width !== pixelWidth) canvas.width = pixelWidth;
@@ -1389,7 +1647,7 @@ function renderModelFamilies() {
     <article class="model-card" style="border-top: 4px solid ${model.color}">
       <div class="model-top">
         <h3>${tx(model.title)}</h3>
-        <span class="model-tag">${model.tag}</span>
+        <span class="model-tag">${tx(model.tag)}</span>
       </div>
       <p>${tx(model.text)}</p>
       <ul>
@@ -1478,6 +1736,159 @@ function renderConceptNote() {
 function renderQuantumConcepts() {
   renderConceptTabs();
   renderConceptNote();
+}
+
+function renderQuantumModelTabs() {
+  const target = document.getElementById("quantumModelTabs");
+  if (!target) return;
+  target.innerHTML = quantumModelScenes.map((scene) => `
+    <button class="tab-button" type="button" data-quantum-model="${scene.key}" aria-pressed="${scene.key === selectedQuantumModel}">
+      ${scene.label}
+    </button>
+  `).join("");
+  target.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedQuantumModel = button.dataset.quantumModel;
+      renderQuantumModelScene();
+      drawQuantumModelFlowCanvas();
+    });
+  });
+}
+
+function quantumModelRows(scene) {
+  return taskOrder.map((task) => {
+    const row = bestMatrixCell(task, scene.key);
+    return {
+      task,
+      label: row?.[0] || scene.label,
+      auroc: row?.[2] || 0,
+      std: row?.[3] || 0,
+    };
+  });
+}
+
+function renderQuantumModelNote() {
+  const target = document.getElementById("quantumModelNote");
+  if (!target) return;
+  const scene = quantumModelScenes.find((item) => item.key === selectedQuantumModel);
+  const rows = quantumModelRows(scene).filter((row) => row.auroc);
+  const best = rows.sort((a, b) => b.auroc - a.auroc)[0];
+  target.innerHTML = `
+    <span class="metric-pill" style="border-left: 4px solid ${scene.color}">${scene.label}</span>
+    <h3>${tx("Kuantum ML sahnesi")}</h3>
+    <p>${tx("Klasik veri devreye girer, kuantum dönüşümden sonra ölçüm tekrar klasik karara çevrilir.")}</p>
+    <div class="quantum-model-facts">
+      <div class="quantum-model-fact"><span>${tx("Veri girişi")}</span><strong>${tx(scene.input)}</strong></div>
+      <div class="quantum-model-fact"><span>${tx("Devre fikri")}</span><strong>${tx(scene.circuit)}</strong></div>
+      <div class="quantum-model-fact"><span>${tx("Çıktı")}</span><strong>${tx(scene.output)}</strong></div>
+      <div class="quantum-model-fact"><span>${tx("Seminer bulgusu")}</span><strong>${tx(scene.finding)}</strong></div>
+      <div class="quantum-model-fact"><span>${tx("En yüksek AUROC")}</span><strong>${best ? `${taskLabel(best.task)} · ${formatMetric(best.auroc)} ± ${formatMetric(best.std)}` : "-"}</strong></div>
+    </div>
+  `;
+}
+
+function renderQuantumModelScene() {
+  renderQuantumModelTabs();
+  renderQuantumModelNote();
+}
+
+function renderQuantumRunControls() {
+  const modelTabs = document.getElementById("quantumRunModelTabs");
+  const taskTabs = document.getElementById("quantumRunTaskTabs");
+  const experimentTabs = document.getElementById("quantumExperimentTabs");
+  if (!modelTabs || !taskTabs || !experimentTabs) return;
+
+  modelTabs.innerHTML = quantumRunModels.map((model) => `
+    <button class="tab-button" type="button" data-quantum-run-model="${model.key}" aria-pressed="${model.key === selectedQuantumRunModel}">
+      ${model.label}
+    </button>
+  `).join("");
+
+  taskTabs.innerHTML = taskOrder.map((task) => `
+    <button class="tab-button" type="button" data-quantum-run-task="${task}" aria-pressed="${task === selectedQuantumRunTask}">
+      ${taskLabel(task)}
+    </button>
+  `).join("");
+
+  const rows = selectedQuantumRunRows();
+  getSelectedQuantumRunRow();
+  experimentTabs.innerHTML = rows.map((row, index) => {
+    const key = quantumExperimentKey(row, index);
+    const pressed = key === selectedQuantumExperimentId;
+    return `
+      <button class="tab-button" type="button" data-quantum-experiment="${key}" aria-pressed="${pressed}" title="${quantumExperimentMeta(row)}">
+        ${quantumExperimentLabel(row)}
+      </button>
+    `;
+  }).join("");
+
+  modelTabs.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedQuantumRunModel = button.dataset.quantumRunModel;
+      selectedQuantumExperimentId = "";
+      renderQuantumRunControls();
+      renderQuantumRunNote();
+      drawCircuitCanvas();
+    });
+  });
+
+  taskTabs.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedQuantumRunTask = button.dataset.quantumRunTask;
+      selectedQuantumExperimentId = "";
+      renderQuantumRunControls();
+      renderQuantumRunNote();
+      drawCircuitCanvas();
+    });
+  });
+
+  experimentTabs.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedQuantumExperimentId = button.dataset.quantumExperiment;
+      renderQuantumRunControls();
+      renderQuantumRunNote();
+      drawCircuitCanvas();
+    });
+  });
+}
+
+function renderQuantumRunNote() {
+  const target = document.getElementById("quantumRunNote");
+  if (!target) return;
+  const rows = selectedQuantumRunRows();
+  const selected = getSelectedQuantumRunRow();
+  if (!rows.length || !selected) {
+    target.innerHTML = `<div class="quantum-run-guidance"><p>${tx("Bu model için ablasyon kaydı bulunamadı.")}</p></div>`;
+    return;
+  }
+  const selectedIndex = rows.findIndex((row, index) => quantumExperimentKey(row, index) === selectedQuantumExperimentId);
+  const best = rows.reduce((acc, row) => quantumMetricValue(row) > quantumMetricValue(acc) ? row : acc, rows[0]);
+  target.innerHTML = `
+    <div class="quantum-run-summary">
+      <div><span>${tx("Seçili deney")}</span><strong>${taskLabel(selected.task)} · ${quantumModelLabel(selected.model)} · ${quantumExperimentLabel(selected)}</strong></div>
+      <div><span>AUROC</span><strong>${formatMetric(quantumMetricValue(selected))} ± ${formatMetric(quantumMetricStd(selected))}</strong></div>
+      <div><span>${tx("CSV kapsamı")}</span><strong>${countLabel(rows.length, "satır", "row")}</strong></div>
+    </div>
+    <div class="quantum-run-guidance">
+      <p><strong>${tx("Devre şeması notu")}:</strong> ${tx("q0-qn eşit aralık devre teli gösterimidir; fiziksel mesafe değildir.")}</p>
+      <p>${tx("Yeşil akış q ile yoğunlaşır, d ile hızlanır; fiziksel hız değil kapasite göstergesidir.")}</p>
+      <p><strong>${tx("Ayar listesi")}:</strong> ${tx("Sekmeler CSV'deki deney satırlarını açar; q/d, veri fraksiyonu ve AUROC birlikte okunur.")}</p>
+    </div>
+    <div class="quantum-run-list" aria-label="${tx("Ayar listesi")}">
+      ${rows.map((row, index) => `
+        <div class="quantum-run-item" aria-current="${index === selectedIndex}">
+          <span>${index === rows.indexOf(best) ? tx("En iyi satır") : `${tx("Deney")} ${index + 1}`}</span>
+          <strong>${quantumExperimentLabel(row)} · ${formatMetric(quantumMetricValue(row))}</strong>
+          <small>${quantumExperimentMeta(row)}</small>
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
+function renderQuantumRun() {
+  renderQuantumRunControls();
+  renderQuantumRunNote();
 }
 
 function renderArchitectureTabs() {
@@ -1923,13 +2334,13 @@ function renderLeaderboardTable() {
 }
 
 function familyLabel(family) {
-  return {
-    classical: "klasik descriptor tabanlı",
+  return tx({
+    classical: "tanımlayıcı (descriptor) tabanlı klasik",
     graph: "klasik grafik",
     quantum: "saf kuantum",
     quantumGraph: "kuantum grafik",
     hybrid: "hibrit",
-  }[family] || family;
+  }[family] || family);
 }
 
 function renderHybrid() {
@@ -2259,6 +2670,7 @@ function renderAblationControls() {
     ["hybrid_qhead", "Hybrid QHead"],
     ["qsvm", "QSVM"],
     ["vqc", "VQC"],
+    ["qgnn", "QGNN"],
   ];
   modelTabs.innerHTML = models.map(([key, label]) => `
     <button class="tab-button" type="button" data-ablation-model="${key}" aria-pressed="${key === selectedAblationModel}">
@@ -2314,14 +2726,20 @@ function renderAblationNote() {
     return;
   }
   const best = rows.reduce((acc, row) => toNumber(row.auroc_mean) > toNumber(acc.auroc_mean) ? row : acc, rows[0]);
+  const uniqueCells = new Set(rows.map((row) => `q${row.n_qubits}-d${row.circuit_depth}`)).size;
   target.innerHTML = `
     <h3>${selectedAblationModel.toUpperCase()} · ${taskLabel(selectedAblationTask)}</h3>
-    <p>${tx("En iyi ayar")} <strong>q${best.n_qubits}-d${best.circuit_depth}</strong> ${tx("olarak okunuyor.")}</p>
+    <p><strong>${tx("En iyi ayar")}:</strong> q${best.n_qubits}-d${best.circuit_depth}</p>
     <div class="metric-list">
       <div class="metric-line"><span>AUROC</span><strong>${formatMetric(best.auroc_mean)} ± ${formatMetric(best.auroc_std || 0)}</strong></div>
       <div class="metric-line"><span>${tx("Dengeli doğr.")}</span><strong>${formatMetric(best.balanced_accuracy_mean || 0)}</strong></div>
       <div class="metric-line"><span>F1</span><strong>${formatMetric(best.f1_mean || 0)}</strong></div>
+      <div class="metric-line"><span>${tx("CSV kapsamı")}</span><strong>${countLabel(uniqueCells, "q/d hücresi", "q/d cell")} · ${countLabel(rows.length, "deney satırı", "experiment row")}</strong></div>
       <div class="metric-line"><span>${tx("Yorum")}</span><strong>${tx("Daha fazla kubit garanti değil")}</strong></div>
+    </div>
+    <p>${tx("Küp benzersiz q/d hücrelerini çizer; aşağıdaki liste CSV'deki bütün deney satırlarını gösterir. Veri fraksiyonu deneyleri q8-d2 f0.25 gibi ayrıca yazılır.")}</p>
+    <div class="ablation-variants">
+      ${rows.map((row) => `<span>${quantumExperimentLabel(row)} · ${formatMetric(quantumMetricValue(row))}</span>`).join("")}
     </div>
   `;
 }
@@ -2372,7 +2790,10 @@ function drawAblationCubeCanvas() {
   });
 
   const legendX = width * 0.78;
-  drawWrappedText(ctx, "Yüzey, kubit sayısı ve derinlik arttıkça başarının her zaman artmadığını gösterir. Veri seti ile devre kapasitesi arasında görev bazlı uyum gerekir.", legendX, height * 0.25, width * 0.18, 18, "rgba(255,255,255,0.76)", "600 14px Inter, sans-serif");
+  const legendText = rows.length === 1
+    ? "Bu model için CSV'de tek q/d kaydı bulundu; panel bunu tek hücre olarak gösterir."
+    : "Yüzey, kubit sayısı ve derinlik arttıkça başarının her zaman artmadığını gösterir. Veri seti ile devre kapasitesi arasında görev bazlı uyum gerekir.";
+  drawWrappedText(ctx, legendText, legendX, height * 0.25, width * 0.18, 18, "rgba(255,255,255,0.76)", "600 14px Inter, sans-serif");
 }
 
 function renderStabilityControls() {
@@ -2559,7 +2980,7 @@ function figureKindLabel(kind) {
 }
 
 function figureModelLabel(model) {
-  return {
+  return tx({
     all: "tüm yöntemler",
     svm: "SVM",
     mlp: "MLP",
@@ -2569,7 +2990,7 @@ function figureModelLabel(model) {
     vqc: "VQC",
     qgnn: "QGNN",
     hybrid_qhead: "Hybrid QHead",
-  }[model] || model;
+  }[model] || model);
 }
 
 function figureDisplayTitle(item) {
@@ -2918,6 +3339,238 @@ function drawSupervisedConcept(ctx, width, height, concept) {
   ctx.font = "800 14px JetBrains Mono, monospace";
   ctx.fillText("loss -> parametre güncelleme", width * 0.43, height * 0.72);
   drawWrappedText(ctx, "Bu seminerde tüm modeller denetimli ikili sınıflandırma olarak karşılaştırıldı: aynı veri ayrımı, aynı hedef, aynı metrik ailesi.", width * 0.12, height * 0.82, width * 0.76, 18, "rgba(255,255,255,0.74)", "600 14px Inter, sans-serif");
+}
+
+function drawQuantumModelFlowCanvas() {
+  const canvas = document.getElementById("quantumModelFlowCanvas");
+  if (!canvas) return;
+  const scene = quantumModelScenes.find((item) => item.key === selectedQuantumModel) || quantumModelScenes[0];
+  const compact = canvas.getBoundingClientRect().width < 760;
+  const { ctx, width, height } = fitCanvas(canvas, compact ? 1.08 : 0.46, compact ? 760 : 470, compact ? Infinity : 640);
+  const t = extendedFrame;
+  const rows = quantumModelRows(scene);
+
+  ctx.clearRect(0, 0, width, height);
+  ctx.fillStyle = "#101216";
+  ctx.fillRect(0, 0, width, height);
+  drawCanvasGrid(ctx, width, height, scene.color);
+
+  ctx.fillStyle = withAlpha(scene.color, 0.18);
+  ctx.beginPath();
+  ctx.arc(width * 0.78, height * 0.18, Math.min(width, height) * 0.24, 0, Math.PI * 2);
+  ctx.fill();
+
+  drawBoundedWrappedText(ctx, `${tx("Kuantum ML sahnesi")} · ${scene.label}`, 28, 38, width - 56, 18, "#ffffff", "800 19px Inter, sans-serif", 1);
+  drawBoundedWrappedText(ctx, "Klasik veri devreye girer, kuantum dönüşümden sonra ölçüm tekrar klasik karara çevrilir.", 28, 62, width - 56, 17, "rgba(255,255,255,0.72)", "700 13px Inter, sans-serif", compact ? 2 : 1);
+
+  if (compact) {
+    drawCompactQuantumModelFlow(ctx, width, height, scene, rows, t);
+    return;
+  }
+
+  const top = 112;
+  const bottom = 34;
+  const panelH = height - top - bottom;
+  const gap = 22;
+  const leftW = width * 0.22;
+  const midW = width * 0.34;
+  const measureW = width * 0.19;
+  const resultW = width - 56 - leftW - midW - measureW - gap * 3;
+  const x1 = 28;
+  const x2 = x1 + leftW + gap;
+  const x3 = x2 + midW + gap;
+  const x4 = x3 + measureW + gap;
+
+  drawQmlDataPanel(ctx, x1, top, leftW, panelH, scene, t);
+  drawArrow(ctx, x1 + leftW + 5, top + panelH * 0.5, x2 - 8, top + panelH * 0.5, scene.color);
+  drawQmlCircuitPanel(ctx, x2, top, midW, panelH, scene, t);
+  drawArrow(ctx, x2 + midW + 5, top + panelH * 0.5, x3 - 8, top + panelH * 0.5, scene.color);
+  drawQmlMeasurementPanel(ctx, x3, top, measureW, panelH, scene, t);
+  drawArrow(ctx, x3 + measureW + 5, top + panelH * 0.5, x4 - 8, top + panelH * 0.5, scene.color);
+  drawQmlResultPanel(ctx, x4, top, resultW, panelH, scene, rows);
+}
+
+function drawCompactQuantumModelFlow(ctx, width, height, scene, rows, t) {
+  const left = 24;
+  const top = 102;
+  const panelW = width - 48;
+  const gap = 16;
+  const panelH = (height - top - 32 - gap * 3) / 4;
+  const panels = [
+    (y) => drawQmlDataPanel(ctx, left, y, panelW, panelH, scene, t),
+    (y) => drawQmlCircuitPanel(ctx, left, y, panelW, panelH, scene, t),
+    (y) => drawQmlMeasurementPanel(ctx, left, y, panelW, panelH, scene, t),
+    (y) => drawQmlResultPanel(ctx, left, y, panelW, panelH, scene, rows),
+  ];
+  panels.forEach((drawPanel, index) => {
+    const y = top + index * (panelH + gap);
+    drawPanel(y);
+    if (index < panels.length - 1) {
+      drawArrow(ctx, width * 0.5, y + panelH + 2, width * 0.5, y + panelH + gap - 4, scene.color);
+    }
+  });
+}
+
+function drawQmlPanelFrame(ctx, x, y, width, height, title, color) {
+  ctx.fillStyle = "rgba(255,255,255,0.055)";
+  roundRect(ctx, x, y, width, height, 8);
+  ctx.fill();
+  ctx.strokeStyle = withAlpha(color, 0.72);
+  ctx.lineWidth = 1.4;
+  ctx.stroke();
+  drawBoundedWrappedText(ctx, title, x + 14, y + 24, width - 28, 13, color, "800 11px JetBrains Mono, monospace", 1);
+}
+
+function withQmlPanelContentClip(ctx, x, y, width, height, draw) {
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(x + 8, y + 34, Math.max(1, width - 16), Math.max(1, height - 42));
+  ctx.clip();
+  draw();
+  ctx.restore();
+}
+
+function drawQmlDataPanel(ctx, x, y, width, height, scene, t) {
+  drawQmlPanelFrame(ctx, x, y, width, height, "Veri kodlama", scene.color);
+  withQmlPanelContentClip(ctx, x, y, width, height, () => {
+    const shortPanel = height < 170;
+    const labelLineHeight = shortPanel ? 13 : 15;
+    const labelY = y + height - (shortPanel ? 20 : 34);
+    const moleculeY = y + height * 0.38;
+    if (scene.key === "qgnn") {
+      drawMoleculeGlyph(ctx, x + width * 0.5, moleculeY, Math.min(width, height) * 0.2, "#24a148");
+      drawBoundedWrappedText(ctx, "Moleküler grafik", x + 16, labelY, width - 32, labelLineHeight, "rgba(255,255,255,0.74)", "800 12px Inter, sans-serif", shortPanel ? 1 : 2);
+      return;
+    }
+
+    if (scene.key === "hybrid_qhead") {
+      const networkH = shortPanel ? height * 0.36 : height * 0.46;
+      drawDenseNetwork(ctx, x + width * 0.08, y + height * 0.25, width * 0.46, networkH, "#00a6c8", false);
+      drawQuantumWires(ctx, x + width * 0.62, y + height * 0.38, width * 0.28, Math.max(32, height * 0.2), scene.color);
+      drawBoundedWrappedText(ctx, "ECFP -> frozen MLP -> q temsil", x + 16, labelY, width - 32, labelLineHeight, "rgba(255,255,255,0.74)", "800 12px Inter, sans-serif", shortPanel ? 1 : 2);
+      return;
+    }
+
+    drawFingerprintBits(ctx, x + 16, y + height * 0.32, width - 32, height * 0.18, t);
+    const dots = scene.key === "qsvm" ? 34 : 26;
+    for (let i = 0; i < dots; i += 1) {
+      const px = x + width * (0.18 + ((i * 19) % 64) / 100);
+      const py = y + height * (0.62 + ((i * 31) % 18) / 100);
+      ctx.fillStyle = i % 2 ? "#00a6c8" : scene.color;
+      ctx.beginPath();
+      ctx.arc(px, py + Math.sin(t * 2.2 + i) * 3, 3, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    drawBoundedWrappedText(ctx, "ECFP -> PCA -> q boyut", x + 16, labelY, width - 32, labelLineHeight, "rgba(255,255,255,0.74)", "800 12px Inter, sans-serif", shortPanel ? 1 : 2);
+  });
+}
+
+function drawQmlCircuitPanel(ctx, x, y, width, height, scene, t) {
+  drawQmlPanelFrame(ctx, x, y, width, height, "Kuantum dönüşüm", scene.color);
+  withQmlPanelContentClip(ctx, x, y, width, height, () => {
+    const shortPanel = height < 170;
+    const wireX = x + width * 0.08;
+    const wireY = y + height * (shortPanel ? 0.32 : 0.34);
+    drawQuantumWires(ctx, wireX, wireY, width * 0.82, height * (shortPanel ? 0.22 : 0.28), scene.color);
+
+    if (scene.key === "qsvm") {
+      const matrixX = x + width * 0.66;
+      const matrixY = y + height * (shortPanel ? 0.27 : 0.34);
+      const cell = Math.min(shortPanel ? 14 : 18, width * 0.045);
+      for (let r = 0; r < 5; r += 1) {
+        for (let c = 0; c < 5; c += 1) {
+          ctx.fillStyle = withAlpha(scene.color, 0.18 + (((r + c + Math.floor(t * 3)) % 5) / 5) * 0.68);
+          ctx.fillRect(matrixX + c * cell, matrixY + r * cell, cell - 2, cell - 2);
+        }
+      }
+      drawBoundedWrappedText(ctx, "K(x_i,x_j)", matrixX, matrixY + cell * 5 + 18, width - (matrixX - x) - 18, 13, "#ffffff", "800 11px JetBrains Mono, monospace", 1);
+    }
+
+    if (scene.key === "vqc" || scene.key === "hybrid_qhead") {
+      for (let i = 0; i < 4; i += 1) {
+        const kx = x + width * (0.16 + i * 0.18);
+        const ky = y + height * (shortPanel ? 0.62 : 0.72);
+        const radius = shortPanel ? 14 : 18;
+        ctx.strokeStyle = withAlpha(scene.color, 0.78);
+        ctx.beginPath();
+        ctx.arc(kx, ky, radius, 0, Math.PI * 2);
+        ctx.stroke();
+        drawArrow(ctx, kx, ky, kx + Math.cos(t * 2 + i) * (radius - 4), ky + Math.sin(t * 2 + i) * (radius - 4), scene.color);
+        drawBoundedWrappedText(ctx, `θ${i + 1}`, kx - 8, ky + (shortPanel ? 25 : 32), 34, 12, "#ffffff", "800 10px JetBrains Mono, monospace", 1);
+      }
+    }
+
+    if (scene.key === "qgnn") {
+      for (let i = 0; i < 5; i += 1) {
+        const px = x + width * (0.17 + i * 0.15);
+        const py = y + height * ((shortPanel ? 0.62 : 0.72) + Math.sin(t * 2 + i) * 0.04);
+        ctx.fillStyle = i % 2 ? "#24a148" : scene.color;
+        ctx.beginPath();
+        ctx.arc(px, py, shortPanel ? 5 : 6, 0, Math.PI * 2);
+        ctx.fill();
+        if (i < 4) drawArrow(ctx, px + 8, py, x + width * (0.17 + (i + 1) * 0.15) - 8, py, scene.color);
+      }
+    }
+
+    drawBoundedWrappedText(ctx, scene.circuit, x + 16, y + height - (shortPanel ? 18 : 28), width - 32, shortPanel ? 13 : 15, "rgba(255,255,255,0.74)", "800 12px Inter, sans-serif", shortPanel ? 1 : 2);
+  });
+}
+
+function drawQmlMeasurementPanel(ctx, x, y, width, height, scene, t) {
+  drawQmlPanelFrame(ctx, x, y, width, height, scene.key === "qsvm" ? tx("Çekirdek ölçümü") : tx("Ölçüm istatistiği"), scene.color);
+  withQmlPanelContentClip(ctx, x, y, width, height, () => {
+    const shortPanel = height < 170;
+    const p0 = 0.55 + Math.sin(t * 1.9) * 0.2;
+    const measurementRows = scene.key === "qsvm"
+      ? [[tx("Kij"), p0], [tx("1-K"), 1 - p0]]
+      : [["P(0)", p0], ["P(1)", 1 - p0]];
+    drawProbabilityBars(ctx, x + 18, y + height * (shortPanel ? 0.26 : 0.28), width * 0.58, measurementRows, scene.color);
+    const meterX = x + width * 0.68;
+    const meterY = y + height * (shortPanel ? 0.56 : 0.58);
+    ctx.strokeStyle = "rgba(255,255,255,0.36)";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(meterX, meterY, Math.min(width, height) * (shortPanel ? 0.12 : 0.16), Math.PI, Math.PI * 2);
+    ctx.stroke();
+    drawArrow(ctx, meterX, meterY, meterX + Math.cos(t * 2.2 - 1.2) * width * 0.12, meterY + Math.sin(t * 2.2 - 1.2) * height * 0.08, "#ffffff");
+    if (scene.key === "qsvm") {
+      drawBoundedWrappedText(ctx, "|<ψi|ψj>|²", x + 18, y + height - (shortPanel ? 34 : 46), width - 32, 13, "#ffffff", "800 11px JetBrains Mono, monospace", 1);
+    }
+    drawBoundedWrappedText(ctx, scene.output, x + 18, y + height - (shortPanel ? 18 : 28), width - 32, shortPanel ? 12 : 13, "#ffffff", "800 11px JetBrains Mono, monospace", 1);
+  });
+}
+
+function drawQmlResultPanel(ctx, x, y, width, height, scene, rows) {
+  drawQmlPanelFrame(ctx, x, y, width, height, "sonuç paneli", scene.color);
+  withQmlPanelContentClip(ctx, x, y, width, height, () => {
+    const validRows = rows.filter((row) => row.auroc);
+    const max = Math.max(...validRows.map((row) => row.auroc), 1);
+    const min = Math.max(0.5, Math.min(...validRows.map((row) => row.auroc), 0.5) - 0.03);
+    const shortPanel = height < 170;
+    const findingLineHeight = shortPanel ? 13 : 15;
+    const findingLines = shortPanel ? 1 : 2;
+    const findingY = y + height - 14 - (findingLines - 1) * findingLineHeight;
+    const top = y + (shortPanel ? 38 : height * 0.28);
+    const bottomLimit = findingY - 18;
+    const rowH = Math.max(shortPanel ? 20 : 28, Math.min(shortPanel ? 28 : 44, (bottomLimit - top) / Math.max(1, validRows.length)));
+    validRows.forEach((row, index) => {
+      const yy = top + index * rowH;
+      if (yy + 30 > bottomLimit) return;
+      const barW = Math.max(36, width - 70);
+      const normalized = (row.auroc - min) / Math.max(0.0001, max - min);
+      ctx.fillStyle = datasets[row.task].accent;
+      ctx.font = `800 ${shortPanel ? 10 : 11}px JetBrains Mono, monospace`;
+      ctx.fillText(taskLabel(row.task), x + 16, yy + 12);
+      ctx.fillStyle = "rgba(255,255,255,0.11)";
+      roundRect(ctx, x + 16, yy + 20, barW, 12, 999);
+      ctx.fill();
+      ctx.fillStyle = mixColor("#273039", datasets[row.task].accent, Math.max(0.18, normalized));
+      roundRect(ctx, x + 16, yy + 20, Math.max(8, barW * normalized), 12, 999);
+      ctx.fill();
+      drawBoundedWrappedText(ctx, row.auroc.toFixed(4), x + 20 + barW, yy + 31, Math.max(30, width - barW - 32), 11, "#ffffff", "800 10px JetBrains Mono, monospace", 1);
+    });
+    drawBoundedWrappedText(ctx, scene.finding, x + 16, findingY, width - 32, findingLineHeight, "rgba(255,255,255,0.74)", "700 12px Inter, sans-serif", findingLines);
+  });
 }
 
 function drawClassicalVisualCanvas() {
@@ -3506,7 +4159,7 @@ function drawSvmPlane(ctx, x, y, width, height, color) {
   drawWrappedText(ctx, "SVM, descriptor uzayında sınıfları ayıran en geniş marjlı sınırı arar.", x + 22, y + 24, width * 0.82, 17, "rgba(255,255,255,0.76)", "600 14px Inter, sans-serif");
 }
 
-function drawDenseNetwork(ctx, x, y, width, height, color) {
+function drawDenseNetwork(ctx, x, y, width, height, color, showText = true) {
   const layers = [5, 7, 5, 1];
   const left = x + width * 0.16;
   const right = x + width * 0.84;
@@ -3540,7 +4193,9 @@ function drawDenseNetwork(ctx, x, y, width, height, color) {
     ctx.arc(nx, ny, 7, 0, Math.PI * 2);
     ctx.fill();
   });
-  drawWrappedText(ctx, "MLP, ECFP vektörünü katman katman soyutlayarak doğrusal olmayan karar fonksiyonu üretir.", x + 22, y + 24, width * 0.82, 17, "rgba(255,255,255,0.76)", "600 14px Inter, sans-serif");
+  if (showText) {
+    drawWrappedText(ctx, "MLP, ECFP vektörünü katman katman soyutlayarak doğrusal olmayan karar fonksiyonu üretir.", x + 22, y + 24, width * 0.82, 17, "rgba(255,255,255,0.76)", "600 14px Inter, sans-serif");
+  }
 }
 
 function drawGraphSignature(ctx, x, y, width, height, color, attention, quantum) {
@@ -3740,6 +4395,48 @@ function drawWrappedText(ctx, text, x, y, maxWidth, lineHeight, color, font) {
   });
   if (line) ctx.fillText(line, x, currentY);
   return currentY + lineHeight - y;
+}
+
+function canvasWrappedLines(ctx, text, maxWidth, font) {
+  text = tx(text);
+  const words = text.split(" ");
+  const lines = [];
+  let line = "";
+  ctx.font = font;
+  words.forEach((word) => {
+    const test = line ? `${line} ${word}` : word;
+    if (ctx.measureText(test).width > maxWidth && line) {
+      lines.push(line);
+      line = word;
+    } else {
+      line = test;
+    }
+  });
+  if (line) lines.push(line);
+  return lines;
+}
+
+function ellipsizeCanvasLine(ctx, line, maxWidth) {
+  if (ctx.measureText(line).width <= maxWidth) return line;
+  let output = line;
+  while (output.length > 1 && ctx.measureText(`${output.trimEnd()}...`).width > maxWidth) {
+    output = output.slice(0, -1);
+  }
+  return `${output.trimEnd()}...`;
+}
+
+function drawBoundedWrappedText(ctx, text, x, y, maxWidth, lineHeight, color, font, maxLines = 2) {
+  ctx.fillStyle = color;
+  ctx.font = font;
+  let lines = canvasWrappedLines(ctx, text, maxWidth, font);
+  if (lines.length > maxLines) {
+    lines = lines.slice(0, maxLines);
+    lines[maxLines - 1] = ellipsizeCanvasLine(ctx, lines[maxLines - 1], maxWidth);
+  }
+  lines.forEach((line, index) => {
+    ctx.fillText(line, x, y + index * lineHeight);
+  });
+  return lines.length * lineHeight;
 }
 
 function withAlpha(hex, alpha) {
@@ -4398,91 +5095,156 @@ function initQuantumField() {
   draw();
 }
 
-function initCircuitCanvas() {
+function circuitStagesForModel(model, depth) {
+  if (model === "hybrid_qhead") return ["ECFP", "Klasik kodlayıcı", "Kubit kodlama", `PQC d${depth}`, "Ölçüm"];
+  if (model === "qsvm") return ["ECFP", "PCA", "ZZFeatureMap", "Kuantum çekirdek", "SVM"];
+  if (model === "vqc") return ["ECFP", "PCA", "Özellik haritası", `Ansatz d${depth}`, "Ölçüm"];
+  if (model === "qgnn") return ["Graf", "Mesaj geçirme", "Q layer", "Okuma", "Metrik"];
+  return ["ECFP", "PCA", "Kubit kodlama", `PQC d${depth}`, "AUROC"];
+}
+
+function drawCircuitCanvas() {
   const canvas = document.getElementById("circuitCanvas");
-  const ctx = canvas.getContext("2d");
-  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let t = 0;
+  if (!canvas) return;
+  const rectWidth = canvas.getBoundingClientRect().width;
+  const compactCanvas = rectWidth < 620;
+  const { ctx, width, height } = fitCanvas(
+    canvas,
+    compactCanvas ? 0.82 : 0.46,
+    compactCanvas ? 340 : 380,
+    compactCanvas ? 500 : 560,
+  );
+  const selected = getSelectedQuantumRunRow() || {
+    task: "bace",
+    model: "hybrid_qhead",
+    n_qubits: "6",
+    circuit_depth: "1",
+    primary_metric_mean: "0.9913741924",
+    primary_metric_std: "0.0027355552",
+    category: "hybrid_quantum_descriptor",
+    seed_count: "5",
+  };
+  const model = selected.model || selectedQuantumRunModel;
+  const depth = Math.max(1, toNumber(selected.circuit_depth, 1));
+  const wires = Math.max(2, Math.min(8, toNumber(selected.n_qubits, 4)));
+  const accent = quantumModelColor(model);
+  const compact = width < 620;
+  const marginX = compact ? 48 : 64;
+  const top = compact ? 92 : 98;
+  const bottom = compact ? height - 118 : height - 126;
+  const gap = (bottom - top) / Math.max(1, wires - 1);
+  const gateH = Math.max(18, Math.min(30, gap * 0.74));
+  const gateW = compact ? 30 : 38;
+  const stages = circuitStagesForModel(model, depth);
+  const usableW = width - marginX * 2;
+  const t = circuitFrame;
 
-  function draw() {
-    const { width, height } = fitCanvas(canvas, 0.58, 420);
-    t += reduced ? 0 : 0.018;
-    ctx.clearRect(0, 0, width, height);
+  ctx.clearRect(0, 0, width, height);
+  ctx.fillStyle = "#101216";
+  ctx.fillRect(0, 0, width, height);
+  ctx.fillStyle = "rgba(255,255,255,0.035)";
+  ctx.fillRect(0, 0, width, height);
 
-    const wires = 6;
-    const marginX = 60;
-    const top = 74;
-    const gap = (height - 140) / (wires - 1);
-    const gateXs = [width * 0.24, width * 0.42, width * 0.6, width * 0.78];
-    const labels = ["ECFP", "PCA", "ZZ", "PQC", "AUROC"];
+  ctx.fillStyle = "#ffffff";
+  ctx.font = compact ? "800 15px Inter, sans-serif" : "800 18px Inter, sans-serif";
+  drawBoundedWrappedText(ctx, `${taskLabel(selected.task)} · ${quantumModelLabel(model)} ${quantumExperimentLabel(selected)}`, marginX, compact ? 26 : 30, width - marginX * 2, 20, "#ffffff", ctx.font, compact ? 2 : 1);
 
-    ctx.fillStyle = "rgba(255,255,255,0.035)";
-    ctx.fillRect(0, 0, width, height);
-    ctx.fillStyle = "#ffffff";
-    ctx.font = "800 18px Inter, sans-serif";
-    ctx.fillText("Kuantum özellik akışı", marginX, 34);
+  const metricText = `AUROC ${formatMetric(quantumMetricValue(selected))} ± ${formatMetric(quantumMetricStd(selected))}`;
+  ctx.fillStyle = "rgba(255,255,255,0.78)";
+  ctx.font = "800 12px JetBrains Mono, monospace";
+  drawBoundedWrappedText(ctx, metricText, marginX, compact ? 66 : 58, width - marginX * 2, 16, "rgba(255,255,255,0.72)", "800 12px JetBrains Mono, monospace", 1);
 
-    labels.forEach((label, index) => {
-      const x = marginX + index * ((width - marginX * 2) / (labels.length - 1));
-      ctx.fillStyle = index < 2 ? "#7ee6ff" : index === 4 ? "#f9c74f" : "#ff9588";
-      ctx.font = "800 12px JetBrains Mono, monospace";
-      ctx.fillText(label, x - 16, height - 34);
-    });
+  for (let i = 0; i < wires; i += 1) {
+    const y = top + i * gap;
+    ctx.strokeStyle = "rgba(255,255,255,0.22)";
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.moveTo(marginX, y);
+    ctx.lineTo(width - marginX, y);
+    ctx.stroke();
+    ctx.fillStyle = "rgba(255,255,255,0.76)";
+    ctx.font = "800 12px JetBrains Mono, monospace";
+    ctx.fillText(`q${i}`, compact ? 16 : 24, y + 4);
+  }
 
+  stages.forEach((label, gateIndex) => {
+    const x = marginX + gateIndex * (usableW / Math.max(1, stages.length - 1));
+    const stageColor = gateIndex < 2 ? "#7ee6ff" : gateIndex === stages.length - 1 ? "#f9c74f" : accent;
     for (let i = 0; i < wires; i += 1) {
       const y = top + i * gap;
-      ctx.strokeStyle = "rgba(255,255,255,0.22)";
-      ctx.lineWidth = 1.2;
-      ctx.beginPath();
-      ctx.moveTo(marginX, y);
-      ctx.lineTo(width - marginX, y);
+      const pulse = 0.48 + 0.52 * Math.sin(t * 3 + i * 0.65 + gateIndex * 0.8);
+      ctx.fillStyle = `${stageColor}${Math.round((0.46 + pulse * 0.36) * 255).toString(16).padStart(2, "0")}`;
+      ctx.strokeStyle = "rgba(255,255,255,0.52)";
+      ctx.lineWidth = 1;
+      roundRect(ctx, x - gateW / 2, y - gateH / 2, gateW, gateH, 6);
+      ctx.fill();
       ctx.stroke();
-      ctx.fillStyle = "rgba(255,255,255,0.74)";
-      ctx.font = "800 12px JetBrains Mono, monospace";
-      ctx.fillText(`q${i}`, 24, y + 4);
+      ctx.fillStyle = "#ffffff";
+      ctx.font = compact ? "800 9px JetBrains Mono, monospace" : "800 10px JetBrains Mono, monospace";
+      const gateLabel = gateIndex === 0 ? "x" : gateIndex === 1 ? "p" : gateIndex === stages.length - 1 ? "m" : "θ";
+      ctx.fillText(gateLabel, x - 4, y + 4);
     }
 
-    gateXs.forEach((x, gateIndex) => {
-      for (let i = 0; i < wires; i += 1) {
-        const y = top + i * gap;
-        const pulse = 0.5 + 0.5 * Math.sin(t * 3 + i * 0.7 + gateIndex);
-        ctx.fillStyle = gateIndex < 2 ? `rgba(0,166,200,${0.5 + pulse * 0.35})` : `rgba(230,95,79,${0.45 + pulse * 0.35})`;
-        ctx.strokeStyle = "rgba(255,255,255,0.5)";
-        ctx.lineWidth = 1;
-        roundRect(ctx, x - 19, y - 16, 38, 32, 6);
-        ctx.fill();
-        ctx.stroke();
-        ctx.fillStyle = "#ffffff";
-        ctx.font = "800 11px JetBrains Mono, monospace";
-        ctx.fillText(gateIndex === 0 ? "Y" : gateIndex === 1 ? "Z" : gateIndex === 2 ? "R" : "M", x - 4, y + 4);
-      }
+    if (gateIndex > 0 && gateIndex < stages.length - 1) {
+      ctx.strokeStyle = gateIndex % 2 ? "rgba(255,255,255,0.35)" : accent;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(x, top);
+      ctx.lineTo(x, top + (wires - 1) * gap);
+      ctx.stroke();
+    }
 
-      if (gateIndex > 0) {
-        ctx.strokeStyle = gateIndex === 2 ? "#f9c74f" : "rgba(255,255,255,0.38)";
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.moveTo(x, top);
-        ctx.lineTo(x, top + (wires - 1) * gap);
-        ctx.stroke();
-      }
-    });
+    ctx.fillStyle = stageColor;
+    ctx.font = compact ? "800 10px Inter, sans-serif" : "800 11px Inter, sans-serif";
+    drawBoundedWrappedText(ctx, label, x - (compact ? 38 : 54), height - 48, compact ? 76 : 108, 13, stageColor, ctx.font, 2);
+  });
 
-    const waveX = marginX + ((Math.sin(t) + 1) / 2) * (width - marginX * 2);
-    ctx.strokeStyle = "#24a148";
-    ctx.lineWidth = 3;
+  const waveY = top + (wires - 1) * gap * 0.5;
+  const qFactor = (wires - 2) / 6;
+  const depthFactor = Math.min(1, (depth - 1) / 2);
+  const flowTime = t * (0.86 + depthFactor * 0.28);
+  const waveX = marginX + ((Math.sin(flowTime * 0.92) + 1) / 2) * usableW;
+  const amp1 = Math.min(18 + qFactor * 12, gap * (0.42 + depthFactor * 0.1));
+  const amp2 = Math.min(10 + qFactor * 7, gap * 0.28);
+  const lineWidth = 2.2 + qFactor * 1.2 + depthFactor * 0.65;
+  const lineCount = Math.max(1, Math.min(4, Math.round(wires / 2)));
+  for (let layer = 0; layer < lineCount; layer += 1) {
+    const offset = (layer - (lineCount - 1) / 2) * Math.min(8, gap * 0.16);
+    ctx.strokeStyle = `rgba(36,161,72,${0.28 + layer * 0.13})`;
+    ctx.lineWidth = Math.max(1.1, lineWidth - layer * 0.28);
     ctx.beginPath();
     for (let x = marginX; x <= width - marginX; x += 5) {
-      const y = height * 0.5 + Math.sin(x * 0.035 + t * 8) * 26 + Math.sin(x * 0.013 - t * 3) * 18;
+      const y = waveY + offset
+        + Math.sin(x * (0.032 + qFactor * 0.006) + flowTime * 8) * amp1
+        + Math.sin(x * (0.012 + depthFactor * 0.004) - flowTime * 3) * amp2;
       if (x === marginX) ctx.moveTo(x, y);
       else ctx.lineTo(x, y);
     }
     ctx.stroke();
+  }
 
-    ctx.fillStyle = "#24a148";
-    ctx.beginPath();
-    ctx.arc(waveX, height * 0.5 + Math.sin(waveX * 0.035 + t * 8) * 26, 7, 0, Math.PI * 2);
-    ctx.fill();
+  const ballY = waveY
+    + Math.sin(waveX * (0.032 + qFactor * 0.006) + flowTime * 8) * amp1
+    + Math.sin(waveX * (0.012 + depthFactor * 0.004) - flowTime * 3) * amp2;
+  const ballRadius = 5.4 + qFactor * 2.1 + depthFactor * 1.1;
+  ctx.fillStyle = "rgba(36,161,72,0.22)";
+  ctx.beginPath();
+  ctx.arc(waveX, ballY, ballRadius * 2.1, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = "#24a148";
+  ctx.beginPath();
+  ctx.arc(waveX, ballY, ballRadius, 0, Math.PI * 2);
+  ctx.fill();
 
+  drawBoundedWrappedText(ctx, "Yeşil akış q ile yoğunlaşır, d ile hızlanır; fiziksel hız değil kapasite göstergesidir.", marginX, height - 28, width - marginX * 2, 14, "rgba(255,255,255,0.55)", "700 11px Inter, sans-serif", compact ? 2 : 1);
+}
+
+function initCircuitCanvas() {
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function draw() {
+    circuitFrame += reduced ? 0 : 0.018;
+    drawCircuitCanvas();
     if (!reduced) requestAnimationFrame(draw);
   }
 
@@ -4530,6 +5292,7 @@ function initExtendedCanvases() {
     drawHeroQuantumCanvas();
     drawDatasetMeaningCanvas();
     drawDataRepresentationCanvas();
+    drawQuantumModelFlowCanvas();
     drawExperimentMatrixCanvas();
     drawResearchMapCanvas();
     drawMoleculeJourneyCanvas();
@@ -4563,6 +5326,8 @@ async function init() {
   renderDataCockpit();
   renderExperimentMatrixNote();
   renderQuantumConcepts();
+  renderQuantumModelScene();
+  renderQuantumRun();
   renderModelArchitecture();
   renderJourneyNote();
   renderResults();
@@ -4590,7 +5355,9 @@ async function init() {
     drawLeaderboardChart();
     drawClassicalVisualCanvas();
     drawQuantumConceptCanvas();
+    drawQuantumModelFlowCanvas();
     drawModelArchitectureCanvas();
+    drawCircuitCanvas();
     drawDatasetMeaningCanvas();
     drawDataRepresentationCanvas();
     drawExperimentMatrixCanvas();
