@@ -71,27 +71,42 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 68px;
-  padding: 0 5vw;
+  min-height: 58px;
+  padding: 0.46rem 5vw;
   border-bottom: 1px solid rgba(255, 255, 255, 0.32);
   background: rgba(247, 248, 244, 0.82);
   backdrop-filter: blur(20px);
+  transform: translateY(0);
+  transition:
+    transform 220ms ease,
+    background 220ms ease,
+    box-shadow 220ms ease;
+  will-change: transform;
+}
+
+.site-header.header-hidden {
+  transform: translateY(calc(-100% - 8px));
+}
+
+.site-header.header-scrolled {
+  background: rgba(247, 248, 244, 0.9);
+  box-shadow: 0 10px 28px rgba(15, 17, 21, 0.09);
 }
 
 .header-actions {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 1rem;
+  gap: 0.68rem;
   flex: 1 1 auto;
   min-width: 0;
-  margin-left: 1.1rem;
+  margin-left: 0.92rem;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.55rem;
   flex: 0 0 auto;
   font-weight: 800;
   letter-spacing: 0;
@@ -102,8 +117,8 @@ a {
 }
 
 .brand-mark {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   border: 2px solid var(--ink);
   border-radius: 50%;
   position: relative;
@@ -129,14 +144,22 @@ a {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: clamp(0.75rem, 2vw, 1.45rem);
+  gap: clamp(0.5rem, 1.15vw, 0.9rem);
+  flex: 1 1 auto;
   min-width: 0;
   overflow-x: auto;
+  overflow-y: hidden;
   white-space: nowrap;
   color: var(--ink-soft);
-  font-size: 0.92rem;
-  font-weight: 700;
-  scrollbar-width: thin;
+  font-size: clamp(0.78rem, 0.78vw, 0.9rem);
+  font-weight: 760;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  mask-image: linear-gradient(90deg, transparent 0, #000 18px, #000 calc(100% - 18px), transparent 100%);
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none;
 }
 
 .language-switcher {
@@ -169,7 +192,7 @@ a {
 
 .nav-links a {
   border-bottom: 2px solid transparent;
-  padding: 0.25rem 0;
+  padding: 0.24rem 0;
 }
 
 .nav-links a:hover {
@@ -1571,6 +1594,193 @@ a {
   overflow-wrap: anywhere;
 }
 
+.quantum-game-section {
+  background: rgba(247, 248, 244, 0.96);
+}
+
+.quantum-game-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(112deg, rgba(123, 97, 255, 0.11), transparent 42%),
+    linear-gradient(290deg, rgba(0, 166, 200, 0.11), transparent 44%);
+}
+
+.quantum-game-section > * {
+  position: relative;
+}
+
+.quantum-game-layout {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.32fr) minmax(0, 1.22fr) minmax(260px, 0.44fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.quantum-game-controls,
+.quantum-game-note {
+  min-width: 0;
+  padding: 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 12px 36px rgba(15, 17, 21, 0.08);
+}
+
+.quantum-game-controls {
+  display: grid;
+  align-content: start;
+  gap: 0.85rem;
+}
+
+.quantum-game-controls span,
+.quantum-game-stat span,
+.quantum-game-note-label {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.quantum-game-controls .result-controls {
+  margin: 0.45rem 0 0;
+}
+
+.result-controls.compact {
+  gap: 0.42rem;
+}
+
+.result-controls.compact .tab-button {
+  min-height: 32px;
+  padding: 0.38rem 0.55rem;
+  font-size: 0.82rem;
+}
+
+.quantum-game-stage {
+  min-height: 430px;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #101216;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+#quantumGameCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.protocol-section {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(241, 247, 248, 0.98));
+}
+
+.protocol-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.55fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.protocol-stage {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #101216;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+#protocolCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.protocol-facts {
+  min-width: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.protocol-fact {
+  padding: 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 32px rgba(15, 17, 21, 0.07);
+}
+
+.protocol-fact span {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.protocol-fact strong {
+  display: block;
+  margin-top: 0.22rem;
+  color: var(--ink);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.92rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.protocol-fact small {
+  display: block;
+  margin-top: 0.42rem;
+  color: #3c4248;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.quantum-game-note h3 {
+  margin: 0;
+  font-size: 1.28rem;
+}
+
+.quantum-game-note p {
+  margin: 0.65rem 0 0;
+  color: #30343a;
+}
+
+.quantum-game-stats {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.9rem;
+}
+
+.quantum-game-stat {
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--line);
+}
+
+.quantum-game-stat strong {
+  display: block;
+  margin-top: 0.16rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.92rem;
+  overflow-wrap: anywhere;
+}
+
+.quantum-game-warning {
+  margin-top: 0.8rem;
+  padding: 0.72rem;
+  border: 1px solid rgba(230, 95, 79, 0.28);
+  border-radius: 8px;
+  background: rgba(230, 95, 79, 0.08);
+  color: #5b2019;
+  font-weight: 800;
+}
+
 .result-controls {
   display: flex;
   flex-wrap: wrap;
@@ -1857,29 +2067,33 @@ a {
 
 @media (max-width: 980px) {
   .site-header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.7rem;
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.55rem;
+    min-height: 56px;
+    padding-top: 0.44rem;
+    padding-bottom: 0.44rem;
   }
 
   .header-actions {
-    width: 100%;
-    align-items: flex-start;
+    width: min(100%, calc(100vw - 1rem));
+    align-items: center;
     justify-content: space-between;
-    gap: 0.75rem;
+    gap: 0.5rem;
+    margin-left: 0.35rem;
   }
 
   .nav-links {
     flex: 1 1 auto;
-    width: auto;
+    width: 100%;
     overflow-x: auto;
-    padding-bottom: 0.15rem;
+    padding-bottom: 0;
+    font-size: 0.82rem;
+    gap: 0.62rem;
   }
 
   .language-switcher {
-    margin-top: 0.02rem;
+    margin-top: 0;
   }
 
   .hero {
@@ -1898,6 +2112,8 @@ a {
   .concept-layout,
   .quantum-model-layout,
   .architecture-layout,
+  .quantum-game-layout,
+  .protocol-grid,
   .visual-layout,
   .visual-layout.reverse,
   .journey-layout,
@@ -1937,6 +2153,10 @@ a {
 
   .quantum-run-note {
     grid-template-columns: 1fr;
+  }
+
+  .quantum-game-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .ablation-layout > .result-controls,
@@ -1991,6 +2211,27 @@ a {
     padding-right: 1rem;
   }
 
+  .site-header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .brand span:last-child {
+    max-width: 96px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .brand-mark {
+    width: 24px;
+    height: 24px;
+  }
+
+  .language-button {
+    min-width: 34px;
+    padding: 0.3rem 0.42rem;
+  }
+
   .hero-metrics,
   .material-source-grid,
   .heatmap,
@@ -2012,6 +2253,23 @@ a {
 
   .hero {
     min-height: 820px;
+  }
+
+  .quantum-game-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .quantum-game-controls .result-controls.vertical {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .quantum-game-controls .tab-button {
+    flex: 0 0 auto;
+  }
+
+  .quantum-game-note {
+    order: 3;
   }
 
   .quantum-model-section {

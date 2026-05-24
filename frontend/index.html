@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260522-qml-v11">
+  <link rel="stylesheet" href="styles.css?v=20260524-circuit-schema-2">
 </head>
 <body>
   <canvas id="quantumField" aria-hidden="true"></canvas>
@@ -29,7 +29,9 @@
         <a href="#kuantum-temelleri">Kuantum</a>
         <a href="#quantum-ml-akisi">QML</a>
         <a href="#mimari">Mimariler</a>
+        <a href="#quantum-oyun">Oyun</a>
         <a href="#veri-kokpiti">Yöntem</a>
+        <a href="#deney-protokolu">Protokol</a>
         <a href="#deney-matrisi">Matris</a>
         <a href="#sonuclar">Sonuçlar</a>
         <a href="#lab">Metrik</a>
@@ -54,9 +56,9 @@
         <p class="eyebrow">Yüksek Lisans Semineri - Şahin Atakan Emre</p>
         <h1>Medikal Veri Analizinde Klasik ve Kuantum Makine Öğrenmesi Modellerinin İncelenmesi</h1>
         <p class="hero-text">
-          BACE, BBBP ve ClinTox veri setleri üzerinde tanımlayıcı (descriptor) tabanlı modeller,
-          moleküler grafik ağları, saf kuantum yöntemler ve hibrit kuantum-klasik
-          başlık mimarisi aynı deneysel zeminde karşılaştırıldı.
+          BACE, BBBP ve ClinTox veri setleri üzerinde klasik modeller, klasik grafik
+          modeller, saf kuantum modeller, kuantum grafik modeli ve hibrit kuantum-klasik
+          model aynı deneysel zeminde karşılaştırıldı.
         </p>
         <div class="hero-actions" aria-label="Hızlı bağlantılar">
           <a class="primary-action" href="#sonuclar">Bulguları İncele</a>
@@ -98,7 +100,7 @@
       <div class="thesis-points">
         <div class="point">
           <span>01</span>
-          <p>Tanımlayıcı (descriptor) tabanlı klasik modeller küçük ve orta ölçekli moleküler verilerde güçlü referanstır.</p>
+          <p>Klasik tanımlayıcı modeller küçük ve orta ölçekli moleküler verilerde güçlü referanstır.</p>
         </div>
         <div class="point">
           <span>02</span>
@@ -116,7 +118,7 @@
         <p class="section-kicker">Materyal</p>
         <h2>Üç ilaç keşfi görevi, ortak deneysel protokol</h2>
         <p>
-          Moleküller SMILES dizgeleri üzerinden işlendi; tanımlayıcı (descriptor) tabanlı modeller için
+          Moleküller SMILES dizgeleri üzerinden işlendi; klasik tanımlayıcı modeller için
           ECFP/Morgan parmak izleri, grafik modeller için atom-bağ yapıları kullanıldı.
         </p>
       </div>
@@ -221,7 +223,7 @@
         <p class="section-kicker">Veri temsili</p>
         <h2>SMILES kaydı klasik, grafik ve kuantum modele farklı yüzlerle girer</h2>
         <p>
-          Aynı molekül önce kimyasal dize olarak gelir; descriptor hattında ECFP bitlerine,
+          Aynı molekül önce kimyasal dize olarak gelir; klasik tanımlayıcı hatta ECFP bitlerine,
           grafik hattında atom-bağ ağına, kuantum hattında ise sıkıştırılmış kubit temsiline dönüşür.
         </p>
       </div>
@@ -374,6 +376,43 @@
       </div>
     </section>
 
+    <section id="quantum-oyun" class="section-band quantum-game-section">
+      <div class="section-heading">
+        <p class="section-kicker">Etkileşimli QML oyunu</p>
+        <h2>Kuantum Molekül Laboratuvarı</h2>
+        <p>
+          Veri setini, model ailesini, kubit sayısını ve devre derinliğini seçerek
+          moleküler verinin kuantum makine öğrenmesi hattında nasıl kodlandığını,
+          ölçümden sonra nasıl klasik metriklere döndüğünü oyunlaştırılmış bir sahnede incele.
+        </p>
+      </div>
+      <div class="quantum-game-layout">
+        <aside class="quantum-game-controls" aria-label="Kuantum oyun kontrol paneli">
+          <div>
+            <span>Model</span>
+            <div class="result-controls vertical compact" id="quantumGameModelTabs"></div>
+          </div>
+          <div>
+            <span>Veri seti</span>
+            <div class="result-controls compact" id="quantumGameTaskTabs"></div>
+          </div>
+          <div>
+            <span>q / d</span>
+            <div class="result-controls compact" id="quantumGameQubitTabs"></div>
+            <div class="result-controls compact" id="quantumGameDepthTabs"></div>
+          </div>
+          <div>
+            <span>Oyun adımı</span>
+            <div class="result-controls compact" id="quantumGameStageTabs"></div>
+          </div>
+        </aside>
+        <div class="quantum-game-stage">
+          <canvas id="quantumGameCanvas" width="1240" height="660" aria-label="Kuantum makine öğrenmesi oyunlaştırılmış laboratuvarı"></canvas>
+        </div>
+        <aside class="quantum-game-note" id="quantumGameNote"></aside>
+      </div>
+    </section>
+
     <section id="veri-kokpiti" class="section-band data-cockpit">
       <div class="section-heading">
         <p class="section-kicker">Deneysel yöntem ve CSV veri katmanı</p>
@@ -388,6 +427,51 @@
         <div class="cockpit-stage">
           <canvas id="researchMapCanvas" width="1100" height="560" aria-label="Deney kategorileri ve veri setleri araştırma haritası"></canvas>
         </div>
+      </div>
+    </section>
+
+    <section id="deney-protokolu" class="section-band protocol-section">
+      <div class="section-heading">
+        <p class="section-kicker">Deney protokolü ve simülasyon ortamı</p>
+        <h2>Klasik, kuantum ve hibrit modeller aynı deney protokolünde karşılaştırıldı</h2>
+        <p>
+          Çalışmadaki kuantum modeller gerçek kuantum donanımında değil, klasik hesaplama donanımı üzerinde
+          çalışan kuantum devre simülatörleriyle yürütüldü. Bu nedenle bulgular kuantum cihaz üstünlüğü
+          olarak değil; aynı veri ayrımları, temsil hattı, seed politikası ve metrik ailesi altında klasik,
+          grafik, saf kuantum ve hibrit model davranışlarının karşılaştırması olarak okunmalıdır.
+        </p>
+      </div>
+      <div class="protocol-grid">
+        <div class="protocol-stage">
+          <canvas id="protocolCanvas" width="1180" height="620" aria-label="Deney protokolü, kuantum simülasyon ortamı ve model karşılaştırma hattı"></canvas>
+        </div>
+        <aside class="protocol-facts" aria-label="Temel deney ortamı ve donanım notları">
+          <div class="protocol-fact">
+            <span>Veri ve split</span>
+            <strong>BACE · BBBP · ClinTox</strong>
+            <small>Train, validation ve test ayrımları sabit tutuldu.</small>
+          </div>
+          <div class="protocol-fact">
+            <span>Kuantum simülasyonu</span>
+            <strong>Qiskit Aer · PennyLane</strong>
+            <small>QSVM/VQC için aer_statevector CPU; hibrit başlık için lightning.qubit. shots=0, exact statevector simülasyonunu ifade eder.</small>
+          </div>
+          <div class="protocol-fact">
+            <span>Eğitim donanımı</span>
+            <strong>Ryzen 9 9950X · RTX 4080 Super · 64 GB DDR5 6200 MHz</strong>
+            <small>CUDA hızlandırmalı klasik/encoder aşamaları bu sistem üzerinde yürütüldü.</small>
+          </div>
+          <div class="protocol-fact">
+            <span>Donanım yorumu</span>
+            <strong>Gerçek kuantum donanımı kullanılmadı</strong>
+            <small>Devre sonuçları simülasyon çıktısıdır; kuantum cihaz üstünlüğü iddiası kurulmaz.</small>
+          </div>
+          <div class="protocol-fact">
+            <span>Tekrar üretilebilirlik</span>
+            <strong>5 seed · AUROC + ek metrikler</strong>
+            <small>0, 42, 123, 456 ve 789 seed değerleri kullanıldı.</small>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -659,6 +743,6 @@
     <span>BACE · BBBP · ClinTox · QSVM · VQC · QGNN · Hybrid QHead</span>
   </footer>
 
-  <script src="script.js?v=20260522-qml-v11"></script>
+  <script src="script.js?v=20260524-circuit-schema-2"></script>
 </body>
 </html>

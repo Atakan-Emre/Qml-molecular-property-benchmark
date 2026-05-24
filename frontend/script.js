@@ -11,8 +11,10 @@ const i18n = {
     "Modeller": "Models",
     "Klasik": "Classical",
     "Kuantum": "Quantum",
+    "Oyun": "Game",
     "Mimariler": "Architectures",
     "Yöntem": "Method",
+    "Protokol": "Protocol",
     "Sonuçlar": "Results",
     "Metrik": "Metrics",
     "Hibrit": "Hybrid",
@@ -25,8 +27,7 @@ const i18n = {
     "Kapasite": "Capacity",
     "Seed": "Seed",
     "Yüksek Lisans Semineri - Şahin Atakan Emre": "Graduate Seminar - Şahin Atakan Emre",
-    "BACE, BBBP ve ClinTox veri setleri üzerinde klasik descriptor tabanlı modeller, moleküler grafik ağları, saf kuantum yöntemler ve hibrit kuantum-klasik başlık mimarisi aynı deneysel zeminde karşılaştırıldı.": "Classical descriptor-based models, molecular graph networks, purely quantum methods, and a hybrid quantum-classical head architecture were compared under the same experimental protocol across the BACE, BBBP, and ClinTox datasets.",
-    "BACE, BBBP ve ClinTox veri setleri üzerinde tanımlayıcı (descriptor) tabanlı modeller, moleküler grafik ağları, saf kuantum yöntemler ve hibrit kuantum-klasik başlık mimarisi aynı deneysel zeminde karşılaştırıldı.": "Descriptor-based classical models, molecular graph networks, purely quantum methods, and a hybrid quantum-classical head architecture were compared under the same experimental protocol across the BACE, BBBP, and ClinTox datasets.",
+    "BACE, BBBP ve ClinTox veri setleri üzerinde klasik modeller, klasik grafik modeller, saf kuantum modeller, kuantum grafik modeli ve hibrit kuantum-klasik model aynı deneysel zeminde karşılaştırıldı.": "Classical models, classical graph models, purely quantum models, the quantum graph model, and the hybrid quantum-classical model were compared under the same experimental protocol across the BACE, BBBP, and ClinTox datasets.",
     "Hızlı bağlantılar": "Quick links",
     "Bulguları İncele": "Inspect Findings",
     "Kuantum Nedir?": "What Is Quantum?",
@@ -38,15 +39,13 @@ const i18n = {
     "Araştırma odağı": "Research focus",
     "Kuantum avantajı varsayılmadı; güçlü klasik referanslarla ölçüldü.": "Quantum advantage was not assumed; it was evaluated against strong classical baselines.",
     "Seminerin temel sorusu, kuantum modellerin moleküler özellik tahmininde hangi koşullarda anlamlı sinyal ürettiğidir. Bu nedenle SVM ve MLP gibi güçlü klasik yöntemler zayıflatılmadan korunmuş, QSVM, VQC, QGNN ve Hybrid QHead sonuçları aynı veri ayrımları ve aynı metrik ailesiyle değerlendirilmiştir.": "The central question of the seminar is under which conditions quantum models produce meaningful signal in molecular property prediction. Therefore, strong classical methods such as SVM and MLP were preserved without weakening, while QSVM, VQC, QGNN, and Hybrid QHead results were evaluated with the same data splits and metric family.",
-    "Klasik descriptor tabanlı modeller küçük ve orta ölçekli moleküler verilerde güçlü referanstır.": "Classical descriptor-based models constitute strong baselines for small- and medium-scale molecular data.",
-    "Tanımlayıcı (descriptor) tabanlı klasik modeller küçük ve orta ölçekli moleküler verilerde güçlü referanstır.": "Descriptor-based classical models constitute strong baselines for small- and medium-scale molecular data.",
+    "Klasik tanımlayıcı modeller küçük ve orta ölçekli moleküler verilerde güçlü referanstır.": "Classical descriptor models constitute strong baselines for small- and medium-scale molecular data.",
     "QSVM, VQC'ye göre daha kararlı saf kuantum sinyali üretmiştir.": "QSVM produced a more stable purely quantum signal than VQC.",
     "Hibrit kuantum başlık, bazı görevlerde klasik modellerle aynı performans bölgesine yaklaşmıştır.": "The hybrid quantum head approached the performance region of classical models in selected tasks.",
     "Materyal": "Material",
     "Üç ilaç keşfi görevi, tek deneysel zemin": "Three drug discovery tasks under one experimental protocol",
     "Üç ilaç keşfi görevi, ortak deneysel protokol": "Three drug discovery tasks under a shared experimental protocol",
-    "Moleküller SMILES dizgeleri üzerinden işlendi; descriptor tabanlı modeller için ECFP/Morgan parmak izleri, grafik modeller için atom-bağ yapıları kullanıldı.": "Molecules were processed through SMILES strings; ECFP/Morgan fingerprints were used for descriptor-based models, and atom-bond structures were used for graph models.",
-    "Moleküller SMILES dizgeleri üzerinden işlendi; tanımlayıcı (descriptor) tabanlı modeller için ECFP/Morgan parmak izleri, grafik modeller için atom-bağ yapıları kullanıldı.": "Molecules were processed through SMILES strings; ECFP/Morgan fingerprints were used for descriptor-based models, and atom-bond structures were used for graph models.",
+    "Moleküller SMILES dizgeleri üzerinden işlendi; klasik tanımlayıcı modeller için ECFP/Morgan parmak izleri, grafik modeller için atom-bağ yapıları kullanıldı.": "Molecules were processed through SMILES strings; ECFP/Morgan fingerprints were used for classical descriptor models, and atom-bond structures were used for graph models.",
     "Veri kaynağı, kullanım amacı ve içerik özeti": "Data source, purpose, and content summary",
     "Kaynak": "Source",
     "MoleculeNet/DeepChem kaynaklı standart görevler": "Standard tasks sourced from MoleculeNet/DeepChem",
@@ -82,7 +81,7 @@ const i18n = {
     "Az pozitif örnek; F1, MCC ve özgüllük zorunlu.": "Few positive samples; F1, MCC, and specificity are mandatory.",
     "Veri temsili": "Data representation",
     "SMILES kaydı klasik, grafik ve kuantum modele farklı yüzlerle girer": "A SMILES record enters classical, graph, and quantum models through different representations",
-    "Aynı molekül önce kimyasal dize olarak gelir; descriptor hattında ECFP bitlerine, grafik hattında atom-bağ ağına, kuantum hattında ise sıkıştırılmış kubit temsiline dönüşür.": "The same molecule first arrives as a chemical string; it becomes ECFP bits in the descriptor pipeline, an atom-bond network in the graph pipeline, and a compressed qubit representation in the quantum pipeline.",
+    "Aynı molekül önce kimyasal dize olarak gelir; klasik tanımlayıcı hatta ECFP bitlerine, grafik hattında atom-bağ ağına, kuantum hattında ise sıkıştırılmış kubit temsiline dönüşür.": "The same molecule first arrives as a chemical string; it becomes ECFP bits in the classical descriptor route, an atom-bond network in the graph route, and a compressed qubit representation in the quantum route.",
     "Temsil dönüşümü": "Representation transformation",
     "Bu katman, seminerdeki model ailelerinin neden doğrudan aynı iç yapıyla karşılaştırılamadığını gösterir: girdi aynı molekül olsa da temsil uzayı değişir.": "This layer shows why the model families in the seminar cannot be compared as identical internal structures: the input molecule is the same, but the representation space changes.",
     "1024 bit, radius 2 Morgan parmak izi.": "1024-bit radius-2 Morgan fingerprint.",
@@ -186,7 +185,6 @@ const i18n = {
     "Kuantum deney hattı": "Quantum experimental pipeline",
     "ECFP uzayından kubitlere, kubitlerden karar sınırına": "From ECFP space to qubits, and from qubits to the decision boundary",
     "Saf kuantum ve hibrit başlık aynı devre mantığında ayrışır": "Purely quantum and hybrid-head routes diverge within the same circuit logic",
-    "Saf kuantum descriptor hattında ECFP vektörleri PCA ile kubit sayısına indirgenir ve ZZFeatureMap üzerinden kuantum özellik uzayına taşınır. Hibrit yaklaşımda ise dondurulmuş MLP kodlayıcı daha kompakt bir gömme temsil üretir; Quantum Head bu temsil üzerinde parametrik devreyle karar katmanı kurar.": "In the purely quantum descriptor pipeline, ECFP vectors are reduced to the qubit dimension with PCA and mapped into a quantum feature space through ZZFeatureMap. In the hybrid approach, the frozen MLP encoder produces a more compact embedding; the Quantum Head builds a parametric-circuit decision layer on that representation.",
     "Bu bölüm, genel kuantum makine öğrenmesi fikrinden sonra çalışmadaki iki deneysel kuantum yolunu ayırır. Saf kuantum tanımlayıcı hattında ECFP vektörleri PCA ile kubit sayısına indirgenir ve ZZFeatureMap üzerinden kuantum özellik uzayına taşınır. Hibrit yaklaşımda ise dondurulmuş MLP kodlayıcı daha kompakt bir gömme temsil üretir; Quantum Head bu temsil üzerinde parametrik devreyle karar katmanı kurar.": "After the general quantum machine learning idea, this section separates the two experimental quantum routes in the study. In the purely quantum descriptor route, ECFP vectors are reduced to the qubit count with PCA and mapped into a quantum feature space through ZZFeatureMap. In the hybrid route, the frozen MLP encoder produces a more compact embedding representation; Quantum Head builds a parametric-circuit decision layer on that representation.",
     "Moleküler yapı metinsel gösterim olarak alınır.": "The molecular structure is taken as a textual representation.",
     "Radius 2, 1024 bit Morgan parmak izi üretilir.": "A radius-2, 1024-bit Morgan fingerprint is generated.",
@@ -196,6 +194,85 @@ const i18n = {
     "Kuantum model seçimi": "Quantum model selection",
     "Kuantum veri seti seçimi": "Quantum dataset selection",
     "Deney satırı seçimi": "Experiment-row selection",
+    "Etkileşimli QML oyunu": "Interactive QML game",
+    "Kuantum Molekül Laboratuvarı": "Quantum Molecule Laboratory",
+    "Veri setini, model ailesini, kubit sayısını ve devre derinliğini seçerek moleküler verinin kuantum makine öğrenmesi hattında nasıl kodlandığını, ölçümden sonra nasıl klasik metriklere döndüğünü oyunlaştırılmış bir sahnede incele.": "Select the dataset, model family, qubit count, and circuit depth to inspect in a gamified scene how molecular data is encoded in the quantum machine learning pipeline and returned to classical metrics after measurement.",
+    "Kuantum oyun kontrol paneli": "Quantum game control panel",
+    "Model": "Model",
+    "kubit": "qubits",
+    "q / d": "q / d",
+    "Oyun adımı": "Game step",
+    "Kuantum makine öğrenmesi oyunlaştırılmış laboratuvarı": "Gamified quantum machine learning laboratory",
+    "Veriyi kodla": "Encode data",
+    "Süperpozisyon kur": "Create superposition",
+    "Dolanıklık kur": "Create entanglement",
+    "Ölç ve oku": "Measure and read",
+    "Sonucu savun": "Defend the result",
+    "SMILES ve ECFP temsili q boyutlu devre girişine çevrilir.": "SMILES and ECFP representations are converted into a q-dimensional circuit input.",
+    "Kapılar kubit durumunu döndürür; olasılık genlikleri tek bir sınıfa kilitlenmez.": "Gates rotate the qubit state; probability amplitudes are not locked to a single class.",
+    "Kontrollü kapılar kubitler arası korelasyon kurar; bu çizgi fiziksel mesafe değildir.": "Controlled gates create correlations between qubits; this line is not physical distance.",
+    "Ölçüm kuantum durumunu klasik olasılık ve karar skoruna indirger.": "Measurement reduces the quantum state to a classical probability and decision score.",
+    "AUROC, std ve görev bağlamı birlikte okunur; özellikle ClinTox tek metrikle savunulmaz.": "AUROC, standard deviation, and task context are read together; ClinTox in particular is not defended with a single metric.",
+    "Oyun hedefi": "Game objective",
+    "Amaç en parlak devreyi seçmek değil; q, d, ölçüm ve metrik dengesini seminer bulgusuyla uyumlu okumaktır.": "The goal is not to choose the flashiest circuit, but to read the balance among q, d, measurement, and metrics in line with the seminar finding.",
+    "Seçili konfigürasyon": "Selected configuration",
+    "Oyun sahnesi": "Game scene",
+    "Model ailesi": "Model family",
+    "Devre kapasitesi": "Circuit capacity",
+    "Beklenen okuma": "Expected reading",
+    "Mini görev": "Mini task",
+    "Karar skoru": "Decision score",
+    "Ölçüm histogramı": "Measurement histogram",
+    "Kuantum oyun sahnesi": "Quantum game scene",
+    "Kuantum devre": "Quantum circuit",
+    "Ölçüm adımında açılır.": "Opens at the measurement step.",
+    "Aşama notu": "Stage note",
+    "ClinTox dengesizdir; AUROC yanında F1, MCC, duyarlılık ve özgüllük okunmalıdır.": "ClinTox is imbalanced; F1, MCC, sensitivity, and specificity must be read alongside AUROC.",
+    "Bu q/d seçimi CSV'de birebir yoksa en yakın mevcut deney satırı gösterilir.": "If this q/d selection is not present exactly in the CSV, the nearest available experiment row is shown.",
+    "Deney protokolü ve simülasyon ortamı": "Experimental protocol and simulation environment",
+    "Kuantum devre simülasyonu ile klasik makine öğrenmesi modelleri aynı metrik hattında karşılaştırıldı": "Quantum circuit simulation and classical machine learning models were compared on the same metric pipeline",
+    "Kuantum devre simülasyonu ve makine öğrenmesi modelleri aynı hatta karşılaştırıldı": "Quantum circuit simulation and machine learning models were compared on the same pipeline",
+    "Klasik, kuantum ve hibrit modeller aynı deney protokolünde karşılaştırıldı": "Classical, quantum, and hybrid models were compared under the same experimental protocol",
+    "Çalışmadaki kuantum modeller gerçek kuantum donanımında değil, klasik hesaplama donanımı üzerinde çalışan kuantum devre simülatörleriyle yürütüldü. Bu ayrım önemlidir: Bulgular kuantum cihaz üstünlüğü değil, aynı veri ayrımları altında klasik, grafik, saf kuantum ve hibrit model davranışlarının karşılaştırmasıdır.": "The quantum models in the study were not run on real quantum hardware; they were executed with quantum circuit simulators running on classical compute hardware. This distinction matters: the findings do not claim quantum-device superiority, but compare the behavior of classical, graph-based, purely quantum, and hybrid models under the same data splits.",
+    "Çalışmadaki kuantum modeller gerçek kuantum donanımında değil, klasik hesaplama donanımı üzerinde çalışan kuantum devre simülatörleriyle yürütüldü. Bu nedenle bulgular kuantum cihaz üstünlüğü olarak değil; aynı veri ayrımları, temsil hattı, seed politikası ve metrik ailesi altında klasik, grafik, saf kuantum ve hibrit model davranışlarının karşılaştırması olarak okunmalıdır.": "The quantum models in the study were not run on real quantum hardware; they were executed with quantum circuit simulators running on classical compute hardware. Therefore, the findings should not be read as quantum-device superiority, but as a comparison of classical, graph-based, purely quantum, and hybrid model behavior under the same data splits, representation pipeline, seed policy, and metric family.",
+    "Deney protokolü, kuantum simülasyon ortamı ve model karşılaştırma hattı": "Experimental protocol, quantum simulation environment, and model comparison pipeline",
+    "Temel deney ortamı ve donanım notları": "Core experimental environment and hardware notes",
+    "Veri ve split": "Data and split",
+    "Train, validation ve test ayrımları sabit tutuldu.": "Train, validation, and test splits were kept fixed.",
+    "Kuantum simülasyonu": "Quantum simulation",
+    "QSVM/VQC için aer_statevector CPU; hibrit başlık için lightning.qubit.": "aer_statevector CPU for QSVM/VQC; lightning.qubit for the hybrid head.",
+    "QSVM/VQC için aer_statevector CPU; hibrit başlık için lightning.qubit. shots=0, exact statevector simülasyonunu ifade eder.": "aer_statevector CPU for QSVM/VQC; lightning.qubit for the hybrid head. shots=0 indicates exact statevector simulation.",
+    "Temel donanım kaydı": "Core hardware record",
+    "CPU simülasyon · CUDA encoder": "CPU simulation · CUDA encoder",
+    "Sonuç dosyalarında kuantum başlık CPU, hibrit encoder tarafı CUDA olarak kayıtlıdır.": "Result files record the quantum head on CPU and the hybrid encoder side on CUDA.",
+    "Eğitim donanımı": "Training hardware",
+    "Ryzen 9 9950X · RTX 4080 Super · 64 GB DDR5 6200 MHz": "Ryzen 9 9950X · RTX 4080 Super · 64 GB DDR5 6200 MHz",
+    "CUDA hızlandırmalı klasik/encoder aşamaları bu sistem üzerinde yürütüldü.": "CUDA-accelerated classical/encoder stages were run on this system.",
+    "Donanım yorumu": "Hardware interpretation",
+    "Gerçek kuantum donanımı kullanılmadı": "No real quantum hardware was used",
+    "Devre sonuçları simülasyon çıktısıdır; kuantum cihaz üstünlüğü iddiası kurulmaz.": "Circuit results are simulation outputs; no quantum-device superiority claim is made.",
+    "Tekrar üretilebilirlik": "Reproducibility",
+    "5 seed · AUROC + ek metrikler": "5 seeds · AUROC + auxiliary metrics",
+    "0, 42, 123, 456 ve 789 seed değerleri kullanıldı.": "Seed values 0, 42, 123, 456, and 789 were used.",
+    "Veri katmanı": "Data layer",
+    "Temsil üretimi": "Representation",
+    "Klasik / grafik": "Classical / graph",
+    "Kuantum simülatör": "Quantum simulator",
+    "Metrik okuması": "Metric reading",
+    "Sabit split": "Fixed split",
+    "SMILES -> ECFP / graf / PCA": "SMILES -> ECFP / graph / PCA",
+    "SVM · MLP · GNN · GAT": "SVM · MLP · GNN · GAT",
+    "QSVM · VQC · QGNN · Hybrid": "QSVM · VQC · QGNN · Hybrid",
+    "Simüle kuantum modelleri": "Simulated quantum models",
+    "QSVM/VQC · QGNN · Hybrid QHead": "QSVM/VQC · QGNN · Hybrid QHead",
+    "AUROC + PR-AUC/F1/MCC": "AUROC + PR-AUC/F1/MCC",
+    "Gerçek kuantum cihazı yok": "No real quantum device",
+    "Devreler klasik donanımda simüle edildi; sonuçlar donanım üstünlüğü olarak yorumlanmaz.": "Circuits were simulated on classical hardware; results are not interpreted as hardware superiority.",
+    "Gerçek kuantum donanımı kullanılmadı": "No real quantum hardware was used",
+    "shots=0: exact statevector simülasyonu; örnekleme gürültüsü yok.": "shots=0: exact statevector simulation; no sampling noise.",
+    "Eğitim sistemi": "Training system",
+    "Adil karşılaştırma": "Fair comparison",
+    "Aynı görev, aynı split, aynı metrik ailesi": "Same task, same split, same metric family",
     "Seçili deney": "Selected experiment",
     "CSV kapsamı": "CSV coverage",
     "En iyi satır": "Best row",
@@ -208,8 +285,9 @@ const i18n = {
     "Kategori": "Category",
     "Seed": "Seed",
     "Devre şeması notu": "Circuit-diagram note",
-    "q0-qn eşit aralıkla çizilir; bu fiziksel mesafe veya özellik büyüklüğü değil, devredeki kubit tellerini gösteren standart şemadır. Kapı sırası soldan sağa okunur.": "q0-qn are drawn with equal spacing; this is not a physical distance or feature magnitude, but the standard schematic layout of qubit wires. Gate order is read from left to right.",
-    "q0-qn eşit aralık devre teli gösterimidir; fiziksel mesafe değildir.": "Equal q0-qn spacing is a circuit-wire convention, not physical distance.",
+    "q0-qn etiketleri sabit devre telleridir; hareket eden yeşil noktalar gerçek parçacık değil temsil/durum akışıdır.": "q0-qn labels are fixed circuit wires; the moving green dots are not real particles, but representation/state flow.",
+    "Bu canvas gerçek kuantum cihazı simüle etmez; deney hattını ve CSV satırını şematik olarak gösterir.": "This canvas does not simulate a real quantum device; it schematically shows the experimental pipeline and the CSV row.",
+    "Şematik gösterim; gerçek cihaz simülasyonu değil": "Schematic view; not a real-device simulation",
     "Bu sekmeler liderlik CSV'sindeki bütün kuantum model satırlarını görev ve model ailesine göre açar; q/d ayarı, veri fraksiyonu ve AUROC birlikte izlenir.": "These tabs expose all quantum-model rows in the leaderboard CSV by task and model family; the q/d setting, data fraction, and AUROC are read together.",
     "Sekmeler CSV'deki deney satırlarını açar; q/d, veri fraksiyonu ve AUROC birlikte okunur.": "Tabs open the experiment rows in the CSV; q/d, data fraction, and AUROC are read together.",
     "Kuantum özellik akışı": "Quantum feature flow",
@@ -221,9 +299,9 @@ const i18n = {
     "Okuma": "Readout",
     "Ölçüm": "Measurement",
     "Metrik": "Metric",
-    "q0-qn eşit aralıkla çizilir; fiziksel mesafe değil devre teli düzenidir.": "q0-qn are drawn with equal spacing; this is circuit-wire layout, not physical distance.",
+    "q0-qn etiketleri sabit devre telleridir; hareket eden yeşil noktalar gerçek parçacık değil temsil/durum akışıdır.": "q0-qn labels are fixed circuit wires; the moving green dots are not real particles, but representation/state flow.",
     "Yeşil akış q arttıkça daha yoğun/kalın, d arttıkça biraz daha hızlı çizilir; bu fiziksel hız değil görsel kapasite göstergesidir.": "The green flow becomes denser/thicker as q increases and slightly faster as d increases; this is a visual capacity indicator, not physical speed.",
-    "Yeşil akış q ile yoğunlaşır, d ile hızlanır; fiziksel hız değil kapasite göstergesidir.": "The green flow gets denser with q and faster with d; it is a capacity indicator, not physical speed.",
+    "Yeşil akış q ile daha çok telde görünür, d ile hızlanır; bu fiziksel hız değil kapasite göstergesidir.": "The green flow appears across more wires as q increases and speeds up with d; it is a capacity indicator, not physical speed.",
     "Animasyonlu kuantum devre görselleştirmesi": "Animated quantum circuit visualization",
     "Deneysel yöntem ve CSV veri katmanı": "Experimental method and CSV data layer",
     "Analiz CSV'lerinden beslenen araştırma paneli": "Research panel driven by analysis CSV files",
@@ -285,10 +363,10 @@ const i18n = {
     "Hybrid QHead q6-d1 zirvede, MLP çok yakın.": "Hybrid QHead q6-d1 ranks first, with MLP very close.",
     "SVM en güçlü, hibrit GNN ile rekabetçi.": "SVM is strongest, while the hybrid model is competitive with GNN.",
     "Hibrit ve MLP AUROC yakın; eşik metrikleri belirleyici.": "Hybrid and MLP AUROC values are close; threshold-dependent metrics are decisive.",
-    "Klasik descriptor tabanlı": "Classical descriptor-based",
-    "Tanımlayıcı (descriptor) tabanlı klasik": "Descriptor-based classical",
+    "Klasik tanımlayıcı": "Classical descriptor",
+    "klasik tanımlayıcı": "classical descriptor",
     "Klasik grafik": "Classical graph",
-    "Saf kuantum descriptor hattı": "Pure quantum descriptor pipeline",
+    "Saf kuantum": "Pure quantum",
     "Kuantum grafik": "Quantum graph",
     "Hibrit kuantum başlık": "Hybrid quantum head",
     "Metrik ailesi": "Metric family",
@@ -314,14 +392,13 @@ const i18n = {
     "ClinTox tek metrikle okunmaz": "ClinTox cannot be interpreted with a single metric",
     "Seed/tekrar ortalaması ve standart sapma raporlandı": "Seed/repetition mean and standard deviation were reported",
     "SVM sonuçları deterministik değerlerdir": "SVM results are deterministic values",
-    "descriptor tabanlı klasik çizgi": "descriptor-based classical line",
-    "descriptor tabanlı sinir ağı": "descriptor-based neural network",
     "tanımlayıcı tabanlı sinir ağı": "descriptor-based neural network",
+    "klasik tanımlayıcı sinir ağı": "classical descriptor neural network",
     "SVM ve MLP, radius 2 ve 1024 bit ECFP/Morgan parmak izleri üzerinde güçlü klasik referans ailesini oluşturur.": "SVM and MLP form the strong classical baseline family on radius-2, 1024-bit ECFP/Morgan fingerprints.",
     "klasik grafik öğrenme": "classical graph learning",
     "dikkat tabanlı grafik öğrenme": "attention-based graph learning",
     "SVM: ECFP uzayında en geniş marjı bulur": "SVM: finds the widest margin in ECFP space",
-    "MLP: sabit descriptor vektöründen karar fonksiyonu öğrenir": "MLP: learns a decision function from a fixed descriptor vector",
+    "MLP: sabit ECFP vektöründen karar fonksiyonu öğrenir": "MLP: learns a decision function from a fixed ECFP vector",
     "GNN: atom komşuluklarından mesaj toplayarak molekülü temsil eder": "GNN: represents the molecule by aggregating messages from atomic neighborhoods",
     "GAT: her komşunun etkisini dikkat ağırlığıyla ayarlar": "GAT: adjusts each neighbor's contribution with attention weights",
     "SMILES verisi Morgan/ECFP parmak izine çevrilir. SVM bu yüksek boyutlu vektörde iki sınıfı ayıran karar sınırını ve destek vektörlerini kullanır.": "SMILES data are converted into a Morgan/ECFP fingerprint. SVM uses support vectors and a decision boundary that separates the two classes in this high-dimensional vector space.",
@@ -390,12 +467,10 @@ const i18n = {
     "0/1 sınıf etiketi": "0/1 class label",
     "Değerlendirme": "Evaluation",
     "Aynı veri ayrımı ve metrik ailesiyle karşılaştırma": "Comparison with the same data split and metric family",
-    "klasik descriptor tabanlı": "classical descriptor-based",
-    "tanımlayıcı (descriptor) tabanlı klasik": "descriptor-based classical",
-    "tanımlayıcı tabanlı klasik referans": "descriptor-based classical baseline",
+    "klasik tanımlayıcı referans": "classical descriptor baseline",
     "klasik grafik": "classical graph",
     "saf kuantum": "pure quantum",
-    "saf kuantum descriptor hattı": "pure quantum descriptor pipeline",
+    "saf kuantum": "pure quantum",
     "kuantum grafik": "quantum graph",
     "hibrit": "hybrid",
     "hibrit kuantum başlık": "hybrid quantum head",
@@ -435,7 +510,7 @@ const i18n = {
     "Marj maksimizasyonu": "Margin maximization",
     "BBBP için en güçlü ana referans": "Strongest primary baseline for BBBP",
     "Radius 2 Morgan parmak izi": "Radius-2 Morgan fingerprint",
-    "Sabit uzunluklu descriptor": "Fixed-length descriptor",
+    "Sabit uzunluklu ECFP": "Fixed-length ECFP",
     "Çok katmanlı algılayıcı": "Multilayer perceptron",
     "BACE ve ClinTox için güçlü klasik çizgi": "Strong classical baseline for BACE and ClinTox",
     "Atom-bağ grafiği": "Atom-bond graph",
@@ -443,7 +518,7 @@ const i18n = {
     "BBBP ve ClinTox için anlamlı grafik sinyali": "Meaningful graph signal for BBBP and ClinTox",
     "Öğrenilebilir dikkat": "Learnable attention",
     "ClinTox üzerinde güçlü grafik alternatifi": "Strong graph alternative on ClinTox",
-    "PCA ile q boyutlu descriptor": "q-dimensional descriptor after PCA",
+    "PCA ile q boyutlu özellik": "q-dimensional feature after PCA",
     "PCA ile q boyutlu tanımlayıcı": "q-dimensional descriptor after PCA",
     "VQC'ye göre daha kararlı saf kuantum çizgi": "More stable pure-quantum line than VQC",
     "Kubit sayısına indirgenmiş özellik": "Feature reduced to the qubit count",
@@ -596,7 +671,7 @@ const i18n = {
     "Dolanıklık, tek tek kubitlerden değil ortak durumdan gelen korelasyonu temsil eder. ZZFeatureMap ve kontrollü kapılar bu etkileşimi üretir.": "Entanglement represents correlation arising from the joint state rather than individual qubits. ZZFeatureMap and controlled gates generate this interaction.",
     "Seminer bulgusunda en iyi kubit sayısı ve derinlik veri setine göre değişti: BACE q6-d1, BBBP q4-d1, ClinTox q8-d2.": "In the seminar findings, the best qubit count and depth varied by dataset: BACE q6-d1, BBBP q4-d1, ClinTox q8-d2.",
     "Bu seminerde tüm modeller denetimli ikili sınıflandırma olarak karşılaştırıldı: aynı veri ayrımı, aynı hedef, aynı metrik ailesi.": "In this seminar, all models were compared as supervised binary classifiers: the same data split, the same target, and the same metric family.",
-    "SVM, descriptor uzayında sınıfları ayıran en geniş marjlı sınırı arar.": "SVM searches for the widest-margin boundary that separates classes in descriptor space.",
+    "SVM, ECFP özellik uzayında sınıfları ayıran en geniş marjlı sınırı arar.": "SVM searches for the widest-margin boundary that separates classes in ECFP feature space.",
     "MLP, ECFP vektörünü katman katman soyutlayarak doğrusal olmayan karar fonksiyonu üretir.": "MLP abstracts the ECFP vector layer by layer to produce a nonlinear decision function.",
     "Hybrid QHead, klasik kodlayıcı temsilini kuantum başlıkla yeniden işler; seminerde en rekabetçi kuantum-klasik yapı budur.": "Hybrid QHead reprocesses the classical encoder representation with a quantum head; it is the most competitive quantum-classical structure in the seminar.",
     "Klasik bit": "Classical bit",
@@ -793,10 +868,12 @@ function redrawLanguageCanvases() {
   drawClassicalVisualCanvas();
   drawModelArchitectureCanvas();
   drawCircuitCanvas();
+  drawQuantumGameCanvas();
   drawDatasetMeaningCanvas();
   drawDataRepresentationCanvas();
   drawExperimentMatrixCanvas();
   drawResearchMapCanvas();
+  drawProtocolCanvas();
   drawMoleculeJourneyCanvas();
   drawMetricLabCanvas();
   drawCapacityCanvas();
@@ -825,6 +902,77 @@ function initLanguageControls() {
   initLanguageObserver();
 }
 
+function initAutoHideHeader() {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+  let lastY = window.scrollY;
+  let ticking = false;
+  let readyToHide = false;
+  let userScrollIntent = false;
+
+  function revealHeader() {
+    header.classList.remove("header-hidden");
+    lastY = Math.max(0, window.scrollY);
+  }
+
+  function markScrollIntent(event) {
+    if (event.type === "keydown") {
+      const scrollKeys = ["ArrowDown", "ArrowUp", "PageDown", "PageUp", "Home", "End", " "];
+      if (!scrollKeys.includes(event.key)) return;
+    }
+    userScrollIntent = true;
+  }
+
+  function resetNavigationState() {
+    userScrollIntent = false;
+    revealHeader();
+    window.setTimeout(revealHeader, 120);
+    window.setTimeout(revealHeader, 520);
+  }
+
+  function updateHeader() {
+    const currentY = Math.max(0, window.scrollY);
+    const delta = currentY - lastY;
+    const headerHasFocus = header.matches(":hover") || header.contains(document.activeElement);
+    header.classList.toggle("header-scrolled", currentY > 12);
+
+    if (!readyToHide || !userScrollIntent || currentY < 120 || headerHasFocus) {
+      header.classList.remove("header-hidden");
+    } else if (delta > 8) {
+      header.classList.add("header-hidden");
+    } else if (delta < -8) {
+      header.classList.remove("header-hidden");
+    }
+
+    lastY = currentY;
+    ticking = false;
+  }
+
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(updateHeader);
+    }
+  }, { passive: true });
+
+  window.addEventListener("wheel", markScrollIntent, { passive: true });
+  window.addEventListener("touchmove", markScrollIntent, { passive: true });
+  window.addEventListener("keydown", markScrollIntent);
+  header.addEventListener("focusin", revealHeader);
+  header.addEventListener("mouseenter", revealHeader);
+  window.addEventListener("hashchange", resetNavigationState);
+  window.addEventListener("pageshow", resetNavigationState);
+  window.addEventListener("load", resetNavigationState);
+  header.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", resetNavigationState);
+  });
+  updateHeader();
+  window.setTimeout(() => {
+    revealHeader();
+    readyToHide = true;
+  }, 900);
+}
+
 function localizeCanvasContext(ctx) {
   if (ctx.__i18nFillTextWrapped) return;
   const nativeFillText = ctx.fillText.bind(ctx);
@@ -844,6 +992,7 @@ function rerenderLocalizedContent() {
   renderQuantumConcepts();
   renderQuantumModelScene();
   renderQuantumRun();
+  renderQuantumGame();
   renderModelArchitecture();
   renderJourneyNote();
   renderResults();
@@ -887,7 +1036,7 @@ const datasets = {
 
 const modelFamilies = [
   {
-    title: "Tanımlayıcı (descriptor) tabanlı klasik",
+    title: "Klasik tanımlayıcı",
     tag: "ECFP",
     color: "#00a6c8",
     text: "SVM ve MLP, radius 2 ve 1024 bit ECFP/Morgan parmak izleri üzerinde güçlü klasik referans ailesini oluşturur.",
@@ -901,7 +1050,7 @@ const modelFamilies = [
     points: ["GNN: komşuluk mesajları", "GAT: öğrenilebilir dikkat katsayıları", "BBBP ve ClinTox üzerinde anlamlı sinyal"],
   },
   {
-    title: "Saf kuantum descriptor hattı",
+    title: "Saf kuantum",
     tag: "QSVM / VQC",
     color: "#7b61ff",
     text: "ECFP özellikleri PCA ile kubit sayısına indirgenir; QSVM kuantum çekirdek, VQC parametrik devre yaklaşımı kullanır.",
@@ -947,9 +1096,9 @@ const classicalVisuals = [
   {
     key: "mlp",
     label: "MLP",
-    family: "tanımlayıcı tabanlı sinir ağı",
+    family: "klasik tanımlayıcı sinir ağı",
     color: "#00a6c8",
-    title: "MLP: sabit descriptor vektöründen karar fonksiyonu öğrenir",
+    title: "MLP: sabit ECFP vektöründen karar fonksiyonu öğrenir",
     summary: "ECFP vektörü yoğun katmanlardan geçer; aktivasyon ve dropout ile doğrusal olmayan bir temsil oluşur, son katman sınıf skorunu üretir.",
     facts: [
       ["Girdi", "Sabit uzunluklu ECFP vektörü"],
@@ -1107,7 +1256,7 @@ const architectureModels = [
   {
     key: "svm",
     label: "SVM",
-    family: "tanımlayıcı (descriptor) tabanlı klasik",
+    family: "klasik tanımlayıcı",
     color: "#00a6c8",
     summary: "ECFP/Morgan parmak izleri üzerinde marj tabanlı karar sınırı kurar ve küçük-orta veri rejiminde güçlü referans üretir.",
     blocks: ["SMILES", "ECFP 1024", "Ölçekleme", "SVM marjı", "Karar skoru"],
@@ -1116,11 +1265,11 @@ const architectureModels = [
   {
     key: "mlp",
     label: "MLP",
-    family: "tanımlayıcı (descriptor) tabanlı klasik",
+    family: "klasik tanımlayıcı",
     color: "#00a6c8",
     summary: "ECFP vektörünü yoğun katmanlardan geçirerek doğrusal olmayan tanımlayıcı temsili öğrenir.",
     blocks: ["SMILES", "ECFP 1024", "Yoğun katman + aktivasyon", "Dropout", "Sigmoid"],
-    facts: [["Girdi", "Sabit uzunluklu descriptor"], ["Yapı", "Çok katmanlı algılayıcı"], ["Seminer rolü", "BACE ve ClinTox için güçlü klasik çizgi"]],
+    facts: [["Girdi", "Sabit uzunluklu ECFP"], ["Yapı", "Çok katmanlı algılayıcı"], ["Seminer rolü", "BACE ve ClinTox için güçlü klasik çizgi"]],
   },
   {
     key: "gnn",
@@ -1143,7 +1292,7 @@ const architectureModels = [
   {
     key: "qsvm",
     label: "QSVM",
-    family: "saf kuantum descriptor hattı",
+    family: "saf kuantum",
     color: "#7b61ff",
     summary: "ECFP özellikleri PCA ile kubit boyutuna indirilir; kuantum özellik haritası ile çekirdek matrisi hesaplanır.",
     blocks: ["ECFP", "PCA q", "ZZFeatureMap", "Kuantum çekirdek", "SVM"],
@@ -1152,7 +1301,7 @@ const architectureModels = [
   {
     key: "vqc",
     label: "VQC",
-    family: "saf kuantum descriptor hattı",
+    family: "saf kuantum",
     color: "#7b61ff",
     summary: "Özellik haritasından sonra parametrik ansatz çalışır; ölçüm çıktısı sınıf olasılığına dönüştürülür.",
     blocks: ["ECFP", "PCA q", "Özellik haritası", "Ansatz theta", "Ölçüm"],
@@ -1258,10 +1407,10 @@ const dataSources = {
 };
 
 const categoryLabels = {
-  classical_descriptor: "tanımlayıcı (descriptor) tabanlı klasik",
+  classical_descriptor: "klasik tanımlayıcı",
   classical_graph: "klasik grafik",
   classical_ablation: "klasik veri ablasyonu",
-  quantum_descriptor: "saf kuantum descriptor hattı",
+  quantum_descriptor: "saf kuantum",
   quantum_graph: "kuantum grafik",
   quantum_ablation: "kuantum veri ablasyonu",
   quantum_data_ablation: "kuantum veri ablasyonu",
@@ -1285,6 +1434,13 @@ const quantumRunModels = [
   { key: "qsvm", label: "QSVM", color: "#7b61ff" },
   { key: "vqc", label: "VQC", color: "#00a6c8" },
   { key: "qgnn", label: "QGNN", color: "#c93d8d" },
+];
+const quantumGameStages = [
+  { key: "encode", label: "Veriyi kodla", summary: "SMILES ve ECFP temsili q boyutlu devre girişine çevrilir." },
+  { key: "superpose", label: "Süperpozisyon kur", summary: "Kapılar kubit durumunu döndürür; olasılık genlikleri tek bir sınıfa kilitlenmez." },
+  { key: "entangle", label: "Dolanıklık kur", summary: "Kontrollü kapılar kubitler arası korelasyon kurar; bu çizgi fiziksel mesafe değildir." },
+  { key: "measure", label: "Ölç ve oku", summary: "Ölçüm kuantum durumunu klasik olasılık ve karar skoruna indirger." },
+  { key: "result", label: "Sonucu savun", summary: "AUROC, std ve görev bağlamı birlikte okunur; özellikle ClinTox tek metrikle savunulmaz." },
 ];
 const representativeSeedOffsets = [-0.92, -0.42, 0.05, 0.48, 0.88];
 
@@ -1326,6 +1482,11 @@ let selectedQuantumModel = "qsvm";
 let selectedQuantumRunModel = "hybrid_qhead";
 let selectedQuantumRunTask = "bace";
 let selectedQuantumExperimentId = "";
+let selectedQuantumGameModel = "hybrid_qhead";
+let selectedQuantumGameTask = "bace";
+let selectedQuantumGameQ = 6;
+let selectedQuantumGameDepth = 1;
+let selectedQuantumGameStage = "encode";
 let selectedClassicalVisual = "svm";
 let selectedArchitecture = "svm";
 let selectedMetricLabModel = "hybrid";
@@ -1870,8 +2031,9 @@ function renderQuantumRunNote() {
       <div><span>${tx("CSV kapsamı")}</span><strong>${countLabel(rows.length, "satır", "row")}</strong></div>
     </div>
     <div class="quantum-run-guidance">
-      <p><strong>${tx("Devre şeması notu")}:</strong> ${tx("q0-qn eşit aralık devre teli gösterimidir; fiziksel mesafe değildir.")}</p>
-      <p>${tx("Yeşil akış q ile yoğunlaşır, d ile hızlanır; fiziksel hız değil kapasite göstergesidir.")}</p>
+      <p><strong>${tx("Devre şeması notu")}:</strong> ${tx("q0-qn etiketleri sabit devre telleridir; hareket eden yeşil noktalar gerçek parçacık değil temsil/durum akışıdır.")}</p>
+      <p>${tx("Bu canvas gerçek kuantum cihazı simüle etmez; deney hattını ve CSV satırını şematik olarak gösterir.")}</p>
+      <p>${tx("Yeşil akış q ile daha çok telde görünür, d ile hızlanır; bu fiziksel hız değil kapasite göstergesidir.")}</p>
       <p><strong>${tx("Ayar listesi")}:</strong> ${tx("Sekmeler CSV'deki deney satırlarını açar; q/d, veri fraksiyonu ve AUROC birlikte okunur.")}</p>
     </div>
     <div class="quantum-run-list" aria-label="${tx("Ayar listesi")}">
@@ -1889,6 +2051,148 @@ function renderQuantumRunNote() {
 function renderQuantumRun() {
   renderQuantumRunControls();
   renderQuantumRunNote();
+}
+
+function getQuantumGameRows({ task = selectedQuantumGameTask, model = selectedQuantumGameModel } = {}) {
+  return getQuantumRunRows({ task, model })
+    .sort((a, b) => toNumber(a.n_qubits) - toNumber(b.n_qubits)
+      || toNumber(a.circuit_depth) - toNumber(b.circuit_depth)
+      || quantumDataFraction(a) - quantumDataFraction(b));
+}
+
+function getSelectedQuantumGameRow() {
+  const rows = getQuantumGameRows();
+  if (!rows.length) return null;
+  let exact = rows
+    .filter((row) => toNumber(row.n_qubits) === selectedQuantumGameQ && toNumber(row.circuit_depth) === selectedQuantumGameDepth)
+    .sort((a, b) => (quantumDataFraction(a) === null ? -1 : 1) - (quantumDataFraction(b) === null ? -1 : 1)
+      || quantumMetricValue(b) - quantumMetricValue(a))[0];
+  if (!exact) {
+    exact = rows.slice().sort((a, b) => {
+      const da = Math.abs(toNumber(a.n_qubits) - selectedQuantumGameQ) + Math.abs(toNumber(a.circuit_depth) - selectedQuantumGameDepth) * 1.5;
+      const db = Math.abs(toNumber(b.n_qubits) - selectedQuantumGameQ) + Math.abs(toNumber(b.circuit_depth) - selectedQuantumGameDepth) * 1.5;
+      return da - db || quantumMetricValue(b) - quantumMetricValue(a);
+    })[0];
+    selectedQuantumGameQ = toNumber(exact.n_qubits, selectedQuantumGameQ);
+    selectedQuantumGameDepth = toNumber(exact.circuit_depth, selectedQuantumGameDepth);
+  }
+  return exact;
+}
+
+function normalizeQuantumGameSelection() {
+  const rows = getQuantumGameRows();
+  if (!rows.length) return;
+  const qValues = [...new Set(rows.map((row) => toNumber(row.n_qubits)).filter(Boolean))].sort((a, b) => a - b);
+  if (!qValues.includes(selectedQuantumGameQ)) selectedQuantumGameQ = qValues[0];
+  const depthValues = [...new Set(rows.filter((row) => toNumber(row.n_qubits) === selectedQuantumGameQ).map((row) => toNumber(row.circuit_depth)).filter(Boolean))].sort((a, b) => a - b);
+  if (!depthValues.includes(selectedQuantumGameDepth)) selectedQuantumGameDepth = depthValues[0];
+}
+
+function renderQuantumGameControls() {
+  const modelTabs = document.getElementById("quantumGameModelTabs");
+  const taskTabs = document.getElementById("quantumGameTaskTabs");
+  const qTabs = document.getElementById("quantumGameQubitTabs");
+  const depthTabs = document.getElementById("quantumGameDepthTabs");
+  const stageTabs = document.getElementById("quantumGameStageTabs");
+  if (!modelTabs || !taskTabs || !qTabs || !depthTabs || !stageTabs) return;
+  normalizeQuantumGameSelection();
+  const rows = getQuantumGameRows();
+  const qValues = [...new Set(rows.map((row) => toNumber(row.n_qubits)).filter(Boolean))].sort((a, b) => a - b);
+  const depthValues = [...new Set(rows.filter((row) => toNumber(row.n_qubits) === selectedQuantumGameQ).map((row) => toNumber(row.circuit_depth)).filter(Boolean))].sort((a, b) => a - b);
+
+  modelTabs.innerHTML = quantumRunModels.map((model) => `
+    <button class="tab-button" type="button" data-quantum-game-model="${model.key}" aria-pressed="${model.key === selectedQuantumGameModel}">
+      ${model.label}
+    </button>
+  `).join("");
+  taskTabs.innerHTML = taskOrder.map((task) => `
+    <button class="tab-button" type="button" data-quantum-game-task="${task}" aria-pressed="${task === selectedQuantumGameTask}">
+      ${taskLabel(task)}
+    </button>
+  `).join("");
+  qTabs.innerHTML = qValues.map((q) => `
+    <button class="tab-button" type="button" data-quantum-game-q="${q}" aria-pressed="${q === selectedQuantumGameQ}">q${q}</button>
+  `).join("");
+  depthTabs.innerHTML = depthValues.map((depth) => `
+    <button class="tab-button" type="button" data-quantum-game-depth="${depth}" aria-pressed="${depth === selectedQuantumGameDepth}">d${depth}</button>
+  `).join("");
+  stageTabs.innerHTML = quantumGameStages.map((stage) => `
+    <button class="tab-button" type="button" data-quantum-game-stage="${stage.key}" aria-pressed="${stage.key === selectedQuantumGameStage}">
+      ${tx(stage.label)}
+    </button>
+  `).join("");
+
+  modelTabs.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedQuantumGameModel = button.dataset.quantumGameModel;
+      normalizeQuantumGameSelection();
+      renderQuantumGame();
+      drawQuantumGameCanvas();
+    });
+  });
+  taskTabs.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedQuantumGameTask = button.dataset.quantumGameTask;
+      normalizeQuantumGameSelection();
+      renderQuantumGame();
+      drawQuantumGameCanvas();
+    });
+  });
+  qTabs.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedQuantumGameQ = toNumber(button.dataset.quantumGameQ, selectedQuantumGameQ);
+      normalizeQuantumGameSelection();
+      renderQuantumGame();
+      drawQuantumGameCanvas();
+    });
+  });
+  depthTabs.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedQuantumGameDepth = toNumber(button.dataset.quantumGameDepth, selectedQuantumGameDepth);
+      normalizeQuantumGameSelection();
+      renderQuantumGame();
+      drawQuantumGameCanvas();
+    });
+  });
+  stageTabs.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedQuantumGameStage = button.dataset.quantumGameStage;
+      renderQuantumGame();
+      drawQuantumGameCanvas();
+    });
+  });
+}
+
+function renderQuantumGameNote() {
+  const target = document.getElementById("quantumGameNote");
+  if (!target) return;
+  const row = getSelectedQuantumGameRow();
+  const stage = quantumGameStages.find((item) => item.key === selectedQuantumGameStage) || quantumGameStages[0];
+  const warning = selectedQuantumGameTask === "clintox"
+    ? `<div class="quantum-game-warning">${tx("ClinTox dengesizdir; AUROC yanında F1, MCC, duyarlılık ve özgüllük okunmalıdır.")}</div>`
+    : "";
+  if (!row) {
+    target.innerHTML = `<h3>${tx("Kuantum Molekül Laboratuvarı")}</h3><p>${tx("Bu model için ablasyon kaydı bulunamadı.")}</p>`;
+    return;
+  }
+  target.innerHTML = `
+    <span class="quantum-game-note-label">${tx("Oyun sahnesi")}</span>
+    <h3>${tx("Kuantum Molekül Laboratuvarı")}</h3>
+    <p>${tx("Amaç en parlak devreyi seçmek değil; q, d, ölçüm ve metrik dengesini seminer bulgusuyla uyumlu okumaktır.")}</p>
+    <div class="quantum-game-stats">
+      <div class="quantum-game-stat"><span>${tx("Seçili konfigürasyon")}</span><strong>${taskLabel(selectedQuantumGameTask)} · ${quantumModelLabel(selectedQuantumGameModel)} · q${selectedQuantumGameQ}-d${selectedQuantumGameDepth}</strong></div>
+      <div class="quantum-game-stat"><span>AUROC</span><strong>${formatMetric(quantumMetricValue(row))} ± ${formatMetric(quantumMetricStd(row))}</strong></div>
+      <div class="quantum-game-stat"><span>${tx("Devre kapasitesi")}</span><strong>${selectedQuantumGameQ} ${tx("kubit")} · d${selectedQuantumGameDepth}</strong></div>
+      <div class="quantum-game-stat"><span>${tx("Mini görev")}</span><strong>${tx(stage.label)}</strong></div>
+      <div class="quantum-game-stat"><span>${tx("Beklenen okuma")}</span><strong>${tx(stage.summary)}</strong></div>
+    </div>
+    ${warning}
+  `;
+}
+
+function renderQuantumGame() {
+  renderQuantumGameControls();
+  renderQuantumGameNote();
 }
 
 function renderArchitectureTabs() {
@@ -2080,6 +2384,121 @@ function drawResearchGrid(ctx, width, height) {
   for (let y = 0; y < height; y += 42) {
     ctx.fillRect(0, y, width, 1);
   }
+}
+
+function drawProtocolCanvas() {
+  const canvas = document.getElementById("protocolCanvas");
+  if (!canvas) return;
+  const rectWidth = canvas.getBoundingClientRect().width;
+  const compact = rectWidth < 720;
+  const { ctx, width, height } = fitCanvas(canvas, compact ? 1.18 : 0.54, compact ? 700 : 590, compact ? 820 : 760);
+  const t = extendedFrame;
+  const pad = compact ? 22 : 34;
+  const accent = "#00a6c8";
+  const quantum = "#7b61ff";
+  const caution = "#e0a100";
+  const success = "#24a148";
+
+  ctx.clearRect(0, 0, width, height);
+  ctx.fillStyle = "#101216";
+  ctx.fillRect(0, 0, width, height);
+  drawResearchGrid(ctx, width, height);
+
+  ctx.fillStyle = "#ffffff";
+  ctx.font = compact ? "800 17px Inter, sans-serif" : "800 24px Inter, sans-serif";
+  drawBoundedWrappedText(ctx, tx("Adil karşılaştırma"), pad, compact ? 30 : 36, width - pad * 2, compact ? 20 : 28, "#ffffff", ctx.font, 1);
+  ctx.fillStyle = "rgba(255,255,255,0.68)";
+  ctx.font = compact ? "700 12px Inter, sans-serif" : "700 14px Inter, sans-serif";
+  drawBoundedWrappedText(ctx, tx("Aynı görev, aynı split, aynı metrik ailesi"), pad, compact ? 58 : 68, width - pad * 2, 17, "rgba(255,255,255,0.68)", ctx.font, compact ? 2 : 1);
+
+  function panel(x, y, w, h, title, body, color) {
+    ctx.fillStyle = `${color}22`;
+    ctx.strokeStyle = `${color}aa`;
+    ctx.lineWidth = 1.4;
+    roundRect(ctx, x, y, w, h, 10);
+    ctx.fill();
+    ctx.stroke();
+    ctx.fillStyle = color;
+    ctx.font = compact ? "800 10px JetBrains Mono, monospace" : "800 11px JetBrains Mono, monospace";
+    drawBoundedWrappedText(ctx, title, x + 12, y + 20, w - 24, 13, color, ctx.font, 1);
+    ctx.fillStyle = "rgba(255,255,255,0.84)";
+    ctx.font = compact ? "750 12px Inter, sans-serif" : "750 13px Inter, sans-serif";
+    drawBoundedWrappedText(ctx, body, x + 12, y + (compact ? 46 : 50), w - 24, compact ? 15 : 16, "rgba(255,255,255,0.84)", ctx.font, compact ? 3 : 2);
+  }
+
+  function arrow(x1, y1, x2, y2, color) {
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+    const angle = Math.atan2(y2 - y1, x2 - x1);
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(x2, y2);
+    ctx.lineTo(x2 - Math.cos(angle - 0.5) * 9, y2 - Math.sin(angle - 0.5) * 9);
+    ctx.lineTo(x2 - Math.cos(angle + 0.5) * 9, y2 - Math.sin(angle + 0.5) * 9);
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  if (compact) {
+    const cardW = width - pad * 2;
+    const cardH = 78;
+    const top = 96;
+    const gap = 14;
+    const cards = [
+      [tx("Veri katmanı"), "BACE · BBBP · ClinTox · " + tx("Sabit split"), accent],
+      [tx("Temsil üretimi"), tx("SMILES -> ECFP / graf / PCA"), "#e65f4f"],
+      [tx("Klasik / grafik"), tx("SVM · MLP · GNN · GAT"), success],
+      [tx("Simüle kuantum modelleri"), tx("QSVM/VQC · QGNN · Hybrid QHead"), quantum],
+      [tx("Metrik okuması"), tx("AUROC + PR-AUC/F1/MCC"), caution],
+    ];
+    cards.forEach(([title, body, color], index) => {
+      const y = top + index * (cardH + gap);
+      panel(pad, y, cardW, cardH, title, body, color);
+      if (index < cards.length - 1) arrow(width / 2, y + cardH + 2, width / 2, y + cardH + gap - 3, "rgba(255,255,255,0.38)");
+    });
+    const warningY = top + cards.length * (cardH + gap) + 10;
+    panel(pad, warningY, cardW, 74, tx("Gerçek kuantum donanımı kullanılmadı"), tx("shots=0: exact statevector simülasyonu; örnekleme gürültüsü yok."), caution);
+    return;
+  }
+
+  const laneY = 170;
+  const cardW = Math.min(180, (width - pad * 2 - 64) / 5);
+  const gap = (width - pad * 2 - cardW * 5) / 4;
+  const cards = [
+    [tx("Veri katmanı"), "BACE · BBBP · ClinTox\n" + tx("Sabit split"), accent],
+    [tx("Temsil üretimi"), tx("SMILES -> ECFP / graf / PCA"), "#e65f4f"],
+    [tx("Klasik / grafik"), tx("SVM · MLP · GNN · GAT"), success],
+    [tx("Simüle kuantum modelleri"), tx("QSVM/VQC · QGNN · Hybrid QHead"), quantum],
+    [tx("Metrik okuması"), tx("AUROC + PR-AUC/F1/MCC"), caution],
+  ];
+  cards.forEach(([title, body, color], index) => {
+    const x = pad + index * (cardW + gap);
+    panel(x, laneY, cardW, 122, title, body, color);
+    if (index < cards.length - 1) arrow(x + cardW + 8, laneY + 61, x + cardW + gap - 8, laneY + 61, "rgba(255,255,255,0.36)");
+  });
+
+  const splitY = laneY + 148;
+  const splitW = (width - pad * 2 - 18) * 0.5;
+  panel(pad, splitY, splitW, 128, tx("Kuantum simülasyonu"), "Qiskit Aer: aer_statevector · CPU · shots=0\nPennyLane: lightning.qubit · adjoint", quantum);
+  panel(pad + splitW + 18, splitY, splitW, 128, tx("Eğitim sistemi"), "Ryzen 9 9950X · RTX 4080 Super\n64 GB DDR5 6200 MHz", accent);
+
+  const pulse = (Math.sin(t * 2) + 1) / 2;
+  ctx.strokeStyle = `rgba(224,161,0,${0.34 + pulse * 0.28})`;
+  ctx.lineWidth = 3;
+  roundRect(ctx, pad, height - 78, width - pad * 2, 48, 10);
+  ctx.stroke();
+  ctx.fillStyle = "rgba(224,161,0,0.12)";
+  ctx.fill();
+  ctx.fillStyle = "#f9c74f";
+  ctx.font = "800 13px Inter, sans-serif";
+  drawBoundedWrappedText(ctx, tx("Gerçek kuantum donanımı kullanılmadı"), pad + 16, height - 48, 260, 15, "#f9c74f", ctx.font, 1);
+  ctx.fillStyle = "rgba(255,255,255,0.76)";
+  ctx.font = "700 13px Inter, sans-serif";
+  drawBoundedWrappedText(ctx, tx("Devreler klasik donanımda simüle edildi; sonuçlar donanım üstünlüğü olarak yorumlanmaz."), pad + 292, height - 51, width - pad * 2 - 308, 15, "rgba(255,255,255,0.76)", ctx.font, 2);
 }
 
 function drawCompactResearchMap(ctx, width, height, taskCounts, categoryCounts, totalRows) {
@@ -2335,7 +2754,7 @@ function renderLeaderboardTable() {
 
 function familyLabel(family) {
   return tx({
-    classical: "tanımlayıcı (descriptor) tabanlı klasik",
+    classical: "klasik tanımlayıcı",
     graph: "klasik grafik",
     quantum: "saf kuantum",
     quantumGraph: "kuantum grafik",
@@ -3258,14 +3677,16 @@ function drawEntanglementConcept(ctx, width, height, concept) {
   }
   ctx.stroke();
 
+  const labelBoxW = Math.min(width * 0.42, Math.max(250, width * 0.28));
+  const labelBoxX = width * 0.5 - labelBoxW / 2;
+  const labelBoxY = height * 0.2;
   ctx.fillStyle = withAlpha(concept.accent, 0.14);
-  roundRect(ctx, width * 0.38, height * 0.22, width * 0.22, 48, 8);
+  roundRect(ctx, labelBoxX, labelBoxY, labelBoxW, 56, 8);
   ctx.fill();
   ctx.strokeStyle = withAlpha(concept.accent, 0.55);
   ctx.stroke();
-  ctx.fillStyle = "#ffffff";
   ctx.font = "800 15px JetBrains Mono, monospace";
-  ctx.fillText("00 ve 11 birlikte güçlenir", width * 0.405, height * 0.25);
+  drawBoundedWrappedText(ctx, "00 ve 11 birlikte güçlenir", labelBoxX + 14, labelBoxY + 28, labelBoxW - 28, 16, "#ffffff", ctx.font, 2);
   drawWrappedText(ctx, "Dolanıklık, tek tek kubitlerden değil ortak durumdan gelen korelasyonu temsil eder. ZZFeatureMap ve kontrollü kapılar bu etkileşimi üretir.", width * 0.12, height * 0.77, width * 0.76, 18, "rgba(255,255,255,0.74)", "600 14px Inter, sans-serif");
 }
 
@@ -3335,9 +3756,17 @@ function drawSupervisedConcept(ctx, width, height, concept) {
   ctx.moveTo(width * 0.76, y + 56);
   ctx.bezierCurveTo(width * 0.63, height * 0.77, width * 0.42, height * 0.77, width * 0.36, y + 58);
   ctx.stroke();
-  ctx.fillStyle = concept.accent;
+  const updateLabel = "loss -> parametre güncelleme";
+  const updateBoxW = Math.min(width * 0.38, 260);
+  const updateBoxX = width * 0.43;
+  const updateBoxY = height * 0.64;
+  ctx.fillStyle = "rgba(16,18,22,0.92)";
+  roundRect(ctx, updateBoxX - 10, updateBoxY - 17, updateBoxW, 32, 999);
+  ctx.fill();
+  ctx.strokeStyle = withAlpha(concept.accent, 0.68);
+  ctx.stroke();
   ctx.font = "800 14px JetBrains Mono, monospace";
-  ctx.fillText("loss -> parametre güncelleme", width * 0.43, height * 0.72);
+  drawBoundedWrappedText(ctx, updateLabel, updateBoxX, updateBoxY + 4, updateBoxW - 20, 14, concept.accent, ctx.font, 1);
   drawWrappedText(ctx, "Bu seminerde tüm modeller denetimli ikili sınıflandırma olarak karşılaştırıldı: aynı veri ayrımı, aynı hedef, aynı metrik ailesi.", width * 0.12, height * 0.82, width * 0.76, 18, "rgba(255,255,255,0.74)", "600 14px Inter, sans-serif");
 }
 
@@ -3471,12 +3900,18 @@ function drawQmlCircuitPanel(ctx, x, y, width, height, scene, t) {
     const shortPanel = height < 170;
     const wireX = x + width * 0.08;
     const wireY = y + height * (shortPanel ? 0.32 : 0.34);
-    drawQuantumWires(ctx, wireX, wireY, width * 0.82, height * (shortPanel ? 0.22 : 0.28), scene.color);
+    const wireW = scene.key === "qsvm" ? width * (shortPanel ? 0.5 : 0.52) : width * 0.82;
+    drawQuantumWires(ctx, wireX, wireY, wireW, height * (shortPanel ? 0.22 : 0.28), scene.color);
 
     if (scene.key === "qsvm") {
-      const matrixX = x + width * 0.66;
-      const matrixY = y + height * (shortPanel ? 0.27 : 0.34);
-      const cell = Math.min(shortPanel ? 14 : 18, width * 0.045);
+      const matrixX = x + width * (shortPanel ? 0.66 : 0.68);
+      const matrixY = y + height * (shortPanel ? 0.25 : 0.31);
+      const cell = Math.min(shortPanel ? 12 : 16, width * 0.04);
+      ctx.fillStyle = "rgba(16,18,22,0.78)";
+      roundRect(ctx, matrixX - 8, matrixY - 8, cell * 5 + 14, cell * 5 + 32, 8);
+      ctx.fill();
+      ctx.strokeStyle = withAlpha(scene.color, 0.48);
+      ctx.stroke();
       for (let r = 0; r < 5; r += 1) {
         for (let c = 0; c < 5; c += 1) {
           ctx.fillStyle = withAlpha(scene.color, 0.18 + (((r + c + Math.floor(t * 3)) % 5) / 5) * 0.68);
@@ -3987,18 +4422,23 @@ function drawMessagePanel(ctx, x, y, width, height, color, t, attention) {
     if (attention) {
       ctx.fillStyle = "rgba(255,255,255,0.72)";
       ctx.font = "800 11px JetBrains Mono, monospace";
-      ctx.fillText(`alpha=${weight.toFixed(2)}`, sourceX + 54, rowY - 8);
+      ctx.fillText(`a=${weight.toFixed(2)}`, sourceX + 54, rowY - 8);
     }
   });
 
+  const hiddenBoxW = Math.max(68, Math.min(92, width * 0.28));
+  const hiddenBoxH = 58;
+  const hiddenBoxX = Math.min(x + width - hiddenBoxW - 18, targetX - hiddenBoxW / 2);
+  const hiddenBoxY = y + height * 0.39;
   ctx.fillStyle = withAlpha(color, 0.22);
-  roundRect(ctx, targetX - 28, y + height * 0.39, 72, 58, 8);
+  roundRect(ctx, hiddenBoxX, hiddenBoxY, hiddenBoxW, hiddenBoxH, 8);
   ctx.fill();
   ctx.strokeStyle = withAlpha(color, 0.74);
   ctx.stroke();
-  ctx.fillStyle = "#ffffff";
   ctx.font = "800 13px JetBrains Mono, monospace";
-  ctx.fillText("h_v'", targetX - 5, y + height * 0.51);
+  const hiddenText = "h_v'";
+  ctx.fillStyle = "#ffffff";
+  ctx.fillText(hiddenText, hiddenBoxX + hiddenBoxW / 2 - ctx.measureText(hiddenText).width / 2, hiddenBoxY + hiddenBoxH / 2 + 5);
   ctx.fillStyle = "rgba(255,255,255,0.72)";
   ctx.font = "700 12px Inter, sans-serif";
   ctx.fillText(attention ? "GAT komşuları eşit görmez" : "GNN komşuları toplar ve günceller", x + 20, y + height - 21);
@@ -4028,15 +4468,20 @@ function drawGraphPoolingPanel(ctx, x, y, width, height, color, t, attention) {
     roundRect(ctx, barX + 28, rowY - 10, barW * Math.max(0.05, Math.min(1, value)), 11, 999);
     ctx.fill();
   });
-  drawArrow(ctx, x + width * 0.63, y + height * 0.48, x + width * 0.78, y + height * 0.48, color);
+  const scoreBoxW = Math.max(58, Math.min(84, width * 0.24));
+  const scoreBoxH = Math.max(50, Math.min(70, height * 0.28));
+  const scoreBoxX = x + width - scoreBoxW - 18;
+  const scoreBoxY = y + height * 0.33;
+  drawArrow(ctx, x + width * 0.62, y + height * 0.48, scoreBoxX - 8, y + height * 0.48, color);
   ctx.fillStyle = withAlpha(color, 0.22);
-  roundRect(ctx, x + width * 0.8, y + height * 0.33, width * 0.14, height * 0.28, 8);
+  roundRect(ctx, scoreBoxX, scoreBoxY, scoreBoxW, scoreBoxH, 8);
   ctx.fill();
   ctx.strokeStyle = withAlpha(color, 0.75);
   ctx.stroke();
-  ctx.fillStyle = "#ffffff";
   ctx.font = "800 17px JetBrains Mono, monospace";
-  ctx.fillText((attention ? "0.82" : "0.76"), x + width * 0.825, y + height * 0.49);
+  const scoreText = attention ? "0.82" : "0.76";
+  ctx.fillStyle = "#ffffff";
+  ctx.fillText(scoreText, scoreBoxX + scoreBoxW / 2 - ctx.measureText(scoreText).width / 2, scoreBoxY + scoreBoxH / 2 + 6);
   ctx.fillStyle = "rgba(255,255,255,0.72)";
   ctx.font = "700 12px Inter, sans-serif";
   ctx.fillText("molekül temsili -> sınıf skoru", x + 20, y + height - 21);
@@ -4156,7 +4601,7 @@ function drawSvmPlane(ctx, x, y, width, height, color) {
     ctx.arc(px, py, 4, 0, Math.PI * 2);
     ctx.fill();
   }
-  drawWrappedText(ctx, "SVM, descriptor uzayında sınıfları ayıran en geniş marjlı sınırı arar.", x + 22, y + 24, width * 0.82, 17, "rgba(255,255,255,0.76)", "600 14px Inter, sans-serif");
+  drawWrappedText(ctx, "SVM, ECFP özellik uzayında sınıfları ayıran en geniş marjlı sınırı arar.", x + 22, y + 24, width * 0.82, 17, "rgba(255,255,255,0.76)", "600 14px Inter, sans-serif");
 }
 
 function drawDenseNetwork(ctx, x, y, width, height, color, showText = true) {
@@ -5095,12 +5540,356 @@ function initQuantumField() {
   draw();
 }
 
+function drawQuantumGameCanvas() {
+  const canvas = document.getElementById("quantumGameCanvas");
+  if (!canvas) return;
+  const rectWidth = canvas.getBoundingClientRect().width;
+  const compact = rectWidth < 720;
+  const { ctx, width, height } = fitCanvas(canvas, compact ? 1.52 : 0.48, compact ? 740 : 520, compact ? 840 : 760);
+  const row = getSelectedQuantumGameRow();
+  const stage = quantumGameStages.find((item) => item.key === selectedQuantumGameStage) || quantumGameStages[0];
+  const stageIndex = quantumGameStages.findIndex((item) => item.key === selectedQuantumGameStage);
+  const accent = quantumModelColor(selectedQuantumGameModel);
+  const taskAccent = datasets[selectedQuantumGameTask]?.accent || "#00a6c8";
+  const t = extendedFrame;
+  const q = selectedQuantumGameQ;
+  const depth = selectedQuantumGameDepth;
+  const auroc = quantumMetricValue(row);
+  const std = quantumMetricStd(row);
+
+  ctx.clearRect(0, 0, width, height);
+  ctx.fillStyle = "#101216";
+  ctx.fillRect(0, 0, width, height);
+  ctx.fillStyle = "rgba(255,255,255,0.035)";
+  for (let i = 0; i < 70; i += 1) {
+    const x = (Math.sin(i * 12.989 + t) * 43758.5453) % 1;
+    const y = (Math.sin(i * 78.233 + t * 0.7) * 24634.6345) % 1;
+    ctx.beginPath();
+    ctx.arc(Math.abs(x) * width, Math.abs(y) * height, 1.1 + (i % 4) * 0.35, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  const pad = compact ? 18 : 26;
+  ctx.fillStyle = "#ffffff";
+  ctx.font = compact ? "800 16px Inter, sans-serif" : "800 22px Inter, sans-serif";
+  drawBoundedWrappedText(ctx, `${tx("Kuantum oyun sahnesi")} · ${taskLabel(selectedQuantumGameTask)} · ${quantumModelLabel(selectedQuantumGameModel)}`, pad, compact ? 22 : 30, width - pad * 2, compact ? 19 : 24, "#ffffff", ctx.font, 2);
+  ctx.font = "800 12px JetBrains Mono, monospace";
+  ctx.fillStyle = "rgba(255,255,255,0.68)";
+  ctx.fillText(`q${q}-d${depth} · AUROC ${formatMetric(auroc)} ± ${formatMetric(std)}`, pad, compact ? 70 : 66);
+
+  function drawGamePanel(x, y, w, h, title) {
+    ctx.fillStyle = "rgba(255,255,255,0.065)";
+    ctx.strokeStyle = "rgba(255,255,255,0.14)";
+    ctx.lineWidth = 1;
+    roundRect(ctx, x, y, w, h, 10);
+    ctx.fill();
+    ctx.stroke();
+    ctx.fillStyle = "rgba(255,255,255,0.72)";
+    ctx.font = compact ? "800 10px Inter, sans-serif" : "800 11px Inter, sans-serif";
+    drawBoundedWrappedText(ctx, title, x + 12, y + 16, w - 24, 13, "rgba(255,255,255,0.72)", ctx.font, 1);
+  }
+
+  function drawGameFlowCard(card, index, total) {
+    const active = index <= Math.min(stageIndex + 1, total - 1);
+    const color = index < 2 ? taskAccent : index < 4 ? accent : "#f9c74f";
+    ctx.fillStyle = active ? `${color}cc` : "rgba(255,255,255,0.1)";
+    ctx.strokeStyle = active ? "rgba(255,255,255,0.55)" : "rgba(255,255,255,0.18)";
+    ctx.lineWidth = 1.1;
+    roundRect(ctx, card.x, card.y, card.w, card.h, 8);
+    ctx.fill();
+    ctx.stroke();
+    ctx.fillStyle = "rgba(16,18,22,0.72)";
+    ctx.beginPath();
+    ctx.arc(card.x + 15, card.y + 15, compact ? 9 : 10, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = "#ffffff";
+    ctx.font = compact ? "800 9px JetBrains Mono, monospace" : "800 10px JetBrains Mono, monospace";
+    ctx.fillText(String(index + 1), card.x + (compact ? 12 : 11), card.y + 18);
+    ctx.font = compact ? "800 11px JetBrains Mono, monospace" : "800 12px JetBrains Mono, monospace";
+    drawBoundedWrappedText(ctx, card.label, card.x + 30, card.y + card.h * 0.5 + 4, card.w - 40, 13, "#ffffff", ctx.font, 1);
+  }
+
+  function drawGameArrow(from, to) {
+    const x1 = from.x + from.w;
+    const y1 = from.y + from.h / 2;
+    const x2 = to.x;
+    const y2 = to.y + to.h / 2;
+    ctx.strokeStyle = "rgba(255,255,255,0.24)";
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    if (Math.abs(y1 - y2) < 4) {
+      ctx.moveTo(x1 + 4, y1);
+      ctx.lineTo(x2 - 4, y2);
+    } else {
+      const midX = Math.min(width - pad - 12, Math.max(pad + 12, x1 + 12));
+      ctx.moveTo(x1 + 4, y1);
+      ctx.lineTo(midX, y1);
+      ctx.lineTo(midX, y2);
+      ctx.lineTo(x2 - 4, y2);
+    }
+    ctx.stroke();
+    ctx.fillStyle = "rgba(255,255,255,0.34)";
+    ctx.beginPath();
+    ctx.moveTo(x2 - 4, y2);
+    ctx.lineTo(x2 - 12, y2 - 4);
+    ctx.lineTo(x2 - 12, y2 + 4);
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  function drawGameCircuit(x, y, w, h) {
+    drawGamePanel(x, y, w, h, tx("Kuantum devre"));
+    const innerLeft = x + (compact ? 40 : 48);
+    const innerRight = x + w - 16;
+    const top = y + (compact ? 44 : 48);
+    const bottom = y + h - 24;
+    const wires = Math.max(2, Math.min(8, q));
+    const gap = (bottom - top) / Math.max(1, wires - 1);
+    const gateW = compact ? Math.max(18, Math.min(24, w / 13)) : Math.max(22, Math.min(30, w / 15));
+    const gateH = Math.max(14, Math.min(22, gap * 0.72));
+
+    for (let i = 0; i < wires; i += 1) {
+      const yLine = top + i * gap;
+      ctx.strokeStyle = "rgba(255,255,255,0.22)";
+      ctx.lineWidth = 1.2;
+      ctx.beginPath();
+      ctx.moveTo(innerLeft, yLine);
+      ctx.lineTo(innerRight, yLine);
+      ctx.stroke();
+      ctx.fillStyle = "rgba(255,255,255,0.7)";
+      ctx.font = "800 10px JetBrains Mono, monospace";
+      ctx.fillText(`q${i}`, x + 12, yLine + 3);
+      const phase = t * (2.2 + depth * 0.28) + i * 0.8;
+      const gx = innerLeft + ((Math.sin(phase) + 1) / 2) * (innerRight - innerLeft);
+      ctx.fillStyle = i % 2 ? accent : taskAccent;
+      roundRect(ctx, gx - gateW / 2, yLine - gateH / 2, gateW, gateH, 5);
+      ctx.fill();
+      ctx.fillStyle = "#fff";
+      ctx.font = compact ? "800 9px JetBrains Mono, monospace" : "800 10px JetBrains Mono, monospace";
+      ctx.fillText(stageIndex < 2 ? "H" : stageIndex < 4 ? "θ" : "M", gx - 4, yLine + 3);
+    }
+
+    if (stageIndex >= 2) {
+      for (let i = 0; i < wires - 1; i += 2) {
+        const y1 = top + i * gap;
+        const y2 = top + (i + 1) * gap;
+        const entangleX = innerLeft + (innerRight - innerLeft) * (0.42 + 0.18 * Math.sin(t + i));
+        ctx.strokeStyle = "#f9c74f";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(entangleX, y1);
+        ctx.lineTo(entangleX, y2);
+        ctx.stroke();
+        ctx.fillStyle = "#f9c74f";
+        ctx.beginPath();
+        ctx.arc(entangleX, y1, 4.5, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.strokeStyle = "#f9c74f";
+        ctx.beginPath();
+        ctx.arc(entangleX, y2, 6.5, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+    }
+  }
+
+  function drawGameBloch(x, y, w, h) {
+    drawGamePanel(x, y, w, h, tx("Durum"));
+    const cx = x + w * 0.5;
+    const cy = y + h * 0.56;
+    const radius = Math.min(w * 0.24, h * 0.32, compact ? 36 : 52);
+    ctx.strokeStyle = "rgba(126,230,255,0.55)";
+    ctx.lineWidth = 1.4;
+    ctx.beginPath();
+    ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.ellipse(cx, cy, radius, radius * 0.32, 0, 0, Math.PI * 2);
+    ctx.stroke();
+    const angle = t * (1 + depth * 0.18) + q * 0.2;
+    const px = cx + Math.cos(angle) * radius * 0.62;
+    const py = cy + Math.sin(angle * 0.7) * radius * 0.62;
+    ctx.strokeStyle = "#7ee6ff";
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.lineTo(px, py);
+    ctx.stroke();
+    ctx.fillStyle = "#7ee6ff";
+    ctx.beginPath();
+    ctx.arc(px, py, compact ? 5 : 6, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  function drawGameHistogram(x, y, w, h) {
+    drawGamePanel(x, y, w, h, tx("Ölçüm histogramı"));
+    const measured = stageIndex >= 3;
+    const p1 = Math.max(0.08, Math.min(0.92, 0.5 + (auroc - 0.72) * 0.9 - std));
+    const histLeft = x + (compact ? 26 : 36);
+    const histTop = y + h * (measured ? 0.4 : 0.52);
+    const barW = Math.max(44, w - (compact ? 82 : 112));
+    [["0", 1 - p1, taskAccent], ["1", p1, accent]].forEach(([label, value, color], index) => {
+      const barY = histTop + index * (compact ? 30 : 38);
+      ctx.fillStyle = "rgba(255,255,255,0.68)";
+      ctx.font = compact ? "800 10px JetBrains Mono, monospace" : "800 11px JetBrains Mono, monospace";
+      ctx.fillText(label, x + 12, barY + 13);
+      ctx.fillStyle = "rgba(255,255,255,0.12)";
+      roundRect(ctx, histLeft, barY, barW, 16, 999);
+      ctx.fill();
+      ctx.fillStyle = measured ? color : "rgba(255,255,255,0.18)";
+      roundRect(ctx, histLeft, barY, barW * (measured ? value : 0.5), 16, 999);
+      ctx.fill();
+      drawBoundedWrappedText(ctx, measured ? value.toFixed(2) : "--", histLeft + barW + 8, barY + 12, w - (histLeft - x) - barW - 12, 12, measured ? "#fff" : "rgba(255,255,255,0.52)", ctx.font, 1);
+    });
+    if (!measured) {
+      ctx.fillStyle = "rgba(255,255,255,0.6)";
+      ctx.font = compact ? "700 11px Inter, sans-serif" : "700 12px Inter, sans-serif";
+      drawBoundedWrappedText(ctx, tx("Ölçüm adımında açılır."), x + 12, y + 36, w - 24, 14, "rgba(255,255,255,0.6)", ctx.font, 1);
+    }
+  }
+
+  function drawGameScore(x, y, w, h) {
+    ctx.fillStyle = "rgba(255,255,255,0.085)";
+    ctx.strokeStyle = "rgba(255,255,255,0.14)";
+    ctx.lineWidth = 1;
+    roundRect(ctx, x, y, w, h, 10);
+    ctx.fill();
+    ctx.stroke();
+    ctx.fillStyle = "#ffffff";
+    ctx.font = compact ? "800 12px Inter, sans-serif" : "800 14px Inter, sans-serif";
+    drawBoundedWrappedText(ctx, tx("Karar skoru"), x + 14, y + 20, w - 28, 14, "#ffffff", ctx.font, 1);
+    ctx.font = compact ? "800 24px JetBrains Mono, monospace" : "800 32px JetBrains Mono, monospace";
+    ctx.fillText(formatMetric(auroc), x + 14, y + (compact ? 62 : 56));
+    ctx.fillStyle = "rgba(255,255,255,0.64)";
+    ctx.font = compact ? "800 10px JetBrains Mono, monospace" : "800 11px JetBrains Mono, monospace";
+    drawBoundedWrappedText(ctx, `std ${formatMetric(std)} · q${q}-d${depth}`, x + 14, y + h - 16, w - 28, 12, "rgba(255,255,255,0.64)", ctx.font, 1);
+  }
+
+  function drawGameSummary(x, y, w, h) {
+    ctx.fillStyle = "rgba(255,255,255,0.07)";
+    ctx.strokeStyle = "rgba(255,255,255,0.14)";
+    ctx.lineWidth = 1;
+    roundRect(ctx, x, y, w, h, 10);
+    ctx.fill();
+    ctx.stroke();
+    ctx.fillStyle = "rgba(255,255,255,0.58)";
+    ctx.font = compact ? "800 9px Inter, sans-serif" : "800 10px Inter, sans-serif";
+    drawBoundedWrappedText(ctx, tx("Aşama notu"), x + 12, y + 15, w - 24, 11, "rgba(255,255,255,0.58)", ctx.font, 1);
+    ctx.font = compact ? "700 11px Inter, sans-serif" : "700 12px Inter, sans-serif";
+    drawBoundedWrappedText(ctx, tx(stage.summary), x + 12, y + (compact ? 33 : 34), w - 24, 15, "rgba(255,255,255,0.76)", ctx.font, compact ? 2 : 1);
+  }
+
+  const flowLabels = ["SMILES", "ECFP", `q${q}`, "PQC", tx("Ölçüm"), "AUROC"];
+  if (compact) {
+    const summaryH = 50;
+    const histH = 104;
+    const miniH = 110;
+    const circuitH = 148;
+    const gap = 10;
+    const flowY = 96;
+    const cardH = 44;
+    const cardW = (width - pad * 2 - gap) / 2;
+    const cards = flowLabels.map((label, index) => ({
+      label,
+      x: pad + (index % 2) * (cardW + gap),
+      y: flowY + Math.floor(index / 2) * (cardH + gap),
+      w: cardW,
+      h: cardH,
+    }));
+    cards.forEach((card, index) => {
+      drawGameFlowCard(card, index, cards.length);
+      if (index > 0 && index % 2 === 1) drawGameArrow(cards[index - 1], card);
+    });
+
+    const summaryY = height - pad - summaryH;
+    const histY = summaryY - histH - 12;
+    const miniY = histY - miniH - 14;
+    const circuitY = miniY - circuitH - 14;
+    const blochW = (width - pad * 2 - gap) * 0.47;
+    const scoreX = pad + blochW + gap;
+    const scoreW = width - pad * 2 - gap - blochW;
+    drawGameCircuit(pad, circuitY, width - pad * 2, circuitH);
+    drawGameBloch(pad, miniY, blochW, miniH);
+    drawGameScore(scoreX, miniY, scoreW, miniH);
+    drawGameHistogram(pad, histY, width - pad * 2, histH);
+    drawGameSummary(pad, summaryY, width - pad * 2, summaryH);
+  } else {
+    const flowY = 92;
+    const gap = 12;
+    const cardW = Math.min(138, (width - pad * 2 - gap * 5) / 6);
+    const flowLeft = (width - (cardW * 6 + gap * 5)) / 2;
+    const cards = flowLabels.map((label, index) => ({
+      label,
+      x: flowLeft + index * (cardW + gap),
+      y: flowY,
+      w: cardW,
+      h: 52,
+    }));
+    cards.forEach((card, index) => {
+      if (index > 0) drawGameArrow(cards[index - 1], card);
+      drawGameFlowCard(card, index, cards.length);
+    });
+
+    const labY = 174;
+    const summaryH = 46;
+    const summaryY = height - 26 - summaryH;
+    const labH = Math.max(230, summaryY - labY - 16);
+    const panelGap = 16;
+    const blochW = Math.max(170, Math.min(240, width * 0.19));
+    const readoutW = Math.max(230, Math.min(310, width * 0.24));
+    const circuitW = width - pad * 2 - blochW - readoutW - panelGap * 2;
+    const scoreH = 80;
+    drawGameBloch(pad, labY, blochW, labH);
+    drawGameCircuit(pad + blochW + panelGap, labY, circuitW, labH);
+    drawGameScore(width - pad - readoutW, labY, readoutW, scoreH);
+    drawGameHistogram(width - pad - readoutW, labY + scoreH + 14, readoutW, labH - scoreH - 14);
+    drawGameSummary(pad, summaryY, width - pad * 2, summaryH);
+  }
+}
+
 function circuitStagesForModel(model, depth) {
-  if (model === "hybrid_qhead") return ["ECFP", "Klasik kodlayıcı", "Kubit kodlama", `PQC d${depth}`, "Ölçüm"];
-  if (model === "qsvm") return ["ECFP", "PCA", "ZZFeatureMap", "Kuantum çekirdek", "SVM"];
-  if (model === "vqc") return ["ECFP", "PCA", "Özellik haritası", `Ansatz d${depth}`, "Ölçüm"];
-  if (model === "qgnn") return ["Graf", "Mesaj geçirme", "Q layer", "Okuma", "Metrik"];
-  return ["ECFP", "PCA", "Kubit kodlama", `PQC d${depth}`, "AUROC"];
+  const stage = (label, kind, symbol) => ({ label, kind, symbol });
+  if (model === "hybrid_qhead") {
+    return [
+      stage("ECFP", "classical", "ECFP"),
+      stage("Frozen MLP", "classical", "MLP"),
+      stage("Kubit kodlama", "encode", "φ"),
+      stage(`PQC d${depth}`, "quantum", "θ"),
+      stage("Ölçüm", "measure", "m"),
+    ];
+  }
+  if (model === "qsvm") {
+    return [
+      stage("ECFP", "classical", "ECFP"),
+      stage("PCA", "classical", "PCA"),
+      stage("ZZFeatureMap", "encode", "φ"),
+      stage("K(xi,xj)", "kernel", "K"),
+      stage("SVM", "readout", "SVM"),
+    ];
+  }
+  if (model === "vqc") {
+    return [
+      stage("ECFP", "classical", "ECFP"),
+      stage("PCA", "classical", "PCA"),
+      stage("Özellik haritası", "encode", "φ"),
+      stage(`Ansatz d${depth}`, "quantum", "θ"),
+      stage("Ölçüm", "measure", "m"),
+    ];
+  }
+  if (model === "qgnn") {
+    return [
+      stage("Graf", "classical", "G"),
+      stage("Mesaj geçirme", "classical", "MP"),
+      stage("Q layer", "quantum", "θ"),
+      stage("Okuma", "measure", "m"),
+      stage("Metrik", "readout", "AUROC"),
+    ];
+  }
+  return [
+    stage("ECFP", "classical", "ECFP"),
+    stage("PCA", "classical", "PCA"),
+    stage("Kubit kodlama", "encode", "φ"),
+    stage(`PQC d${depth}`, "quantum", "θ"),
+    stage("AUROC", "readout", "AUROC"),
+  ];
 }
 
 function drawCircuitCanvas() {
@@ -5138,6 +5927,8 @@ function drawCircuitCanvas() {
   const stages = circuitStagesForModel(model, depth);
   const usableW = width - marginX * 2;
   const t = circuitFrame;
+  const qFactor = (wires - 2) / 6;
+  const depthFactor = Math.min(1, (depth - 1) / 2);
 
   ctx.clearRect(0, 0, width, height);
   ctx.fillStyle = "#101216";
@@ -5153,6 +5944,17 @@ function drawCircuitCanvas() {
   ctx.fillStyle = "rgba(255,255,255,0.78)";
   ctx.font = "800 12px JetBrains Mono, monospace";
   drawBoundedWrappedText(ctx, metricText, marginX, compact ? 66 : 58, width - marginX * 2, 16, "rgba(255,255,255,0.72)", "800 12px JetBrains Mono, monospace", 1);
+  const schematicBadge = tx("Şematik gösterim; gerçek cihaz simülasyonu değil");
+  const badgeW = compact ? width - marginX * 2 : Math.min(320, width * 0.34);
+  const badgeX = compact ? marginX : width - marginX - badgeW;
+  const badgeY = compact ? 76 : 48;
+  ctx.fillStyle = "rgba(255,255,255,0.075)";
+  roundRect(ctx, badgeX, badgeY, badgeW, 28, 999);
+  ctx.fill();
+  ctx.strokeStyle = "rgba(255,255,255,0.14)";
+  ctx.stroke();
+  ctx.font = compact ? "800 10px Inter, sans-serif" : "800 11px Inter, sans-serif";
+  drawBoundedWrappedText(ctx, schematicBadge, badgeX + 12, badgeY + 18, badgeW - 24, 12, "rgba(255,255,255,0.68)", ctx.font, 1);
 
   for (let i = 0; i < wires; i += 1) {
     const y = top + i * gap;
@@ -5165,28 +5967,74 @@ function drawCircuitCanvas() {
     ctx.fillStyle = "rgba(255,255,255,0.76)";
     ctx.font = "800 12px JetBrains Mono, monospace";
     ctx.fillText(`q${i}`, compact ? 16 : 24, y + 4);
+    const packetProgress = (t * (0.035 + depth * 0.01) + i * 0.13) % 1;
+    const packetX = marginX + packetProgress * usableW;
+    const packetRadius = Math.max(3.5, Math.min(6.5, 3.8 + qFactor * 1.4 + depthFactor * 0.8));
+    ctx.fillStyle = "rgba(36,161,72,0.16)";
+    ctx.beginPath();
+    ctx.arc(packetX, y, packetRadius * 2.2, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = "#24a148";
+    ctx.beginPath();
+    ctx.arc(packetX, y, packetRadius, 0, Math.PI * 2);
+    ctx.fill();
   }
 
-  stages.forEach((label, gateIndex) => {
+  stages.forEach((stage, gateIndex) => {
     const x = marginX + gateIndex * (usableW / Math.max(1, stages.length - 1));
-    const stageColor = gateIndex < 2 ? "#7ee6ff" : gateIndex === stages.length - 1 ? "#f9c74f" : accent;
-    for (let i = 0; i < wires; i += 1) {
-      const y = top + i * gap;
-      const pulse = 0.48 + 0.52 * Math.sin(t * 3 + i * 0.65 + gateIndex * 0.8);
-      ctx.fillStyle = `${stageColor}${Math.round((0.46 + pulse * 0.36) * 255).toString(16).padStart(2, "0")}`;
-      ctx.strokeStyle = "rgba(255,255,255,0.52)";
-      ctx.lineWidth = 1;
-      roundRect(ctx, x - gateW / 2, y - gateH / 2, gateW, gateH, 6);
+    const stageColor = stage.kind === "classical" ? "#7ee6ff"
+      : stage.kind === "readout" ? "#f9c74f"
+        : stage.kind === "measure" || stage.kind === "kernel" ? "#e0a100"
+          : accent;
+
+    if (stage.kind === "classical" || stage.kind === "readout") {
+      const blockW = compact ? 46 : 58;
+      const blockY = top - 22;
+      const blockH = bottom - top + 44;
+      ctx.fillStyle = withAlpha(stageColor, stage.kind === "readout" ? 0.2 : 0.16);
+      roundRect(ctx, x - blockW / 2, blockY, blockW, blockH, 8);
       ctx.fill();
+      ctx.strokeStyle = withAlpha(stageColor, 0.72);
       ctx.stroke();
+      ctx.font = compact ? "800 8px JetBrains Mono, monospace" : "800 9px JetBrains Mono, monospace";
+      drawBoundedWrappedText(ctx, stage.symbol, x - blockW / 2 + 6, blockY + blockH * 0.5 + 4, blockW - 12, 10, "#ffffff", ctx.font, compact ? 2 : 1);
+    } else if (stage.kind === "kernel") {
+      const cell = compact ? 7 : 9;
+      const matrixSize = cell * 4;
+      const matrixX = x - matrixSize / 2;
+      const matrixY = top + (bottom - top) * 0.5 - matrixSize / 2;
+      ctx.fillStyle = "rgba(16,18,22,0.9)";
+      roundRect(ctx, matrixX - 8, matrixY - 8, matrixSize + 16, matrixSize + 30, 8);
+      ctx.fill();
+      ctx.strokeStyle = withAlpha(stageColor, 0.72);
+      ctx.stroke();
+      for (let r = 0; r < 4; r += 1) {
+        for (let c = 0; c < 4; c += 1) {
+          ctx.fillStyle = withAlpha(stageColor, 0.22 + (((r + c + Math.floor(t * 4)) % 4) / 4) * 0.58);
+          ctx.fillRect(matrixX + c * cell, matrixY + r * cell, cell - 1, cell - 1);
+        }
+      }
       ctx.fillStyle = "#ffffff";
       ctx.font = compact ? "800 9px JetBrains Mono, monospace" : "800 10px JetBrains Mono, monospace";
-      const gateLabel = gateIndex === 0 ? "x" : gateIndex === 1 ? "p" : gateIndex === stages.length - 1 ? "m" : "θ";
-      ctx.fillText(gateLabel, x - 4, y + 4);
+      drawBoundedWrappedText(ctx, "K", matrixX - 4, matrixY + matrixSize + 17, matrixSize + 8, 10, "#ffffff", ctx.font, 1);
+    } else {
+      for (let i = 0; i < wires; i += 1) {
+        const y = top + i * gap;
+        const pulse = 0.48 + 0.52 * Math.sin(t * 3 + i * 0.65 + gateIndex * 0.8);
+        ctx.fillStyle = withAlpha(stageColor, 0.46 + pulse * 0.36);
+        ctx.strokeStyle = "rgba(255,255,255,0.52)";
+        ctx.lineWidth = 1;
+        roundRect(ctx, x - gateW / 2, y - gateH / 2, gateW, gateH, 6);
+        ctx.fill();
+        ctx.stroke();
+        ctx.fillStyle = "#ffffff";
+        ctx.font = compact ? "800 9px JetBrains Mono, monospace" : "800 10px JetBrains Mono, monospace";
+        ctx.fillText(stage.symbol, x - ctx.measureText(stage.symbol).width / 2, y + 4);
+      }
     }
 
-    if (gateIndex > 0 && gateIndex < stages.length - 1) {
-      ctx.strokeStyle = gateIndex % 2 ? "rgba(255,255,255,0.35)" : accent;
+    if (stage.kind === "encode" || stage.kind === "quantum") {
+      ctx.strokeStyle = stage.kind === "encode" ? "rgba(255,255,255,0.35)" : accent;
       ctx.lineWidth = 2;
       ctx.beginPath();
       ctx.moveTo(x, top);
@@ -5196,12 +6044,10 @@ function drawCircuitCanvas() {
 
     ctx.fillStyle = stageColor;
     ctx.font = compact ? "800 10px Inter, sans-serif" : "800 11px Inter, sans-serif";
-    drawBoundedWrappedText(ctx, label, x - (compact ? 38 : 54), height - 48, compact ? 76 : 108, 13, stageColor, ctx.font, 2);
+    drawBoundedWrappedText(ctx, stage.label, x - (compact ? 38 : 54), height - 48, compact ? 76 : 108, 13, stageColor, ctx.font, 2);
   });
 
   const waveY = top + (wires - 1) * gap * 0.5;
-  const qFactor = (wires - 2) / 6;
-  const depthFactor = Math.min(1, (depth - 1) / 2);
   const flowTime = t * (0.86 + depthFactor * 0.28);
   const waveX = marginX + ((Math.sin(flowTime * 0.92) + 1) / 2) * usableW;
   const amp1 = Math.min(18 + qFactor * 12, gap * (0.42 + depthFactor * 0.1));
@@ -5236,7 +6082,7 @@ function drawCircuitCanvas() {
   ctx.arc(waveX, ballY, ballRadius, 0, Math.PI * 2);
   ctx.fill();
 
-  drawBoundedWrappedText(ctx, "Yeşil akış q ile yoğunlaşır, d ile hızlanır; fiziksel hız değil kapasite göstergesidir.", marginX, height - 28, width - marginX * 2, 14, "rgba(255,255,255,0.55)", "700 11px Inter, sans-serif", compact ? 2 : 1);
+  drawBoundedWrappedText(ctx, "Yeşil akış q ile daha çok telde görünür, d ile hızlanır; bu fiziksel hız değil kapasite göstergesidir.", marginX, height - 28, width - marginX * 2, 14, "rgba(255,255,255,0.55)", "700 11px Inter, sans-serif", compact ? 2 : 1);
 }
 
 function initCircuitCanvas() {
@@ -5295,8 +6141,10 @@ function initExtendedCanvases() {
     drawQuantumModelFlowCanvas();
     drawExperimentMatrixCanvas();
     drawResearchMapCanvas();
+    drawProtocolCanvas();
     drawMoleculeJourneyCanvas();
     drawMetricLabCanvas();
+    drawQuantumGameCanvas();
     drawCapacityCanvas();
     drawAblationCubeCanvas();
     drawStabilityCanvas();
@@ -5328,6 +6176,7 @@ async function init() {
   renderQuantumConcepts();
   renderQuantumModelScene();
   renderQuantumRun();
+  renderQuantumGame();
   renderModelArchitecture();
   renderJourneyNote();
   renderResults();
@@ -5342,6 +6191,7 @@ async function init() {
   renderGallery();
   renderLimitations();
   initLanguageControls();
+  initAutoHideHeader();
   initQuantumField();
   initClassicalVisualCanvas();
   initQuantumConceptCanvas();
@@ -5358,10 +6208,12 @@ async function init() {
     drawQuantumModelFlowCanvas();
     drawModelArchitectureCanvas();
     drawCircuitCanvas();
+    drawQuantumGameCanvas();
     drawDatasetMeaningCanvas();
     drawDataRepresentationCanvas();
     drawExperimentMatrixCanvas();
     drawResearchMapCanvas();
+    drawProtocolCanvas();
     drawMoleculeJourneyCanvas();
     drawMetricLabCanvas();
     drawCapacityCanvas();
