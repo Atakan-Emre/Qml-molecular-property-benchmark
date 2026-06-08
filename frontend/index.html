@@ -8,39 +8,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260524-circuit-schema-2">
+  <link rel="stylesheet" href="styles.css?v=20260524-presenter-stops-1">
 </head>
 <body>
   <canvas id="quantumField" aria-hidden="true"></canvas>
 
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Ana bölüme git">
+    <a class="brand" href="#kapak" aria-label="Ana bölüme git">
       <span class="brand-mark"></span>
       <span>QML Semineri</span>
     </a>
     <div class="header-actions">
       <nav class="nav-links" aria-label="Sayfa bölümleri">
+        <a href="#kapak">Kapak</a>
+        <a href="#amac">Amaç</a>
+        <a href="#literatur">Literatür</a>
         <a href="#veri">Veri</a>
-        <a href="#veri-anlami">Anlam</a>
-        <a href="#veri-temsili">Temsil</a>
-        <a href="#yolculuk">Yolculuk</a>
-        <a href="#modeller">Modeller</a>
-        <a href="#klasik-akis">Klasik</a>
+        <a href="#modeller">Yöntem</a>
         <a href="#kuantum-temelleri">Kuantum</a>
         <a href="#quantum-ml-akisi">QML</a>
-        <a href="#mimari">Mimariler</a>
-        <a href="#quantum-oyun">Oyun</a>
-        <a href="#veri-kokpiti">Yöntem</a>
         <a href="#deney-protokolu">Protokol</a>
-        <a href="#deney-matrisi">Matris</a>
-        <a href="#sonuclar">Sonuçlar</a>
-        <a href="#lab">Metrik</a>
-        <a href="#hibrit">Hibrit</a>
-        <a href="#kapasite">Kapasite</a>
-        <a href="#kuantum-ablation">Ablasyon</a>
-        <a href="#kararlilik">Kararlılık</a>
-        <a href="#seed-dagilimi">Seed</a>
-        <a href="#kanit">Kanıtlar</a>
+        <a href="#sonuclar">Bulgular</a>
+        <a href="#sonuc">Sonuç</a>
+        <a href="#oneriler">Öneriler</a>
       </nav>
       <div class="language-switcher" aria-label="Dil seçimi">
         <button class="language-button" type="button" data-lang="tr" aria-pressed="true">TR</button>
@@ -50,19 +40,29 @@
   </header>
 
   <main id="top">
-    <section class="hero section-band">
+    <section id="kapak" class="hero section-band">
       <canvas id="heroQuantumCanvas" class="hero-quantum-canvas" width="1400" height="900" aria-hidden="true"></canvas>
       <div class="hero-copy">
-        <p class="eyebrow">Yüksek Lisans Semineri - Şahin Atakan Emre</p>
+        <p class="eyebrow">Yüksek Lisans Semineri</p>
         <h1>Medikal Veri Analizinde Klasik ve Kuantum Makine Öğrenmesi Modellerinin İncelenmesi</h1>
+        <div class="seminar-cover-meta" aria-label="Seminer kapak bilgileri">
+          <div>
+            <span>Sunum Yapan</span>
+            <strong>Şahin Atakan Emre</strong>
+          </div>
+          <div>
+            <span>Danışman</span>
+            <strong>Doç. Dr. Bihter DAŞ</strong>
+          </div>
+        </div>
         <p class="hero-text">
           BACE, BBBP ve ClinTox veri setleri üzerinde klasik modeller, klasik grafik
           modeller, saf kuantum modeller, kuantum grafik modeli ve hibrit kuantum-klasik
           model aynı deneysel zeminde karşılaştırıldı.
         </p>
         <div class="hero-actions" aria-label="Hızlı bağlantılar">
-          <a class="primary-action" href="#sonuclar">Bulguları İncele</a>
-          <a class="secondary-action" href="#kuantum-temelleri">Kuantum Nedir?</a>
+          <a class="primary-action" href="#amac">Sunum Akışına Başla</a>
+          <a class="secondary-action" href="#sonuclar">Bulguları İncele</a>
         </div>
       </div>
       <div class="hero-metrics" aria-label="Ana seminer bulguları">
@@ -85,66 +85,103 @@
       </div>
     </section>
 
-    <section class="intro-grid section-band">
+    <section id="amac" class="intro-grid section-band">
       <article class="statement">
-        <p class="section-kicker">Araştırma odağı</p>
-        <h2>Kuantum avantajı varsayılmadı; güçlü klasik referanslarla ölçüldü.</h2>
+        <p class="section-kicker">Amaç ve araştırma sorusu</p>
+        <h2>Amaç, kuantum üstünlüğü varsaymak değil; model ailelerini aynı deneysel zeminde okumaktır.</h2>
         <p>
-          Seminerin temel sorusu, kuantum modellerin moleküler özellik tahmininde
-          hangi koşullarda anlamlı sinyal ürettiğidir. Bu nedenle SVM ve MLP gibi
-          güçlü klasik yöntemler zayıflatılmadan korunmuş, QSVM, VQC, QGNN ve
-          Hybrid QHead sonuçları aynı veri ayrımları ve aynı metrik ailesiyle
-          değerlendirilmiştir.
+          Bu seminer çalışması, medikal veri analizi kapsamında ele alınan moleküler
+          özellik tahmini problemlerinde klasik tanımlayıcı modeller, klasik grafik
+          modeller, saf kuantum tanımlayıcı modeller, kuantum grafik modeli ve hibrit
+          kuantum-klasik modeli aynı veri ayrımları, aynı seed politikası ve aynı metrik
+          ailesiyle karşılaştırır.
         </p>
       </article>
+      <div class="aim-visual-stage">
+        <canvas id="researchAimCanvas" width="980" height="560" aria-label="Seminer amacını ve karşılaştırma hattını gösteren dinamik görsel"></canvas>
+      </div>
       <div class="thesis-points">
         <div class="point">
           <span>01</span>
-          <p>Klasik tanımlayıcı modeller küçük ve orta ölçekli moleküler verilerde güçlü referanstır.</p>
+          <p>BACE, BBBP ve ClinTox ilaç keşfinde biyolojik aktivite, geçirgenlik ve toksisite sorularını temsil eder.</p>
         </div>
         <div class="point">
           <span>02</span>
-          <p>QSVM, VQC'ye göre daha kararlı saf kuantum sinyali üretmiştir.</p>
+          <p>SVM, MLP, GNN ve GAT zayıflatılmış örnekler değil, güçlü klasik referans modeller olarak korunur.</p>
         </div>
         <div class="point">
           <span>03</span>
-          <p>Hibrit kuantum başlık, bazı görevlerde klasik modellerle aynı performans bölgesine yaklaşmıştır.</p>
+          <p>QSVM, VQC, QGNN ve Hybrid QHead sonuçları kuantum üstünlüğü iddiası yerine veri, temsil ve metrik bağlamında yorumlanır.</p>
         </div>
+      </div>
+    </section>
+
+    <section id="literatur" class="section-band literature-section">
+      <div class="section-heading">
+        <p class="section-kicker">Literatür çalışması</p>
+        <h2>Çalışma, klasik moleküler öğrenme birikimi ile NISQ dönemi QML sınırlılıkları arasına yerleşir</h2>
+        <p>
+          Literatür, moleküler özellik tahmininde temsil seçiminin, veri seti ölçeğinin,
+          güçlü klasik referansların ve çoklu metrik raporlamanın birlikte ele alınması
+          gerektiğini gösterir. Bu nedenle çalışma, kuantum modellerin klasik yöntemlerden
+          genel olarak üstün olduğunu ileri sürmez; hangi koşullarda anlamlı ya da sınırlı
+          sonuç verdiğini tartışır.
+        </p>
+      </div>
+      <div class="visual-layout">
+        <div class="visual-stage">
+          <canvas id="literatureMapCanvas" width="1180" height="620" aria-label="Literatür çalışmasını klasik, grafik, kuantum ve hibrit araştırma çizgileriyle gösteren dinamik harita"></canvas>
+        </div>
+        <aside class="visual-note">
+          <h3>Literatürden çıkan ana okuma</h3>
+          <p>Kuantum ve hibrit yaklaşımların katkısı, ancak güçlü klasik referanslar, aynı veri ayrımları ve tamamlayıcı metriklerle birlikte değerlendirildiğinde anlamlıdır.</p>
+          <div class="visual-note-list">
+            <div><span>Klasik çizgi</span><strong>QSAR, SMILES ve ECFP/Morgan temsilleri güçlü başlangıç noktasıdır.</strong></div>
+            <div><span>Grafik çizgi</span><strong>GNN ve GAT molekülü atom-bağ grafiği olarak öğrenir; veri koşullarına duyarlıdır.</strong></div>
+            <div><span>QML çizgisi</span><strong>QSVM, VQC, QGNN ve hibrit başlık NISQ sınırlılıklarıyla birlikte okunmalıdır.</strong></div>
+          </div>
+        </aside>
       </div>
     </section>
 
     <section id="veri" class="section-band">
       <div class="section-heading">
         <p class="section-kicker">Materyal</p>
-        <h2>Üç ilaç keşfi görevi, ortak deneysel protokol</h2>
+        <h2>MoleculeNet kaynaklı üç moleküler özellik tahmini görevi</h2>
         <p>
-          Moleküller SMILES dizgeleri üzerinden işlendi; klasik tanımlayıcı modeller için
-          ECFP/Morgan parmak izleri, grafik modeller için atom-bağ yapıları kullanıldı.
+          Materyal katmanı MoleculeNet/DeepChem çizgisindeki BACE, BBBP ve ClinTox
+          veri setlerinden oluşur. Her veri seti moleküler yapıyı SMILES dizgesiyle,
+          hedef biyomedikal sonucu ise ikili sınıf etiketiyle temsil eder; aynı kayıtlar
+          klasik, grafik, saf kuantum, kuantum grafik ve hibrit modellere farklı temsil
+          biçimleriyle aktarılmıştır.
         </p>
       </div>
       <div class="material-source-grid" aria-label="Veri kaynağı, kullanım amacı ve içerik özeti">
         <article class="material-source-card">
           <span>Kaynak</span>
-          <h3>MoleculeNet/DeepChem kaynaklı standart görevler</h3>
+          <h3>MoleculeNet, model karşılaştırması için standart zemin sağlar</h3>
           <p>
-            BACE, BBBP ve ClinTox veri setleri MoleculeNet/DeepChem çizgisinden alınan
-            moleküler özellik tahmini görevleridir. Her kayıt SMILES dizgesi ve ikili sınıf etiketiyle başlar.
+            MoleculeNet, ilaç keşfiyle ilişkili moleküler görevleri ortak veri formatı,
+            ortak değerlendirme mantığı ve tekrarlanabilir benchmark yaklaşımıyla sunar.
+            Bu çalışmada BACE, BBBP ve ClinTox bu standart karşılaştırma zemini nedeniyle seçildi.
           </p>
         </article>
         <article class="material-source-card">
-          <span>Ne için kullanıldı?</span>
-          <h3>Klasik ve kuantum modeller için ortak zemin</h3>
+          <span>Veri setlerinin anlamı</span>
+          <h3>Üç veri seti üç farklı biyomedikal soruyu temsil eder</h3>
           <p>
-            Aynı veri ayrımları üzerinde klasik, grafik, saf kuantum, kuantum grafik ve hibrit modeller
-            karşılaştırıldı; amaç kuantum üstünlüğü varsaymak değil, hangi koşulda sinyal oluştuğunu ölçmektir.
+            BACE, BACE-1 inhibitör aktivitesini; BBBP, kan-beyin bariyerini geçebilme
+            durumunu; ClinTox ise klinik toksisite ve güvenlilik sinyalini inceler.
+            Bu yüzden sonuçlar yalnızca satır sayısıyla değil, biyomedikal görev bağlamıyla okunur.
           </p>
         </article>
         <article class="material-source-card">
-          <span>Verinin içinde neler var?</span>
-          <h3>SMILES, etiket, temsil ve ayrım bilgisi</h3>
+          <span>Deneyde nasıl kullanıldı?</span>
+          <h3>SMILES kaydı tüm model aileleri için ortak başlangıçtır</h3>
           <p>
-            Geçerli SMILES kayıtları RDKit ile işlenir; ECFP/Morgan parmak izi, atom-bağ grafı,
-            sınıf etiketi, eğitim-doğrulama-test ayrımı ve değerlendirme metrikleri bu hattan üretilir.
+            Geçerli SMILES kayıtları RDKit ile işlenir; ECFP/Morgan parmak izi,
+            atom-bağ grafı, PCA veya kodlayıcı sonrası kubit girişi, eğitim-doğrulama-test
+            ayrımı ve AUROC merkezli metrikler aynı deney hattından üretilir.
           </p>
         </article>
       </div>
@@ -165,27 +202,27 @@
           <tbody>
             <tr>
               <td>BACE</td>
-              <td>BACE-1 inhibitör sınıflandırması</td>
+              <td>BACE-1 enzimi için inhibitör aktivite tahmini</td>
               <td>1211</td>
               <td>151</td>
               <td>152</td>
-              <td>Dengeliye yakın ikili sınıflandırma</td>
+              <td>Biyolojik aktivite görevi; dengeliye yakın test ayrımı</td>
             </tr>
             <tr>
               <td>BBBP</td>
-              <td>Kan-beyin bariyeri geçiş tahmini</td>
+              <td>Kan-beyin bariyerini geçebilme tahmini</td>
               <td>1631</td>
               <td>204</td>
               <td>204</td>
-              <td>Pozitif sınıf baskın</td>
+              <td>Farmakokinetik geçirgenlik görevi; pozitif sınıf baskın</td>
             </tr>
             <tr>
               <td>ClinTox</td>
-              <td>Klinik toksisite tahmini</td>
+              <td>Klinik toksisite ve güvenlilik sinyali tahmini</td>
               <td>1184</td>
               <td>148</td>
               <td>148</td>
-              <td>Belirgin sınıf dengesizliği</td>
+              <td>Toksisite görevi; belirgin sınıf dengesizliği</td>
             </tr>
           </tbody>
         </table>
@@ -291,12 +328,26 @@
     <section id="kuantum-temelleri" class="section-band quantum-basics">
       <div class="section-heading">
         <p class="section-kicker">Kuantum nedir?</p>
-        <h2>Kubit, süperpozisyon ve ölçüm aynı görsel anlatımda</h2>
+        <h2>Önce kuantum bilgisayarı, sonra kubit ve QML kavramlarını okuyalım</h2>
         <p>
-          Kuantum hesaplama, klasik bitlerden farklı olarak kubit durumları üzerinde çalışır.
-          Bu bölüm, seminerde kullanılan QML akışının arkasındaki kubit, süperpozisyon,
-          dolanıklık, ölçüm ve devre derinliği kavramlarını hareketli grafikle açar.
+          Kuantum bilgisayarlar klasik bit yerine kubit durumları üzerinde işlem yapar;
+          ancak bu çalışmada gerçek kuantum donanımı kullanılmadı. QML modelleri klasik
+          veriyi kuantum devre simülasyonuna taşıyan araştırma modelleri olarak ele alındı.
         </p>
+      </div>
+      <div class="quantum-primer-layout">
+        <div class="quantum-primer-stage">
+          <canvas id="quantumOverviewCanvas" width="1180" height="620" aria-label="Kuantum bilgisayar, QML model aileleri ve simülasyon düzeyini anlatan dinamik genel bakış"></canvas>
+        </div>
+        <aside class="quantum-primer-note">
+          <h3>Kuantum bilgisayar burada ne anlama geliyor?</h3>
+          <p>Bu seminerde kuantum tarafı fiziksel cihaz çalıştırma iddiası değildir; klasik moleküler verinin kuantum özellik uzayı, parametrik devre veya hibrit kuantum başlık fikriyle nasıl temsil edildiğini inceleyen simülasyon tabanlı karşılaştırmadır.</p>
+          <div class="concept-facts">
+            <div class="concept-fact"><span>Kuantum bilgisayar</span><strong>Kubit, kapı, dolanıklık ve ölçüm ilkeleriyle çalışan hesaplama modelidir.</strong></div>
+            <div class="concept-fact"><span>QML modelleri</span><strong>QSVM, VQC, QGNN ve Hybrid QHead bu çalışmadaki kuantum ilişkili model aileleridir.</strong></div>
+            <div class="concept-fact"><span>Simülasyon düzeyi</span><strong>Devreler klasik donanımda statevector/quantum simulator mantığıyla yürütüldü; gerçek cihaz üstünlüğü iddiası kurulmadı.</strong></div>
+          </div>
+        </aside>
       </div>
       <div class="concept-layout">
         <div class="concept-controls">
@@ -718,7 +769,7 @@
       <div class="limitations-grid" id="limitationsGrid"></div>
     </section>
 
-    <section class="section-band conclusion-section">
+    <section id="sonuc" class="section-band conclusion-section">
       <div class="conclusion-copy">
         <p class="section-kicker">Seminer sonucu</p>
         <h2>Kuantum modeller güçlü klasik referanslarla birlikte okunmalıdır.</h2>
@@ -736,6 +787,32 @@
         <div><strong>ClinTox</strong><span>Hibrit ve MLP AUROC yakın; eşik metrikleri belirleyici.</span></div>
       </div>
     </section>
+
+    <section id="oneriler" class="section-band recommendations-section">
+      <div class="section-heading">
+        <p class="section-kicker">Öneriler ve gelecek çalışmalar</p>
+        <h2>Sonraki adım, daha yüksek skor aramak kadar güvenilir karşılaştırmayı genişletmektir</h2>
+        <p>
+          Tezdeki öneriler, model başarısını yalnızca tek bir AUROC değerine indirgemeden
+          veri kapsamı, temsil çeşitliliği, klasik referans gücü, kuantum devre tasarımı,
+          istatistiksel güvenilirlik ve kimyasal yorumlanabilirlik eksenlerinde ilerletir.
+        </p>
+      </div>
+      <div class="visual-layout reverse">
+        <aside class="visual-note">
+          <h3>Gelecek çalışma eksenleri</h3>
+          <p>Öneriler kuantum üstünlüğünü varsaymaz; klasik, kuantum ve hibrit modellerin hangi veri temsili ve deney koşullarında katkı verdiğini daha güvenilir biçimde sınamayı hedefler.</p>
+          <div class="visual-note-list">
+            <div><span>Veri</span><strong>Tox21, HIV, SIDER, ESOL, FreeSolv ve Lipophilicity gibi görevlerle kapsam genişletilebilir.</strong></div>
+            <div><span>Model</span><strong>Klasik referanslar, hibrit kodlayıcılar ve saf kuantum devre tasarımları daha sistematik denenebilir.</strong></div>
+            <div><span>Güvenilirlik</span><strong>Farklı split stratejileri, güven aralıkları, kalibrasyon ve gerçek donanım denemeleri eklenebilir.</strong></div>
+          </div>
+        </aside>
+        <div class="visual-stage">
+          <canvas id="recommendationRoadmapCanvas" width="1180" height="620" aria-label="Öneriler ve gelecek çalışmalar için dinamik yol haritası"></canvas>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -743,6 +820,6 @@
     <span>BACE · BBBP · ClinTox · QSVM · VQC · QGNN · Hybrid QHead</span>
   </footer>
 
-  <script src="script.js?v=20260524-circuit-schema-2"></script>
+  <script src="script.js?v=20260524-presenter-stops-1"></script>
 </body>
 </html>

@@ -199,6 +199,11 @@ a {
   border-color: var(--cyan);
 }
 
+.nav-links a.is-active {
+  color: var(--ink);
+  border-color: var(--coral);
+}
+
 .section-band {
   position: relative;
   scroll-margin-top: 88px;
@@ -272,6 +277,37 @@ a {
   font-weight: 560;
 }
 
+.seminar-cover-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  max-width: 920px;
+  margin-top: 1.35rem;
+}
+
+.seminar-cover-meta div {
+  min-width: min(260px, 100%);
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(17, 17, 17, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 12px 34px rgba(15, 17, 21, 0.08);
+}
+
+.seminar-cover-meta span {
+  display: block;
+  color: var(--ink-soft);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.seminar-cover-meta strong {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: clamp(1.02rem, 1.45vw, 1.3rem);
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -334,9 +370,46 @@ a {
 
 .intro-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  grid-template-columns: minmax(0, 0.78fr) minmax(640px, 1.22fr);
   gap: clamp(1.5rem, 4vw, 4rem);
   background: rgba(247, 248, 244, 0.96);
+}
+
+.intro-grid .thesis-points {
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.aim-visual-stage {
+  min-width: 0;
+  min-height: 380px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #101216;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+#researchAimCanvas,
+#literatureMapCanvas,
+#recommendationRoadmapCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.literature-section {
+  background:
+    linear-gradient(120deg, rgba(123, 97, 255, 0.09), transparent 42%),
+    linear-gradient(300deg, rgba(0, 166, 200, 0.08), transparent 44%),
+    rgba(255, 255, 255, 0.94);
+}
+
+.recommendations-section {
+  background:
+    linear-gradient(120deg, rgba(224, 161, 0, 0.1), transparent 42%),
+    linear-gradient(300deg, rgba(36, 161, 72, 0.08), transparent 44%),
+    rgba(247, 248, 244, 0.98);
 }
 
 .statement h2,
@@ -665,6 +738,42 @@ a {
   background: rgba(255, 255, 255, 0.9);
 }
 
+.quantum-primer-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.52fr);
+  gap: 1rem;
+  align-items: stretch;
+  margin-bottom: 1.2rem;
+}
+
+.quantum-primer-stage {
+  min-width: 0;
+  min-height: 430px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #101216;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.quantum-primer-note {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: 0 12px 36px rgba(15, 17, 21, 0.08);
+}
+
+.quantum-primer-note h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.3rem;
+}
+
+.quantum-primer-note p {
+  margin: 0.65rem 0;
+  color: #30343a;
+}
+
 .concept-layout {
   display: grid;
   grid-template-columns: minmax(150px, 0.22fr) minmax(0, 1.08fr) minmax(280px, 0.5fr);
@@ -695,6 +804,7 @@ a {
 }
 
 #quantumConceptCanvas,
+#quantumOverviewCanvas,
 #modelArchitectureCanvas,
 #quantumModelFlowCanvas {
   display: block;
@@ -2107,8 +2217,10 @@ a {
   .model-grid,
   .figure-grid,
   .intro-grid,
+  .intro-grid .thesis-points,
   .cockpit-grid,
   .classical-visual-layout,
+  .quantum-primer-layout,
   .concept-layout,
   .quantum-model-layout,
   .architecture-layout,
@@ -2127,6 +2239,10 @@ a {
   .imbalance-section,
   .conclusion-section {
     grid-template-columns: 1fr;
+  }
+
+  .aim-visual-stage {
+    min-height: 440px;
   }
 
   .metric-compare {
@@ -2233,6 +2349,8 @@ a {
   }
 
   .hero-metrics,
+  .seminar-cover-meta,
+  .intro-grid .thesis-points,
   .material-source-grid,
   .heatmap,
   .lab-mini-grid {
@@ -2253,6 +2371,15 @@ a {
 
   .hero {
     min-height: 820px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 10vw, 2.85rem);
+    line-height: 1.04;
+  }
+
+  .seminar-cover-meta div {
+    padding: 0.72rem 0.85rem;
   }
 
   .quantum-game-controls {
