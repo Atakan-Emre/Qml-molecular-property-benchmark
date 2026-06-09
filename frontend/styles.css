@@ -190,6 +190,20 @@ a {
   background: #111111;
 }
 
+.presentation-link {
+  flex: 0 0 auto;
+  border: 1px solid rgba(17, 17, 17, 0.18);
+  border-radius: 8px;
+  padding: 0.36rem 0.62rem;
+  background: #111111;
+  color: #fff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 .nav-links a {
   border-bottom: 2px solid transparent;
   padding: 0.24rem 0;
@@ -306,66 +320,6 @@ a {
   display: block;
   margin-top: 0.25rem;
   font-size: clamp(1.02rem, 1.45vw, 1.3rem);
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  margin-top: 2rem;
-}
-
-.primary-action,
-.secondary-action {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  padding: 0.7rem 1rem;
-  border-radius: 6px;
-  font-weight: 800;
-}
-
-.primary-action {
-  color: #fff;
-  background: var(--ink);
-}
-
-.secondary-action {
-  border: 1px solid var(--ink);
-  background: rgba(255, 255, 255, 0.68);
-}
-
-.hero-metrics {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
-  max-width: 980px;
-  margin-top: clamp(2rem, 4.5vw, 4rem);
-  background: var(--line);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-}
-
-.hero-metrics div {
-  padding: 1.1rem;
-  background: rgba(255, 255, 255, 0.86);
-}
-
-.hero-metrics strong {
-  display: block;
-  font-family: "JetBrains Mono", monospace;
-  font-size: clamp(1.45rem, 3vw, 2.45rem);
-  line-height: 1;
-}
-
-.hero-metrics span {
-  display: block;
-  margin-top: 0.45rem;
-  color: var(--ink-soft);
-  font-size: 0.88rem;
-  font-weight: 700;
 }
 
 .intro-grid {
@@ -586,7 +540,8 @@ a {
 }
 
 .data-table-wrap,
-.leaderboard-table-wrap {
+.leaderboard-table-wrap,
+.literature-table-wrap {
   overflow-x: auto;
   margin-top: 1.4rem;
   border: 1px solid var(--line);
@@ -630,6 +585,40 @@ a {
 .data-table.compact th,
 .data-table.compact td {
   padding: 0.62rem 0.75rem;
+}
+
+.literature-table-wrap {
+  max-height: min(58vh, 620px);
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.literature-table {
+  min-width: 1080px;
+}
+
+.literature-table caption {
+  position: sticky;
+  left: 0;
+  background: rgba(255, 255, 255, 0.94);
+  z-index: 1;
+}
+
+.literature-table th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.literature-table th:nth-child(2),
+.literature-table td:nth-child(2) {
+  width: 72px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.literature-table td {
+  font-size: 0.88rem;
+  line-height: 1.45;
 }
 
 .model-card {
@@ -2211,7 +2200,6 @@ a {
     min-height: 760px;
   }
 
-  .hero-metrics,
   .material-source-grid,
   .dataset-grid,
   .model-grid,
@@ -2348,7 +2336,6 @@ a {
     padding: 0.3rem 0.42rem;
   }
 
-  .hero-metrics,
   .seminar-cover-meta,
   .intro-grid .thesis-points,
   .material-source-grid,

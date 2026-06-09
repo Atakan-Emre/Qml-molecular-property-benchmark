@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="QML semineri icin kumanda uyumlu sunum modu.">
+  <title>QML Semineri - Sunum Modu</title>
+  <style>
+    :root {
+      --ink: #111111;
+      --paper: #f7f8f4;
+      --line: rgba(17, 17, 17, 0.18);
+      --accent: #e65f4f;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .presentation-shell {
+      position: fixed;
+      inset: 0;
+      background: var(--paper);
+      isolation: isolate;
+    }
+
+    .deck-frame {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: var(--paper);
+    }
+
+    .capture-layer {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+      outline: none;
+    }
+
+    .presentation-status {
+      position: absolute;
+      top: 0.7rem;
+      right: 0.75rem;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 0.34rem;
+      max-width: min(320px, calc(100vw - 1.5rem));
+      padding: 0.26rem 0.4rem;
+      border: 1px solid rgba(17, 17, 17, 0.12);
+      border-radius: 8px;
+      background: rgba(247, 248, 244, 0.68);
+      color: rgba(17, 17, 17, 0.74);
+      box-shadow: 0 10px 34px rgba(15, 17, 21, 0.12);
+      backdrop-filter: blur(14px);
+      font-size: 0.68rem;
+      font-weight: 760;
+    }
+
+    .presentation-status strong {
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .presentation-status span {
+      display: none;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .presentation-controls {
+      position: absolute;
+      left: 1rem;
+      bottom: 0.7rem;
+      z-index: 3;
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .presentation-controls button {
+      width: 38px;
+      height: 34px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--ink);
+      font-size: 1.28rem;
+      font-weight: 800;
+      line-height: 1;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(15, 17, 21, 0.1);
+    }
+
+    .presentation-controls button:hover {
+      border-color: var(--accent);
+    }
+
+    @media (max-width: 720px) {
+      .presentation-status {
+        left: auto;
+        right: 0.75rem;
+        top: 0.7rem;
+      }
+
+      .presentation-controls {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="presentation-shell">
+    <iframe
+      id="deckFrame"
+      class="deck-frame"
+      src="index.html?v=20260609-literature-table-1#kapak"
+      title="QML semineri ana sayfasi"
+      tabindex="-1"></iframe>
+    <div id="captureLayer" class="capture-layer" tabindex="0" aria-label="Sunum kontrol katmani"></div>
+    <div class="presentation-controls" aria-hidden="false">
+      <button id="previousStop" type="button" aria-label="Onceki durak">&#8249;</button>
+      <button id="nextStop" type="button" aria-label="Sonraki durak">&#8250;</button>
+    </div>
+    <div class="presentation-status" aria-live="polite">
+      <strong id="progressText">01 / 01</strong>
+      <span id="sectionText">QML Semineri</span>
+    </div>
+  </main>
+
+  <script>
+    (() => {
+      const frame = document.getElementById("deckFrame");
+      const captureLayer = document.getElementById("captureLayer");
+      const previousButton = document.getElementById("previousStop");
+      const nextButton = document.getElementById("nextStop");
+      const progressText = document.getElementById("progressText");
+      const sectionText = document.getElementById("sectionText");
+      const advanceKeys = new Set(["PageDown", "ArrowRight", "ArrowDown", " ", "Enter", "n", "N"]);
+      const reverseKeys = new Set(["PageUp", "ArrowLeft", "ArrowUp", "Backspace", "p", "P"]);
+      let stops = [];
+      let activeIndex = 0;
+      let locked = false;
+
+      function getFrameWindow() {
+        return frame.contentWindow;
+      }
+
+      function getFrameDocument() {
+        return frame.contentDocument || frame.contentWindow?.document;
+      }
+
+      function formatNumber(value) {
+        return String(value).padStart(2, "0");
+      }
+
+      function elementTop(element) {
+        const frameWindow = getFrameWindow();
+        return element.getBoundingClientRect().top + frameWindow.scrollY;
+      }
+
+      function injectPresentationStyles() {
+        const doc = getFrameDocument();
+        if (!doc || doc.getElementById("presentationModeStyles")) return;
+        const style = doc.createElement("style");
+        style.id = "presentationModeStyles";
+        style.textContent = `
+          html {
+            scroll-behavior: auto !important;
+            scroll-padding-top: 0 !important;
+            overflow: hidden !important;
+          }
+
+          body {
+            overflow: hidden !important;
+            overscroll-behavior: none !important;
+          }
+
+          .site-header,
+          .site-footer {
+            display: none !important;
+          }
+
+          main > section[id] {
+            width: 100vw !important;
+            min-height: 100vh !important;
+            height: 100vh !important;
+            max-height: 100vh !important;
+            overflow: hidden !important;
+            scroll-margin-top: 0 !important;
+            padding: clamp(1rem, 2.6vh, 1.8rem) clamp(1.6rem, 3.4vw, 3.2rem) !important;
+          }
+
+          .hero {
+            min-height: 100vh !important;
+            padding-top: clamp(1.25rem, 3.2vh, 2.4rem) !important;
+            padding-bottom: clamp(1.25rem, 3.2vh, 2.4rem) !important;
+          }
+
+          .section-heading,
+          .flow-copy {
+            margin-bottom: clamp(0.45rem, 1.1vh, 0.82rem) !important;
+          }
+
+          .section-heading h2,
+          .statement h2,
+          .flow-copy h2 {
+            font-size: clamp(1.55rem, 2.75vw, 2.65rem) !important;
+            line-height: 1.05 !important;
+            margin: 0 0 0.42rem !important;
+          }
+
+          .section-heading p,
+          .statement p,
+          .flow-copy p,
+          .visual-note p,
+          .material-source-card p {
+            font-size: clamp(0.78rem, 1.05vw, 0.98rem) !important;
+            line-height: 1.42 !important;
+          }
+
+          .section-heading p {
+            max-width: 74rem !important;
+          }
+
+          .hero-copy h1 {
+            font-size: clamp(2.1rem, 4.8vw, 5.4rem) !important;
+            line-height: 0.98 !important;
+          }
+
+          .hero-text {
+            max-width: 58rem !important;
+            font-size: clamp(0.9rem, 1.35vw, 1.15rem) !important;
+          }
+
+          .hero-metrics,
+          .material-source-grid,
+          .dataset-grid,
+          .model-grid,
+          .thesis-points,
+          .limitations-grid {
+            gap: clamp(0.42rem, 0.82vw, 0.72rem) !important;
+          }
+
+          .material-source-card,
+          .dataset-card,
+          .model-card,
+          .point,
+          .limitation-card,
+          .visual-note,
+          .concept-note,
+          .quantum-model-note,
+          .architecture-note,
+          .classical-visual-note,
+          .ablation-note,
+          .stability-note,
+          .quantum-game-note,
+          .protocol-facts {
+            padding: clamp(0.68rem, 1.15vw, 1rem) !important;
+          }
+
+          .dataset-card p,
+          .model-card p,
+          .point p,
+          .limitation-card p,
+          .material-source-card p {
+            margin: 0.35rem 0 0 !important;
+          }
+
+          .visual-note h3,
+          .concept-note h3,
+          .quantum-model-note h3,
+          .architecture-note h3,
+          .classical-visual-note h3,
+          .ablation-note h3,
+          .stability-note h3,
+          .quantum-game-note h3 {
+            font-size: clamp(1rem, 1.45vw, 1.45rem) !important;
+            line-height: 1.1 !important;
+            margin: 0 0 0.5rem !important;
+          }
+
+          .visual-note-list {
+            gap: 0.45rem !important;
+          }
+
+          .visual-note-list div,
+          .protocol-fact {
+            padding: 0.48rem 0 !important;
+          }
+
+          .visual-note-list span,
+          .protocol-fact span {
+            font-size: 0.62rem !important;
+            line-height: 1.1 !important;
+          }
+
+          .visual-note-list strong,
+          .protocol-fact strong {
+            font-size: clamp(0.7rem, 0.92vw, 0.88rem) !important;
+            line-height: 1.28 !important;
+          }
+
+          canvas {
+            display: block !important;
+            width: 100% !important;
+            height: auto !important;
+            max-height: min(46vh, 440px) !important;
+            object-fit: contain !important;
+          }
+
+          .aim-visual-stage,
+          .visual-stage,
+          .classical-visual-stage,
+          .quantum-primer-stage,
+          .circuit-stage {
+            min-height: 0 !important;
+          }
+
+          .aim-visual-stage canvas {
+            max-height: min(44vh, 410px) !important;
+          }
+
+          #veri .material-source-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+          }
+
+          #veri .dataset-grid,
+          #veri .data-table-wrap {
+            margin-top: 0.7rem !important;
+          }
+
+          #veri .dataset-card {
+            min-height: 0 !important;
+          }
+
+          #veri .dataset-card p,
+          #veri .dataset-card .dataset-meta,
+          #veri .dataset-card .dataset-bars {
+            display: none !important;
+          }
+
+          #literatur {
+            display: grid !important;
+            grid-template-rows: auto minmax(0, 0.82fr) minmax(0, 0.92fr) !important;
+            gap: 0.55rem !important;
+          }
+
+          #literatur .section-heading {
+            margin-bottom: 0 !important;
+          }
+
+          #literatur .section-heading p:not(.section-kicker) {
+            display: none !important;
+          }
+
+          #literatur .visual-layout {
+            min-height: 0 !important;
+            margin-top: 0 !important;
+            grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.55fr) !important;
+            gap: 0.7rem !important;
+          }
+
+          #literatur canvas {
+            max-height: min(26vh, 270px) !important;
+          }
+
+          #literatur .visual-note p {
+            display: none !important;
+          }
+
+          #literatur .visual-note-list {
+            gap: 0.28rem !important;
+          }
+
+          #literatur .visual-note-list div {
+            padding: 0.34rem 0 !important;
+          }
+
+          #literatur .literature-table-wrap {
+            margin-top: 0 !important;
+            max-height: min(38vh, 360px) !important;
+            overflow: auto !important;
+          }
+
+          #literatur .literature-table {
+            min-width: 980px !important;
+          }
+
+          #literatur .literature-table caption {
+            padding: 0.38rem 0.55rem !important;
+            font-size: 0.72rem !important;
+          }
+
+          #literatur .literature-table th,
+          #literatur .literature-table td {
+            padding: 0.38rem 0.5rem !important;
+            font-size: 0.68rem !important;
+            line-height: 1.24 !important;
+          }
+
+          #yolculuk .journey-layout,
+          #veri-kokpiti .cockpit-grid {
+            grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr) !important;
+          }
+
+          #yolculuk .journey-note,
+          #veri-kokpiti .cockpit-cards {
+            max-height: 48vh !important;
+            overflow: hidden !important;
+          }
+
+          #modeller .model-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+          }
+
+          #modeller .model-card .tag,
+          #modeller .model-card ul {
+            display: none !important;
+          }
+
+          #kuantum-temelleri {
+            display: grid !important;
+            grid-template-rows: auto minmax(0, 1fr) !important;
+            gap: 0.55rem !important;
+          }
+
+          #kuantum-temelleri .section-heading p {
+            display: none !important;
+          }
+
+          #kuantum-temelleri .quantum-primer-layout,
+          #kuantum-temelleri .concept-layout {
+            min-height: 0 !important;
+            margin: 0 !important;
+            gap: 0.58rem !important;
+          }
+
+          #kuantum-temelleri .quantum-primer-layout {
+            grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.55fr) !important;
+          }
+
+          #kuantum-temelleri .concept-layout {
+            display: none !important;
+          }
+
+          #kuantum-temelleri .quantum-primer-note p {
+            display: none !important;
+          }
+
+          #kuantum-temelleri .concept-note {
+            display: none !important;
+          }
+
+          #kuantum-temelleri canvas {
+            max-height: min(54vh, 520px) !important;
+          }
+
+          #quantum-ml-akisi .quantum-model-layout,
+          #mimari .architecture-layout {
+            grid-template-columns: minmax(0, 1.15fr) minmax(270px, 0.55fr) !important;
+          }
+
+          #quantum-ml-akisi .quantum-model-note,
+          #mimari .architecture-note {
+            max-height: 52vh !important;
+            overflow: hidden !important;
+          }
+
+          #kuantum-akis {
+            grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1.22fr) !important;
+            gap: 1rem !important;
+          }
+
+          #kuantum-akis .flow-copy p {
+            display: none !important;
+          }
+
+          #kuantum-akis .pipeline-list {
+            gap: 0.38rem !important;
+          }
+
+          #kuantum-akis .pipeline-list li {
+            padding: 0.42rem 0.48rem !important;
+            font-size: 0.78rem !important;
+          }
+
+          #kuantum-akis canvas {
+            max-height: min(39vh, 380px) !important;
+          }
+
+          #kuantum-akis .quantum-run-note {
+            max-height: 26vh !important;
+            overflow: hidden !important;
+          }
+
+          #quantum-oyun .quantum-game-layout {
+            grid-template-columns: minmax(190px, 0.34fr) minmax(0, 1.24fr) !important;
+          }
+
+          #quantum-oyun .section-heading p {
+            display: none !important;
+          }
+
+          #quantum-oyun canvas {
+            max-height: min(42vh, 390px) !important;
+          }
+
+          #quantum-oyun .quantum-game-note p,
+          #quantum-oyun .quantum-game-warning,
+          #quantum-oyun .quantum-game-note {
+            display: none !important;
+          }
+
+          #deney-protokolu .protocol-grid {
+            grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.55fr) !important;
+          }
+
+          #deney-protokolu .section-heading p,
+          #deney-protokolu .protocol-fact small {
+            display: none !important;
+          }
+
+          #sonuclar .leaderboard-table-wrap {
+            display: none !important;
+          }
+
+          #sonuclar .results-layout {
+            grid-template-columns: minmax(0, 1.28fr) minmax(280px, 0.52fr) !important;
+          }
+
+          #lab .metric-lab-copy,
+          #lab .lab-mini-grid {
+            max-height: 48vh !important;
+            overflow: hidden !important;
+          }
+
+          #kuantum-ablation .ablation-layout,
+          #kararlilik .stability-layout {
+            grid-template-columns: minmax(0, 1.2fr) minmax(270px, 0.55fr) !important;
+          }
+
+          #kuantum-ablation .section-heading p,
+          #kuantum-ablation .ablation-note p {
+            display: none !important;
+          }
+
+          #kuantum-ablation canvas {
+            max-height: min(42vh, 390px) !important;
+          }
+
+          #kanit .figure-grid {
+            display: none !important;
+          }
+
+          #kanit .gallery-layout {
+            grid-template-columns: minmax(0, 1fr) !important;
+          }
+
+          #kanit .section-heading p,
+          #kanit .gallery-strip {
+            display: none !important;
+          }
+
+          #kanit .gallery-feature {
+            max-height: 58vh !important;
+            overflow: hidden !important;
+          }
+
+          #kanit .gallery-feature img {
+            max-height: 48vh !important;
+            object-fit: contain !important;
+          }
+
+          .visual-layout,
+          .visual-layout.reverse,
+          .classical-visual-layout,
+          .quantum-primer-layout,
+          .concept-layout,
+          .quantum-model-layout,
+          .architecture-layout,
+          .quantum-game-layout,
+          .protocol-grid,
+          .results-layout,
+          .lab-layout,
+          .hybrid-layout,
+          .ablation-layout,
+          .stability-layout,
+          .journey-layout,
+          .cockpit-grid {
+            align-items: center !important;
+            gap: clamp(0.75rem, 1.5vw, 1.4rem) !important;
+          }
+
+          .data-table {
+            font-size: clamp(0.68rem, 0.86vw, 0.84rem) !important;
+          }
+
+          .data-table th,
+          .data-table td {
+            padding: 0.42rem 0.48rem !important;
+          }
+
+          .result-controls {
+            gap: 0.35rem !important;
+            margin-bottom: 0.45rem !important;
+          }
+
+          .result-controls button {
+            min-height: 28px !important;
+            padding: 0.28rem 0.5rem !important;
+            font-size: 0.68rem !important;
+          }
+        `;
+        doc.head.appendChild(style);
+      }
+
+      function collectStops() {
+        const doc = getFrameDocument();
+        const frameWindow = getFrameWindow();
+        if (!doc) return [];
+        const sections = [...doc.querySelectorAll("main > section[id]")];
+        const viewportHeight = frameWindow.innerHeight;
+        const maxY = Math.max(0, doc.documentElement.scrollHeight - viewportHeight);
+
+        return sections.map((section) => {
+          const rect = section.getBoundingClientRect();
+          const top = elementTop(section);
+          const height = rect.height;
+          const heading = section.querySelector("h1,h2,h3");
+          const title = heading?.textContent?.trim() || section.id || "QML Semineri";
+          const centeredTop = top - Math.max(0, viewportHeight - height) / 2;
+          return {
+            sectionId: section.id,
+            title,
+            targetY: Math.max(0, Math.min(maxY, centeredTop))
+          };
+        });
+      }
+
+      function refreshStops() {
+        stops = collectStops();
+        if (activeIndex >= stops.length) activeIndex = Math.max(0, stops.length - 1);
+        auditSlides();
+        updateStatus();
+      }
+
+      function auditSlides() {
+        const doc = getFrameDocument();
+        if (!doc) return;
+        const audit = [...doc.querySelectorAll("main > section[id]")].map((section, index) => {
+          const heading = section.querySelector("h1,h2,h3")?.textContent?.trim() || section.id;
+          return {
+            index: index + 1,
+            id: section.id,
+            title: heading,
+            clientHeight: Math.round(section.clientHeight),
+            scrollHeight: Math.round(section.scrollHeight),
+            overflowY: Math.max(0, Math.round(section.scrollHeight - section.clientHeight))
+          };
+        });
+        const overflows = audit.filter((item) => item.overflowY > 8);
+        document.documentElement.dataset.qmlSlideCount = String(audit.length);
+        document.documentElement.dataset.qmlOverflowCount = String(overflows.length);
+        document.documentElement.dataset.qmlOverflowSlides = overflows.map((item) => `${item.index}:${item.id}:${item.overflowY}`).join("|");
+      }
+
+      function updateStatus() {
+        const stop = stops[activeIndex];
+        progressText.textContent = `${formatNumber(activeIndex + 1)} / ${formatNumber(Math.max(1, stops.length))}`;
+        sectionText.textContent = stop?.title || "QML Semineri";
+      }
+
+      function goToStop(index) {
+        if (!stops.length) refreshStops();
+        if (!stops.length) return;
+        const frameWindow = getFrameWindow();
+        const doc = getFrameDocument();
+        activeIndex = Math.max(0, Math.min(stops.length - 1, index));
+        const stop = stops[activeIndex];
+        const maxY = Math.max(0, doc.documentElement.scrollHeight - frameWindow.innerHeight);
+        const targetY = Math.max(0, Math.min(maxY, stop.targetY));
+        frameWindow.history.replaceState(null, "", `#${stop.sectionId}`);
+        frameWindow.scrollTo({ top: targetY, behavior: "smooth" });
+        updateStatus();
+      }
+
+      function move(direction) {
+        if (locked) return;
+        locked = true;
+        refreshStops();
+        goToStop(activeIndex + direction);
+        window.setTimeout(() => {
+          locked = false;
+        }, 520);
+      }
+
+      function onKeydown(event) {
+        if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+        if (advanceKeys.has(event.key)) {
+          event.preventDefault();
+          move(1);
+        } else if (reverseKeys.has(event.key)) {
+          event.preventDefault();
+          move(-1);
+        } else if (event.key === "Home") {
+          event.preventDefault();
+          goToStop(0);
+        } else if (event.key === "End") {
+          event.preventDefault();
+          refreshStops();
+          goToStop(stops.length - 1);
+        }
+      }
+
+      function onWheel(event) {
+        event.preventDefault();
+        const dominantDelta = Math.abs(event.deltaY) >= Math.abs(event.deltaX) ? event.deltaY : event.deltaX;
+        if (Math.abs(dominantDelta) < 8) return;
+        move(dominantDelta > 0 ? 1 : -1);
+      }
+
+      function bindFrameControls() {
+        const frameWindow = getFrameWindow();
+        const doc = getFrameDocument();
+        if (!frameWindow || !doc || frameWindow.__qmlPresentationControlsBound) return;
+        frameWindow.__qmlPresentationControlsBound = true;
+        frameWindow.addEventListener("keydown", onKeydown);
+        frameWindow.addEventListener("wheel", onWheel, { passive: false });
+        doc.addEventListener("keydown", onKeydown);
+      }
+
+      frame.addEventListener("load", () => {
+        injectPresentationStyles();
+        bindFrameControls();
+        window.setTimeout(() => {
+          refreshStops();
+          goToStop(0);
+        }, 700);
+      });
+
+      captureLayer.addEventListener("keydown", onKeydown);
+      window.addEventListener("keydown", onKeydown);
+      window.addEventListener("wheel", onWheel, { passive: false });
+      window.addEventListener("resize", () => window.setTimeout(() => {
+        refreshStops();
+        goToStop(activeIndex);
+      }, 120));
+      previousButton.addEventListener("click", () => move(-1));
+      nextButton.addEventListener("click", () => move(1));
+      captureLayer.focus();
+    })();
+  </script>
+</body>
+</html>

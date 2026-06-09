@@ -38,29 +38,25 @@ const i18n = {
     "Danışman": "Advisor",
     "Şahin Atakan Emre": "Şahin Atakan Emre",
     "Doç. Dr. Bihter DAŞ": "Assoc. Prof. Dr. Bihter DAŞ",
-    "BACE, BBBP ve ClinTox veri setleri üzerinde klasik modeller, klasik grafik modeller, saf kuantum modeller, kuantum grafik modeli ve hibrit kuantum-klasik model aynı deneysel zeminde karşılaştırıldı.": "Classical models, classical graph models, purely quantum models, the quantum graph model, and the hybrid quantum-classical model were compared under the same experimental protocol across the BACE, BBBP, and ClinTox datasets.",
-    "Hızlı bağlantılar": "Quick links",
-    "Sunum Akışına Başla": "Start Seminar Flow",
-    "Bulguları İncele": "Inspect Findings",
+    "BACE, BBBP ve ClinTox veri setleri üzerinde klasik modeller, klasik grafik modeller, saf kuantum modeller, kuantum grafik modeli ve hibrit kuantum-klasik model aynı deneysel zeminde karşılaştırılmıştır.": "Classical models, classical graph models, purely quantum models, the quantum graph model, and the hybrid quantum-classical model were compared under the same experimental protocol across the BACE, BBBP, and ClinTox datasets.",
     "Kuantum Nedir?": "What Is Quantum?",
-    "Ana seminer bulguları": "Main seminar findings",
-    "MoleculeNet görevi": "MoleculeNet tasks",
-    "model ailesi": "model families",
-    "deney tekrarı": "experimental repetitions",
-    "en yüksek AUROC": "highest AUROC",
     "Araştırma odağı": "Research focus",
     "Amaç ve araştırma sorusu": "Aim and research question",
     "Kuantum avantajı varsayılmadı; güçlü klasik referanslarla ölçüldü.": "Quantum advantage was not assumed; it was evaluated against strong classical baselines.",
     "Amaç, kuantum üstünlüğü varsaymak değil; model ailelerini aynı deneysel zeminde okumaktır.": "The aim is not to assume quantum superiority, but to read model families on the same experimental ground.",
+    "Bu seminer çalışmasının amacı, kuantum modellerinin klasik yöntemlerle deneysel ortamlarda karşılaştırılmasıdır.": "The aim of this seminar study is to compare quantum models with classical methods under experimental conditions.",
     "Seminerin temel sorusu, kuantum modellerin moleküler özellik tahmininde hangi koşullarda anlamlı sinyal ürettiğidir. Bu nedenle SVM ve MLP gibi güçlü klasik yöntemler zayıflatılmadan korunmuş, QSVM, VQC, QGNN ve Hybrid QHead sonuçları aynı veri ayrımları ve aynı metrik ailesiyle değerlendirilmiştir.": "The central question of the seminar is under which conditions quantum models produce meaningful signal in molecular property prediction. Therefore, strong classical methods such as SVM and MLP were preserved without weakening, while QSVM, VQC, QGNN, and Hybrid QHead results were evaluated with the same data splits and metric family.",
-    "Bu seminer çalışması, medikal veri analizi kapsamında ele alınan moleküler özellik tahmini problemlerinde klasik tanımlayıcı modeller, klasik grafik modeller, saf kuantum tanımlayıcı modeller, kuantum grafik modeli ve hibrit kuantum-klasik modeli aynı veri ayrımları, aynı seed politikası ve aynı metrik ailesiyle karşılaştırır.": "This seminar compares classical descriptor models, classical graph models, purely quantum descriptor models, the quantum graph model, and the hybrid quantum-classical model on molecular property prediction problems in medical data analysis using the same data splits, seed policy, and metric family.",
+    "Bu seminer çalışması, medikal veri analizi kapsamında ele alınan moleküler özellik tahmini problemlerinde klasik makine öğrenmesi modelleri, klasik grafik modeller, saf kuantum modeller, kuantum grafik modeli ve hibrit kuantum-klasik modeli aynı veri ayrımları, aynı seed politikası ve aynı metrik ailesiyle karşılaştırmaktadır.": "This seminar study compares classical machine learning models, classical graph models, purely quantum models, the quantum graph model, and the hybrid quantum-classical model on molecular property prediction problems in medical data analysis using the same data splits, seed policy, and metric family.",
+    "Bu seminer çalışması, medikal veri analizi kapsamında ele alınan moleküler özellik tahmini problemlerinde klasik tanımlayıcı modeller, klasik grafik modeller, saf kuantum tanımlayıcı modeller, kuantum grafik modeli ve hibrit kuantum-klasik modeli aynı veri ayrımları, aynı seed politikası ve aynı metrik ailesiyle karşılaştırmaktadır.": "This seminar compares classical descriptor models, classical graph models, purely quantum descriptor models, the quantum graph model, and the hybrid quantum-classical model on molecular property prediction problems in medical data analysis using the same data splits, seed policy, and metric family.",
     "Seminer amacını ve karşılaştırma hattını gösteren dinamik görsel": "Dynamic visual showing the seminar aim and comparison pipeline",
-    "BACE, BBBP ve ClinTox ilaç keşfinde biyolojik aktivite, geçirgenlik ve toksisite sorularını temsil eder.": "BACE, BBBP, and ClinTox represent bioactivity, permeability, and toxicity questions in drug discovery.",
+    "BACE, BBBP ve ClinTox ilaç keşfinde biyolojik aktivite, geçirgenlik ve toksisite sorularını temsil etmektedir.": "BACE, BBBP, and ClinTox represent bioactivity, permeability, and toxicity questions in drug discovery.",
     "SVM, MLP, GNN ve GAT zayıflatılmış örnekler değil, güçlü klasik referans modeller olarak korunur.": "SVM, MLP, GNN, and GAT are preserved as strong classical baselines, not weakened examples.",
     "QSVM, VQC, QGNN ve Hybrid QHead sonuçları kuantum üstünlüğü iddiası yerine veri, temsil ve metrik bağlamında yorumlanır.": "QSVM, VQC, QGNN, and Hybrid QHead results are interpreted through data, representation, and metrics rather than as a quantum-superiority claim.",
     "Literatür çalışması": "Literature review",
+    "Kuramsal çerçeve": "Theoretical framework",
+    "Literatür Çalışması": "Literature Review",
     "Çalışma, klasik moleküler öğrenme birikimi ile NISQ dönemi QML sınırlılıkları arasına yerleşir": "The study is positioned between classical molecular learning knowledge and NISQ-era QML limitations",
-    "Literatür, moleküler özellik tahmininde temsil seçiminin, veri seti ölçeğinin, güçlü klasik referansların ve çoklu metrik raporlamanın birlikte ele alınması gerektiğini gösterir. Bu nedenle çalışma, kuantum modellerin klasik yöntemlerden genel olarak üstün olduğunu ileri sürmez; hangi koşullarda anlamlı ya da sınırlı sonuç verdiğini tartışır.": "The literature shows that representation choice, dataset scale, strong classical baselines, and multi-metric reporting must be considered together in molecular property prediction. Therefore, the study does not claim that quantum models are generally superior to classical methods; it discusses under which conditions they produce meaningful or limited results.",
+    "Literatür, moleküler özellik tahmininde temsil seçiminin, veri seti ölçeğinin, güçlü klasik referansların ve çoklu metrik raporlamanın birlikte ele alınması gerektiğini göstermektedir. Bu nedenle çalışma, kuantum modellerin klasik yöntemlerden genel olarak üstün olduğunu ileri sürmez; hangi koşullarda anlamlı ya da sınırlı sonuç verdiğini tartışır.": "The literature shows that representation choice, dataset scale, strong classical baselines, and multi-metric reporting must be considered together in molecular property prediction. Therefore, the study does not claim that quantum models are generally superior to classical methods; it discusses under which conditions they produce meaningful or limited results.",
     "Literatür çalışmasını klasik, grafik, kuantum ve hibrit araştırma çizgileriyle gösteren dinamik harita": "Dynamic map showing the literature review through classical, graph, quantum, and hybrid research lines",
     "Literatürden çıkan ana okuma": "Main reading from the literature",
     "Kuantum ve hibrit yaklaşımların katkısı, ancak güçlü klasik referanslar, aynı veri ayrımları ve tamamlayıcı metriklerle birlikte değerlendirildiğinde anlamlıdır.": "The contribution of quantum and hybrid approaches is meaningful only when evaluated together with strong classical baselines, the same data splits, and complementary metrics.",
@@ -70,33 +66,81 @@ const i18n = {
     "GNN ve GAT molekülü atom-bağ grafiği olarak öğrenir; veri koşullarına duyarlıdır.": "GNN and GAT learn the molecule as an atom-bond graph; they are sensitive to data conditions.",
     "QML çizgisi": "QML line",
     "QSVM, VQC, QGNN ve hibrit başlık NISQ sınırlılıklarıyla birlikte okunmalıdır.": "QSVM, VQC, QGNN, and the hybrid head should be read together with NISQ limitations.",
+    "Seminer literatür kaynakları tablosu": "Seminar literature sources table",
+    "Seminerde kullanılan temel literatür kaynakları": "Core literature sources used in the seminar",
+    "Yıl": "Year",
+    "Amaç ve katkı": "Aim and contribution",
+    "Bu çalışmadaki rolü": "Role in this study",
+    "Wu ve ark., MoleculeNet": "Wu et al., MoleculeNet",
+    "Moleküler makine öğrenmesi için ortak veri seti ve benchmark zemini sunmaktadır.": "Provides a shared dataset and benchmark ground for molecular machine learning.",
+    "BACE, BBBP ve ClinTox görevlerinin standart karşılaştırma kaynağını oluşturmaktadır.": "Forms the standard comparison source for the BACE, BBBP, and ClinTox tasks.",
+    "Weininger, SMILES": "Weininger, SMILES",
+    "Moleküllerin metinsel kimyasal gösterimle kodlanmasını tanımlamaktadır.": "Defines the encoding of molecules as textual chemical representations.",
+    "Veri setlerindeki molekül kayıtlarının ortak başlangıç temsilini açıklamaktadır.": "Explains the common starting representation of molecule records in the datasets.",
+    "Rogers ve Hahn, ECFP": "Rogers and Hahn, ECFP",
+    "Atom merkezli alt yapı örüntülerini sabit uzunluklu parmak izlerine dönüştürmektedir.": "Transforms atom-centered substructure patterns into fixed-length fingerprints.",
+    "SVM, MLP, QSVM ve VQC hatlarında kullanılan ECFP/Morgan temsilini gerekçelendirmektedir.": "Justifies the ECFP/Morgan representation used in the SVM, MLP, QSVM, and VQC routes.",
+    "Cherkasov ve ark., QSAR": "Cherkasov et al., QSAR",
+    "Kimyasal yapı ile biyolojik aktivite arasındaki modelleme çizgisini özetlemektedir.": "Summarizes the modeling line between chemical structure and biological activity.",
+    "Klasik tanımlayıcı yaklaşımın tarihsel ve yöntemsel temelini sağlamaktadır.": "Provides the historical and methodological basis for the classical descriptor approach.",
+    "Cortes ve Vapnik, SVM": "Cortes and Vapnik, SVM",
+    "Yüksek boyutlu özellik uzayında marj tabanlı sınıflandırmayı tanımlamaktadır.": "Defines margin-based classification in high-dimensional feature spaces.",
+    "Güçlü klasik referans model olarak SVM kullanımını temellendirmektedir.": "Grounds the use of SVM as a strong classical baseline model.",
+    "Gilmer ve ark., MPNN": "Gilmer et al., MPNN",
+    "Moleküler grafiklerde mesaj geçirme öğrenme çerçevesini kurmaktadır.": "Establishes message-passing learning for molecular graphs.",
+    "GNN model ailesinin atom-bağ grafiği üzerinden neden kullanıldığını açıklamaktadır.": "Explains why the GNN family is used over atom-bond graphs.",
+    "Veličković ve ark., GAT": "Veličković et al., GAT",
+    "Graf düğümleri arasında dikkat mekanizmalı mesaj ağırlıklandırması önermektedir.": "Proposes attention-based message weighting between graph nodes.",
+    "GAT modelinin komşu atom katkılarını öğrenilebilir ağırlıklarla ele almasını açıklamaktadır.": "Explains how GAT handles neighboring atom contributions through learnable weights.",
+    "Biamonte ve ark., QML": "Biamonte et al., QML",
+    "Kuantum algoritmalar ile makine öğrenmesi ilişkisini genel çerçevede incelemektedir.": "Reviews the relationship between quantum algorithms and machine learning.",
+    "QSVM, VQC, QGNN ve hibrit kuantum başlık tartışmasının kuramsal zeminini vermektedir.": "Provides the theoretical ground for QSVM, VQC, QGNN, and hybrid quantum-head discussion.",
+    "Preskill, NISQ": "Preskill, NISQ",
+    "Sınırlı kubit, gürültü ve devre derinliği koşullarındaki kuantum dönemi tanımlamaktadır.": "Defines the quantum era under limited qubits, noise, and circuit-depth constraints.",
+    "Gerçek kuantum donanımı yerine devre simülasyonu kullanılmasını sınırlılık bağlamına yerleştirmektedir.": "Places circuit simulation instead of real quantum hardware within the limitation context.",
+    "Havlíček ve ark., kuantum özellik uzayı": "Havlíček et al., quantum feature space",
+    "Kuantum devreleriyle oluşturulan özellik uzaylarının sınıflandırmada kullanımını göstermektedir.": "Shows the use of feature spaces created by quantum circuits for classification.",
+    "QSVM ve kuantum çekirdek anlatımının temel dayanaklarından birini oluşturmaktadır.": "Forms one of the bases for the QSVM and quantum-kernel explanation.",
+    "Schuld ve Killoran, Hilbert uzayı": "Schuld and Killoran, Hilbert space",
+    "QML modellerini özellik Hilbert uzayları ve çekirdek bakışıyla açıklamaktadır.": "Explains QML models through feature Hilbert spaces and the kernel view.",
+    "Kuantum veri kodlama ve kuantum özellik uzayı yorumunu akademik zemine taşımaktadır.": "Places quantum data encoding and quantum feature-space interpretation on academic ground.",
+    "Cerezo ve ark., VQA": "Cerezo et al., VQA",
+    "Varyasyonel kuantum algoritmaların olanaklarını ve optimizasyon sınırlılıklarını incelemektedir.": "Examines the capabilities and optimization limits of variational quantum algorithms.",
+    "VQC ve parametrik devre tabanlı hibrit başlık yorumunu desteklemektedir.": "Supports the interpretation of VQC and parametric-circuit-based hybrid heads.",
+    "Mari ve ark., hibrit transfer öğrenmesi": "Mari et al., hybrid transfer learning",
+    "Klasik ağ temsillerinin kuantum devrelerle birleştirilebileceğini göstermektedir.": "Shows that classical network representations can be combined with quantum circuits.",
+    "Dondurulmuş klasik kodlayıcı ve Quantum Head yaklaşımının hibrit mantığını açıklamaktadır.": "Explains the hybrid logic of the frozen classical encoder and Quantum Head approach.",
+    "Cerezo ve ark., QML zorlukları": "Cerezo et al., QML challenges",
+    "QML için veri kodlama, eğitilebilirlik, genelleme ve donanım sınırlılıklarını tartışmaktadır.": "Discusses data encoding, trainability, generalization, and hardware limitations for QML.",
+    "Kuantum üstünlüğü iddiası kurmadan dengeli deneysel yorum yapılmasını desteklemektedir.": "Supports balanced experimental interpretation without asserting quantum superiority.",
     "Klasik tanımlayıcı modeller küçük ve orta ölçekli moleküler verilerde güçlü referanstır.": "Classical descriptor models constitute strong baselines for small- and medium-scale molecular data.",
     "QSVM, VQC'ye göre daha kararlı saf kuantum sinyali üretmiştir.": "QSVM produced a more stable purely quantum signal than VQC.",
     "Hibrit kuantum başlık, bazı görevlerde klasik modellerle aynı performans bölgesine yaklaşmıştır.": "The hybrid quantum head approached the performance region of classical models in selected tasks.",
     "Materyal": "Material",
+    "Kullanılan Veri Seti": "Dataset Used",
     "Üç ilaç keşfi görevi, tek deneysel zemin": "Three drug discovery tasks under one experimental protocol",
     "Üç ilaç keşfi görevi, ortak deneysel protokol": "Three drug discovery tasks under a shared experimental protocol",
     "MoleculeNet kaynaklı üç moleküler özellik tahmini görevi": "Three molecular property prediction tasks sourced from MoleculeNet",
-    "Moleküller SMILES dizgeleri üzerinden işlendi; klasik tanımlayıcı modeller için ECFP/Morgan parmak izleri, grafik modeller için atom-bağ yapıları kullanıldı.": "Molecules were processed through SMILES strings; ECFP/Morgan fingerprints were used for classical descriptor models, and atom-bond structures were used for graph models.",
-    "Materyal katmanı MoleculeNet/DeepChem çizgisindeki BACE, BBBP ve ClinTox veri setlerinden oluşur. Her veri seti moleküler yapıyı SMILES dizgesiyle, hedef biyomedikal sonucu ise ikili sınıf etiketiyle temsil eder; aynı kayıtlar klasik, grafik, saf kuantum, kuantum grafik ve hibrit modellere farklı temsil biçimleriyle aktarılmıştır.": "The material layer consists of the BACE, BBBP, and ClinTox datasets from the MoleculeNet/DeepChem line. Each dataset represents molecular structure with a SMILES string and the target biomedical outcome with a binary class label; the same records are transferred to classical, graph, purely quantum, quantum-graph, and hybrid models through different representations.",
+    "Moleküller SMILES dizgeleri üzerinden işlendi; klasik tanımlayıcı modeller için ECFP/Morgan parmak izleri, grafik modeller için atom-bağ yapıları kullanılmıştır.": "Molecules were processed through SMILES strings; ECFP/Morgan fingerprints were used for classical descriptor models, and atom-bond structures were used for graph models.",
+    "Materyal katmanı MoleculeNet/DeepChem çizgisindeki BACE, BBBP ve ClinTox veri setlerinden oluşmaktadır. Her veri seti moleküler yapıyı SMILES dizgesiyle, hedef biyomedikal sonucu ise ikili sınıf etiketiyle temsil etmektedir; aynı kayıtlar klasik, grafik, saf kuantum, kuantum grafik ve hibrit modellere farklı temsil biçimleriyle aktarılmıştır.": "The material layer consists of the BACE, BBBP, and ClinTox datasets from the MoleculeNet/DeepChem line. Each dataset represents molecular structure with a SMILES string and the target biomedical outcome with a binary class label; the same records are transferred to classical, graph, purely quantum, quantum-graph, and hybrid models through different representations.",
     "Veri kaynağı, kullanım amacı ve içerik özeti": "Data source, purpose, and content summary",
     "Kaynak": "Source",
     "MoleculeNet/DeepChem kaynaklı standart görevler": "Standard tasks sourced from MoleculeNet/DeepChem",
     "MoleculeNet, model karşılaştırması için standart zemin sağlar": "MoleculeNet provides a standard ground for model comparison",
-    "BACE, BBBP ve ClinTox veri setleri MoleculeNet/DeepChem çizgisinden alınan moleküler özellik tahmini görevleridir. Her kayıt SMILES dizgesi ve ikili sınıf etiketiyle başlar.": "The BACE, BBBP, and ClinTox datasets are molecular property prediction tasks sourced from the MoleculeNet/DeepChem line. Each record starts with a SMILES string and a binary class label.",
-    "MoleculeNet, ilaç keşfiyle ilişkili moleküler görevleri ortak veri formatı, ortak değerlendirme mantığı ve tekrarlanabilir benchmark yaklaşımıyla sunar. Bu çalışmada BACE, BBBP ve ClinTox bu standart karşılaştırma zemini nedeniyle seçildi.": "MoleculeNet provides drug-discovery-related molecular tasks through a shared data format, evaluation logic, and reproducible benchmark approach. In this study, BACE, BBBP, and ClinTox were selected because they provide this standard comparison ground.",
-    "Ne için kullanıldı?": "What was it used for?",
+    "BACE, BBBP ve ClinTox veri setleri MoleculeNet/DeepChem çizgisinden alınan moleküler özellik tahmini görevleridir. Her kayıt SMILES dizgesi ve ikili sınıf etiketiyle başlamaktadır.": "The BACE, BBBP, and ClinTox datasets are molecular property prediction tasks sourced from the MoleculeNet/DeepChem line. Each record starts with a SMILES string and a binary class label.",
+    "MoleculeNet, ilaç keşfiyle ilişkili moleküler görevleri ortak veri formatı, ortak değerlendirme mantığı ve tekrarlanabilir benchmark yaklaşımıyla sunmaktadır. Bu çalışmada BACE, BBBP ve ClinTox bu standart karşılaştırma zemini nedeniyle seçildi.": "MoleculeNet provides drug-discovery-related molecular tasks through a shared data format, evaluation logic, and reproducible benchmark approach. In this study, BACE, BBBP, and ClinTox were selected because they provide this standard comparison ground.",
+    "Ne için kullanılmıştır?": "What was it used for?",
     "Veri setlerinin anlamı": "Meaning of the datasets",
     "Klasik ve kuantum modeller için ortak zemin": "A common ground for classical and quantum models",
-    "Üç veri seti üç farklı biyomedikal soruyu temsil eder": "The three datasets represent three distinct biomedical questions",
-    "Aynı veri ayrımları üzerinde klasik, grafik, saf kuantum, kuantum grafik ve hibrit modeller karşılaştırıldı; amaç kuantum üstünlüğü varsaymak değil, hangi koşulda sinyal oluştuğunu ölçmektir.": "Classical, graph, purely quantum, quantum-graph, and hybrid models were compared on the same data splits; the goal is not to assume quantum advantage, but to measure under which conditions signal appears.",
-    "BACE, BACE-1 inhibitör aktivitesini; BBBP, kan-beyin bariyerini geçebilme durumunu; ClinTox ise klinik toksisite ve güvenlilik sinyalini inceler. Bu yüzden sonuçlar yalnızca satır sayısıyla değil, biyomedikal görev bağlamıyla okunur.": "BACE examines BACE-1 inhibitory activity; BBBP examines the ability to cross the blood-brain barrier; ClinTox examines clinical toxicity and safety signal. Therefore, the results are read not only by row count, but also by biomedical task context.",
+    "Üç veri seti üç farklı biyomedikal soruyu temsil etmektedir": "The three datasets represent three distinct biomedical questions",
+    "Aynı veri ayrımları üzerinde klasik, grafik, saf kuantum, kuantum grafik ve hibrit modeller karşılaştırılmıştır; amaç kuantum üstünlüğü varsaymak değil, hangi koşulda sinyal oluştuğunu ölçmektir.": "Classical, graph, purely quantum, quantum-graph, and hybrid models were compared on the same data splits; the goal is not to assume quantum advantage, but to measure under which conditions signal appears.",
+    "BACE, BACE-1 inhibitör aktivitesini; BBBP, kan-beyin bariyerini geçebilme durumunu; ClinTox ise klinik toksisite ve güvenlilik sinyalini inceler. Bu yüzden sonuçlar yalnızca satır sayısıyla değil, biyomedikal görev bağlamıyla okunmaktadır.": "BACE examines BACE-1 inhibitory activity; BBBP examines the ability to cross the blood-brain barrier; ClinTox examines clinical toxicity and safety signal. Therefore, the results are read not only by row count, but also by biomedical task context.",
     "Verinin içinde neler var?": "What is inside the data?",
-    "Deneyde nasıl kullanıldı?": "How was it used in the experiment?",
+    "Deneyde nasıl kullanılmıştır?": "How was it used in the experiment?",
     "SMILES, etiket, temsil ve ayrım bilgisi": "SMILES, labels, representations, and split information",
     "SMILES kaydı tüm model aileleri için ortak başlangıçtır": "The SMILES record is the common starting point for all model families",
-    "Geçerli SMILES kayıtları RDKit ile işlenir; ECFP/Morgan parmak izi, atom-bağ grafı, sınıf etiketi, eğitim-doğrulama-test ayrımı ve değerlendirme metrikleri bu hattan üretilir.": "Valid SMILES records are processed with RDKit; ECFP/Morgan fingerprints, atom-bond graphs, class labels, train-validation-test splits, and evaluation metrics are produced through this pipeline.",
-    "Geçerli SMILES kayıtları RDKit ile işlenir; ECFP/Morgan parmak izi, atom-bağ grafı, PCA veya kodlayıcı sonrası kubit girişi, eğitim-doğrulama-test ayrımı ve AUROC merkezli metrikler aynı deney hattından üretilir.": "Valid SMILES records are processed with RDKit; ECFP/Morgan fingerprints, atom-bond graphs, qubit inputs after PCA or an encoder, train-validation-test splits, and AUROC-centered metrics are produced from the same experimental pipeline.",
+    "Geçerli SMILES kayıtları RDKit ile işlenir; ECFP/Morgan parmak izi, atom-bağ grafı, sınıf etiketi, eğitim-doğrulama-test ayrımı ve değerlendirme metrikleri bu hattan üretilmektedir.": "Valid SMILES records are processed with RDKit; ECFP/Morgan fingerprints, atom-bond graphs, class labels, train-validation-test splits, and evaluation metrics are produced through this pipeline.",
+    "Geçerli SMILES kayıtları RDKit ile işlenir; ECFP/Morgan parmak izi, atom-bağ grafı, PCA veya kodlayıcı sonrası kubit girişi, eğitim-doğrulama-test ayrımı ve AUROC merkezli metrikler aynı deney hattından üretilmektedir.": "Valid SMILES records are processed with RDKit; ECFP/Morgan fingerprints, atom-bond graphs, qubit inputs after PCA or an encoder, train-validation-test splits, and AUROC-centered metrics are produced from the same experimental pipeline.",
     "Ön işleme sonrası kullanılan veri ayrımları": "Data splits used after preprocessing",
     "Veri seti": "Dataset",
     "Görev": "Task",
@@ -119,36 +163,53 @@ const i18n = {
     "Verinin anlamı": "Data meaning",
     "BACE, BBBP ve ClinTox aynı boyutta değil, aynı soruda da değil": "BACE, BBBP, and ClinTox do not have the same size or represent the same biomedical task",
     "BACE, BBBP ve ClinTox aynı büyüklükte değildir ve aynı biyomedikal görevi temsil etmez": "BACE, BBBP, and ClinTox differ in size and represent distinct biomedical tasks",
-    "Veri setleri yalnızca satır sayısı olarak okunmadı. BACE enzim inhibisyonunu, BBBP kan-beyin bariyeri geçişini, ClinTox ise klinik toksisite sinyalini temsil eder. Sınıf dağılımı ve biyomedikal soru, model yorumunu doğrudan değiştirir.": "The datasets were not interpreted only as row counts. BACE represents enzyme inhibition, BBBP represents blood-brain barrier penetration, and ClinTox represents clinical toxicity signal. Class distribution and the biomedical question directly change model interpretation.",
+    "Veri setleri yalnızca satır sayısı olarak okunmadı. BACE enzim inhibisyonunu, BBBP kan-beyin bariyeri geçişini, ClinTox ise klinik toksisite sinyalini temsil etmektedir. Sınıf dağılımı ve biyomedikal soru, model yorumunu doğrudan değiştirir.": "The datasets were not interpreted only as row counts. BACE represents enzyme inhibition, BBBP represents blood-brain barrier penetration, and ClinTox represents clinical toxicity signal. Class distribution and the biomedical question directly change model interpretation.",
     "Veri setlerinin biyomedikal anlam ve sınıf dağılım haritası": "Biomedical meaning and class-distribution map of the datasets",
     "Veri okuma kuralı": "Rule for reading the data",
-    "AUROC karşılaştırması aynı metrik dili verir; ancak veri setinin sınıf dengesi ve biyomedikal görevi sonuçların nasıl savunulacağını belirler.": "AUROC comparison gives a common metric language, but the class balance and biomedical task determine how the results should be defended.",
+    "AUROC karşılaştırması aynı metrik dili verir; ancak veri setinin sınıf dengesi ve biyomedikal görevi sonuçların nasıl savunulacağını belirlemektedir.": "AUROC comparison gives a common metric language, but the class balance and biomedical task determine how the results should be defended.",
     "Enzim inhibitörlüğü; dengeliye yakın test ayrımı.": "Enzyme inhibition; nearly balanced test split.",
     "Pozitif sınıf baskın; geçiş sinyali güçlü.": "Positive class is dominant; penetration signal is strong.",
     "Az pozitif örnek; F1, MCC ve özgüllük zorunlu.": "Few positive samples; F1, MCC, and specificity are mandatory.",
     "Veri temsili": "Data representation",
-    "SMILES kaydı klasik, grafik ve kuantum modele farklı yüzlerle girer": "A SMILES record enters classical, graph, and quantum models through different representations",
-    "Aynı molekül önce kimyasal dize olarak gelir; klasik tanımlayıcı hatta ECFP bitlerine, grafik hattında atom-bağ ağına, kuantum hattında ise sıkıştırılmış kubit temsiline dönüşür.": "The same molecule first arrives as a chemical string; it becomes ECFP bits in the classical descriptor route, an atom-bond network in the graph route, and a compressed qubit representation in the quantum route.",
+    "Veri Temsili": "Data Representation",
+    "Çalışmanın Akış Diyagramı": "Study Workflow Diagram",
+    "Kullanılan Yöntemler": "Methods Used",
+    "Klasik ve grafik yöntemler": "Classical and graph-based methods",
+    "Kullanılan Klasik Makine Öğrenmesi Yöntemleri": "Classical Machine Learning Methods Used",
+    "Kuantum Yapısı": "Quantum Structure",
+    "Kuantum makine öğrenmesi": "Quantum machine learning",
+    "Kuantumun Çalışma Mekanizması": "Operating Mechanism of Quantum Computing",
+    "Kullanılan Modellerin Mimarileri": "Architectures of the Models Used",
+    "Saf ve Hibrit Kuantum Yapısı": "Pure and Hybrid Quantum Structure",
+    "Deneysel Uygulama": "Experimental Application",
+    "Kuantum Devre Simülasyonu": "Quantum Circuit Simulation",
+    "Deneysel Sonuçlar": "Experimental Results",
+    "Kuantum-Hibrit Modellerin Ablasyon Tablosu": "Ablation Table of Quantum-Hybrid Models",
+    "Kübit-Derinlik İlişkisi": "Qubit-Depth Relationship",
+    "Tartışma ve Elde Edilen Bulgular": "Discussion and Findings Obtained",
+    "Öneriler ve Gelecek Çalışmalar": "Recommendations and Future Work",
+    "SMILES kaydı klasik, grafik ve kuantum modele farklı temsillerle girmektedir": "A SMILES record enters classical, graph, and quantum models through different representations",
+    "Aynı molekül önce kimyasal dize olarak gelmektedir; klasik tanımlayıcı hatta ECFP bitlerine, grafik hattında atom-bağ ağına, kuantum hattında ise sıkıştırılmış kubit temsiline dönüşmektedir.": "The same molecule first arrives as a chemical string; it becomes ECFP bits in the classical descriptor route, an atom-bond network in the graph route, and a compressed qubit representation in the quantum route.",
     "Temsil dönüşümü": "Representation transformation",
-    "Bu katman, seminerdeki model ailelerinin neden doğrudan aynı iç yapıyla karşılaştırılamadığını gösterir: girdi aynı molekül olsa da temsil uzayı değişir.": "This layer shows why the model families in the seminar cannot be compared as identical internal structures: the input molecule is the same, but the representation space changes.",
+    "Bu katman, seminerdeki model ailelerinin neden doğrudan aynı iç yapıyla karşılaştırılamadığını göstermektedir: girdi aynı molekül olsa da temsil uzayı değişmektedir.": "This layer shows why the model families in the seminar cannot be compared as identical internal structures: the input molecule is the same, but the representation space changes.",
     "1024 bit, radius 2 Morgan parmak izi.": "1024-bit radius-2 Morgan fingerprint.",
     "Atom düğümleri ve bağ kenarları.": "Atom nodes and bond edges.",
     "PCA veya kodlayıcı sonrası q boyutlu devre girişi.": "q-dimensional circuit input after PCA or an encoder.",
     "SMILES verisinin ECFP, grafik, PCA ve kubit temsiline dönüşümü": "Transformation of SMILES data into ECFP, graph, PCA, and qubit representations",
     "Deney matrisi": "Experimental matrix",
     "Veri seti, model ailesi ve AUROC tek ısı haritasında birleşiyor": "Dataset, model family, and AUROC merge into one heatmap",
-    "Liderlik CSV'sindeki her görev için en iyi SVM, MLP, GNN, GAT, QSVM, VQC, QGNN ve Hybrid QHead değeri alınır. Böylece seminer bulgusu tablo yerine doğrudan karşılaştırılabilir bir model matrisi olarak okunur.": "For each task in the leaderboard CSV, the best SVM, MLP, GNN, GAT, QSVM, VQC, QGNN, and Hybrid QHead value is selected. Thus, the seminar finding can be read as a directly comparable model matrix instead of only a table.",
+    "Liderlik CSV'sindeki her görev için en iyi SVM, MLP, GNN, GAT, QSVM, VQC, QGNN ve Hybrid QHead değeri alınmaktadır. Böylece seminer bulgusu tablo yerine doğrudan karşılaştırılabilir bir model matrisi olarak okunmaktadır.": "For each task in the leaderboard CSV, the best SVM, MLP, GNN, GAT, QSVM, VQC, QGNN, and Hybrid QHead value is selected. Thus, the seminar finding can be read as a directly comparable model matrix instead of only a table.",
     "Model ailesi ve veri setine göre AUROC deney matrisi": "AUROC experimental matrix by model family and dataset",
     "Matris okuması": "Reading the matrix",
-    "Renk koyulaştıkça AUROC yükselir. Aynı satır içinde model aileleri, aynı sütun içinde veri seti davranışı karşılaştırılır.": "Darker color indicates higher AUROC. Model families are compared within a row, and dataset behavior is compared within a column.",
+    "Renk koyulaştıkça AUROC yükselmektedir. Aynı satır içinde model aileleri, aynı sütun içinde veri seti davranışı karşılaştırılmaktadır.": "Darker color indicates higher AUROC. Model families are compared within a row, and dataset behavior is compared within a column.",
     "Kubit-derinlik kapasitesi": "Qubit-depth capacity",
     "Daha fazla kubit veya derinlik otomatik üstünlük üretmedi": "More qubits or greater depth did not automatically produce superiority",
-    "Hybrid QHead ablasyonları, q ve d ayarlarının veri setine göre farklı tepki verdiğini gösterir. Kapasite artışı, küçük moleküler veri rejiminde her zaman daha iyi genelleme anlamına gelmez.": "Hybrid QHead ablations show that q and d settings respond differently by dataset. Increasing capacity does not always mean better generalization in a small molecular data regime.",
+    "Hybrid QHead ablasyonları, q ve d ayarlarının veri setine göre farklı tepki verdiğini göstermektedir. Kapasite artışı, küçük moleküler veri rejiminde her zaman daha iyi genelleme anlamına gelmez.": "Hybrid QHead ablations show that q and d settings respond differently by dataset. Increasing capacity does not always mean better generalization in a small molecular data regime.",
     "Kapasite yorumu": "Capacity interpretation",
     "BACE q6-d1, BBBP q4-d1, ClinTox q8-d2 ile en iyi değeri verdi. Bu yüzden sayfadaki kuantum yorumu genel üstünlük değil, görev bazlı uyum vurgusudur.": "BACE achieved its best value with q6-d1, BBBP with q4-d1, and ClinTox with q8-d2. Therefore, the quantum interpretation on this page emphasizes task-specific fit, not general superiority.",
     "Devreye giren özellik boyutu ve kubit sayısı.": "Feature dimension entering the circuit and number of qubits.",
     "Ardışık kuantum kapı katmanı derinliği.": "Depth of successive quantum gate layers.",
-    "Yüksek skor, düşük std ile birlikte okunur.": "A high score is read together with a low std.",
+    "Yüksek skor, düşük std ile birlikte okunmaktadır.": "A high score is read together with a low std.",
     "Kubit sayısı ve devre derinliğine göre kapasite haritası": "Capacity map by qubit count and circuit depth",
     "Seed dağılımı": "Seed distribution",
     "Ortalama ve standart sapma birlikte raporlandığında karar daha güvenilir olur": "Decision-making is more reliable when mean and standard deviation are reported together",
@@ -159,14 +220,14 @@ const i18n = {
     "Molekül yolculuğu": "Molecular pipeline",
     "SMILES dizgesinden kuantum ölçümüne kadar bütün hat tek sahnede": "The complete route from SMILES string to model decision in a single scene",
     "SMILES dizgesinden model kararına kadar deney hattı tek sahnede": "The experimental pipeline from SMILES string to model decision in a single scene",
-    "Bu görsel, seminerdeki deney hattını adım adım gösterir: molekül önce RDKit ile işlenir, ECFP parmak izine çevrilir, PCA veya kodlayıcı ile sıkıştırılır, kubitlere kodlanır ve ölçümden sonra klasik metriklerle değerlendirilir.": "This visual presents the seminar's experimental pipeline step by step: the molecule is first processed with RDKit, converted into an ECFP fingerprint, branched into classical, graph, purely quantum, and hybrid routes, and evaluated with classical metrics.",
-    "Bu görsel, seminerdeki deney hattını adım adım gösterir: molekül önce RDKit ile işlenir, ECFP parmak izine çevrilir, klasik, grafik, saf kuantum ve hibrit kollara ayrılır; kuantum kolda ölçümden sonra, tüm kollarda ise klasik metriklerle değerlendirilir.": "This visual presents the seminar's experimental pipeline step by step: the molecule is first processed with RDKit, converted into an ECFP fingerprint, branched into classical, graph, purely quantum, and hybrid routes, and then evaluated with classical metrics; the quantum route also passes through measurement.",
+    "Bu görsel, seminerdeki deney hattını adım adım göstermektedir: molekül önce RDKit ile işlenir, ECFP parmak izine çevrilir, PCA veya kodlayıcı ile sıkıştırılır, kubitlere kodlanır ve ölçümden sonra klasik metriklerle değerlendirilir.": "This visual presents the seminar's experimental pipeline step by step: the molecule is first processed with RDKit, converted into an ECFP fingerprint, branched into classical, graph, purely quantum, and hybrid routes, and evaluated with classical metrics.",
+    "Bu görsel, seminerdeki deney hattını adım adım göstermektedir: molekül önce RDKit ile işlenir, ECFP parmak izine çevrilir, klasik, grafik, saf kuantum ve hibrit kollara ayrılır; kuantum kolda ölçümden sonra, tüm kollarda ise klasik metriklerle değerlendirilir.": "This visual presents the seminar's experimental pipeline step by step: the molecule is first processed with RDKit, converted into an ECFP fingerprint, branched into classical, graph, purely quantum, and hybrid routes, and then evaluated with classical metrics; the quantum route also passes through measurement.",
     "SMILES'tan kuantum ölçümüne molekül yolculuğu": "Molecular journey from SMILES to model decision",
     "SMILES'tan model kararına molekül yolculuğu": "Molecular journey from SMILES to model decision",
     "Yöntem aileleri": "Method families",
     "Klasik çizgi, grafik öğrenme, saf kuantum ve hibrit başlık aynı sahnede": "Classical baselines, graph learning, purely quantum models, and the hybrid head in one view",
     "Klasik referanslar, grafik öğrenme, saf kuantum ve hibrit başlık aynı sahnede": "Classical baselines, graph learning, purely quantum models, and the hybrid head in one view",
-    "Klasik ve grafik yöntemler nasıl çalışır?": "How do classical and graph-based methods operate?",
+    "Klasik ve grafik yöntemler nasıl çalışmaktadır?": "How do classical and graph-based methods operate?",
     "SVM, MLP, GNN ve GAT için dinamik karar akışı": "Dynamic decision flow for SVM, MLP, GNN, and GAT",
     "Seminerde klasik taraf iki çizgide ilerler: ECFP/Morgan parmak izleri üzerinde SVM ve MLP; moleküler grafik üzerinde GNN ve GAT. Molekül görüntü olarak değil, atom-bağ grafiği olarak işlendiği için bu bölümde CNN yerine GNN/GAT akışı anlatılır.": "The classical side of the seminar proceeds along two routes: SVM and MLP on ECFP/Morgan fingerprints, and GNN and GAT on molecular graphs. Because the molecule is processed as an atom-bond graph rather than as an image, this section explains the GNN/GAT flow rather than presenting CNN as an experimental model.",
     "Klasik ve grafik yöntem seçimi": "Classical and graph method selection",
@@ -177,7 +238,7 @@ const i18n = {
     "Kuantum hesaplama, klasik bitlerden farklı olarak kubit durumları üzerinde çalışır. Bu bölüm, seminerde kullanılan QML akışının arkasındaki kubit, süperpozisyon, dolanıklık, ölçüm ve devre derinliği kavramlarını hareketli grafikle açar.": "Unlike classical computing over bits, quantum computing operates on qubit states. This section uses motion graphics to unpack the qubit, superposition, entanglement, measurement, and circuit-depth concepts behind the QML pipeline used in the seminar.",
     "Kuantum bilgisayarlar klasik bit yerine kubit durumları üzerinde işlem yapar; ancak bu çalışmada gerçek kuantum donanımı kullanılmadı. QML modelleri klasik veriyi kuantum devre simülasyonuna taşıyan araştırma modelleri olarak ele alındı.": "Quantum computers operate on qubit states instead of classical bits; however, no real quantum hardware was used in this study. QML models were treated as research models that map classical data into quantum circuit simulation.",
     "Kuantum bilgisayar, QML model aileleri ve simülasyon düzeyini anlatan dinamik genel bakış": "Dynamic overview explaining quantum computers, QML model families, and simulation level",
-    "Kuantum bilgisayar burada ne anlama geliyor?": "What does a quantum computer mean here?",
+    "Kuantum bilgisayar burada ne anlama gelmektedir?": "What does a quantum computer mean here?",
     "Bu seminerde kuantum tarafı fiziksel cihaz çalıştırma iddiası değildir; klasik moleküler verinin kuantum özellik uzayı, parametrik devre veya hibrit kuantum başlık fikriyle nasıl temsil edildiğini inceleyen simülasyon tabanlı karşılaştırmadır.": "In this seminar, the quantum side is not a claim of running a physical device; it is a simulation-based comparison that examines how classical molecular data is represented through quantum feature spaces, parametric circuits, or a hybrid quantum head.",
     "Kuantum bilgisayar": "Quantum computer",
     "Kubit, kapı, dolanıklık ve ölçüm ilkeleriyle çalışan hesaplama modelidir.": "A computing model based on qubits, gates, entanglement, and measurement principles.",
@@ -198,17 +259,17 @@ const i18n = {
     "QSVM/VQC/QGNN/Hybrid QHead deneyleri gerçek kuantum donanımı sonucu değildir; klasik bilgisayarda kuantum devre davranışını hesaplayan simülatör çıktısıdır.": "QSVM/VQC/QGNN/Hybrid QHead experiments are not real quantum hardware results; they are simulator outputs that compute quantum circuit behavior on a classical computer.",
     "Kuantum kavram seçimi": "Quantum concept selection",
     "Kuantum kavramlarını anlatan dinamik görsel": "Dynamic visual explaining quantum concepts",
-    "Quantum ML nasıl çalışır?": "How does quantum machine learning work?",
-    "Kuantum makine öğrenmesi nasıl çalışır?": "How does quantum machine learning work?",
+    "Quantum ML nasıl çalışmaktadır?": "How does quantum machine learning work?",
+    "Kuantum makine öğrenmesi nasıl çalışmaktadır?": "How does quantum machine learning work?",
     "Veri kuantum özellik uzayına taşınır, ölçüm klasik karara döner": "Data is mapped into a quantum feature space, and measurement returns a classical decision",
     "Veri kuantum özellik uzayına taşınır; ölçüm klasik karara döner": "Data is mapped into a quantum feature space; measurement returns a classical decision",
-    "Bu sahne, seminerdeki kuantum modellerin ortak çalışma fikrini gösterir: moleküler veri önce sayısal temsile çevrilir, kubitlere kodlanır, devrede etkileşime sokulur, ölçüm istatistiği alınır ve sonuç AUROC gibi klasik metriklerle raporlanır.": "This scene shows the common operating idea behind the quantum models in the seminar: molecular data is first converted into a numerical representation, encoded into qubits, made to interact inside the circuit, measured as statistics, and reported with classical metrics such as AUROC.",
+    "Bu sahne, seminerdeki kuantum modellerin ortak çalışma fikrini göstermektedir: moleküler veri önce sayısal temsile çevrilir, kubitlere kodlanır, devrede etkileşime sokulur, ölçüm istatistiği alınmaktadır ve sonuç AUROC gibi klasik metriklerle raporlanır.": "This scene shows the common operating idea behind the quantum models in the seminar: molecular data is first converted into a numerical representation, encoded into qubits, made to interact inside the circuit, measured as statistics, and reported with classical metrics such as AUROC.",
     "Quantum ML model seçimi": "Quantum ML model selection",
     "Kuantum makine öğrenmesi model seçimi": "Quantum machine learning model selection",
     "Quantum ML modellerinin veri, devre, ölçüm ve sonuç çalışma akışı": "Data, circuit, measurement, and result workflow of quantum machine learning models",
     "Kuantum makine öğrenmesi modellerinin veri, devre, ölçüm ve sonuç çalışma akışı": "Data, circuit, measurement, and result workflow of quantum machine learning models",
     "Kuantum ML sahnesi": "Quantum ML scene",
-    "Klasik veri devreye girer, kuantum dönüşümden sonra ölçüm tekrar klasik karara çevrilir.": "Classical data enters the circuit; after the quantum transformation, measurement is converted back into a classical decision.",
+    "Klasik veri devreye girmektedir, kuantum dönüşümden sonra ölçüm tekrar klasik karara çevrilir.": "Classical data enters the circuit; after the quantum transformation, measurement is converted back into a classical decision.",
     "Veri kodlama": "Data encoding",
     "Kuantum dönüşüm": "Quantum transformation",
     "Ölçüm istatistiği": "Measurement statistics",
@@ -229,7 +290,7 @@ const i18n = {
     "ECFP + PCA ile q boyutlu veri, ZZFeatureMap ile kuantum özellik uzayına taşınır; çekirdek matrisi ölçülen benzerliklerden hesaplanır.": "q-dimensional data produced by ECFP + PCA is mapped into a quantum feature space with ZZFeatureMap; the kernel matrix is computed from measured similarities.",
     "Özellik haritası veriyi devreye kodlar; eğitilebilir ansatz ölçümden gelen kayıp üzerinden optimize edilir.": "The feature map encodes data into the circuit; the trainable ansatz is optimized through the loss obtained from measurement.",
     "Moleküler grafikten gelen düğüm mesajları kuantum katman fikriyle yeniden ağırlıklandırılır.": "Node messages from the molecular graph are reweighted through the idea of a quantum layer.",
-    "Dondurulmuş MLP kodlayıcı kompakt temsil üretir; Quantum Head bu temsili parametrik devrede işler.": "The frozen MLP encoder produces a compact representation; the Quantum Head processes that representation in a parametric circuit.",
+    "Dondurulmuş MLP kodlayıcı kompakt temsil üretmektedir; Quantum Head bu temsili parametrik devrede işlemektedir.": "The frozen MLP encoder produces a compact representation; the Quantum Head processes that representation in a parametric circuit.",
     "Kuantum çekirdek + klasik SVM": "Quantum kernel + classical SVM",
     "Ansatz + klasik optimizer": "Ansatz + classical optimizer",
     "Graf mesajları + kuantum katman sinyali": "Graph messages + quantum-layer signal",
@@ -246,17 +307,17 @@ const i18n = {
     "Hybrid QHead BACE ve ClinTox üzerinde klasik çizgiye en çok yaklaşan kuantum-klasik yapı oldu.": "Hybrid QHead was the quantum-classical structure that came closest to the classical baselines on BACE and ClinTox.",
     "Hybrid QHead BACE ve ClinTox üzerinde klasik referanslara en çok yaklaşan kuantum-klasik yapı oldu.": "Hybrid QHead was the quantum-classical structure that came closest to the classical baselines on BACE and ClinTox.",
     "Model mimarileri": "Model architectures",
-    "Seminerde kullanılan bütün modeller aynı görsel dilde açılıyor": "All models used in the seminar are explained in a shared visual language",
-    "Her sekme, modelin veri girişinden karar skoruna kadar izlediği yolu dinamik olarak çizer. Klasik makine öğrenmesi, grafik öğrenme, saf kuantum ve hibrit yapıların farkı böylece doğrudan okunabilir.": "Each tab dynamically draws the route followed by a model from data input to decision score. The differences between classical machine learning, graph learning, purely quantum, and hybrid structures can therefore be read directly.",
+    "Seminerde kullanılan bütün modeller aynı görsel dilde açılmaktadır": "All models used in the seminar are explained in a shared visual language",
+    "Her sekme, modelin veri girişinden karar skoruna kadar izlediği yolu dinamik olarak çizmektedir. Klasik makine öğrenmesi, grafik öğrenme, saf kuantum ve hibrit yapıların farkı böylece doğrudan okunabilir.": "Each tab dynamically draws the route followed by a model from data input to decision score. The differences between classical machine learning, graph learning, purely quantum, and hybrid structures can therefore be read directly.",
     "Model mimarisi seçimi": "Model architecture selection",
     "Model mimarilerini anlatan dinamik görsel": "Dynamic visual explaining model architectures",
     "Kuantum anlatımı": "Quantum narrative",
     "Kuantum deney hattı": "Quantum experimental pipeline",
     "ECFP uzayından kubitlere, kubitlerden karar sınırına": "From ECFP space to qubits, and from qubits to the decision boundary",
     "Saf kuantum ve hibrit başlık aynı devre mantığında ayrışır": "Purely quantum and hybrid-head routes diverge within the same circuit logic",
-    "Bu bölüm, genel kuantum makine öğrenmesi fikrinden sonra çalışmadaki iki deneysel kuantum yolunu ayırır. Saf kuantum tanımlayıcı hattında ECFP vektörleri PCA ile kubit sayısına indirgenir ve ZZFeatureMap üzerinden kuantum özellik uzayına taşınır. Hibrit yaklaşımda ise dondurulmuş MLP kodlayıcı daha kompakt bir gömme temsil üretir; Quantum Head bu temsil üzerinde parametrik devreyle karar katmanı kurar.": "After the general quantum machine learning idea, this section separates the two experimental quantum routes in the study. In the purely quantum descriptor route, ECFP vectors are reduced to the qubit count with PCA and mapped into a quantum feature space through ZZFeatureMap. In the hybrid route, the frozen MLP encoder produces a more compact embedding representation; Quantum Head builds a parametric-circuit decision layer on that representation.",
-    "Moleküler yapı metinsel gösterim olarak alınır.": "The molecular structure is taken as a textual representation.",
-    "Radius 2, 1024 bit Morgan parmak izi üretilir.": "A radius-2, 1024-bit Morgan fingerprint is generated.",
+    "Bu bölüm, genel kuantum makine öğrenmesi fikrinden sonra çalışmadaki iki deneysel kuantum yolunu ayırır. Saf kuantum tanımlayıcı hattında ECFP vektörleri PCA ile kubit sayısına indirgenir ve ZZFeatureMap üzerinden kuantum özellik uzayına taşınır. Hibrit yaklaşımda ise dondurulmuş MLP kodlayıcı daha kompakt bir gömme temsil üretmektedir; Quantum Head bu temsil üzerinde parametrik devreyle karar katmanı kurmaktadır.": "After the general quantum machine learning idea, this section separates the two experimental quantum routes in the study. In the purely quantum descriptor route, ECFP vectors are reduced to the qubit count with PCA and mapped into a quantum feature space through ZZFeatureMap. In the hybrid route, the frozen MLP encoder produces a more compact embedding representation; Quantum Head builds a parametric-circuit decision layer on that representation.",
+    "Moleküler yapı metinsel gösterim olarak alınmaktadır.": "The molecular structure is taken as a textual representation.",
+    "Radius 2, 1024 bit Morgan parmak izi üretilmektedir.": "A radius-2, 1024-bit Morgan fingerprint is generated.",
     "Klasik özellik uzayı kubit sayısına veya gömme uzayına indirgenir.": "The classical feature space is reduced to the qubit dimension or embedding space.",
     "Parametrik kuantum devre temsil üzerinde dönüşüm uygular.": "The parametric quantum circuit transforms the representation.",
     "Sonuçlar çoklu metriklerle raporlanır.": "Results are reported with multiple metrics.",
@@ -279,9 +340,9 @@ const i18n = {
     "Sonucu savun": "Defend the result",
     "SMILES ve ECFP temsili q boyutlu devre girişine çevrilir.": "SMILES and ECFP representations are converted into a q-dimensional circuit input.",
     "Kapılar kubit durumunu döndürür; olasılık genlikleri tek bir sınıfa kilitlenmez.": "Gates rotate the qubit state; probability amplitudes are not locked to a single class.",
-    "Kontrollü kapılar kubitler arası korelasyon kurar; bu çizgi fiziksel mesafe değildir.": "Controlled gates create correlations between qubits; this line is not physical distance.",
+    "Kontrollü kapılar kubitler arası korelasyon kurmaktadır; bu çizgi fiziksel mesafe değildir.": "Controlled gates create correlations between qubits; this line is not physical distance.",
     "Ölçüm kuantum durumunu klasik olasılık ve karar skoruna indirger.": "Measurement reduces the quantum state to a classical probability and decision score.",
-    "AUROC, std ve görev bağlamı birlikte okunur; özellikle ClinTox tek metrikle savunulmaz.": "AUROC, standard deviation, and task context are read together; ClinTox in particular is not defended with a single metric.",
+    "AUROC, std ve görev bağlamı birlikte okunmaktadır; özellikle ClinTox tek metrikle savunulmaz.": "AUROC, standard deviation, and task context are read together; ClinTox in particular is not defended with a single metric.",
     "Oyun hedefi": "Game objective",
     "Amaç en parlak devreyi seçmek değil; q, d, ölçüm ve metrik dengesini seminer bulgusuyla uyumlu okumaktır.": "The goal is not to choose the flashiest circuit, but to read the balance among q, d, measurement, and metrics in line with the seminar finding.",
     "Seçili konfigürasyon": "Selected configuration",
@@ -299,9 +360,9 @@ const i18n = {
     "ClinTox dengesizdir; AUROC yanında F1, MCC, duyarlılık ve özgüllük okunmalıdır.": "ClinTox is imbalanced; F1, MCC, sensitivity, and specificity must be read alongside AUROC.",
     "Bu q/d seçimi CSV'de birebir yoksa en yakın mevcut deney satırı gösterilir.": "If this q/d selection is not present exactly in the CSV, the nearest available experiment row is shown.",
     "Deney protokolü ve simülasyon ortamı": "Experimental protocol and simulation environment",
-    "Kuantum devre simülasyonu ile klasik makine öğrenmesi modelleri aynı metrik hattında karşılaştırıldı": "Quantum circuit simulation and classical machine learning models were compared on the same metric pipeline",
-    "Kuantum devre simülasyonu ve makine öğrenmesi modelleri aynı hatta karşılaştırıldı": "Quantum circuit simulation and machine learning models were compared on the same pipeline",
-    "Klasik, kuantum ve hibrit modeller aynı deney protokolünde karşılaştırıldı": "Classical, quantum, and hybrid models were compared under the same experimental protocol",
+    "Kuantum devre simülasyonu ile klasik makine öğrenmesi modelleri aynı metrik hattında karşılaştırılmıştır": "Quantum circuit simulation and classical machine learning models were compared on the same metric pipeline",
+    "Kuantum devre simülasyonu ve makine öğrenmesi modelleri aynı hatta karşılaştırılmıştır": "Quantum circuit simulation and machine learning models were compared on the same pipeline",
+    "Klasik, kuantum ve hibrit modeller aynı deney protokolünde karşılaştırılmıştır": "Classical, quantum, and hybrid models were compared under the same experimental protocol",
     "Çalışmadaki kuantum modeller gerçek kuantum donanımında değil, klasik hesaplama donanımı üzerinde çalışan kuantum devre simülatörleriyle yürütüldü. Bu ayrım önemlidir: Bulgular kuantum cihaz üstünlüğü değil, aynı veri ayrımları altında klasik, grafik, saf kuantum ve hibrit model davranışlarının karşılaştırmasıdır.": "The quantum models in the study were not run on real quantum hardware; they were executed with quantum circuit simulators running on classical compute hardware. This distinction matters: the findings do not claim quantum-device superiority, but compare the behavior of classical, graph-based, purely quantum, and hybrid models under the same data splits.",
     "Çalışmadaki kuantum modeller gerçek kuantum donanımında değil, klasik hesaplama donanımı üzerinde çalışan kuantum devre simülatörleriyle yürütüldü. Bu nedenle bulgular kuantum cihaz üstünlüğü olarak değil; aynı veri ayrımları, temsil hattı, seed politikası ve metrik ailesi altında klasik, grafik, saf kuantum ve hibrit model davranışlarının karşılaştırması olarak okunmalıdır.": "The quantum models in the study were not run on real quantum hardware; they were executed with quantum circuit simulators running on classical compute hardware. Therefore, the findings should not be read as quantum-device superiority, but as a comparison of classical, graph-based, purely quantum, and hybrid model behavior under the same data splits, representation pipeline, seed policy, and metric family.",
     "Deney protokolü, kuantum simülasyon ortamı ve model karşılaştırma hattı": "Experimental protocol, quantum simulation environment, and model comparison pipeline",
@@ -322,7 +383,7 @@ const i18n = {
     "Devre sonuçları simülasyon çıktısıdır; kuantum cihaz üstünlüğü iddiası kurulmaz.": "Circuit results are simulation outputs; no quantum-device superiority claim is made.",
     "Tekrar üretilebilirlik": "Reproducibility",
     "5 seed · AUROC + ek metrikler": "5 seeds · AUROC + auxiliary metrics",
-    "0, 42, 123, 456 ve 789 seed değerleri kullanıldı.": "Seed values 0, 42, 123, 456, and 789 were used.",
+    "0, 42, 123, 456 ve 789 seed değerleri kullanılmıştır.": "Seed values 0, 42, 123, 456, and 789 were used.",
     "Veri katmanı": "Data layer",
     "Temsil üretimi": "Representation",
     "Klasik / grafik": "Classical / graph",
@@ -355,10 +416,10 @@ const i18n = {
     "Seed": "Seed",
     "Devre şeması notu": "Circuit-diagram note",
     "q0-qn etiketleri sabit devre telleridir; hareket eden yeşil noktalar gerçek parçacık değil temsil/durum akışıdır.": "q0-qn labels are fixed circuit wires; the moving green dots are not real particles, but representation/state flow.",
-    "Bu canvas gerçek kuantum cihazı simüle etmez; deney hattını ve CSV satırını şematik olarak gösterir.": "This canvas does not simulate a real quantum device; it schematically shows the experimental pipeline and the CSV row.",
+    "Bu canvas gerçek kuantum cihazı simüle etmez; deney hattını ve CSV satırını şematik olarak göstermektedir.": "This canvas does not simulate a real quantum device; it schematically shows the experimental pipeline and the CSV row.",
     "Şematik gösterim; gerçek cihaz simülasyonu değil": "Schematic view; not a real-device simulation",
     "Bu sekmeler liderlik CSV'sindeki bütün kuantum model satırlarını görev ve model ailesine göre açar; q/d ayarı, veri fraksiyonu ve AUROC birlikte izlenir.": "These tabs expose all quantum-model rows in the leaderboard CSV by task and model family; the q/d setting, data fraction, and AUROC are read together.",
-    "Sekmeler CSV'deki deney satırlarını açar; q/d, veri fraksiyonu ve AUROC birlikte okunur.": "Tabs open the experiment rows in the CSV; q/d, data fraction, and AUROC are read together.",
+    "Sekmeler CSV'deki deney satırlarını açar; q/d, veri fraksiyonu ve AUROC birlikte okunmaktadır.": "Tabs open the experiment rows in the CSV; q/d, data fraction, and AUROC are read together.",
     "Kuantum özellik akışı": "Quantum feature flow",
     "Klasik kodlayıcı": "Classical encoder",
     "Özellik haritası": "Feature map",
@@ -374,7 +435,7 @@ const i18n = {
     "Animasyonlu kuantum devre görselleştirmesi": "Animated quantum circuit visualization",
     "Deneysel yöntem ve CSV veri katmanı": "Experimental method and CSV data layer",
     "Analiz CSV'lerinden beslenen araştırma paneli": "Research panel driven by analysis CSV files",
-    "Benchmark özeti, liderlik tablosu, figür manifesti ve deney bayrakları GitHub Pages içinde okunur. Böylece bulgu tabloları, model yoğunluğu ve kanıt galerisi tek kaynaktan güncellenir.": "The benchmark summary, leaderboard, figure manifest, and experiment flags are read inside GitHub Pages. As a result, finding tables, model density views, and the evidence gallery are updated from a single source.",
+    "Benchmark özeti, liderlik tablosu, figür manifesti ve deney bayrakları GitHub Pages içinde okunmaktadır. Böylece bulgu tabloları, model yoğunluğu ve kanıt galerisi tek kaynaktan güncellenir.": "The benchmark summary, leaderboard, figure manifest, and experiment flags are read inside GitHub Pages. As a result, finding tables, model density views, and the evidence gallery are updated from a single source.",
     "Deney kategorileri ve veri setleri araştırma haritası": "Research map of experimental categories and datasets",
     "Bulgular": "Findings",
     "AUROC ana metrik; ClinTox için tamamlayıcı metrikler zorunlu": "AUROC is the primary metric; complementary metrics are required for ClinTox",
@@ -387,29 +448,29 @@ const i18n = {
     "Std": "Std",
     "Dengeli Doğr.": "Balanced Acc.",
     "Metrik laboratuvarı": "Metric laboratory",
-    "ClinTox için eşik değişince model davranışı nasıl değişiyor?": "How does model behavior change when the threshold changes for ClinTox?",
+    "ClinTox için eşik değişince model davranışı nasıl değişmektedir?": "How does model behavior change when the threshold changes for ClinTox?",
     "ClinTox dengesiz olduğu için AUROC tek başına yeterli değildir. Burada eşik değeri değiştikçe karışıklık matrisi, F1, MCC, duyarlılık, özgüllük ve dengeli doğruluk birlikte hareket eder.": "Because ClinTox is imbalanced, AUROC alone is insufficient. Here, as the threshold changes, the confusion matrix, F1, MCC, sensitivity, specificity, and balanced accuracy move together.",
     "Metrik laboratuvarı model seçimi": "Metric laboratory model selection",
     "Karar eşiği": "Decision threshold",
     "ClinTox metrik laboratuvarı": "ClinTox metric laboratory",
     "Hibrit ablasyon": "Hybrid ablation",
     "Tek bir kubit sayısı bütün görevlerde en iyi değil": "No single qubit count is optimal for all tasks",
-    "BACE için q6-d1, BBBP için q4-d1, ClinTox için q8-d2 öne çıktı. Bu sonuç, kuantum başlığın kapasitesi ile veri setinin yapısı arasında görev bazlı bir uyum gerektiğini gösterir.": "q6-d1 stood out for BACE, q4-d1 for BBBP, and q8-d2 for ClinTox. This result indicates that a task-specific match is required between the capacity of the quantum head and the structure of the dataset.",
+    "BACE için q6-d1, BBBP için q4-d1, ClinTox için q8-d2 öne çıktı. Bu sonuç, kuantum başlığın kapasitesi ile veri setinin yapısı arasında görev bazlı bir uyum gerektiğini göstermektedir.": "q6-d1 stood out for BACE, q4-d1 for BBBP, and q8-d2 for ClinTox. This result indicates that a task-specific match is required between the capacity of the quantum head and the structure of the dataset.",
     "Hibrit veri seti seçimi": "Hybrid dataset selection",
     "Kuantum ablasyon küpü": "Quantum ablation cube",
     "Kubit sayısı, devre derinliği ve model ailesi aynı yüzeyde": "Qubit count, circuit depth, and model family on the same surface",
-    "Hybrid QHead, QSVM ve VQC için q/d ayarları veri setine göre farklı davranır. Bu panel daha fazla kubit veya daha fazla derinliğin otomatik olarak daha iyi olmadığını gösterir.": "q/d settings for Hybrid QHead, QSVM, and VQC behave differently by dataset. This panel shows that more qubits or greater depth are not automatically better.",
-    "Hybrid QHead, QSVM, VQC ve QGNN için CSV'de bulunan q/d kayıtları veri setine göre farklı davranır. Bu panel daha fazla kubit veya daha fazla derinliğin otomatik olarak daha iyi olmadığını gösterir.": "The q/d records available in the CSV for Hybrid QHead, QSVM, VQC, and QGNN behave differently by dataset. This panel shows that more qubits or greater depth are not automatically better.",
-    "Bu panel benchmark CSV'sindeki mevcut q/d varyasyonlarını çizer; QGNN için kayıt tek q4-d2 ise tek hücre olarak gösterilir.": "This panel draws the available q/d variations in the benchmark CSV; if QGNN has only a single q4-d2 record, it is shown as a single cell.",
-    "Küp benzersiz q/d hücrelerini çizer; aşağıdaki liste CSV'deki bütün deney satırlarını gösterir. Veri fraksiyonu deneyleri q8-d2 f0.25 gibi ayrıca yazılır.": "The cube draws unique q/d cells; the list below shows all experiment rows in the CSV. Data-fraction experiments are written separately, such as q8-d2 f0.25.",
-    "Bu model için CSV'de tek q/d kaydı bulundu; panel bunu tek hücre olarak gösterir.": "Only one q/d record was found in the CSV for this model; the panel shows it as a single cell.",
-    "Yüzey, kubit sayısı ve derinlik arttıkça başarının her zaman artmadığını gösterir. Veri seti ile devre kapasitesi arasında görev bazlı uyum gerekir.": "The surface shows that performance does not always increase as qubit count and depth grow. A task-specific fit is required between the dataset and circuit capacity.",
+    "Hybrid QHead, QSVM ve VQC için q/d ayarları veri setine göre farklı davranmaktadır. Bu panel daha fazla kubit veya daha fazla derinliğin otomatik olarak daha iyi olmadığını göstermektedir.": "q/d settings for Hybrid QHead, QSVM, and VQC behave differently by dataset. This panel shows that more qubits or greater depth are not automatically better.",
+    "Hybrid QHead, QSVM, VQC ve QGNN için CSV'de bulunan q/d kayıtları veri setine göre farklı davranmaktadır. Bu panel daha fazla kubit veya daha fazla derinliğin otomatik olarak daha iyi olmadığını göstermektedir.": "The q/d records available in the CSV for Hybrid QHead, QSVM, VQC, and QGNN behave differently by dataset. This panel shows that more qubits or greater depth are not automatically better.",
+    "Bu panel benchmark CSV'sindeki mevcut q/d varyasyonlarını çizmektedir; QGNN için kayıt tek q4-d2 ise tek hücre olarak gösterilir.": "This panel draws the available q/d variations in the benchmark CSV; if QGNN has only a single q4-d2 record, it is shown as a single cell.",
+    "Küp benzersiz q/d hücrelerini çizmektedir; aşağıdaki liste CSV'deki bütün deney satırlarını göstermektedir. Veri fraksiyonu deneyleri q8-d2 f0.25 gibi ayrıca yazılmaktadır.": "The cube draws unique q/d cells; the list below shows all experiment rows in the CSV. Data-fraction experiments are written separately, such as q8-d2 f0.25.",
+    "Bu model için CSV'de tek q/d kaydı bulundu; panel bunu tek hücre olarak göstermektedir.": "Only one q/d record was found in the CSV for this model; the panel shows it as a single cell.",
+    "Yüzey, kubit sayısı ve derinlik arttıkça başarının her zaman artmadığını göstermektedir. Veri seti ile devre kapasitesi arasında görev bazlı uyum gerekir.": "The surface shows that performance does not always increase as qubit count and depth grow. A task-specific fit is required between the dataset and circuit capacity.",
     "Ablasyon model seçimi": "Ablation model selection",
     "Ablasyon veri seti seçimi": "Ablation dataset selection",
     "Kuantum ablasyon yüzeyi": "Quantum ablation surface",
     "Seed/tekrar kararlılığı": "Seed/repetition stability",
     "En yüksek skor kadar standart sapma da kararın parçası": "Standard deviation is part of the decision, not only the highest score",
-    "Beş farklı seed ile tekrarlanan deneylerde standart sapma model kararlılığını gösterir. QGNN ve bazı kuantum ayarlarında değişkenlik artarken, hibrit ve klasik çizgide daha kontrollü davranışlar görülebilir.": "In experiments repeated with five different seeds, the standard deviation indicates model stability. Variability increases for QGNN and some quantum settings, whereas more controlled behavior can be observed in the hybrid and classical baseline families.",
+    "Beş farklı seed ile tekrarlanan deneylerde standart sapma model kararlılığını göstermektedir. QGNN ve bazı kuantum ayarlarında değişkenlik artarken, hibrit ve klasik çizgide daha kontrollü davranışlar görülebilir.": "In experiments repeated with five different seeds, the standard deviation indicates model stability. Variability increases for QGNN and some quantum settings, whereas more controlled behavior can be observed in the hybrid and classical baseline families.",
     "Kararlılık veri seti seçimi": "Stability dataset selection",
     "Seed ve tekrar kararlılığı grafiği": "Seed and repetition stability chart",
     "ClinTox okuması": "ClinTox interpretation",
@@ -424,8 +485,8 @@ const i18n = {
     "BBBP - tüm yöntem ve parametre varyasyonları": "BBBP - all method and parameter variations",
     "ClinTox - tüm yöntem ve parametre varyasyonları": "ClinTox - all method and parameter variations",
     "Sınırlılıklar ve araştırma dürüstlüğü": "Limitations and research integrity",
-    "Bu çalışma kuantum üstünlüğü iddiası değil, dengeli karşılaştırma sunar": "This study does not claim quantum advantage; it presents a balanced comparison",
-    "Seminerin akademik gücü, güçlü klasik referansları korumasından ve dengesiz veri setlerinde tek metrikle karar vermemesinden gelir.": "The academic strength of the seminar comes from preserving strong classical baselines and avoiding single-metric decisions on imbalanced datasets.",
+    "Bu çalışma kuantum üstünlüğü iddiası değil, dengeli karşılaştırma sunmaktadır": "This study does not claim quantum advantage; it presents a balanced comparison",
+    "Seminerin akademik gücü, güçlü klasik referansları korumasından ve dengesiz veri setlerinde tek metrikle karar vermemesinden gelmektedir.": "The academic strength of the seminar comes from preserving strong classical baselines and avoiding single-metric decisions on imbalanced datasets.",
     "Seminer sonucu": "Seminar conclusion",
     "Kuantum modeller güçlü klasik referanslarla birlikte okunmalıdır.": "Quantum models should be interpreted together with strong classical baselines.",
     "Bulgular genel bir kuantum üstünlüğü iddiasını desteklememektedir. Daha savunulabilir sonuç; SVM ve MLP'nin güçlü referans konumunu koruduğu, QSVM'in VQC'ye göre daha kararlı davrandığı, QGNN'in bazı görevlerde sinyal ürettiği ve Hybrid QHead'in belirli veri setlerinde rekabetçi bir tamamlayıcı model ailesi olduğudur.": "The findings do not support a general claim of quantum advantage. The more defensible conclusion is that SVM and MLP retain their strong baseline position, QSVM behaves more stably than VQC, QGNN produces signal in some tasks, and Hybrid QHead is a competitive complementary model family for specific datasets.",
@@ -484,10 +545,10 @@ const i18n = {
     "Hibrit kuantum başlık": "Hybrid quantum head",
     "Metrik ailesi": "Metric family",
     "SVM ve MLP, radius 2 ve 1024 bit ECFP/Morgan parmak izleri üzerinde güçlü klasik referans çizgisini oluşturur.": "SVM and MLP form a strong classical baseline on radius-2, 1024-bit ECFP/Morgan fingerprints.",
-    "Moleküller atomları düğüm, bağları kenar olan grafikler olarak ele alınır; mesaj geçirme ve dikkat mekanizması kullanılır.": "Molecules are treated as graphs whose nodes are atoms and whose edges are bonds; message passing and attention mechanisms are used.",
+    "Moleküller atomları düğüm, bağları kenar olan grafikler olarak ele alınmaktadır; mesaj geçirme ve dikkat mekanizması kullanılır.": "Molecules are treated as graphs whose nodes are atoms and whose edges are bonds; message passing and attention mechanisms are used.",
     "ECFP özellikleri PCA ile kubit sayısına indirgenir; QSVM kuantum çekirdek, VQC parametrik devre yaklaşımı kullanır.": "ECFP features are reduced to the qubit dimension with PCA; QSVM uses a quantum kernel, whereas VQC uses a parametric circuit approach.",
     "Grafik temsili ile parametrik kuantum mesaj geçirme fikrini bir araya getiren araştırma modelidir.": "It is a research model that combines graph representation with the idea of parametric quantum message passing.",
-    "Dondurulmuş MLP kodlayıcı kompakt bir gömme temsil üretir; Quantum Head bu temsil üzerinde parametrik devre tabanlı karar katmanı kurar.": "The frozen MLP encoder produces a compact embedding representation; the Quantum Head builds a parametric-circuit decision layer on that representation.",
+    "Dondurulmuş MLP kodlayıcı kompakt bir gömme temsil üretmektedir; Quantum Head bu temsil üzerinde parametrik devre tabanlı karar katmanı kurmaktadır.": "The frozen MLP encoder produces a compact embedding representation; the Quantum Head builds a parametric-circuit decision layer on that representation.",
     "Ana metrik AUROC'tur; dengesiz görevlerde PR-AUC, F1, MCC, duyarlılık ve özgüllük birlikte yorumlanır.": "The primary metric is AUROC; in imbalanced tasks, PR-AUC, F1, MCC, sensitivity, and specificity are interpreted together.",
     "SVM: marj tabanlı karar sınırı": "SVM: margin-based decision boundary",
     "MLP: doğrusal olmayan descriptor temsili": "MLP: nonlinear descriptor representation",
@@ -512,11 +573,11 @@ const i18n = {
     "dikkat tabanlı grafik öğrenme": "attention-based graph learning",
     "SVM: ECFP uzayında en geniş marjı bulur": "SVM: finds the widest margin in ECFP space",
     "MLP: sabit ECFP vektöründen karar fonksiyonu öğrenir": "MLP: learns a decision function from a fixed ECFP vector",
-    "GNN: atom komşuluklarından mesaj toplayarak molekülü temsil eder": "GNN: represents the molecule by aggregating messages from atomic neighborhoods",
+    "GNN: atom komşuluklarından mesaj toplayarak molekülü temsil etmektedir": "GNN: represents the molecule by aggregating messages from atomic neighborhoods",
     "GAT: her komşunun etkisini dikkat ağırlığıyla ayarlar": "GAT: adjusts each neighbor's contribution with attention weights",
     "SMILES verisi Morgan/ECFP parmak izine çevrilir. SVM bu yüksek boyutlu vektörde iki sınıfı ayıran karar sınırını ve destek vektörlerini kullanır.": "SMILES data are converted into a Morgan/ECFP fingerprint. SVM uses support vectors and a decision boundary that separates the two classes in this high-dimensional vector space.",
-    "ECFP vektörü yoğun katmanlardan geçer; aktivasyon ve dropout ile doğrusal olmayan bir temsil oluşur, son katman sınıf skorunu üretir.": "The ECFP vector passes through dense layers; activation and dropout produce a nonlinear representation, and the final layer produces the class score.",
-    "Molekül, atom düğümleri ve bağ kenarları olan grafik olarak okunur. Mesaj geçirme katmanları komşu atom bilgisini birleştirir ve grafik havuzlama molekül temsilini çıkarır.": "The molecule is read as a graph with atom nodes and bond edges. Message-passing layers combine neighboring atom information, and graph pooling extracts a molecular representation.",
+    "ECFP vektörü yoğun katmanlardan geçer; aktivasyon ve dropout ile doğrusal olmayan bir temsil oluşmaktadır, son katman sınıf skorunu üretmektedir.": "The ECFP vector passes through dense layers; activation and dropout produce a nonlinear representation, and the final layer produces the class score.",
+    "Molekül, atom düğümleri ve bağ kenarları olan grafik olarak okunmaktadır. Mesaj geçirme katmanları komşu atom bilgisini birleştirir ve grafik havuzlama molekül temsilini çıkarmaktadır.": "The molecule is read as a graph with atom nodes and bond edges. Message-passing layers combine neighboring atom information, and graph pooling extracts a molecular representation.",
     "GAT, GNN mesajlarını eşit ağırlıkla toplamak yerine komşu atomların katkısını öğrenilebilir dikkat katsayılarıyla tartar.": "Rather than aggregating GNN messages with equal weight, GAT weights neighboring atoms through learnable attention coefficients.",
     "Girdi": "Input",
     "Karar fikri": "Decision principle",
@@ -540,14 +601,14 @@ const i18n = {
     "Derinlik": "Depth",
     "Denetimli öğrenme": "Supervised learning",
     "Kubit nedir?": "What is a qubit?",
-    "Süperpozisyon nasıl okunur?": "How should superposition be interpreted?",
+    "Süperpozisyon nasıl okunmaktadır?": "How should superposition be interpreted?",
     "Ölçüm neden kritik?": "Why is measurement critical?",
     "Dolanıklık ne sağlar?": "What does entanglement provide?",
     "Devre derinliği neyi değiştirir?": "What does circuit depth change?",
     "Seminerde öğrenme problemi nasıl kuruldu?": "How was the learning problem formulated in the seminar?",
     "Kubit, klasik bit gibi yalnızca 0 veya 1 değildir; ölçülene kadar iki temel durumun karmaşık katsayılı birleşimi olarak temsil edilir.": "A qubit is not restricted to 0 or 1 like a classical bit; until measurement, it is represented as a complex-coefficient combination of two basis states.",
     "Süperpozisyon, bir kubitin ölçümden önce birden fazla olası sonucu aynı anda taşıyan olasılık genliği durumudur.": "Superposition is the probability-amplitude state in which a qubit carries multiple possible outcomes before measurement.",
-    "Kuantum devre sonunda ölçüm yapıldığında sürekli durum, klasik modele aktarılabilecek ayrık istatistiklere dönüşür.": "When measurement is performed at the end of a quantum circuit, the continuous state is converted into discrete statistics that can be transferred to a classical model.",
+    "Kuantum devre sonunda ölçüm yapıldığında sürekli durum, klasik modele aktarılabilecek ayrık istatistiklere dönüşmektedir.": "When measurement is performed at the end of a quantum circuit, the continuous state is converted into discrete statistics that can be transferred to a classical model.",
     "Dolanıklık, kubitlerin bağımsız okunamayacak biçimde ortak bir durum üretmesidir; özellikler arası etkileşimleri temsil etmek için kullanılır.": "Entanglement is the production of a joint state that cannot be read as independent qubits; it is used to represent interactions among features.",
     "Derinlik, ardışık kuantum kapı katmanı sayısıdır. Daha derin devre daha esnek olabilir, ancak küçük veri ve gürültü altında her zaman daha iyi değildir.": "Depth is the number of successive quantum-gate layers. A deeper circuit can be more flexible, but it is not always better under small-data and noisy conditions.",
     "BACE, BBBP ve ClinTox ikili sınıflandırma görevleri olarak ele alındı; model, molekülden etikete giden karar fonksiyonunu öğrenir.": "BACE, BBBP, and ClinTox were treated as binary classification tasks; the model learns the decision function from molecule to label.",
@@ -558,7 +619,7 @@ const i18n = {
     "Genlik": "Amplitude",
     "Faz": "Phase",
     "Model etkisi": "Model effect",
-    "alpha ve beta ölçüm olasılığını belirler": "alpha and beta determine measurement probability",
+    "alpha ve beta ölçüm olasılığını belirlemektedir": "alpha and beta determine measurement probability",
     "Aynı olasılık farklı girişim davranışı üretebilir": "The same probability can produce different interference behavior",
     "Özellik haritası klasik veriyi kuantum genliklerine taşır": "The feature map transfers classical data into quantum amplitudes",
     "Çıkış": "Output",
@@ -566,7 +627,7 @@ const i18n = {
     "Karar": "Decision",
     "Sigmoid / margin / sınıf olasılığı": "Sigmoid / margin / class probability",
     "Metrik": "Metric",
-    "AUROC, PR-AUC, F1 ve MCC ile okunur": "Interpreted with AUROC, PR-AUC, F1, and MCC",
+    "AUROC, PR-AUC, F1 ve MCC ile okunmaktadır": "Interpreted with AUROC, PR-AUC, F1, and MCC",
     "Bağ": "Coupling",
     "Kontrollü kapılar kubitleri korele eder": "Controlled gates correlate qubits",
     "Yorum": "Interpretation",
@@ -588,10 +649,10 @@ const i18n = {
     "hibrit": "hybrid",
     "hibrit kuantum başlık": "hybrid quantum head",
     "hibrit kuantum-klasik": "hybrid quantum-classical",
-    "ECFP/Morgan parmak izleri üzerinde marj tabanlı karar sınırı kurar ve küçük-orta veri rejiminde güçlü referans üretir.": "It builds a margin-based decision boundary on ECFP/Morgan fingerprints and provides a strong baseline in small- to medium-data regimes.",
+    "ECFP/Morgan parmak izleri üzerinde marj tabanlı karar sınırı kurmaktadır ve küçük-orta veri rejiminde güçlü referans üretmektedir.": "It builds a margin-based decision boundary on ECFP/Morgan fingerprints and provides a strong baseline in small- to medium-data regimes.",
     "ECFP vektörünü yoğun katmanlardan geçirerek doğrusal olmayan descriptor temsili öğrenir.": "It learns a nonlinear descriptor representation by passing the ECFP vector through dense layers.",
     "ECFP vektörünü yoğun katmanlardan geçirerek doğrusal olmayan tanımlayıcı temsili öğrenir.": "It learns a nonlinear descriptor representation by passing the ECFP vector through dense layers.",
-    "Molekülü atom düğümleri ve bağ kenarları olarak işler; komşuluk mesajlarını toplayarak grafik temsili üretir.": "It processes the molecule as atom nodes and bond edges, producing a graph representation by aggregating neighborhood messages.",
+    "Molekülü atom düğümleri ve bağ kenarları olarak işlemektedir; komşuluk mesajlarını toplayarak grafik temsili üretmektedir.": "It processes the molecule as atom nodes and bond edges, producing a graph representation by aggregating neighborhood messages.",
     "GNN çizgisini dikkat katsayılarıyla genişletir; her komşunun katkısını öğrenilebilir ağırlıklarla ayarlar.": "It extends the GNN line with attention coefficients, adjusting each neighbor's contribution with learnable weights.",
     "ECFP özellikleri PCA ile kubit boyutuna indirilir; kuantum özellik haritası ile çekirdek matrisi hesaplanır.": "ECFP features are reduced to the qubit dimension with PCA, and the kernel matrix is computed with a quantum feature map.",
     "Özellik haritasından sonra parametrik ansatz çalışır; ölçüm çıktısı sınıf olasılığına dönüştürülür.": "After the feature map, a parametric ansatz is applied; measurement output is converted into class probability.",
@@ -644,11 +705,11 @@ const i18n = {
     "BACE, BBBP ve ClinTox'ta rekabetçi hibrit aile": "Competitive hybrid family on BACE, BBBP, and ClinTox",
     "klasik veri ablasyonu": "classical data ablation",
     "kuantum veri ablasyonu": "quantum data ablation",
-    "Molekül metinsel kimyasal dize olarak alınır.": "The molecule is taken as a textual chemical string.",
-    "Geçerli molekül nesnesi, atom ve bağ bilgisi üretilir.": "A valid molecule object, atom information, and bond information are generated.",
+    "Molekül metinsel kimyasal dize olarak alınmaktadır.": "The molecule is taken as a textual chemical string.",
+    "Geçerli molekül nesnesi, atom ve bağ bilgisi üretilmektedir.": "A valid molecule object, atom information, and bond information are generated.",
     "Radius 2 ve 1024 bit Morgan parmak izi çıkarılır.": "A radius-2, 1024-bit Morgan fingerprint is extracted.",
     "Klasik temsil kubit sayısına veya gömme uzayına sıkıştırılır.": "The classical representation is compressed to the qubit count or embedding space.",
-    "Özellikler AngleEmbedding veya ZZFeatureMap ile devreye girer.": "Features enter the circuit through AngleEmbedding or ZZFeatureMap.",
+    "Özellikler AngleEmbedding veya ZZFeatureMap ile devreye girmektedir.": "Features enter the circuit through AngleEmbedding or ZZFeatureMap.",
     "Beklenen değerler klasik skor ve metriklere çevrilir.": "Expectation values are converted into classical scores and metrics.",
     "Tek çalıştırma": "Single run",
     "Dengesiz veri": "Imbalanced data",
@@ -662,7 +723,7 @@ const i18n = {
     "Sınırlı kubit sayısı, devre derinliği, gürültü ve ölçüm maliyeti kuantum modellerin pratik sınırlarıdır.": "Limited qubit count, circuit depth, noise, and measurement cost are practical constraints for quantum models.",
     "QGNN saf kuantum model olarak değil, kuantum grafik veya hibritize grafik araştırma hattı olarak sunulmalıdır.": "QGNN should be presented not as a purely quantum model, but as a quantum-graph or hybridized graph research line.",
     "Hybrid QHead ile MLP arasındaki AUROC farkları çok küçük olduğu için istatistiksel güvenilirlik vurgusu gerekir.": "Because AUROC differences between Hybrid QHead and MLP are very small, statistical reliability must be emphasized.",
-    "Yeni paneller CSV ve figür manifestinden beslendiği için sonuç dosyaları değişirse sayfa da güncellenebilir.": "Because the new panels are driven by CSV files and the figure manifest, the page can also update when the result files change.",
+    "Yeni paneller CSV ve figür manifestinden beslendiği için sonuç dosyaları değiştiğinde sayfa da güncellenebilmektedir.": "Because the new panels are driven by CSV files and the figure manifest, the page can also update when the result files change.",
     "eğitim": "train",
     "doğrulama": "validation",
     "test": "test",
@@ -687,7 +748,7 @@ const i18n = {
     "kategori": "category",
     "figür": "figure",
     "sayfa": "page",
-    "kategori satırı CSV'den okunur": "category rows are read from CSV",
+    "kategori satırı CSV'den okunmaktadır": "category rows are read from CSV",
     "En yüksek AUROC": "Highest AUROC",
     "En iyi hibrit": "Best hybrid",
     "QSVM sinyali": "QSVM signal",
@@ -699,20 +760,20 @@ const i18n = {
     "Duyarlılık": "Sensitivity",
     "Özgüllük": "Specificity",
     "Deney hattı": "Experimental pipeline",
-    "Bu akış, klasik modeller ile kuantum modellerin aynı molekül kaydını farklı temsil biçimleriyle nasıl kullandığını gösterir.": "This flow shows how classical and quantum models use the same molecular record through different representation forms.",
+    "Bu akış, klasik modeller ile kuantum modellerin aynı molekül kaydını farklı temsil biçimleriyle nasıl kullandığını göstermektedir.": "This flow shows how classical and quantum models use the same molecular record through different representation forms.",
     "Sens.": "Sens.",
     "Spec.": "Spec.",
     "Dengeli": "Balanced",
     "Kesinlik": "Precision",
     "ClinTox eşik laboratuvarı": "ClinTox threshold laboratory",
-    "Simüle edilmiş eşik duyarlılığı: test sınıf dağılımı 137 negatif / 11 pozitif üzerinden okunur.": "Simulated threshold sensitivity: interpreted through the test class distribution of 137 negatives / 11 positives.",
+    "Simüle edilmiş eşik duyarlılığı: test sınıf dağılımı 137 negatif / 11 pozitif üzerinden okunmaktadır.": "Simulated threshold sensitivity: interpreted through the test class distribution of 137 negatives / 11 positives.",
     "Veri yok": "No data",
     "Bu model için ablasyon kaydı bulunamadı.": "No ablation record was found for this model.",
     "En iyi ayar": "The best setting",
     "olarak okunuyor.": "is read as",
     "Daha fazla kubit garanti değil": "More qubits are not a guarantee",
-    "Yüzey, kubit sayısı ve derinlik arttıkça başarının her zaman artmadığını gösterir. Veri seti ile devre kapasitesi arasında görev bazlı uyum gerekir.": "The surface shows that performance does not necessarily increase as qubit count and depth increase. A task-specific match is required between the dataset and circuit capacity.",
-    "Standart sapma, seed değiştiğinde modelin ne kadar değiştiğini gösterir.": "Standard deviation shows how much the model changes when the seed changes.",
+    "Yüzey, kubit sayısı ve derinlik arttıkça başarının her zaman artmadığını göstermektedir. Veri seti ile devre kapasitesi arasında görev bazlı uyum gerekir.": "The surface shows that performance does not necessarily increase as qubit count and depth increase. A task-specific match is required between the dataset and circuit capacity.",
+    "Standart sapma, seed değiştiğinde modelin ne kadar değiştiğini göstermektedir.": "Standard deviation shows how much the model changes when the seed changes.",
     "En kararlı": "Most stable",
     "En değişken": "Most variable",
     "Okuma": "Interpretation",
@@ -770,7 +831,7 @@ const i18n = {
     "kalın bağ = yüksek dikkat ağırlığı": "thick bond = high attention weight",
     "hareketli noktalar = komşuluk mesajı": "moving dots = neighborhood message",
     "GAT komşuları eşit görmez": "GAT does not treat neighbors equally",
-    "GNN komşuları toplar ve günceller": "GNN aggregates and updates neighbors",
+    "GNN komşuları toplamaktadır ve güncellemektedir": "GNN aggregates and updates neighbors",
     "molekül temsili -> sınıf skoru": "molecular representation -> class score",
     "mimarisi": "architecture",
     "çekirdek": "kernel",
@@ -778,28 +839,28 @@ const i18n = {
     "kuantum başlık": "quantum head",
     "SMILES -> RDKit -> ECFP -> PCA/Kodlayıcı -> Kubitler -> Metrikler": "SMILES -> RDKit -> ECFP -> PCA/Encoder -> Qubits -> Metrics",
     "Aynı molekül kaydı klasik çizgide SVM/MLP/GNN'e, kuantum çizgide QSVM/VQC/QGNN'e, hibrit çizgide dondurulmuş MLP + Quantum Head'e ayrılır.": "The same molecular record branches into SVM/MLP/GNN in the classical baseline route, QSVM/VQC/QGNN in the quantum route, and frozen MLP + Quantum Head in the hybrid route.",
-    "Bir kubit ölçülmeden önce Bloch küresi üzerinde bir yön gibi düşünülebilir. Yön değiştikçe ölçüm olasılıkları değişir.": "Before measurement, a qubit can be interpreted as a direction on the Bloch sphere. As the direction changes, measurement probabilities change.",
-    "Süperpozisyon olasılıkların basit toplamı değil; genlik ve faz birlikte devre içindeki girişimi belirler.": "Superposition is not a simple sum of probabilities; amplitude and phase jointly determine interference inside the circuit.",
+    "Bir kubit ölçülmeden önce Bloch küresi üzerinde bir yön gibi düşünülebilir. Yön değiştikçe ölçüm olasılıkları değişmektedir.": "Before measurement, a qubit can be interpreted as a direction on the Bloch sphere. As the direction changes, measurement probabilities change.",
+    "Süperpozisyon olasılıkların basit toplamı değil; genlik ve faz birlikte devre içindeki girişimi belirlemektedir.": "Superposition is not a simple sum of probabilities; amplitude and phase jointly determine interference inside the circuit.",
     "Modelin sonundaki ölçüm, kuantum durumunu sınıflandırıcıya aktarılabilir klasik istatistiğe çevirir.": "Measurement at the end of the model converts the quantum state into classical statistics that can be transferred to the classifier.",
-    "Dolanıklık, tek tek kubitlerden değil ortak durumdan gelen korelasyonu temsil eder. ZZFeatureMap ve kontrollü kapılar bu etkileşimi üretir.": "Entanglement represents correlation arising from the joint state rather than individual qubits. ZZFeatureMap and controlled gates generate this interaction.",
+    "Dolanıklık, tek tek kubitlerden değil ortak durumdan gelen korelasyonu temsil etmektedir. ZZFeatureMap ve kontrollü kapılar bu etkileşimi üretmektedir.": "Entanglement represents correlation arising from the joint state rather than individual qubits. ZZFeatureMap and controlled gates generate this interaction.",
     "Seminer bulgusunda en iyi kubit sayısı ve derinlik veri setine göre değişti: BACE q6-d1, BBBP q4-d1, ClinTox q8-d2.": "In the seminar findings, the best qubit count and depth varied by dataset: BACE q6-d1, BBBP q4-d1, ClinTox q8-d2.",
-    "Bu seminerde tüm modeller denetimli ikili sınıflandırma olarak karşılaştırıldı: aynı veri ayrımı, aynı hedef, aynı metrik ailesi.": "In this seminar, all models were compared as supervised binary classifiers: the same data split, the same target, and the same metric family.",
-    "SVM, ECFP özellik uzayında sınıfları ayıran en geniş marjlı sınırı arar.": "SVM searches for the widest-margin boundary that separates classes in ECFP feature space.",
-    "MLP, ECFP vektörünü katman katman soyutlayarak doğrusal olmayan karar fonksiyonu üretir.": "MLP abstracts the ECFP vector layer by layer to produce a nonlinear decision function.",
-    "Hybrid QHead, klasik kodlayıcı temsilini kuantum başlıkla yeniden işler; seminerde en rekabetçi kuantum-klasik yapı budur.": "Hybrid QHead reprocesses the classical encoder representation with a quantum head; it is the most competitive quantum-classical structure in the seminar.",
+    "Bu seminerde tüm modeller denetimli ikili sınıflandırma olarak karşılaştırılmıştır: aynı veri ayrımı, aynı hedef, aynı metrik ailesi.": "In this seminar, all models were compared as supervised binary classifiers: the same data split, the same target, and the same metric family.",
+    "SVM, ECFP özellik uzayında sınıfları ayıran en geniş marjlı sınırı aramaktadır.": "SVM searches for the widest-margin boundary that separates classes in ECFP feature space.",
+    "MLP, ECFP vektörünü katman katman soyutlayarak doğrusal olmayan karar fonksiyonu üretmektedir.": "MLP abstracts the ECFP vector layer by layer to produce a nonlinear decision function.",
+    "Hybrid QHead, klasik kodlayıcı temsilini kuantum başlıkla yeniden işlemektedir; seminerde en rekabetçi kuantum-klasik yapı budur.": "Hybrid QHead reprocesses the classical encoder representation with a quantum head; it is the most competitive quantum-classical structure in the seminar.",
     "Klasik bit": "Classical bit",
     "kesin 0/1": "definite 0/1",
     "Kubit": "Qubit",
     "süperpozisyon": "superposition",
-    "Bit kesin durum taşır; kubit ölçümden önce genlik ve faz taşır. Seminerde klasik ve kuantum farkı buradan başlar.": "A bit carries a definite state; a qubit carries amplitude and phase before measurement. The classical-quantum distinction in the seminar starts here.",
+    "Bit kesin durum taşır; kubit ölçümden önce genlik ve faz taşır. Seminerde klasik ve kuantum farkı buradan başlamaktadır.": "A bit carries a definite state; a qubit carries amplitude and phase before measurement. The classical-quantum distinction in the seminar starts here.",
     "Biyomedikal görev haritası": "Biomedical task map",
-    "Satır sayısı + sınıf dengesi + klinik soru birlikte okunur.": "Row count + class balance + clinical question are read together.",
+    "Satır sayısı + sınıf dengesi + klinik soru birlikte okunmaktadır.": "Row count + class balance + clinical question are read together.",
     "eğitim": "training",
     "doğrulama": "validation",
     "test": "test",
     "pozitif": "positive",
     "Temsil dönüşüm katmanı": "Representation transformation layer",
-    "Aynı molekül üç model çizgisinde farklı bilgi geometrisine dönüşür.": "The same molecule becomes a different information geometry across the three model lines.",
+    "Aynı molekül üç model çizgisinde farklı bilgi geometrisine dönüşmektedir.": "The same molecule becomes a different information geometry across the three model lines.",
     "Molekül grafiği": "Molecular graph",
     "atom + bağ": "atom + bond",
     "radius 2 bit vektörü": "radius-2 bit vector",
@@ -836,7 +897,7 @@ const i18n = {
     "En iyi ayar": "Best setting",
     "olarak okunuyor.": "is read as the best setting.",
     "Daha fazla kubit garanti değil": "More qubits are not guaranteed to help",
-    "Standart sapma, seed değiştiğinde modelin ne kadar değiştiğini gösterir.": "Standard deviation shows how much the model changes when the seed changes.",
+    "Standart sapma, seed değiştiğinde modelin ne kadar değiştiğini göstermektedir.": "Standard deviation shows how much the model changes when the seed changes.",
     "En kararlı": "Most stable",
     "En değişken": "Most variable",
     "Okuma": "Reading",
@@ -888,7 +949,7 @@ function translateDynamicText(text) {
     [/^(.+) ablasyon · (.+)$/, "$1 ablation · $2"],
     [/^(.+) · (\d+) satır$/, "$1 · $2 rows"],
     [/^(\d+) deney$/, "$1 experiments"],
-    [/^(\d+) kategori satırı CSV'den okunur$/, "$1 category rows are read from CSV"],
+    [/^(\d+) kategori satırı CSV'den okunmaktadır$/, "$1 category rows are read from CSV"],
     [/^En iyi konfigürasyon$/, "The best configuration"],
     [/^olarak raporlandı\\.$/, "was reported."],
   ];
@@ -963,9 +1024,9 @@ function scheduleLanguageApply() {
 }
 
 function initLanguageObserver() {
-  if (languageObserver) return;
-  languageObserver = new MutationObserver(() => scheduleLanguageApply());
-  languageObserver.observe(document.body, { childList: true, characterData: true, subtree: true });
+  if (!languageObserver) return;
+  languageObserver.disconnect();
+  languageObserver = null;
 }
 
 function updateLanguageButtons() {
@@ -1301,7 +1362,7 @@ const modelFamilies = [
     title: "Klasik grafik",
     tag: "GNN / GAT",
     color: "#24a148",
-    text: "Moleküller atomları düğüm, bağları kenar olan grafikler olarak ele alınır; mesaj geçirme ve dikkat mekanizması kullanılır.",
+    text: "Moleküller atomları düğüm, bağları kenar olan grafikler olarak ele alınmaktadır; mesaj geçirme ve dikkat mekanizması kullanılır.",
     points: ["GNN: komşuluk mesajları", "GAT: öğrenilebilir dikkat katsayıları", "BBBP ve ClinTox üzerinde anlamlı sinyal"],
   },
   {
@@ -1322,7 +1383,7 @@ const modelFamilies = [
     title: "Hibrit kuantum başlık",
     tag: "Dondurulmuş MLP + QHead",
     color: "#e0a100",
-    text: "Dondurulmuş MLP kodlayıcı kompakt bir gömme temsil üretir; Quantum Head bu temsil üzerinde parametrik devre tabanlı karar katmanı kurar.",
+    text: "Dondurulmuş MLP kodlayıcı kompakt bir gömme temsil üretmektedir; Quantum Head bu temsil üzerinde parametrik devre tabanlı karar katmanı kurmaktadır.",
     points: ["BACE q6-d1: 0.9914 AUROC", "BBBP q4-d1: 0.9444 AUROC", "ClinTox q8-d2: 0.8804 AUROC"],
   },
   {
@@ -1354,7 +1415,7 @@ const classicalVisuals = [
     family: "klasik tanımlayıcı sinir ağı",
     color: "#00a6c8",
     title: "MLP: sabit ECFP vektöründen karar fonksiyonu öğrenir",
-    summary: "ECFP vektörü yoğun katmanlardan geçer; aktivasyon ve dropout ile doğrusal olmayan bir temsil oluşur, son katman sınıf skorunu üretir.",
+    summary: "ECFP vektörü yoğun katmanlardan geçer; aktivasyon ve dropout ile doğrusal olmayan bir temsil oluşmaktadır, son katman sınıf skorunu üretmektedir.",
     facts: [
       ["Girdi", "Sabit uzunluklu ECFP vektörü"],
       ["Karar fikri", "Yoğun katmanlar + aktivasyon + sigmoid"],
@@ -1366,8 +1427,8 @@ const classicalVisuals = [
     label: "GNN",
     family: "klasik grafik öğrenme",
     color: "#24a148",
-    title: "GNN: atom komşuluklarından mesaj toplayarak molekülü temsil eder",
-    summary: "Molekül, atom düğümleri ve bağ kenarları olan grafik olarak okunur. Mesaj geçirme katmanları komşu atom bilgisini birleştirir ve grafik havuzlama molekül temsilini çıkarır.",
+    title: "GNN: atom komşuluklarından mesaj toplayarak molekülü temsil etmektedir",
+    summary: "Molekül, atom düğümleri ve bağ kenarları olan grafik olarak okunmaktadır. Mesaj geçirme katmanları komşu atom bilgisini birleştirir ve grafik havuzlama molekül temsilini çıkarmaktadır.",
     facts: [
       ["Girdi", "Atom düğümleri, bağ kenarları ve atom özellikleri"],
       ["Karar fikri", "Mesaj geçirme + grafik havuzlama"],
@@ -1405,11 +1466,11 @@ const quantumConcepts = [
   {
     key: "superposition",
     label: "Süperpozisyon",
-    title: "Süperpozisyon nasıl okunur?",
+    title: "Süperpozisyon nasıl okunmaktadır?",
     accent: "#7b61ff",
     summary: "Süperpozisyon, bir kubitin ölçümden önce birden fazla olası sonucu aynı anda taşıyan olasılık genliği durumudur.",
     facts: [
-      ["Genlik", "alpha ve beta ölçüm olasılığını belirler"],
+      ["Genlik", "alpha ve beta ölçüm olasılığını belirlemektedir"],
       ["Faz", "Aynı olasılık farklı girişim davranışı üretebilir"],
       ["Model etkisi", "Özellik haritası klasik veriyi kuantum genliklerine taşır"],
     ],
@@ -1419,11 +1480,11 @@ const quantumConcepts = [
     label: "Ölçüm",
     title: "Ölçüm neden kritik?",
     accent: "#e0a100",
-    summary: "Kuantum devre sonunda ölçüm yapıldığında sürekli durum, klasik modele aktarılabilecek ayrık istatistiklere dönüşür.",
+    summary: "Kuantum devre sonunda ölçüm yapıldığında sürekli durum, klasik modele aktarılabilecek ayrık istatistiklere dönüşmektedir.",
     facts: [
       ["Çıkış", "Beklenen değer veya ölçüm frekansı"],
       ["Karar", "Sigmoid / margin / sınıf olasılığı"],
-      ["Metrik", "AUROC, PR-AUC, F1 ve MCC ile okunur"],
+      ["Metrik", "AUROC, PR-AUC, F1 ve MCC ile okunmaktadır"],
     ],
   },
   {
@@ -1499,7 +1560,7 @@ const quantumModelScenes = [
     key: "hybrid_qhead",
     label: "Hybrid QHead",
     color: "#e0a100",
-    input: "Dondurulmuş MLP kodlayıcı kompakt temsil üretir; Quantum Head bu temsili parametrik devrede işler.",
+    input: "Dondurulmuş MLP kodlayıcı kompakt temsil üretmektedir; Quantum Head bu temsili parametrik devrede işlemektedir.",
     circuit: "Klasik kodlayıcı + parametrik kuantum başlık",
     output: "ölçüm skoru",
     finding: "Hybrid QHead BACE ve ClinTox üzerinde klasik referanslara en çok yaklaşan kuantum-klasik yapı oldu.",
@@ -1513,7 +1574,7 @@ const architectureModels = [
     label: "SVM",
     family: "klasik tanımlayıcı",
     color: "#00a6c8",
-    summary: "ECFP/Morgan parmak izleri üzerinde marj tabanlı karar sınırı kurar ve küçük-orta veri rejiminde güçlü referans üretir.",
+    summary: "ECFP/Morgan parmak izleri üzerinde marj tabanlı karar sınırı kurmaktadır ve küçük-orta veri rejiminde güçlü referans üretmektedir.",
     blocks: ["SMILES", "ECFP 1024", "Ölçekleme", "SVM marjı", "Karar skoru"],
     facts: [["Girdi", "Radius 2 Morgan parmak izi"], ["Yapı", "Marj maksimizasyonu"], ["Seminer rolü", "BBBP için en güçlü ana referans"]],
   },
@@ -1531,7 +1592,7 @@ const architectureModels = [
     label: "GNN",
     family: "klasik grafik",
     color: "#24a148",
-    summary: "Molekülü atom düğümleri ve bağ kenarları olarak işler; komşuluk mesajlarını toplayarak grafik temsili üretir.",
+    summary: "Molekülü atom düğümleri ve bağ kenarları olarak işlemektedir; komşuluk mesajlarını toplayarak grafik temsili üretmektedir.",
     blocks: ["Moleküler grafik", "Atom özellikleri", "Mesaj geçirme", "Grafik havuzlama", "Sınıflandırıcı"],
     facts: [["Girdi", "Atom-bağ grafiği"], ["Yapı", "Komşuluk mesajları"], ["Seminer rolü", "BBBP ve ClinTox için anlamlı grafik sinyali"]],
   },
@@ -1693,18 +1754,18 @@ const quantumRunModels = [
 const quantumGameStages = [
   { key: "encode", label: "Veriyi kodla", summary: "SMILES ve ECFP temsili q boyutlu devre girişine çevrilir." },
   { key: "superpose", label: "Süperpozisyon kur", summary: "Kapılar kubit durumunu döndürür; olasılık genlikleri tek bir sınıfa kilitlenmez." },
-  { key: "entangle", label: "Dolanıklık kur", summary: "Kontrollü kapılar kubitler arası korelasyon kurar; bu çizgi fiziksel mesafe değildir." },
+  { key: "entangle", label: "Dolanıklık kur", summary: "Kontrollü kapılar kubitler arası korelasyon kurmaktadır; bu çizgi fiziksel mesafe değildir." },
   { key: "measure", label: "Ölç ve oku", summary: "Ölçüm kuantum durumunu klasik olasılık ve karar skoruna indirger." },
-  { key: "result", label: "Sonucu savun", summary: "AUROC, std ve görev bağlamı birlikte okunur; özellikle ClinTox tek metrikle savunulmaz." },
+  { key: "result", label: "Sonucu savun", summary: "AUROC, std ve görev bağlamı birlikte okunmaktadır; özellikle ClinTox tek metrikle savunulmaz." },
 ];
 const representativeSeedOffsets = [-0.92, -0.42, 0.05, 0.48, 0.88];
 
 const journeySteps = [
-  ["SMILES", "Molekül metinsel kimyasal dize olarak alınır."],
-  ["RDKit", "Geçerli molekül nesnesi, atom ve bağ bilgisi üretilir."],
+  ["SMILES", "Molekül metinsel kimyasal dize olarak alınmaktadır."],
+  ["RDKit", "Geçerli molekül nesnesi, atom ve bağ bilgisi üretilmektedir."],
   ["ECFP", "Radius 2 ve 1024 bit Morgan parmak izi çıkarılır."],
   ["PCA / Kodlayıcı", "Klasik temsil kubit sayısına veya gömme uzayına sıkıştırılır."],
-  ["Kubit kodlama", "Özellikler AngleEmbedding veya ZZFeatureMap ile devreye girer."],
+  ["Kubit kodlama", "Özellikler AngleEmbedding veya ZZFeatureMap ile devreye girmektedir."],
   ["Ölçüm", "Beklenen değerler klasik skor ve metriklere çevrilir."],
 ];
 
@@ -1727,7 +1788,7 @@ const limitations = [
   ["QML", "NISQ gerçekliği", "Sınırlı kubit sayısı, devre derinliği, gürültü ve ölçüm maliyeti kuantum modellerin pratik sınırlarıdır."],
   ["QGNN", "Dikkatli adlandırma", "QGNN saf kuantum model olarak değil, kuantum grafik veya hibritize grafik araştırma hattı olarak sunulmalıdır."],
   ["BACE/ClinTox", "Küçük fark", "Hybrid QHead ile MLP arasındaki AUROC farkları çok küçük olduğu için istatistiksel güvenilirlik vurgusu gerekir."],
-  ["Sayfa", "Kaynak tutarlılığı", "Yeni paneller CSV ve figür manifestinden beslendiği için sonuç dosyaları değişirse sayfa da güncellenebilir."],
+  ["Sayfa", "Kaynak tutarlılığı", "Yeni paneller CSV ve figür manifestinden beslendiği için sonuç dosyaları değiştiğinde sayfa da güncellenebilmektedir."],
 ];
 
 let selectedDataset = "bace";
@@ -2192,7 +2253,7 @@ function renderQuantumModelNote() {
   target.innerHTML = `
     <span class="metric-pill" style="border-left: 4px solid ${scene.color}">${scene.label}</span>
     <h3>${tx("Kuantum ML sahnesi")}</h3>
-    <p>${tx("Klasik veri devreye girer, kuantum dönüşümden sonra ölçüm tekrar klasik karara çevrilir.")}</p>
+    <p>${tx("Klasik veri devreye girmektedir, kuantum dönüşümden sonra ölçüm tekrar klasik karara çevrilir.")}</p>
     <div class="quantum-model-facts">
       <div class="quantum-model-fact"><span>${tx("Veri girişi")}</span><strong>${tx(scene.input)}</strong></div>
       <div class="quantum-model-fact"><span>${tx("Devre fikri")}</span><strong>${tx(scene.circuit)}</strong></div>
@@ -2287,9 +2348,9 @@ function renderQuantumRunNote() {
     </div>
     <div class="quantum-run-guidance">
       <p><strong>${tx("Devre şeması notu")}:</strong> ${tx("q0-qn etiketleri sabit devre telleridir; hareket eden yeşil noktalar gerçek parçacık değil temsil/durum akışıdır.")}</p>
-      <p>${tx("Bu canvas gerçek kuantum cihazı simüle etmez; deney hattını ve CSV satırını şematik olarak gösterir.")}</p>
+      <p>${tx("Bu canvas gerçek kuantum cihazı simüle etmez; deney hattını ve CSV satırını şematik olarak göstermektedir.")}</p>
       <p>${tx("Yeşil akış q ile daha çok telde görünür, d ile hızlanır; bu fiziksel hız değil kapasite göstergesidir.")}</p>
-      <p><strong>${tx("Ayar listesi")}:</strong> ${tx("Sekmeler CSV'deki deney satırlarını açar; q/d, veri fraksiyonu ve AUROC birlikte okunur.")}</p>
+      <p><strong>${tx("Ayar listesi")}:</strong> ${tx("Sekmeler CSV'deki deney satırlarını açar; q/d, veri fraksiyonu ve AUROC birlikte okunmaktadır.")}</p>
     </div>
     <div class="quantum-run-list" aria-label="${tx("Ayar listesi")}">
       ${rows.map((row, index) => `
@@ -2864,7 +2925,7 @@ function drawCompactResearchMap(ctx, width, height, taskCounts, categoryCounts, 
 
   ctx.fillStyle = "rgba(255,255,255,0.55)";
   ctx.font = "700 10px Inter, sans-serif";
-  ctx.fillText(`${categoryTotal} kategori satırı CSV'den okunur`, pad, height - 14);
+  ctx.fillText(`${categoryTotal} kategori satırı CSV'den okunmaktadır`, pad, height - 14);
 }
 
 function renderDatasetTabs() {
@@ -3098,7 +3159,7 @@ function renderJourneyNote() {
   if (!target) return;
   target.innerHTML = `
     <h3>${tx("Deney hattı")}</h3>
-    <p>${tx("Bu akış, klasik modeller ile kuantum modellerin aynı molekül kaydını farklı temsil biçimleriyle nasıl kullandığını gösterir.")}</p>
+    <p>${tx("Bu akış, klasik modeller ile kuantum modellerin aynı molekül kaydını farklı temsil biçimleriyle nasıl kullandığını göstermektedir.")}</p>
     <div class="journey-step-list">
       ${journeySteps.map(([label, text], index) => `
         <div class="journey-step">
@@ -3289,7 +3350,7 @@ function drawMetricLabCanvas() {
   ctx.fillText(`ClinTox eşik laboratuvarı · ${s.model.label}`, 24, 34);
   ctx.fillStyle = "rgba(255,255,255,0.72)";
   ctx.font = "600 13px Inter, sans-serif";
-  ctx.fillText("Simüle edilmiş eşik duyarlılığı: test sınıf dağılımı 137 negatif / 11 pozitif üzerinden okunur.", 24, 56);
+  ctx.fillText("Simüle edilmiş eşik duyarlılığı: test sınıf dağılımı 137 negatif / 11 pozitif üzerinden okunmaktadır.", 24, 56);
 
   const matrixX = width * 0.08;
   const matrixY = height * 0.22;
@@ -3411,7 +3472,7 @@ function renderAblationNote() {
       <div class="metric-line"><span>${tx("CSV kapsamı")}</span><strong>${countLabel(uniqueCells, "q/d hücresi", "q/d cell")} · ${countLabel(rows.length, "deney satırı", "experiment row")}</strong></div>
       <div class="metric-line"><span>${tx("Yorum")}</span><strong>${tx("Daha fazla kubit garanti değil")}</strong></div>
     </div>
-    <p>${tx("Küp benzersiz q/d hücrelerini çizer; aşağıdaki liste CSV'deki bütün deney satırlarını gösterir. Veri fraksiyonu deneyleri q8-d2 f0.25 gibi ayrıca yazılır.")}</p>
+    <p>${tx("Küp benzersiz q/d hücrelerini çizmektedir; aşağıdaki liste CSV'deki bütün deney satırlarını göstermektedir. Veri fraksiyonu deneyleri q8-d2 f0.25 gibi ayrıca yazılmaktadır.")}</p>
     <div class="ablation-variants">
       ${rows.map((row) => `<span>${quantumExperimentLabel(row)} · ${formatMetric(quantumMetricValue(row))}</span>`).join("")}
     </div>
@@ -3465,8 +3526,8 @@ function drawAblationCubeCanvas() {
 
   const legendX = width * 0.78;
   const legendText = rows.length === 1
-    ? "Bu model için CSV'de tek q/d kaydı bulundu; panel bunu tek hücre olarak gösterir."
-    : "Yüzey, kubit sayısı ve derinlik arttıkça başarının her zaman artmadığını gösterir. Veri seti ile devre kapasitesi arasında görev bazlı uyum gerekir.";
+    ? "Bu model için CSV'de tek q/d kaydı bulundu; panel bunu tek hücre olarak göstermektedir."
+    : "Yüzey, kubit sayısı ve derinlik arttıkça başarının her zaman artmadığını göstermektedir. Veri seti ile devre kapasitesi arasında görev bazlı uyum gerekir.";
   drawWrappedText(ctx, legendText, legendX, height * 0.25, width * 0.18, 18, "rgba(255,255,255,0.76)", "600 14px Inter, sans-serif");
 }
 
@@ -3505,7 +3566,7 @@ function renderStabilityNote() {
   const volatile = [...rows].sort((a, b) => b[3] - a[3])[0];
   target.innerHTML = `
     <h3>${taskLabel(selectedStabilityTask)} ${tx("kararlılık okuması")}</h3>
-    <p>${tx("Standart sapma, seed değiştiğinde modelin ne kadar değiştiğini gösterir.")}</p>
+    <p>${tx("Standart sapma, seed değiştiğinde modelin ne kadar değiştiğini göstermektedir.")}</p>
     <div class="metric-list">
       <div class="metric-line"><span>${tx("En kararlı")}</span><strong>${stable?.[0] || "-"} · ${formatMetric(stable?.[3] || 0)}</strong></div>
       <div class="metric-line"><span>${tx("En değişken")}</span><strong>${volatile?.[0] || "-"} · ${formatMetric(volatile?.[3] || 0)}</strong></div>
@@ -3962,7 +4023,7 @@ function drawQubitConcept(ctx, width, height, concept) {
   ctx.fillText("|1>", cx - 18, cy + radius + 44);
 
   drawProbabilityBars(ctx, width * 0.68, height * 0.38, width * 0.22, [["P(0)", p0], ["P(1)", p1]], concept.accent);
-  drawWrappedText(ctx, "Bir kubit ölçülmeden önce Bloch küresi üzerinde bir yön gibi düşünülebilir. Yön değiştikçe ölçüm olasılıkları değişir.", 34, height - 68, width * 0.86, 18, "rgba(255,255,255,0.74)", "600 14px Inter, sans-serif");
+  drawWrappedText(ctx, "Bir kubit ölçülmeden önce Bloch küresi üzerinde bir yön gibi düşünülebilir. Yön değiştikçe ölçüm olasılıkları değişmektedir.", 34, height - 68, width * 0.86, 18, "rgba(255,255,255,0.74)", "600 14px Inter, sans-serif");
 }
 
 function drawSuperpositionConcept(ctx, width, height, concept) {
@@ -4007,7 +4068,7 @@ function drawSuperpositionConcept(ctx, width, height, concept) {
   ctx.fillStyle = "#ffffff";
   ctx.font = "800 18px JetBrains Mono, monospace";
   ctx.fillText("|psi> = alpha|0> + beta|1>", left, height * 0.24);
-  drawWrappedText(ctx, "Süperpozisyon olasılıkların basit toplamı değil; genlik ve faz birlikte devre içindeki girişimi belirler.", left, height * 0.74, width * 0.74, 18, "rgba(255,255,255,0.74)", "600 14px Inter, sans-serif");
+  drawWrappedText(ctx, "Süperpozisyon olasılıkların basit toplamı değil; genlik ve faz birlikte devre içindeki girişimi belirlemektedir.", left, height * 0.74, width * 0.74, 18, "rgba(255,255,255,0.74)", "600 14px Inter, sans-serif");
 }
 
 function drawMeasurementConcept(ctx, width, height, concept) {
@@ -4079,7 +4140,7 @@ function drawEntanglementConcept(ctx, width, height, concept) {
   ctx.stroke();
   ctx.font = "800 15px JetBrains Mono, monospace";
   drawBoundedWrappedText(ctx, "00 ve 11 birlikte güçlenir", labelBoxX + 14, labelBoxY + 28, labelBoxW - 28, 16, "#ffffff", ctx.font, 2);
-  drawWrappedText(ctx, "Dolanıklık, tek tek kubitlerden değil ortak durumdan gelen korelasyonu temsil eder. ZZFeatureMap ve kontrollü kapılar bu etkileşimi üretir.", width * 0.12, height * 0.77, width * 0.76, 18, "rgba(255,255,255,0.74)", "600 14px Inter, sans-serif");
+  drawWrappedText(ctx, "Dolanıklık, tek tek kubitlerden değil ortak durumdan gelen korelasyonu temsil etmektedir. ZZFeatureMap ve kontrollü kapılar bu etkileşimi üretmektedir.", width * 0.12, height * 0.77, width * 0.76, 18, "rgba(255,255,255,0.74)", "600 14px Inter, sans-serif");
 }
 
 function drawDepthConcept(ctx, width, height, concept) {
@@ -4159,7 +4220,7 @@ function drawSupervisedConcept(ctx, width, height, concept) {
   ctx.stroke();
   ctx.font = "800 14px JetBrains Mono, monospace";
   drawBoundedWrappedText(ctx, updateLabel, updateBoxX, updateBoxY + 4, updateBoxW - 20, 14, concept.accent, ctx.font, 1);
-  drawWrappedText(ctx, "Bu seminerde tüm modeller denetimli ikili sınıflandırma olarak karşılaştırıldı: aynı veri ayrımı, aynı hedef, aynı metrik ailesi.", width * 0.12, height * 0.82, width * 0.76, 18, "rgba(255,255,255,0.74)", "600 14px Inter, sans-serif");
+  drawWrappedText(ctx, "Bu seminerde tüm modeller denetimli ikili sınıflandırma olarak karşılaştırılmıştır: aynı veri ayrımı, aynı hedef, aynı metrik ailesi.", width * 0.12, height * 0.82, width * 0.76, 18, "rgba(255,255,255,0.74)", "600 14px Inter, sans-serif");
 }
 
 function drawQuantumModelFlowCanvas() {
@@ -4182,7 +4243,7 @@ function drawQuantumModelFlowCanvas() {
   ctx.fill();
 
   drawBoundedWrappedText(ctx, `${tx("Kuantum ML sahnesi")} · ${scene.label}`, 28, 38, width - 56, 18, "#ffffff", "800 19px Inter, sans-serif", 1);
-  drawBoundedWrappedText(ctx, "Klasik veri devreye girer, kuantum dönüşümden sonra ölçüm tekrar klasik karara çevrilir.", 28, 62, width - 56, 17, "rgba(255,255,255,0.72)", "700 13px Inter, sans-serif", compact ? 2 : 1);
+  drawBoundedWrappedText(ctx, "Klasik veri devreye girmektedir, kuantum dönüşümden sonra ölçüm tekrar klasik karara çevrilir.", 28, 62, width - 56, 17, "rgba(255,255,255,0.72)", "700 13px Inter, sans-serif", compact ? 2 : 1);
 
   if (compact) {
     drawCompactQuantumModelFlow(ctx, width, height, scene, rows, t);
@@ -4833,7 +4894,7 @@ function drawMessagePanel(ctx, x, y, width, height, color, t, attention) {
   ctx.fillText(hiddenText, hiddenBoxX + hiddenBoxW / 2 - ctx.measureText(hiddenText).width / 2, hiddenBoxY + hiddenBoxH / 2 + 5);
   ctx.fillStyle = "rgba(255,255,255,0.72)";
   ctx.font = "700 12px Inter, sans-serif";
-  ctx.fillText(attention ? "GAT komşuları eşit görmez" : "GNN komşuları toplar ve günceller", x + 20, y + height - 21);
+  ctx.fillText(attention ? "GAT komşuları eşit görmez" : "GNN komşuları toplamaktadır ve güncellemektedir", x + 20, y + height - 21);
 }
 
 function drawGraphPoolingPanel(ctx, x, y, width, height, color, t, attention) {
@@ -4993,7 +5054,7 @@ function drawSvmPlane(ctx, x, y, width, height, color) {
     ctx.arc(px, py, 4, 0, Math.PI * 2);
     ctx.fill();
   }
-  drawWrappedText(ctx, "SVM, ECFP özellik uzayında sınıfları ayıran en geniş marjlı sınırı arar.", x + 22, y + 24, width * 0.82, 17, "rgba(255,255,255,0.76)", "600 14px Inter, sans-serif");
+  drawWrappedText(ctx, "SVM, ECFP özellik uzayında sınıfları ayıran en geniş marjlı sınırı aramaktadır.", x + 22, y + 24, width * 0.82, 17, "rgba(255,255,255,0.76)", "600 14px Inter, sans-serif");
 }
 
 function drawDenseNetwork(ctx, x, y, width, height, color, showText = true) {
@@ -5031,7 +5092,7 @@ function drawDenseNetwork(ctx, x, y, width, height, color, showText = true) {
     ctx.fill();
   });
   if (showText) {
-    drawWrappedText(ctx, "MLP, ECFP vektörünü katman katman soyutlayarak doğrusal olmayan karar fonksiyonu üretir.", x + 22, y + 24, width * 0.82, 17, "rgba(255,255,255,0.76)", "600 14px Inter, sans-serif");
+    drawWrappedText(ctx, "MLP, ECFP vektörünü katman katman soyutlayarak doğrusal olmayan karar fonksiyonu üretmektedir.", x + 22, y + 24, width * 0.82, 17, "rgba(255,255,255,0.76)", "600 14px Inter, sans-serif");
   }
 }
 
@@ -5106,12 +5167,12 @@ function drawQuantumSignature(ctx, x, y, width, height, color, mode) {
   }
   const message = mode === "kernel"
     ? "QSVM, kuantum özellik haritası sonrası örnekler arası çekirdek benzerliğini SVM'e verir."
-    : "VQC, parametrik ansatz ağırlıklarını eğiterek ölçümden sınıf olasılığı çıkarır.";
+    : "VQC, parametrik ansatz ağırlıklarını eğiterek ölçümden sınıf olasılığı çıkarmaktadır.";
   drawWrappedText(ctx, message, x + 22, y + 24, width * 0.82, 17, "rgba(255,255,255,0.76)", "600 14px Inter, sans-serif");
 }
 
 function drawHybridSignature(ctx, x, y, width, height, color) {
-  drawWrappedText(ctx, "Hybrid QHead, klasik kodlayıcı temsilini kuantum başlıkla yeniden işler; seminerde en rekabetçi kuantum-klasik yapı budur.", x + 22, y + 24, width * 0.86, 17, "rgba(255,255,255,0.76)", "600 14px Inter, sans-serif");
+  drawWrappedText(ctx, "Hybrid QHead, klasik kodlayıcı temsilini kuantum başlıkla yeniden işlemektedir; seminerde en rekabetçi kuantum-klasik yapı budur.", x + 22, y + 24, width * 0.86, 17, "rgba(255,255,255,0.76)", "600 14px Inter, sans-serif");
 
   const layers = [4, 5, 3];
   const left = x + width * 0.12;
@@ -5310,10 +5371,10 @@ function drawResearchAimCanvas() {
     { label: "Hibrit", sub: "Frozen MLP + QHead", color: "#e0a100" },
   ];
   const metrics = ["AUROC", "PR-AUC", "F1", "MCC", "Sens.", "Spec."];
-  const pad = compact ? 22 : 32;
-  const top = compact ? 88 : 88;
-  const laneGap = compact ? 12 : 12;
-  const laneH = compact ? 62 : Math.max(54, Math.min(66, (height - top - pad - laneGap * (lanes.length - 1)) / lanes.length));
+  const pad = compact ? 22 : 24;
+  const top = compact ? 88 : 76;
+  const laneGap = compact ? 12 : 8;
+  const laneH = compact ? 62 : Math.max(42, Math.min(58, (height - top - pad - laneGap * (lanes.length - 1)) / lanes.length));
   const laneW = compact ? width - pad * 2 : width * 0.52;
   const rightX = compact ? pad : width * 0.66;
   const rightW = compact ? width - pad * 2 : width - rightX - pad;
@@ -5329,11 +5390,11 @@ function drawResearchAimCanvas() {
     ctx.lineWidth = 1.4;
     ctx.stroke();
     ctx.fillStyle = "#ffffff";
-    ctx.font = compact ? "800 13px Inter, sans-serif" : "800 15px Inter, sans-serif";
+    ctx.font = compact ? "800 13px Inter, sans-serif" : "800 13px Inter, sans-serif";
     drawBoundedWrappedText(ctx, lane.label, x + 16, y + 24, laneW * 0.44, 16, "#ffffff", ctx.font, 1);
     ctx.fillStyle = withAlpha(lane.color, 0.95);
-    ctx.font = "800 12px JetBrains Mono, monospace";
-    drawBoundedWrappedText(ctx, lane.sub, x + 16, y + 48, laneW * 0.46, 14, withAlpha(lane.color, 0.95), ctx.font, 1);
+    ctx.font = compact ? "800 12px JetBrains Mono, monospace" : "800 10px JetBrains Mono, monospace";
+    drawBoundedWrappedText(ctx, lane.sub, x + 16, y + (compact ? 48 : 42), laneW * 0.46, 14, withAlpha(lane.color, 0.95), ctx.font, 1);
     drawArrow(ctx, x + laneW * 0.52, y + laneH * 0.5, x + laneW - 20, y + laneH * 0.5, lane.color);
     for (let i = 0; i < 10; i += 1) {
       const px = x + laneW * 0.6 + ((i * 29 + index * 17) % Math.max(80, laneW * 0.32));
@@ -5652,7 +5713,7 @@ function drawHeroQuantumCanvas() {
   drawArrow(ctx, bitX + bitW + 18, bitY + 48, cx - sphereR - 18, cy - 12, "#ffffff");
   drawWrappedText(
     ctx,
-    "Bit kesin durum taşır; kubit ölçümden önce genlik ve faz taşır. Seminerde klasik ve kuantum farkı buradan başlar.",
+    "Bit kesin durum taşır; kubit ölçümden önce genlik ve faz taşır. Seminerde klasik ve kuantum farkı buradan başlamaktadır.",
     compact ? width * 0.08 : width * 0.56,
     compact ? height * 0.82 : height * 0.83,
     compact ? width * 0.84 : width * 0.34,
@@ -5678,7 +5739,7 @@ function drawDatasetMeaningCanvas() {
   ctx.fillText("Biyomedikal görev haritası", 24, 34);
   ctx.fillStyle = "rgba(255,255,255,0.68)";
   ctx.font = "700 12px Inter, sans-serif";
-  ctx.fillText("Satır sayısı + sınıf dengesi + klinik soru birlikte okunur.", 24, 56);
+  ctx.fillText("Satır sayısı + sınıf dengesi + klinik soru birlikte okunmaktadır.", 24, 56);
 
   const pad = compact ? 22 : 30;
   const panelGap = compact ? 16 : 18;
@@ -5757,7 +5818,7 @@ function drawDataRepresentationCanvas() {
   ctx.fillText("Temsil dönüşüm katmanı", 24, 34);
   ctx.fillStyle = "rgba(255,255,255,0.68)";
   ctx.font = "700 12px Inter, sans-serif";
-  ctx.fillText("Aynı molekül üç model çizgisinde farklı bilgi geometrisine dönüşür.", 24, 56);
+  ctx.fillText("Aynı molekül üç model çizgisinde farklı bilgi geometrisine dönüşmektedir.", 24, 56);
 
   const steps = [
     { key: "smiles", label: "SMILES", sub: "CC(=O)Nc1ccc(O)cc1", color: "#ffffff" },
