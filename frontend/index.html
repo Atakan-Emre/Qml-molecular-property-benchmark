@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260609-literature-table-1">
+  <link rel="stylesheet" href="styles.css?v=20260609-dataset-example-2">
 </head>
 <body>
   <canvas id="quantumField" aria-hidden="true"></canvas>
@@ -264,6 +264,55 @@
         </article>
       </div>
       <div class="dataset-grid" id="datasetCards"></div>
+      <div class="dataset-example-panel" aria-label="Veri Seti Örneği">
+        <div class="dataset-example-copy">
+          <p class="section-kicker">Veri Seti Örneği</p>
+          <h3>CSV satırı molekülü ve hedef etiketi aynı kayıtta göstermektedir</h3>
+          <p>
+            Aktif deney dosyalarında her split için temel tablo data.csv dosyasıdır.
+            Bu dosyada smiles molekülün kimyasal dize gösterimini, y
+            ise ilgili biyomedikal göreve ait ikili hedef etiketi temsil etmektedir.
+          </p>
+          <div class="csv-column-legend">
+            <div><span>smiles</span><strong>Molekülün metinsel kimyasal gösterimi</strong></div>
+            <div><span>y</span><strong>0 veya 1 olarak saklanan hedef sınıf etiketi</strong></div>
+            <div><span>split</span><strong>Train, validation ve test ayrımı sabit tutulmaktadır</strong></div>
+          </div>
+        </div>
+        <div class="dataset-example-table-wrap">
+          <table class="dataset-example-table">
+            <caption>Gerçek train CSV kayıtlarından örnek satırlar</caption>
+            <thead>
+              <tr>
+                <th>Veri seti</th>
+                <th>Gerçek SMILES örneği</th>
+                <th>y</th>
+                <th>Etiketin anlamı</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>BACE</strong></td>
+                <td><code>Fc1ccc(cc1C#CCCCF)[C@]1(N=C(N)N(C)C1=O)c1ccc(OC(F)F)cc1</code></td>
+                <td><span class="label-pill positive">1</span></td>
+                <td>BACE-1 inhibitör aktivitesi için pozitif sınıfı temsil etmektedir.</td>
+              </tr>
+              <tr>
+                <td><strong>BBBP</strong></td>
+                <td><code>C1=C(Cl)C=CC5=C1N(CCCN4CCC3(N2C(CCCC2)NC3=O)CC4)C6=C(CC5)C=CC=C6</code></td>
+                <td><span class="label-pill positive">1</span></td>
+                <td>Kan-beyin bariyeri geçişi için pozitif sınıfı göstermektedir.</td>
+              </tr>
+              <tr>
+                <td><strong>ClinTox</strong></td>
+                <td><code>CCCCC(=O)N(Cc1ccc(cc1)c2ccccc2c3[n-]nnn3)[C@@H](C(C)C)C(=O)[O-]</code></td>
+                <td><span class="label-pill negative">0</span></td>
+                <td>Klinik toksisite/güvenlilik sinyali için negatif sınıfı temsil etmektedir.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
       <div class="data-table-wrap">
         <table class="data-table">
           <caption>Ön işleme sonrası kullanılan veri ayrımları</caption>
@@ -898,6 +947,6 @@
     <span>BACE · BBBP · ClinTox · QSVM · VQC · QGNN · Hybrid QHead</span>
   </footer>
 
-  <script src="script.js?v=20260609-literature-table-1"></script>
+  <script src="script.js?v=20260609-dataset-example-2"></script>
 </body>
 </html>

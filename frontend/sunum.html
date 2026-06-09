@@ -135,7 +135,7 @@
     <iframe
       id="deckFrame"
       class="deck-frame"
-      src="index.html?v=20260609-literature-table-1#kapak"
+      src="index.html?v=20260609-dataset-example-2#kapak"
       title="QML semineri ana sayfasi"
       tabindex="-1"></iframe>
     <div id="captureLayer" class="capture-layer" tabindex="0" aria-label="Sunum kontrol katmani"></div>
@@ -349,6 +349,78 @@
           #veri .dataset-grid,
           #veri .data-table-wrap {
             margin-top: 0.7rem !important;
+          }
+
+          #veri .dataset-example-panel {
+            grid-template-columns: minmax(210px, 0.36fr) minmax(0, 1fr) !important;
+            gap: 0.55rem !important;
+            margin-top: 0.55rem !important;
+            padding: 0.58rem !important;
+          }
+
+          #veri .dataset-example-copy {
+            gap: 0.34rem !important;
+          }
+
+          #veri .dataset-example-copy h3 {
+            font-size: clamp(0.92rem, 1.4vw, 1.25rem) !important;
+          }
+
+          #veri .dataset-example-copy p {
+            display: none !important;
+          }
+
+          #veri .csv-column-legend {
+            gap: 0.22rem !important;
+          }
+
+          #veri .csv-column-legend div {
+            padding: 0.28rem 0 !important;
+          }
+
+          #veri .csv-column-legend span {
+            font-size: 0.58rem !important;
+          }
+
+          #veri .csv-column-legend strong {
+            font-size: 0.62rem !important;
+            line-height: 1.18 !important;
+          }
+
+          #veri .dataset-example-table-wrap {
+            max-height: min(32vh, 310px) !important;
+            overflow: auto !important;
+          }
+
+          #veri .dataset-example-table {
+            min-width: 700px !important;
+          }
+
+          #veri .dataset-example-table caption {
+            padding: 0.3rem 0.42rem !important;
+            font-size: 0.64rem !important;
+          }
+
+          #veri .dataset-example-table th,
+          #veri .dataset-example-table td {
+            padding: 0.32rem 0.42rem !important;
+            font-size: 0.62rem !important;
+            line-height: 1.18 !important;
+          }
+
+          #veri .dataset-example-table td:nth-child(2) code {
+            max-width: 29rem !important;
+            font-size: 0.57rem !important;
+          }
+
+          #veri .label-pill {
+            width: 1.32rem !important;
+            height: 1.32rem !important;
+            font-size: 0.62rem !important;
+          }
+
+          #veri .data-table-wrap {
+            display: none !important;
           }
 
           #veri .dataset-card {
