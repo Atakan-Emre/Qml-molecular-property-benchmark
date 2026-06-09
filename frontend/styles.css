@@ -262,12 +262,7 @@ a {
 
 .eyebrow,
 .section-kicker {
-  margin: 0 0 1rem;
-  color: var(--coral);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0;
+  display: none;
 }
 
 .hero h1,
@@ -383,6 +378,38 @@ a {
   max-width: 820px;
   color: #30343a;
   font-size: 1.03rem;
+}
+
+p,
+.hero-copy li,
+.statement li,
+.section-heading li,
+.flow-copy li,
+.visual-note,
+.visual-note p,
+.concept-note p,
+.classical-visual-note p,
+.quantum-model-note p,
+.architecture-note p,
+.quantum-game-note p,
+.ablation-note p,
+.stability-note p,
+.material-source-card p,
+.dataset-card p,
+.dataset-example-copy p,
+.data-table td,
+.dataset-example-table td,
+.literature-table td,
+.model-card p,
+.point p,
+.protocol-fact small,
+.result-summary p,
+.limitations-grid p,
+.recommendation-card p,
+.conclusion-copy p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .thesis-points {
@@ -558,7 +585,7 @@ a {
 .data-table caption {
   caption-side: top;
   padding: 0.85rem 1rem;
-  text-align: left;
+  text-align: justify;
   color: var(--ink-soft);
   font-weight: 800;
 }
@@ -567,14 +594,18 @@ a {
 .data-table td {
   padding: 0.85rem 1rem;
   border-top: 1px solid var(--line);
-  text-align: left;
   vertical-align: top;
 }
 
 .data-table th {
+  text-align: left;
   color: var(--ink);
   background: #eef1ed;
   font-size: 0.84rem;
+}
+
+.data-table td {
+  text-align: justify;
 }
 
 .data-table td {
@@ -701,7 +732,7 @@ a {
 .dataset-example-table caption {
   caption-side: top;
   padding: 0.72rem 0.82rem;
-  text-align: left;
+  text-align: justify;
   color: var(--ink-soft);
   font-weight: 900;
 }
@@ -710,11 +741,11 @@ a {
 .dataset-example-table td {
   padding: 0.68rem 0.78rem;
   border-top: 1px solid var(--line);
-  text-align: left;
   vertical-align: top;
 }
 
 .dataset-example-table th {
+  text-align: left;
   background: #eef1ed;
   color: var(--ink);
   font-size: 0.76rem;
@@ -1087,7 +1118,6 @@ a {
 
 .data-cockpit::before,
 .molecule-journey::before,
-.metric-lab-section::before,
 .quantum-ablation-section::before,
 .stability-section::before {
   content: "";
@@ -1104,7 +1134,6 @@ a {
 
 .data-cockpit > *,
 .molecule-journey > *,
-.metric-lab-section > *,
 .quantum-ablation-section > *,
 .stability-section > * {
   position: relative;
@@ -1126,8 +1155,7 @@ a {
   align-items: start;
 }
 
-.cockpit-cards,
-.lab-mini-grid {
+.cockpit-cards {
   display: grid;
   gap: 0.75rem;
 }
@@ -1148,8 +1176,7 @@ a {
   background: rgba(255, 255, 255, 0.08);
 }
 
-.cockpit-card span,
-.lab-stat span {
+.cockpit-card span {
   display: block;
   color: rgba(255, 255, 255, 0.66);
   font-size: 0.82rem;
@@ -1172,7 +1199,6 @@ a {
 
 .cockpit-stage,
 .journey-stage,
-.lab-stage,
 .ablation-stage,
 .stability-stage {
   min-height: 420px;
@@ -1190,7 +1216,6 @@ a {
 
 #researchMapCanvas,
 #moleculeJourneyCanvas,
-#metricLabCanvas,
 #ablationCubeCanvas,
 #stabilityCanvas,
 #datasetMeaningCanvas,
@@ -1317,16 +1342,11 @@ a {
 }
 
 .journey-layout,
-.lab-layout,
 .stability-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.55fr);
   gap: 1rem;
   align-items: stretch;
-}
-
-.lab-layout {
-  grid-template-columns: minmax(300px, 0.5fr) minmax(0, 1.15fr);
 }
 
 .journey-note,
@@ -1348,6 +1368,72 @@ a {
   gap: 0.75rem;
 }
 
+.color-meaning-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  max-width: 980px;
+  margin-top: 1rem;
+}
+
+.color-meaning-list div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.18rem 0.5rem;
+  align-items: center;
+  min-width: 0;
+  padding: 0.74rem 0.82rem;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--ink-soft);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 26px rgba(15, 17, 21, 0.08);
+}
+
+.color-meaning-list div:has(.turquoise) {
+  border-left-color: #00a6c8;
+}
+
+.color-meaning-list div:has(.purple) {
+  border-left-color: #7b61ff;
+}
+
+.color-meaning-list div:has(.yellow) {
+  border-left-color: #e0a100;
+}
+
+.color-meaning-list strong {
+  color: var(--ink);
+  font-size: 0.92rem;
+}
+
+.color-meaning-list small {
+  grid-column: 1 / -1;
+  color: #30343a;
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: justify;
+}
+
+.color-dot {
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 999px;
+  box-shadow: 0 0 0 4px rgba(15, 17, 21, 0.08);
+}
+
+.color-dot.turquoise {
+  background: #00a6c8;
+}
+
+.color-dot.purple {
+  background: #7b61ff;
+}
+
+.color-dot.yellow {
+  background: #e0a100;
+}
+
 .journey-step {
   padding-top: 0.65rem;
   border-top: 1px solid var(--line);
@@ -1365,61 +1451,6 @@ a {
 .limitation-card strong {
   display: block;
   margin-top: 0.2rem;
-}
-
-.metric-lab-section {
-  background: rgba(255, 255, 255, 0.9);
-}
-
-.metric-lab-section::before {
-  background:
-    linear-gradient(120deg, rgba(230, 95, 79, 0.09), transparent 44%),
-    linear-gradient(300deg, rgba(36, 161, 72, 0.08), transparent 42%);
-}
-
-.lab-panel {
-  padding: 1rem;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(15, 17, 21, 0.94);
-  color: #fff;
-  box-shadow: var(--shadow);
-}
-
-.range-control {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  margin: 1rem 0 0.6rem;
-  font-weight: 800;
-}
-
-.range-control strong,
-.lab-stat strong {
-  font-family: "JetBrains Mono", monospace;
-}
-
-#thresholdSlider {
-  width: 100%;
-  accent-color: var(--coral);
-}
-
-.lab-mini-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: 1rem;
-}
-
-.lab-stat {
-  padding: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.lab-stat strong {
-  display: block;
-  margin-top: 0.25rem;
-  font-size: 1.05rem;
 }
 
 .quantum-ablation-section {
@@ -2354,7 +2385,6 @@ a {
   .visual-layout,
   .visual-layout.reverse,
   .journey-layout,
-  .lab-layout,
   .ablation-layout,
   .stability-layout,
   .gallery-layout,
@@ -2363,6 +2393,10 @@ a {
   .hybrid-layout,
   .imbalance-section,
   .conclusion-section {
+    grid-template-columns: 1fr;
+  }
+
+  .color-meaning-list {
     grid-template-columns: 1fr;
   }
 
@@ -2476,8 +2510,7 @@ a {
   .seminar-cover-meta,
   .intro-grid .thesis-points,
   .material-source-grid,
-  .heatmap,
-  .lab-mini-grid {
+  .heatmap {
     grid-template-columns: 1fr;
   }
 

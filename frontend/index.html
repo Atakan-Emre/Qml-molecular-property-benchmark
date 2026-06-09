@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260609-dataset-example-2">
+  <link rel="stylesheet" href="styles.css?v=20260609-stability-color-legend-2">
 </head>
 <body>
   <canvas id="quantumField" aria-hidden="true"></canvas>
@@ -103,7 +103,7 @@
           Literatür, moleküler özellik tahmininde temsil seçiminin, veri seti ölçeğinin,
           güçlü klasik referansların ve çoklu metrik raporlamanın birlikte ele alınması
           gerektiğini göstermektedir. Bu nedenle çalışma, kuantum modellerin klasik yöntemlerden
-          genel olarak üstün olduğunu ileri sürmez; hangi koşullarda anlamlı ya da sınırlı
+          genel olarak üstün olduğunu ileri sürmemektedir. Hangi koşullarda anlamlı ya da sınırlı
           sonuç verdiğini tartışmaktadır.
         </p>
       </div>
@@ -112,11 +112,11 @@
           <canvas id="literatureMapCanvas" width="1180" height="620" aria-label="Literatür çalışmasını klasik, grafik, kuantum ve hibrit araştırma çizgileriyle gösteren dinamik harita"></canvas>
         </div>
         <aside class="visual-note">
-          <h3>Literatürden çıkan ana okuma</h3>
+          <h3>Literatür</h3>
           <p>Kuantum ve hibrit yaklaşımların katkısı, ancak güçlü klasik referanslar, aynı veri ayrımları ve tamamlayıcı metriklerle birlikte değerlendirildiğinde anlamlıdır.</p>
           <div class="visual-note-list">
             <div><span>Klasik çizgi</span><strong>QSAR, SMILES ve ECFP/Morgan temsilleri güçlü başlangıç noktasıdır.</strong></div>
-            <div><span>Grafik çizgi</span><strong>GNN ve GAT molekülü atom-bağ grafiği olarak öğrenir; veri koşullarına duyarlıdır.</strong></div>
+            <div><span>Grafik çizgi</span><strong>GNN ve GAT molekülü atom-bağ grafiği olarak öğrenmektedir. Veri koşullarına duyarlıdır.</strong></div>
             <div><span>QML çizgisi</span><strong>QSVM, VQC, QGNN ve hibrit başlık NISQ sınırlılıklarıyla birlikte okunmalıdır.</strong></div>
           </div>
         </aside>
@@ -166,7 +166,7 @@
             <tr>
               <td>Gilmer ve ark., MPNN</td>
               <td>2017</td>
-              <td>Moleküler grafiklerde mesaj geçirme öğrenme çerçevesini kurmaktadır.</td>
+              <td>Moleküler grafiklerde Mesaj geçirme öğrenme çerçevesini kurmaktadır.</td>
               <td>GNN model ailesinin atom-bağ grafiği üzerinden neden kullanıldığını açıklamaktadır.</td>
             </tr>
             <tr>
@@ -229,7 +229,7 @@
         <p>
           Materyal katmanı MoleculeNet/DeepChem çizgisindeki BACE, BBBP ve ClinTox
           veri setlerinden oluşmaktadır. Her veri seti moleküler yapıyı SMILES dizgesiyle,
-          hedef biyomedikal sonucu ise ikili sınıf etiketiyle temsil etmektedir; aynı kayıtlar
+          hedef biyomedikal sonucu ise ikili sınıf etiketiyle temsil etmektedir. Aynı kayıtlar
           klasik, grafik, saf kuantum, kuantum grafik ve hibrit modellere farklı temsil
           biçimleriyle aktarılmaktadır.
         </p>
@@ -248,16 +248,16 @@
           <span>Veri setlerinin anlamı</span>
           <h3>Üç veri seti üç farklı biyomedikal soruyu temsil etmektedir</h3>
           <p>
-            BACE, BACE-1 inhibitör aktivitesini; BBBP, kan-beyin bariyerini geçebilme
-            durumunu; ClinTox ise klinik toksisite ve güvenlilik sinyalini içermektedir.
+            BACE, BACE-1 inhibitör aktivitesini. BBBP, kan-beyin bariyerini geçebilme
+            durumunu. ClinTox ise klinik toksisite ve güvenlilik sinyalini içermektedir.
             Bu yüzden sonuçlar yalnızca satır sayısıyla değil, biyomedikal görev bağlamıyla okunmaktadır.
           </p>
         </article>
         <article class="material-source-card">
           <span>Deneyde nasıl kullanılmaktadır?</span>
-          <h3>SMILES kaydı tüm model aileleri için ortak başlangıçtır</h3>
+          <h3>SMILES sekansı tüm model aileleri için ortak başlangıçtır</h3>
           <p>
-            Geçerli SMILES kayıtları RDKit ile işlenmektedir; ECFP/Morgan parmak izi,
+            Geçerli SMILES kayıtları RDKit ile işlenmektedir. ECFP/Morgan parmak izi,
             atom-bağ grafı, PCA veya kodlayıcı sonrası kubit girişi, eğitim-doğrulama-test
             ayrımı ve AUROC merkezli metrikler aynı deney hattından üretilmektedir.
           </p>
@@ -333,7 +333,7 @@
               <td>1211</td>
               <td>151</td>
               <td>152</td>
-              <td>Biyolojik aktivite görevi; dengeliye yakın test ayrımı</td>
+              <td>Biyolojik aktivite görevi. Dengeliye yakın test ayrımı</td>
             </tr>
             <tr>
               <td>BBBP</td>
@@ -341,7 +341,7 @@
               <td>1631</td>
               <td>204</td>
               <td>204</td>
-              <td>Farmakokinetik geçirgenlik görevi; pozitif sınıf baskın</td>
+              <td>Farmakokinetik geçirgenlik görevi. Pozitif sınıf baskın</td>
             </tr>
             <tr>
               <td>ClinTox</td>
@@ -349,7 +349,7 @@
               <td>1184</td>
               <td>148</td>
               <td>148</td>
-              <td>Toksisite görevi; belirgin sınıf dengesizliği</td>
+              <td>Toksisite görevi. Belirgin sınıf dengesizliği</td>
             </tr>
           </tbody>
         </table>
@@ -371,12 +371,12 @@
           <canvas id="datasetMeaningCanvas" width="1180" height="620" aria-label="Veri setlerinin biyomedikal anlam ve sınıf dağılım haritası"></canvas>
         </div>
         <aside class="visual-note">
-          <h3>Veri okuma kuralı</h3>
-          <p>AUROC karşılaştırması aynı metrik dili verir; ancak veri setinin sınıf dengesi ve biyomedikal görevi sonuçların nasıl savunulacağını belirler.</p>
+          <h3>Veri modelleri</h3>
+          <p>AUROC karşılaştırması aynı metrik dili vermektedir. Ancak veri setinin sınıf dengesi ve biyomedikal görevi sonuçların nasıl savunulacağını belirler.</p>
           <div class="visual-note-list">
-            <div><span>BACE</span><strong>Enzim inhibitörlüğü; dengeliye yakın test ayrımı.</strong></div>
-            <div><span>BBBP</span><strong>Pozitif sınıf baskın; geçiş sinyali güçlü.</strong></div>
-            <div><span>ClinTox</span><strong>Az pozitif örnek; F1, MCC ve özgüllük zorunlu.</strong></div>
+            <div><span>BACE</span><strong>Enzim inhibitörlüğü. Dengeliye yakın test ayrımı.</strong></div>
+            <div><span>BBBP</span><strong>Pozitif sınıf baskındır. Geçiş sinyali güçlü.</strong></div>
+            <div><span>ClinTox</span><strong>Az pozitif örnek. F1, MCC ve özgüllük zorunlu.</strong></div>
           </div>
         </aside>
       </div>
@@ -387,7 +387,7 @@
         <p class="section-kicker">Veri temsili</p>
         <h2>Veri Temsili</h2>
         <p>
-          Aynı molekül önce kimyasal dize olarak gelmektedir; klasik tanımlayıcı hatta ECFP bitlerine,
+          Aynı molekül önce kimyasal dize olarak gelmektedir. Klasik tanımlayıcı hatta ECFP bitlerine,
           grafik hattında atom-bağ ağına, kuantum hattında ise sıkıştırılmış kubit temsiline dönüşmektedir.
         </p>
       </div>
@@ -413,8 +413,8 @@
         <h2>Çalışmanın Akış Diyagramı</h2>
         <p>
           Bu görsel, seminerdeki deney hattını adım adım göstermektedir: molekül önce RDKit ile işlenmekte,
-          ECFP parmak izine çevrilmekte, klasik, grafik, saf kuantum ve hibrit kollara ayrılmakta;
-          kuantum kolda ölçümden sonra, tüm kollarda ise klasik metriklerle değerlendirilmektedir.
+          ECFP parmak izine çevrilmekte, klasik, grafik, saf kuantum ve hibrit kollara ayrılmakta.
+          Kuantum kolda ölçümden sonra, tüm kollarda ise klasik metriklerle değerlendirilmektedir.
         </p>
       </div>
       <div class="journey-layout">
@@ -428,7 +428,7 @@
     <section id="modeller" class="section-band">
       <div class="section-heading">
         <p class="section-kicker">Yöntem aileleri</p>
-        <h2>Kullanılan Yöntemler</h2>
+        <h2>Kullanılan Modeller</h2>
       </div>
       <div class="model-grid" id="modelFamilies"></div>
     </section>
@@ -439,7 +439,7 @@
         <h2>Kullanılan Klasik Makine Öğrenmesi Yöntemleri</h2>
         <p>
           Seminerde klasik taraf iki çizgide ilerlemektedir: ECFP/Morgan parmak izleri üzerinde
-          SVM ve MLP; moleküler grafik üzerinde GNN ve GAT. Molekül görüntü olarak değil,
+          SVM ve MLP kullanılmaktadır. Moleküler grafik üzerinde GNN ve GAT. Molekül görüntü olarak değil,
           atom-bağ grafiği olarak işlendiği için bu bölümde CNN yerine GNN/GAT akışı anlatılmaktadır.
         </p>
       </div>
@@ -457,7 +457,7 @@
         <p class="section-kicker">Kuantum nedir?</p>
         <h2>Kuantum Yapısı</h2>
         <p>
-          Kuantum bilgisayarlar klasik bit yerine kubit durumları üzerinde işlem yapmaktadır;
+          Kuantum bilgisayarlar klasik bit yerine kubit durumları üzerinde işlem yapmaktadır.
           ancak bu çalışmada gerçek kuantum donanımı kullanılmamıştır. QML modelleri klasik
           veriyi kuantum devre simülasyonuna taşıyan araştırma modelleri olarak ele alınmaktadır.
         </p>
@@ -468,11 +468,11 @@
         </div>
         <aside class="quantum-primer-note">
           <h3>Kuantum bilgisayar burada ne anlama gelmektedir?</h3>
-          <p>Bu seminerde kuantum tarafı fiziksel cihaz çalıştırma iddiası değildir; klasik moleküler verinin kuantum özellik uzayı, parametrik devre veya hibrit kuantum başlık fikriyle nasıl temsil edildiğini inceleyen simülasyon tabanlı karşılaştırmadır.</p>
+          <p>Bu seminerde kuantum tarafı fiziksel cihaz çalıştırma iddiası değildir. Klasik moleküler verinin kuantum özellik uzayı, parametrik devre veya hibrit kuantum başlık fikriyle nasıl temsil edildiğini inceleyen simülasyon tabanlı karşılaştırmadır.</p>
           <div class="concept-facts">
             <div class="concept-fact"><span>Kuantum bilgisayar</span><strong>Kubit, kapı, dolanıklık ve ölçüm ilkeleriyle çalışan hesaplama modelidir.</strong></div>
             <div class="concept-fact"><span>QML modelleri</span><strong>QSVM, VQC, QGNN ve Hybrid QHead bu çalışmadaki kuantum ilişkili model aileleridir.</strong></div>
-            <div class="concept-fact"><span>Simülasyon düzeyi</span><strong>Devreler klasik donanımda statevector/quantum simulator mantığıyla yürütüldü; gerçek cihaz üstünlüğü iddiası kurulmadı.</strong></div>
+            <div class="concept-fact"><span>Simülasyon düzeyi</span><strong>Devreler klasik donanımda statevector/quantum simulator mantığıyla yürütülmektedir. Gerçek cihaz üstünlüğü iddiası kurulmamaktadır.</strong></div>
           </div>
         </aside>
       </div>
@@ -534,7 +534,7 @@
           Bu bölüm, genel kuantum makine öğrenmesi fikrinden sonra çalışmadaki iki deneysel
           kuantum yolunu ayırmaktadır. Saf kuantum hattında ECFP vektörleri PCA ile
           kubit sayısına indirgenmekte ve ZZFeatureMap üzerinden kuantum özellik uzayına taşınmaktadır.
-          Hibrit yaklaşımda ise dondurulmuş MLP kodlayıcı daha kompakt bir gömme temsil üretmektedir;
+          Hibrit yaklaşımda ise dondurulmuş MLP kodlayıcı daha kompakt bir gömme temsil üretmektedir.
           Quantum Head bu temsil üzerinde parametrik devreyle karar katmanı kurmaktadır.
         </p>
         <ol class="pipeline-list">
@@ -615,7 +615,7 @@
         <p>
           Çalışmadaki kuantum modeller gerçek kuantum donanımında değil, klasik hesaplama donanımı üzerinde
           çalışan kuantum devre simülatörleriyle yürütülmüştür. Bu nedenle bulgular kuantum cihaz üstünlüğü
-          olarak değil; aynı veri ayrımları, temsil hattı, seed politikası ve metrik ailesi altında klasik,
+          olarak değil. Aynı veri ayrımları, temsil hattı, seed politikası ve metrik ailesi altında klasik,
           grafik, saf kuantum ve hibrit model davranışlarının karşılaştırması olarak okunmalıdır.
         </p>
       </div>
@@ -632,7 +632,7 @@
           <div class="protocol-fact">
             <span>Kuantum simülasyonu</span>
             <strong>Qiskit Aer · PennyLane</strong>
-            <small>QSVM/VQC için aer_statevector CPU; hibrit başlık için lightning.qubit. shots=0, exact statevector simülasyonunu ifade eder.</small>
+            <small>QSVM/VQC için aer_statevector CPU. Hibrit başlık için lightning.qubit. shots=0, exact statevector simülasyonunu ifade etmektedir.</small>
           </div>
           <div class="protocol-fact">
             <span>Eğitim donanımı</span>
@@ -642,7 +642,7 @@
           <div class="protocol-fact">
             <span>Donanım yorumu</span>
             <strong>Gerçek kuantum donanımı kullanılmadı</strong>
-            <small>Devre sonuçları simülasyon çıktısıdır; kuantum cihaz üstünlüğü iddiası kurulmaz.</small>
+            <small>Devre sonuçları simülasyon çıktısıdır. Kuantum cihaz üstünlüğü iddiası kurulmamaktadır.</small>
           </div>
           <div class="protocol-fact">
             <span>Tekrar üretilebilirlik</span>
@@ -709,31 +709,6 @@
       </div>
     </section>
 
-    <section id="lab" class="section-band metric-lab-section">
-      <div class="section-heading">
-        <p class="section-kicker">Metrik laboratuvarı</p>
-        <h2>Deneysel Sonuçlar</h2>
-        <p>
-          ClinTox dengesiz olduğu için AUROC tek başına yeterli değildir. Burada eşik değeri
-          değiştikçe karışıklık matrisi, F1, MCC, duyarlılık, özgüllük ve dengeli doğruluk birlikte hareket etmektedir.
-        </p>
-      </div>
-      <div class="lab-layout">
-        <div class="lab-panel">
-          <div class="result-controls small" id="metricLabModelTabs" aria-label="Metrik laboratuvarı model seçimi"></div>
-          <label class="range-control" for="thresholdSlider">
-            <span>Karar eşiği</span>
-            <strong id="thresholdValue">0.50</strong>
-          </label>
-          <input id="thresholdSlider" type="range" min="0.05" max="0.95" step="0.01" value="0.50">
-          <div class="lab-mini-grid" id="metricLabStats"></div>
-        </div>
-        <div class="lab-stage">
-          <canvas id="metricLabCanvas" width="1100" height="620" aria-label="ClinTox metrik laboratuvarı"></canvas>
-        </div>
-      </div>
-    </section>
-
     <section id="clintox-okumasi" class="section-band imbalance-section">
       <div class="imbalance-copy">
         <p class="section-kicker">ClinTox okuması</p>
@@ -778,7 +753,7 @@
       <div class="visual-layout reverse">
         <aside class="visual-note">
           <h3>Kapasite yorumu</h3>
-          <p>BACE q6-d1, BBBP q4-d1, ClinTox q8-d2 ile en iyi değeri verdi. Bu yüzden sayfadaki kuantum yorumu genel üstünlük değil, görev bazlı uyum vurgusudur.</p>
+          <p>BACE q6-d1, BBBP q4-d1, ClinTox q8-d2 ile en iyi değeri verdi. Bu yüzden sayfadaki kuantum yorumu Genel üstünlük değil, görev bazlı uyum vurgusudur.</p>
           <div class="visual-note-list">
             <div><span>q</span><strong>Devreye giren özellik boyutu ve kubit sayısı.</strong></div>
             <div><span>d</span><strong>Ardışık kuantum kapı katmanı derinliği.</strong></div>
@@ -817,8 +792,13 @@
         <h2>Deneysel Sonuçlar</h2>
         <p>
           Beş farklı seed ile tekrarlanan deneylerde standart sapma model kararlılığını göstermektedir.
-          QGNN ve bazı kuantum ayarlarında değişkenlik artarken, hibrit ve klasik çizgide daha kontrollü davranışlar görülebilir.
+          QGNN ve bazı kuantum ayarlarında değişkenlik artarken, hibrit ve klasik çizgide daha kontrollü davranışlar gözlemlenebilmektedir.
         </p>
+        <div class="color-meaning-list" aria-label="Kararlılık grafiği renk açıklaması">
+          <div><span class="color-dot turquoise"></span><strong>Turkuaz</strong><small>Klasik tanımlayıcı modelleri, özellikle SVM ve MLP çizgisini göstermektedir.</small></div>
+          <div><span class="color-dot purple"></span><strong>Mor</strong><small>Saf kuantum modelleri, özellikle QSVM ve VQC çizgisini göstermektedir.</small></div>
+          <div><span class="color-dot yellow"></span><strong>Sarı</strong><small>Hibrit kuantum-klasik yapıyı, özellikle Hybrid QHead modelini göstermektedir.</small></div>
+        </div>
       </div>
       <div class="stability-layout">
         <div class="result-controls" id="stabilityTaskTabs" aria-label="Kararlılık veri seti seçimi"></div>
@@ -835,7 +815,7 @@
         <h2>Deneysel Sonuçlar</h2>
         <p>
           Bu görsel, liderlik CSV'sindeki ortalama AUROC ve standart sapma değerlerini
-          temsili seed noktalarıyla açar. Noktalar ham seed kayıtları değil, raporlanan
+          temsili seed noktalarıyla açmaktadır. Noktalar ham seed kayıtları değil, raporlanan
           ortalama ve std bilgisinin görsel karşılığıdır.
         </p>
       </div>
@@ -902,7 +882,7 @@
         <h2>Tartışma ve Elde Edilen Bulgular</h2>
         <p>
           Bulgular genel bir kuantum üstünlüğü iddiasını desteklememektedir. Daha
-          savunulabilir sonuç; SVM ve MLP'nin güçlü referans konumunu koruduğu,
+          savunulabilir sonuç. SVM ve MLP'nin güçlü referans konumunu koruduğu,
           QSVM'in VQC'ye göre daha kararlı davrandığı, QGNN'in bazı görevlerde
           sinyal ürettiği ve Hybrid QHead'in belirli veri setlerinde rekabetçi
           bir tamamlayıcı model ailesi olduğudur.
@@ -911,7 +891,7 @@
       <div class="final-matrix">
         <div><strong>BACE</strong><span>Hybrid QHead q6-d1 zirvede, MLP çok yakın.</span></div>
         <div><strong>BBBP</strong><span>SVM en güçlü, hibrit GNN ile rekabetçi.</span></div>
-        <div><strong>ClinTox</strong><span>Hibrit ve MLP AUROC yakın; eşik metrikleri belirleyici.</span></div>
+        <div><strong>ClinTox</strong><span>Hibrit ve MLP AUROC yakındır. Eşik metrikleri belirleyicidir.</span></div>
       </div>
     </section>
 
@@ -928,7 +908,7 @@
       <div class="visual-layout reverse">
         <aside class="visual-note">
           <h3>Gelecek çalışma eksenleri</h3>
-          <p>Öneriler kuantum üstünlüğünü varsaymaz; klasik, kuantum ve hibrit modellerin hangi veri temsili ve deney koşullarında katkı verdiğini daha güvenilir biçimde sınamayı hedefler.</p>
+          <p>Öneriler kuantum üstünlüğünü varsaymamaktadır. Klasik, kuantum ve hibrit modellerin hangi veri temsili ve deney koşullarında katkı verdiğini daha güvenilir biçimde sınamayı hedeflemektedir.</p>
           <div class="visual-note-list">
             <div><span>Veri</span><strong>Tox21, HIV, SIDER, ESOL, FreeSolv ve Lipophilicity gibi görevlerle kapsam genişletilebilir.</strong></div>
             <div><span>Model</span><strong>Klasik referanslar, hibrit kodlayıcılar ve saf kuantum devre tasarımları daha sistematik denenebilir.</strong></div>
@@ -947,6 +927,6 @@
     <span>BACE · BBBP · ClinTox · QSVM · VQC · QGNN · Hybrid QHead</span>
   </footer>
 
-  <script src="script.js?v=20260609-dataset-example-2"></script>
+  <script src="script.js?v=20260609-stability-color-legend-2"></script>
 </body>
 </html>
