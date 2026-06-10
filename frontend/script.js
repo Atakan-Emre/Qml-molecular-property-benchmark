@@ -443,6 +443,7 @@ const i18n = {
     "Seed": "Seed",
     "Devre şeması notu": "Circuit-diagram note",
     "q0-qn etiketleri sabit devre telleridir. hareket eden yeşil noktalar gerçek parçacık değil temsil/durum akışıdır.": "q0-qn labels are fixed circuit wires. the moving green dots are not real particles, but representation/state flow.",
+    "q0-qn etiketleri sabit devre telleridir. Hareket eden yeşil noktalar gerçek parçacık değil temsil/durum akışıdır.": "q0-qn labels are fixed circuit wires. The moving green dots are not real particles, but representation/state flow.",
     "Bu canvas gerçek kuantum cihazı simüle etmemektedir. Deney hattını ve CSV satırını şematik olarak göstermektedir.": "This canvas does not simulate a real quantum device. It schematically shows the experimental pipeline and the CSV row.",
     "Şematik gösterim. gerçek cihaz simülasyonu değildir": "Schematic view. not a real-device simulation",
     "Bu sekmeler liderlik CSV'sindeki bütün kuantum model satırlarını görev ve model ailesine göre açmaktadır. Q/d ayarı, veri fraksiyonu ve AUROC birlikte izlenir.": "These tabs expose all quantum-model rows in the leaderboard CSV by task and model family. the q/d setting, data fraction, and AUROC are read together.",
@@ -972,6 +973,43 @@ const i18n = {
     "Seçili veri seti": "Selected dataset",
     "En düşük std": "Lowest std",
     "En yüksek std": "Highest std",
+    "Sunum": "Presentation",
+    "Kapak": "Cover",
+    "Amaç": "Aim",
+    "Literatür": "Literature",
+    "Veri": "Data",
+    "Kuantum": "Quantum",
+    "Yöntem": "Method",
+    "Protokol": "Protocol",
+    "Bulgular": "Findings",
+    "Sonuç": "Conclusion",
+    "Öneriler": "Recommendations",
+    "Seminer çalışmasının amacı, kuantum modellerinin klasik yöntemlerle deneysel ortamlarda karşılaştırılmasıdır.": "The aim of the seminar study is to compare quantum models with classical methods under experimental conditions.",
+    "Materyal katmanı MoleculeNet/DeepChem çizgisindeki BACE, BBBP ve ClinTox veri setlerinden oluşmaktadır. Her veri seti moleküler yapıyı SMILES dizgesiyle, hedef biyomedikal sonucu ise ikili sınıf etiketiyle temsil etmektedir. Aynı kayıtlar klasik, grafik, saf kuantum, kuantum grafik ve hibrit modellere farklı temsil biçimleriyle aktarılmaktadır.": "The material layer consists of the BACE, BBBP, and ClinTox datasets from the MoleculeNet/DeepChem line. Each dataset represents molecular structure with a SMILES string and the target biomedical outcome with a binary class label. The same records are transferred to classical, graph, pure quantum, quantum graph, and hybrid models through different representation forms.",
+    "MoleculeNet, model karşılaştırması için standart zemin sağlamaktadır": "MoleculeNet provides a standard basis for model comparison",
+    "MoleculeNet, ilaç keşfiyle ilişkili moleküler görevleri ortak veri formatı, ortak değerlendirme mantığı ve tekrarlanabilir benchmark yaklaşımıyla sunmaktadır. Bu çalışmada BACE, BBBP ve ClinTox bu standart karşılaştırma zemini nedeniyle kullanılmaktadır.": "MoleculeNet provides drug-discovery-related molecular tasks through a shared data format, a common evaluation logic, and a reproducible benchmark approach. BACE, BBBP, and ClinTox are used in this study because they provide this standard comparison basis.",
+    "BACE, BACE-1 inhibitör aktivitesini. BBBP, kan-beyin bariyerini geçebilme durumunu. ClinTox ise klinik toksisite ve güvenlilik sinyalini içermektedir. Bu yüzden sonuçlar yalnızca satır sayısıyla değil, biyomedikal görev bağlamıyla okunmaktadır.": "BACE contains BACE-1 inhibitory activity, BBBP contains blood-brain barrier penetration status, and ClinTox contains clinical toxicity and safety signals. Therefore, the results are interpreted not only by sample count, but also by biomedical task context.",
+    "SMILES sekansı tüm model aileleri için ortak başlangıçtır": "The SMILES sequence is the common starting point for all model families",
+    "BACE, BBBP ve ClinTox aynı büyüklükte değildir ve aynı biyomedikal görevi temsil etmemektedir. BACE enzim inhibisyonunu, BBBP kan-beyin bariyeri geçişini, ClinTox ise klinik toksisite sinyalini içermektedir. Sınıf dağılımı ve biyomedikal soru, model yorumunu doğrudan değiştirmektedir.": "BACE, BBBP, and ClinTox are not the same size and do not represent the same biomedical task. BACE covers enzyme inhibition, BBBP covers blood-brain barrier penetration, and ClinTox covers clinical toxicity signals. Class distribution and biomedical task definition directly affect model interpretation.",
+    "AUROC karşılaştırması aynı metrik dili vermektedir. Ancak veri setinin sınıf dengesi ve biyomedikal görevi sonuçların nasıl savunulacağını belirler.": "AUROC provides a common metric language for comparison. However, class balance and the biomedical task determine how the results should be defended.",
+    "Bu görsel, seminerdeki deney hattını adım adım göstermektedir: molekül önce RDKit ile işlenmekte, ECFP parmak izine çevrilmekte, klasik, grafik, saf kuantum ve hibrit kollara ayrılmakta. Kuantum kolda ölçümden sonra, tüm kollarda ise klasik metriklerle değerlendirilmektedir.": "This visual presents the experimental pipeline step by step: the molecule is first processed with RDKit, converted into an ECFP fingerprint, and branched into classical, graph, pure quantum, and hybrid routes. After measurement in the quantum route, all routes are evaluated with classical metrics.",
+    "Kullanılan Modeller": "Models Used",
+    "Seminerde klasik taraf iki çizgide ilerlemektedir: ECFP/Morgan parmak izleri üzerinde SVM ve MLP kullanılmaktadır. Moleküler grafik üzerinde GNN ve GAT. Molekül görüntü olarak değil, atom-bağ grafiği olarak işlendiği için bu bölümde CNN yerine GNN/GAT akışı anlatılmaktadır.": "The classical side of the seminar follows two routes: SVM and MLP are used on ECFP/Morgan fingerprints, while GNN and GAT are used on molecular graphs. Because the molecule is processed as an atom-bond graph rather than an image, this section explains the GNN/GAT flow instead of a CNN flow.",
+    "SVM: ECFP uzayında en geniş alanı bulur": "SVM: finds the widest margin in ECFP space",
+    "tanımlayıcı tabanlı klasik referans": "descriptor-based classical baseline",
+    "Bu sahne, seminerdeki kuantum modellerin ortak çalışma fikrini göstermektedir: moleküler veri önce sayısal temsile çevrilmekte, kubitlere kodlanmakta, devrede etkileşime sokulmakta, ölçüm istatistiği alınmakta ve sonuç AUROC gibi klasik metriklerle raporlanmaktadır.": "This scene shows the shared operating idea of the quantum models in the seminar: molecular data is first converted into a numerical representation, encoded into qubits, processed through circuit interactions, measured as statistics, and reported with classical metrics such as AUROC.",
+    "Bu bölüm, genel kuantum makine öğrenmesi fikrinden sonra çalışmadaki iki deneysel kuantum yolunu ayırmaktadır. Saf kuantum hattında ECFP vektörleri PCA ile kubit sayısına indirgenmekte ve ZZFeatureMap üzerinden kuantum özellik uzayına taşınmaktadır. Hibrit yaklaşımda ise dondurulmuş MLP kodlayıcı daha kompakt bir gömme temsil üretmektedir. Quantum Head bu temsil üzerinde parametrik devreyle karar katmanı kurmaktadır.": "After the general quantum machine learning idea, this section separates the two experimental quantum routes in the study. In the pure quantum route, ECFP vectors are reduced to the qubit count with PCA and mapped into a quantum feature space through ZZFeatureMap. In the hybrid approach, the frozen MLP encoder produces a more compact embedding representation. Quantum Head builds a decision layer on this representation through a parametrized circuit.",
+    "Klasik özellik uzayı kubit sayısına veya gömme uzayına indirgenmektedir.": "The classical feature space is reduced to the qubit count or embedding space.",
+    "Parametrik kuantum devre temsil üzerinde dönüşüm uygulamaktadır.": "The parametrized quantum circuit applies a transformation over the representation.",
+    "Sonuçlar çoklu metriklerle raporlanmaktadır.": "Results are reported with multiple metrics.",
+    "Circuit-diagram note: q0-qn etiketleri sabit devre telleridir. Hareket eden yeşil noktalar gerçek parçacık değil temsil/durum akışıdır.": "Circuit-diagram note: q0-qn labels are fixed circuit wires. The moving green dots are not real particles, but representation/state flow.",
+    "Veri setini, model ailesini, kubit sayısını ve devre derinliğini seçerek moleküler verinin kuantum makine öğrenmesi hattında nasıl kodlandığını, ölçümden sonra nasıl klasik metriklere döndüğünü oyunlaştırılmış bir sahnede incelemektedir.": "By selecting the dataset, model family, qubit count, and circuit depth, this gamified scene shows how molecular data is encoded in the quantum machine learning pipeline and how it returns to classical metrics after measurement.",
+    "Benchmark özeti, liderlik tablosu, figür manifesti ve deney bayrakları GitHub Pages içinde okunmaktadır. Böylece bulgu tabloları, model yoğunluğu ve kanıt galerisi tek kaynaktan güncellenmektedir.": "The benchmark summary, leaderboard, figure manifest, and experiment flags are read inside the static seminar page. This keeps finding tables, model density views, and the evidence gallery updated from one source.",
+    "Train, validation ve test ayrımları sabit tutulmuştur.": "Train, validation, and test splits are kept fixed.",
+    "Veri seti seçilerek sıralama, model aileleri ve hibrit modelin konumu incelenmektedir.": "Selecting a dataset reveals the ranking, model families, and the position of the hybrid model.",
+    "BACE için q6-d1, BBBP için q4-d1, ClinTox için q8-d2 öne çıkmıştır. Bu sonuç, kuantum başlığın kapasitesi ile veri setinin yapısı arasında görev bazlı bir uyum gerektiğini göstermektedir.": "q6-d1 stands out for BACE, q4-d1 for BBBP, and q8-d2 for ClinTox. This result shows that task-specific alignment is required between the capacity of the quantum head and the structure of the dataset.",
+    "Seminerin akademik gücü, güçlü klasik referansları korumasından ve dengesiz veri setlerinde tek metrikle karar vermemesinden kaynaklanmaktadır.": "The academic strength of the seminar comes from preserving strong classical baselines and avoiding single-metric decisions on imbalanced datasets.",
+    "Tezdeki öneriler, model başarısını yalnızca tek bir AUROC değerine indirgemeden veri kapsamı, temsil çeşitliliği, klasik referans gücü, kuantum devre tasarımı, istatistiksel güvenilirlik ve kimyasal yorumlanabilirlik eksenlerinde ilerletmektedir.": "The thesis recommendations move beyond reducing model success to a single AUROC value and extend the study through data coverage, representation diversity, classical baseline strength, quantum circuit design, statistical reliability, and chemical interpretability.",
     "ayrımları": "splits",
     "Sınıf dağılımı": "Class distribution",
     "yorumu": "interpretation",
@@ -999,9 +1037,9 @@ const i18n = {
 
 let currentLanguage = (() => {
   try {
-    return localStorage.getItem("qmlSeminarLanguage") === "en" ? "en" : "tr";
+    return localStorage.getItem("qmlSeminarLanguage") === "tr" ? "tr" : "en";
   } catch (error) {
-    return "tr";
+    return "en";
   }
 })();
 let languageObserver = null;
@@ -1045,12 +1083,16 @@ function translateDynamicText(text) {
   return text;
 }
 
+function polishEnglishText(text) {
+  return String(text ?? "").replace(/([.!?]\s+)([a-z])/g, (_, boundary, letter) => `${boundary}${letter.toUpperCase()}`);
+}
+
 function tx(value) {
   const raw = String(value ?? "");
   if (currentLanguage === "tr") return raw;
   const normalized = normalizeI18nText(raw);
   if (!normalized) return raw;
-  return i18n.en[normalized] || translateDynamicText(normalized);
+  return polishEnglishText(i18n.en[normalized] || translateDynamicText(normalized));
 }
 
 function preserveWhitespace(original, translated) {

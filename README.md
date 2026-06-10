@@ -1,230 +1,177 @@
-# MEDİKAL VERİ ANALİZİNDE KLASİK VE KUANTUM MAKİNE ÖĞRENMESİ MODELLERİNİN İNCELENMESİ
+# Classical and Quantum Machine Learning Models for Medical Data Analysis
 
-**Author:** Şahin Atakan Emre
-
+**Seminar title:** MEDİKAL VERİ ANALİZİNDE KLASİK VE KUANTUM MAKİNE ÖĞRENMESİ MODELLERİNİN İNCELENMESİ<br>
+**Presenter:** Şahin Atakan Emre<br>
+**Advisor:** Doç. Dr. Bihter DAŞ<br>
 **Repository:** QML Molecular Property Benchmark
 
-Klasik makine öğrenmesi, saf kuantum makine öğrenmesi ve hibrit kuantum-klasik modellerin ilaç adaylarına ait moleküler veriler üzerinde karşılaştırmalı değerlendirmesi.
+This repository contains a reproducible molecular property benchmark comparing classical machine learning, classical graph learning, pure quantum machine learning, quantum graph learning, and hybrid quantum-classical models on biomedical molecular datasets.
 
-Bu çalışma BACE, BBBP ve ClinTox veri setlerinde moleküler özellik tahmini problemine odaklanır. Amaç, güçlü klasik taban modeller ile kuantum ve hibrit kuantum yaklaşımlarını aynı veri ayrımları, aynı seed politikası ve aynı metrik ailesi altında değerlendirmektir.
+The study does not claim real quantum hardware advantage. Quantum models are evaluated as circuit-simulation based research models under the same data splits, seed policy, and metric family used for the classical baselines.
 
-## GitHub Pages Seminer Sayfası
+## Seminar Page
 
-Yayın adresi:
+Interactive seminar page:
 
 [https://atakan-emre.github.io/Qml-molecular-property-benchmark/](https://atakan-emre.github.io/Qml-molecular-property-benchmark/)
 
+## Research Aim
 
-## Tez Başlığı
+The aim of this seminar study is to compare quantum models with classical methods under experimental conditions.
 
-**MEDİKAL VERİ ANALİZİNDE KLASİK VE KUANTUM MAKİNE ÖĞRENMESİ MODELLERİNİN İNCELENMESİ**
+The central question is whether quantum and hybrid quantum models can produce meaningful signals for molecular property prediction when they are compared against strong classical baselines instead of weakened reference models.
 
-Kısa başlık önerisi:
+## Datasets
 
-**Kuantum Makine Öğrenmesi ile Moleküler Özellik Tahmini**
+The benchmark uses MoleculeNet-derived molecular datasets. Each molecule is represented by SMILES strings and processed into ECFP/Morgan fingerprints, graph representations, and compressed qubit-level inputs where required.
 
-## Araştırma Soruları
+| Dataset | Biomedical task | Train | Validation | Test | Interpretation note |
+|---|---:|---:|---:|---:|---|
+| BACE | BACE-1 inhibitor classification | 1211 | 151 | 152 | Nearly balanced binary classification task |
+| BBBP | Blood-brain barrier penetration prediction | 1631 | 204 | 204 | Positive class is dominant |
+| ClinTox | Clinical toxicity signal prediction | 1184 | 148 | 148 | Strong class imbalance |
 
-1. Klasik descriptor ve grafik tabanlı modeller, moleküler özellik tahmini için ne kadar güçlü bir temel karşılaştırma sağlar?
-2. QSVM, VQC ve QGNN modelleri klasik yaklaşımlara göre hangi koşullarda rekabetçi sonuç verebilir?
-3. Donmuş klasik encoder üzerine kurulan kuantum başlık mimarisi, saf kuantum modellere göre daha kararlı ve uygulanabilir bir hibrit yaklaşım sunar mı?
-
-## Veri Setleri
-
-| Veri seti | Görev | Train | Validation | Test | Not |
-|---|---|---:|---:|---:|---|
-| BACE | BACE-1 inhibitör sınıflandırması | 1211 | 151 | 152 | Dengeliye yakın ikili sınıflandırma |
-| BBBP | Kan-beyin bariyeri geçiş tahmini | 1631 | 204 | 204 | Pozitif sınıf baskın |
-| ClinTox | Klinik toksisite tahmini | 1184 | 148 | 148 | Belirgin sınıf dengesizliği |
-
-Veriler MoleculeNet kaynaklıdır. SMILES temsilleri RDKit ile işlenmiş, ECFP parmak izleri ve moleküler grafik temsilleri üretilmiştir. Aktif veri konumu:
+Processed data location:
 
 ```text
 data/processed/{bace,bbbp,clintox}/{train,val,test}/
 ```
 
-## Model Aileleri
+Each split contains:
 
-| Grup | Modeller | Temsil | Rol |
+- `data.csv`: SMILES records and labels
+- `ecfp_r2_b1024.npy`: radius-2 1024-bit ECFP/Morgan fingerprints
+- `X.npy`: model-ready feature array
+- `y.npy`: binary labels
+- `valid_mask.npy`: valid SMILES mask
+
+## Model Families
+
+| Family | Models | Representation | Role in the study |
 |---|---|---|---|
-| Klasik descriptor | SVM, MLP | ECFP | Güçlü klasik baseline |
-| Klasik grafik | GNN, GAT | Moleküler grafik | Grafik tabanlı öğrenme |
-| Saf kuantum descriptor | QSVM, VQC | ECFP + PCA + kuantum devre | Kuantum feature map ve ansatz etkisi |
-| Kuantum grafik | QGNN | Moleküler grafik | Kuantum mesaj geçirme yaklaşımı |
-| Hibrit kuantum-klasik | Frozen MLP encoder + quantum head | ECFP embedding | Tezin ana hibrit yaklaşımı |
+| Classical descriptor models | SVM, MLP | ECFP/Morgan fingerprints | Strong non-quantum baselines |
+| Classical graph models | GNN, GAT | Atom-bond molecular graphs | Graph-based molecular learning baselines |
+| Pure quantum descriptor models | QSVM, VQC | ECFP + PCA + quantum circuit simulation | Quantum feature map and variational circuit comparison |
+| Quantum graph model | QGNN | Molecular graph + quantum layer | Quantum graph learning experiment |
+| Hybrid quantum-classical model | Frozen MLP encoder + Quantum Head | Learned embedding + parametrized quantum circuit | Main hybrid comparison line |
 
-## Öne Çıkan Bulgular
+## Quantum Scope
 
-Ana karşılaştırma metriği AUROC'tur. ClinTox gibi dengesiz veri setlerinde AUROC; PR-AUC, F1, MCC, sensitivity ve specificity ile birlikte yorumlanmalıdır.
+The quantum part is implemented as simulation-based quantum machine learning. Classical molecular features are compressed to the selected qubit dimension, encoded into a quantum circuit, processed through quantum gates, and measured back into classical statistics.
 
-| Veri seti | En güçlü klasik sonuç | En güçlü hibrit sonuç | Saf kuantumda öne çıkan sonuç |
+Key concepts represented in the seminar page:
+
+- **Qubit:** A two-state quantum representation before measurement.
+- **Quantum gates:** H, X, RX, RY, RZ, CNOT, CZ, and measurement operations are used to explain state rotation, phase change, controlled interaction, entanglement, and readout.
+- **Circuit depth:** The number of successive quantum gate layers. Higher depth increases expressive capacity but does not guarantee better performance.
+- **Measurement:** The circuit output is converted into classical statistics and evaluated with classical metrics.
+
+## Main Results
+
+The primary ranking metric is AUROC. Because ClinTox is strongly imbalanced, AUROC should be read together with PR-AUC, F1, MCC, sensitivity, specificity, and balanced accuracy.
+
+| Dataset | Best result by AUROC | Strong classical reference | Best pure or graph quantum result |
 |---|---:|---:|---:|
-| BACE | MLP: 0.9905 | Hybrid QHead q6-d1: 0.9914 | QSVM q6: 0.8741 |
-| BBBP | SVM: 0.9706 | Hybrid QHead q4-d1: 0.9444 | QGNN: 0.8995 |
-| ClinTox | MLP: 0.8802 | Hybrid QHead q8-d2: 0.8804 | QGNN: 0.7582 |
+| BACE | Hybrid QHead q6-d1: 0.9914 ± 0.0027 | MLP: 0.9905 ± 0.0033 | QSVM q6-d2: 0.8741 ± 0.0274 |
+| BBBP | SVM: 0.9706 ± 0.0000 | MLP: 0.9564 ± 0.0107 | QGNN q4-d2: 0.8995 ± 0.0326 |
+| ClinTox | Hybrid QHead q8-d2: 0.8804 ± 0.0157 | MLP: 0.8802 ± 0.0189 | QGNN q4-d2: 0.7582 ± 0.1350 |
 
-Genel gözlem: klasik descriptor modeller hâlâ çok güçlüdür. Buna karşın hibrit kuantum başlık mimarisi BACE ve ClinTox üzerinde klasik performans seviyesine yaklaşabilmiştir. Saf kuantum descriptor modeller arasında QSVM, VQC'ye göre daha kararlı sonuç vermiştir.
+Summary of interpretation:
 
-## Repo Yapısı
+- Classical descriptor models remain very strong, especially SVM on BBBP and MLP on BACE and ClinTox.
+- Hybrid QHead is competitive on BACE and ClinTox and is the top-ranked configuration for those two datasets.
+- QSVM is more stable than VQC among pure quantum descriptor models, but it does not surpass the strongest classical baselines.
+- QGNN produces meaningful graph-quantum signals on BBBP, but variability increases across tasks.
+- More qubits or greater circuit depth does not automatically improve performance. The best qubit-depth setting is task dependent.
+
+## Reproducibility
+
+Main experiments use five seeds:
+
+```text
+0, 42, 123, 456, 789
+```
+
+Reported scores are mean and standard deviation across seeds where applicable. Single-seed interpretation is intentionally avoided.
+
+Experimental hardware used for the reported training runs:
+
+```text
+CPU: AMD Ryzen 9 9950X
+GPU: MSI NVIDIA GeForce RTX 4080 SUPER
+RAM: 64 GB DDR5 6200 MHz
+```
+
+## Experimental Outputs
+
+The repository is organized around completed experiment outputs. The main CSV files summarize the evaluated models, dataset-level rankings, seed stability, qubit-depth settings, and metric families used in the seminar.
+
+Main analysis files:
+
+| File | Purpose |
+|---|---|
+| `results/analysis/molecular_leaderboard.csv` | Ranked AUROC leaderboard by dataset and model configuration |
+| `results/analysis/molecular_benchmark_summary.csv` | Full metric summary across classical, graph, quantum, and hybrid models |
+| `results/analysis/molecular_inventory.json` | Inventory of generated tables, figures, and experiment artifacts |
+
+Frontend-ready copies used by the seminar page:
+
+| File | Purpose |
+|---|---|
+| `frontend/data/molecular_leaderboard.csv` | Interactive leaderboard and result visuals |
+| `frontend/data/molecular_benchmark_summary.csv` | Dynamic charts, metric cards, and model comparisons |
+| `frontend/data/figure_manifest.json` | Figure registry for seminar visuals |
+
+Experiment-level outputs:
+
+| Path | Content |
+|---|---|
+| `results/tables/*_aggregated.json` | Mean and standard deviation over seeds for each experiment |
+| `results/tables/*_results.json` | Seed-level metric records where available |
+| `results/analysis/figures/` | Analysis figures used for interpretation |
+| `results/analysis/paper_figures/` | Selected high-resolution comparison figures |
+
+Selected visual outputs:
+
+![BACE all-method parameter summary](results/analysis/paper_figures/molecule_bace_all_methods_parameters.png)
+
+![BBBP all-method parameter summary](results/analysis/paper_figures/molecule_bbbp_all_methods_parameters.png)
+
+![ClinTox all-method parameter summary](results/analysis/paper_figures/molecule_clintox_all_methods_parameters.png)
+
+## Repository Structure
 
 ```text
 Qml-molecular-property-benchmark/
-├── README.md
-├── requirements.txt
-├── LICENSE
-├── .gitattributes
-├── .github/
-│   └── workflows/
-│       └── deploy-pages.yml
-├── frontend/
-│   ├── index.html
-│   ├── styles.css
-│   ├── script.js
-│   ├── data/
-│   └── assets/
+├── data/
+│   └── processed/
 ├── docs/
 │   └── molecular_report_tr.md
-├── source/
-│   ├── molecule/
-│   │   ├── classical/
-│   │   ├── quantum/
-│   │   ├── configs/
-│   │   └── data/
-│   └── shared/
-├── data/
-│   ├── README.md
-│   └── processed/
-│       ├── bace/
-│       ├── bbbp/
-│       └── clintox/
+├── frontend/
+│   ├── index.html
+│   ├── script.js
+│   ├── styles.css
+│   ├── sunum.html
+│   ├── data/
+│   └── assets/
+├── provenance/
 ├── results/
-│   ├── README.md
 │   ├── analysis/
 │   └── tables/
-└── provenance/
-    ├── README.md
-    └── MANIFEST.md
+├── source/
+│   ├── molecule/
+│   └── shared/
+├── CITATION.cff
+├── LICENSE
+├── README.md
+└── requirements.txt
 ```
 
-Yerel doğrulama amacıyla tutulan ağır eğitim çıktıları `results/checkpoints/`, `results/logs/` ve `results/figures/` altında kalır. Bu klasörler silinmemiştir; Git geçmişini büyütmemek için `.gitignore` kapsamındadır.
+The `thesis/` directory is intentionally ignored by Git. It is kept as a local seminar and thesis working area and is not part of the public repository content.
 
-`thesis/` klasörü yerel seminer/tez çalışma alanı olarak korunur ve GitHub'a aktarılmaması için `.gitignore` içindedir.
+## Metrics
 
-## Kurulum
-
-Windows PowerShell örneği:
-
-```powershell
-cd E:\molecular
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-```
-
-Kodları doğrudan `source/` altından çalıştırmak için:
-
-```powershell
-$env:PYTHONPATH = (Resolve-Path .\source).Path
-$env:MOLECULAR_RESULTS_DIR = (Resolve-Path .\results_runtime).Path
-$env:MOLECULAR_OUTPUT_DIR = (Resolve-Path .\outputs_runtime).Path
-New-Item -ItemType Directory -Force .\results_runtime, .\outputs_runtime | Out-Null
-```
-
-Hazır tez çıktıları `results/analysis/` ve `results/tables/` altında tutulur. Yeni denemeler varsayılan olarak `results_runtime/` ve `outputs_runtime/` altında üretilir.
-
-## Veri Hazırlama
-
-Veriler hazır olarak `data/processed/` içinde bulunur. Yeniden üretmek için:
-
-```powershell
-python source\molecule\data\download_moldata.py `
-  --data-dir data\processed `
-  --datasets bace bbbp clintox `
-  --generate-ecfp `
-  --generate-rdkit
-```
-
-Her split için temel dosyalar:
-
-- `data.csv`: SMILES ve etiket bilgisi
-- `ecfp_r2_b1024.npy`: ECFP parmak izi
-- `X.npy`: model girdisi
-- `y.npy`: etiket
-- `valid_mask.npy`: geçerli SMILES maskesi
-
-## Deney Komutları
-
-Klasik descriptor modeller:
-
-```powershell
-python source\molecule\classical\train_descriptor.py `
-  --model mlp `
-  --dataset bace `
-  --data-dir data\processed `
-  --seeds 0 42 123 456 789
-```
-
-Klasik grafik modeller:
-
-```powershell
-python source\molecule\classical\train_graph.py `
-  --model gnn `
-  --dataset clintox `
-  --data-dir data\processed `
-  --seeds 0 42 123 456 789
-```
-
-QSVM:
-
-```powershell
-python source\molecule\quantum\descriptor\train_qsvm.py `
-  --dataset bace `
-  --data-dir data\processed `
-  --n-qubits 6 `
-  --circuit-depth 2 `
-  --entanglement linear `
-  --seeds 0 42 123 456 789
-```
-
-VQC:
-
-```powershell
-python source\molecule\quantum\descriptor\train_vqc.py `
-  --dataset bace `
-  --data-dir data\processed `
-  --n-qubits 4 `
-  --circuit-depth 2 `
-  --maxiter 200 `
-  --seeds 0 42 123 456 789
-```
-
-QGNN:
-
-```powershell
-python source\molecule\quantum\graph\train_qgnn.py `
-  --dataset bbbp `
-  --data-dir data\processed `
-  --n-qubits 4 `
-  --circuit-depth 2 `
-  --seeds 0 42 123 456 789
-```
-
-Hibrit kuantum başlık:
-
-```powershell
-python source\molecule\quantum\descriptor\train_hybrid_qhead.py `
-  --dataset bace `
-  --data-dir data\processed `
-  --n-qubits 6 `
-  --circuit-depth 1 `
-  --seeds 0 42 123 456 789
-```
-
-Hibrit model, önce eğitilmiş klasik MLP encoder checkpoint'ini kullanır. Bu nedenle ilgili MLP deneyinin daha önce çalıştırılmış olması gerekir.
-
-## Metrikler
-
-Projede kullanılan temel metrikler:
+The benchmark reports:
 
 - AUROC
 - PR-AUC
@@ -237,48 +184,11 @@ Projede kullanılan temel metrikler:
 - Sensitivity
 - Specificity
 - ECE
-- Eğitim ve çıkarım süresi
+- Training time
+- Inference time
 
-## Sonuç Dosyaları
+## Citation and License
 
-Ana analiz dosyaları:
+The code is released under the MIT License. The datasets originate from MoleculeNet and DeepChem resources and remain subject to their own citation and licensing requirements.
 
-- `results/analysis/molecular_benchmark_summary.csv`
-- `results/analysis/molecular_leaderboard.csv`
-- `results/analysis/molecular_inventory.json`
-
-Deney metrikleri:
-
-- `results/tables/*_aggregated.json`
-- `results/tables/*_results.json`
-
-Tez ve makale için seçilmiş figürler:
-
-- `results/analysis/paper_figures/`
-- `results/analysis/figures/`
-
-Öne çıkan karşılaştırma görselleri:
-
-![BACE tüm yöntem-parametre özeti](results/analysis/paper_figures/molecule_bace_all_methods_parameters.png)
-
-![BBBP tüm yöntem-parametre özeti](results/analysis/paper_figures/molecule_bbbp_all_methods_parameters.png)
-
-![ClinTox tüm yöntem-parametre özeti](results/analysis/paper_figures/molecule_clintox_all_methods_parameters.png)
-
-## Dokümantasyon
-
-- [Moleküler deney raporu](docs/molecular_report_tr.md)
-
-## Tekrar Üretilebilirlik
-
-Ana deneylerde kullanılan seed seti:
-
-```text
-0, 42, 123, 456, 789
-```
-
-Deneyler ortalama ve standart sapma ile raporlanır. Tek bir seed sonucuna dayalı yorum yapılmamalıdır. Dengesiz veri setlerinde özellikle ClinTox için accuracy tek başına yeterli değildir; AUROC, PR-AUC, F1, MCC, sensitivity ve specificity birlikte değerlendirilmelidir.
-
-## Lisans ve Atıf
-
-Kod MIT lisansı ile paylaşılır. Veri setleri MoleculeNet/DeepChem kaynaklıdır ve kendi lisans/atıf koşullarına tabidir. Tez veya makale yazımında MoleculeNet, RDKit, PyTorch, PyTorch Geometric, Qiskit, PennyLane ve kullanılan model ailelerinin özgün yayınlarına atıf verilmelidir.
+When using this repository in academic writing, cite the relevant sources for MoleculeNet, RDKit, PyTorch, PyTorch Geometric, Qiskit, PennyLane, SVM, GNN, GAT, QSVM, VQC, QGNN, and hybrid quantum-classical learning methods.
