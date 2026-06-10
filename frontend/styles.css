@@ -1075,6 +1075,7 @@ p,
 .concept-fact,
 .architecture-fact,
 .quantum-model-fact {
+  min-width: 0;
   padding-top: 0.65rem;
   border-top: 1px solid var(--line);
 }
@@ -1095,6 +1096,14 @@ p,
   margin-top: 0.18rem;
   font-family: "JetBrains Mono", monospace;
   font-size: 0.9rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.quantum-primer-note .concept-fact strong {
+  font-family: "Inter", sans-serif;
+  font-size: 0.88rem;
 }
 
 .quantum-model-section {

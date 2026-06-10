@@ -267,6 +267,7 @@ const i18n = {
     "QSVM, VQC, QGNN ve Hybrid QHead bu çalışmadaki kuantum ilişkili model aileleridir.": "QSVM, VQC, QGNN, and Hybrid QHead are the quantum-related model families in this study.",
     "Simülasyon düzeyi": "Simulation level",
     "Devreler klasik donanımda statevector/quantum simulator mantığıyla yürütülmektedir. Gerçek cihaz üstünlüğü iddiası kurulmamaktadır.": "Circuits were executed on classical hardware with a statevector/quantum simulator logic. no real-device superiority claim was made.",
+    "Devreler klasik donanımda simülatör ile yürütülmektedir. Gerçek cihaz üstünlüğü iddiası kurulmamaktadır.": "Circuits are executed on classical hardware through a simulator. no real-device superiority claim is made.",
     "Kuantum bilgisayar ve QML katmanı": "Quantum computer and QML layer",
     "Bu çalışma fiziksel kuantum cihazı değil, klasik donanımda kuantum devre simülasyonu kullanmaktadır.": "This study does not use a physical quantum device. it uses quantum circuit simulation on classical hardware.",
     "Klasik hesaplama": "Classical computing",
@@ -278,6 +279,7 @@ const i18n = {
     "Bu çalışmadaki QML": "QML in this study",
     "simülasyon + metrik": "simulation + metric",
     "QSVM/VQC/QGNN/Hybrid QHead deneyleri gerçek kuantum donanımı sonucu değildir. Klasik bilgisayarda kuantum devre davranışını hesaplayan simülatör çıktısıdır.": "QSVM/VQC/QGNN/Hybrid QHead experiments are not real quantum hardware results. they are simulator outputs that compute quantum circuit behavior on a classical computer.",
+    "Gerçek kuantum donanımı kullanılmamaktadır. Sonuçlar klasik bilgisayarda çalışan kuantum devre simülatörü çıktısıdır.": "Real quantum hardware is not used. Results are outputs of a quantum circuit simulator running on a classical computer.",
     "Kuantum kavram seçimi": "Quantum concept selection",
     "Kuantum kavramlarını anlatan dinamik görsel": "Dynamic visual explaining quantum concepts",
     "Quantum ML nasıl çalışmaktadır?": "How does quantum machine learning work?",
@@ -3849,10 +3851,10 @@ function drawQuantumOverviewCanvas() {
 
   ctx.fillStyle = "#ffffff";
   ctx.font = "800 18px Inter, sans-serif";
-  ctx.fillText("Kuantum bilgisayar ve QML katmanı", 24, 34);
+  ctx.fillText(tx("Kuantum bilgisayar ve QML katmanı"), 24, 34);
   ctx.fillStyle = "rgba(255,255,255,0.68)";
   ctx.font = "700 12px Inter, sans-serif";
-  drawBoundedWrappedText(ctx, "Bu çalışma fiziksel kuantum cihazı değil, klasik donanımda kuantum devre simülasyonu kullanmaktadır.", 24, 56, width - 48, 15, "rgba(255,255,255,0.68)", ctx.font, compact ? 2 : 1);
+  drawBoundedWrappedText(ctx, tx("Bu çalışma fiziksel kuantum cihazı değil, klasik donanımda kuantum devre simülasyonu kullanmaktadır."), 24, 56, width - 48, 15, "rgba(255,255,255,0.68)", ctx.font, compact ? 2 : 1);
 
   const pad = compact ? 22 : 30;
   const top = compact ? 96 : 100;
@@ -3864,19 +3866,16 @@ function drawQuantumOverviewCanvas() {
       title: "Klasik hesaplama",
       subtitle: "bit -> vektör -> karar",
       color: "#00a6c8",
-      lines: ["0/1 durum", "ECFP 1024", "SVM · MLP · GNN"],
     },
     {
       title: "Kuantum hesaplama",
       subtitle: "kubit -> devre -> ölçüm",
       color: "#7b61ff",
-      lines: ["süperpozisyon", "dolanıklık", "ölçüm istatistiği"],
     },
     {
       title: "Bu çalışmadaki QML",
       subtitle: "simülasyon + metrik",
       color: "#e0a100",
-      lines: ["QSVM · VQC", "QGNN", "Hybrid QHead"],
     },
   ];
 
@@ -3893,10 +3892,10 @@ function drawQuantumOverviewCanvas() {
 
     ctx.fillStyle = "#ffffff";
     ctx.font = compact ? "800 14px Inter, sans-serif" : "800 15px Inter, sans-serif";
-    drawBoundedWrappedText(ctx, panel.title, x + 16, y + 28, panelW - 32, 16, "#ffffff", ctx.font, 1);
+    drawBoundedWrappedText(ctx, tx(panel.title), x + 16, y + 28, panelW - 32, 16, "#ffffff", ctx.font, 1);
     ctx.fillStyle = withAlpha(panel.color, 0.95);
     ctx.font = "800 11px JetBrains Mono, monospace";
-    drawBoundedWrappedText(ctx, panel.subtitle, x + 16, y + 52, panelW - 32, 13, withAlpha(panel.color, 0.95), ctx.font, 1);
+    drawBoundedWrappedText(ctx, tx(panel.subtitle), x + 16, y + 52, panelW - 32, 13, withAlpha(panel.color, 0.95), ctx.font, 1);
 
     if (index === 0) {
       const bitY = y + panelH * 0.68;
@@ -3929,30 +3928,43 @@ function drawQuantumOverviewCanvas() {
     }
 
     if (index === 2) {
-      const labels = ["QSVM", "VQC", "QGNN", "QHead"];
-      labels.forEach((label, labelIndex) => {
-        const lx = x + 18 + (labelIndex % 2) * ((panelW - 48) / 2);
-        const ly = y + panelH * 0.56 + Math.floor(labelIndex / 2) * 34;
-        ctx.fillStyle = withAlpha(labelIndex === 3 ? "#e0a100" : labelIndex === 2 ? "#c93d8d" : "#7b61ff", 0.2);
-        roundRect(ctx, lx, ly, (panelW - 58) / 2, 24, 5);
-        ctx.fill();
-        ctx.strokeStyle = "rgba(255,255,255,0.14)";
+      const nodeCount = compact ? 5 : 7;
+      const flowTop = y + panelH * 0.58;
+      const flowBottom = y + panelH * 0.84;
+      const nodes = Array.from({ length: nodeCount }, (_, nodeIndex) => {
+        const ratio = nodeCount === 1 ? 0.5 : nodeIndex / (nodeCount - 1);
+        return {
+          x: x + 24 + ratio * (panelW - 48),
+          y: flowTop + ((Math.sin(t * 2.1 + nodeIndex * 0.95) + 1) / 2) * (flowBottom - flowTop),
+          color: nodeIndex % 3 === 0 ? "#7b61ff" : nodeIndex % 3 === 1 ? "#c93d8d" : "#e0a100",
+        };
+      });
+      ctx.lineWidth = 1.2;
+      nodes.forEach((node, nodeIndex) => {
+        if (nodeIndex === 0) return;
+        const prev = nodes[nodeIndex - 1];
+        ctx.strokeStyle = withAlpha(node.color, 0.42);
+        ctx.beginPath();
+        ctx.moveTo(prev.x, prev.y);
+        ctx.quadraticCurveTo((prev.x + node.x) / 2, flowTop - 8, node.x, node.y);
         ctx.stroke();
-        ctx.fillStyle = "#ffffff";
-        ctx.font = "800 10px JetBrains Mono, monospace";
-        ctx.fillText(label, lx + 8, ly + 16);
+      });
+      nodes.forEach((node, nodeIndex) => {
+        const radius = 5.5 + ((Math.sin(t * 3 + nodeIndex) + 1) / 2) * 3.5;
+        ctx.fillStyle = withAlpha(node.color, 0.22);
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, radius * 2.1, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = node.color;
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, radius, 0, Math.PI * 2);
+        ctx.fill();
       });
     }
-
-    panel.lines.forEach((line, lineIndex) => {
-      ctx.fillStyle = "rgba(255,255,255,0.68)";
-      ctx.font = "800 10px Inter, sans-serif";
-      ctx.fillText(`• ${tx(line)}`, x + 16, y + panelH - 54 + lineIndex * 15);
-    });
   });
 
-  const bottomY = compact ? top + panels.length * (panelH + panelGap) + 2 : height - 78;
-  const bottomH = Math.max(58, height - bottomY - pad);
+  const bottomY = compact ? top + panels.length * panelH + (panels.length - 1) * panelGap + 14 : height - 96;
+  const bottomH = Math.max(compact ? 72 : 78, height - bottomY - pad);
   ctx.fillStyle = "rgba(255,255,255,0.075)";
   roundRect(ctx, pad, bottomY, width - pad * 2, bottomH, 8);
   ctx.fill();
@@ -3960,16 +3972,17 @@ function drawQuantumOverviewCanvas() {
   ctx.stroke();
   ctx.fillStyle = "#e0a100";
   ctx.font = "800 12px JetBrains Mono, monospace";
-  ctx.fillText("Simülasyon düzeyi", pad + 16, bottomY + 24);
-  drawWrappedText(
+  ctx.fillText(tx("Simülasyon düzeyi"), pad + 16, bottomY + 24);
+  drawBoundedWrappedText(
     ctx,
-    "QSVM/VQC/QGNN/Hybrid QHead deneyleri gerçek kuantum donanımı sonucu değildir. Klasik bilgisayarda kuantum devre davranışını hesaplayan simülatör çıktısıdır.",
+    tx("Gerçek kuantum donanımı kullanılmamaktadır. Sonuçlar klasik bilgisayarda çalışan kuantum devre simülatörü çıktısıdır."),
     pad + 16,
     bottomY + 46,
     width - pad * 2 - 32,
     16,
     "rgba(255,255,255,0.74)",
     "700 12px Inter, sans-serif",
+    compact ? 3 : 2,
   );
 }
 
