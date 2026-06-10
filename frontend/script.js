@@ -257,12 +257,16 @@ const i18n = {
     "Önce kuantum bilgisayarı, sonra kubit ve QML kavramlarını okuyalım": "First read the quantum computer, then qubits and QML concepts",
     "Kubit, süperpozisyon ve ölçüm aynı görsel anlatımda": "Qubit, superposition, and measurement in a shared visual explanation",
     "Kuantum hesaplama, klasik bitlerden farklı olarak kubit durumları üzerinde çalışmaktadır. Bu bölüm, seminerde kullanılan QML akışının arkasındaki kubit, süperpozisyon, dolanıklık, ölçüm ve devre derinliği kavramlarını hareketli grafikle açmaktadır.": "Unlike classical computing over bits, quantum computing operates on qubit states. This section uses motion graphics to unpack the qubit, superposition, entanglement, measurement, and circuit-depth concepts behind the QML pipeline used in the seminar.",
+    "Kuantum hesaplama, klasik bitlerden farklı olarak kubit durumları ve kuantum kapıları üzerinde çalışmaktadır. Bu bölüm, seminerde kullanılan QML akışının arkasındaki kubit, kapı türleri, süperpozisyon, dolanıklık, ölçüm ve devre derinliği kavramlarını hareketli grafikle açmaktadır.": "Unlike classical computing over bits, quantum computing operates on qubit states and quantum gates. This section uses motion graphics to unpack qubits, gate types, superposition, entanglement, measurement, and circuit depth behind the QML pipeline used in the seminar.",
+    "Kuantum bilgisayarlar klasik bit yerine kubit durumları ve kuantum kapıları üzerinde işlem yapmaktadır. ancak bu çalışmada gerçek kuantum donanımı kullanılmamıştır. QML modelleri klasik veriyi kuantum devre simülasyonuna taşıyan araştırma modelleri olarak ele alınmaktadır.": "Quantum computers operate on qubit states and quantum gates instead of classical bits. however, no real quantum hardware was used in this study. QML models are treated as research models that map classical data into quantum circuit simulation.",
+    "Kuantum bilgisayarlar klasik bit yerine kubit durumları ve kuantum kapıları üzerinde işlem yapmaktadır. Ancak bu çalışmada gerçek kuantum donanımı kullanılmamıştır. QML modelleri klasik veriyi kuantum devre simülasyonuna taşıyan araştırma modelleri olarak ele alınmaktadır.": "Quantum computers operate on qubit states and quantum gates instead of classical bits. However, no real quantum hardware was used in this study. QML models are treated as research models that map classical data into quantum circuit simulation.",
     "Kuantum bilgisayarlar klasik bit yerine kubit durumları üzerinde işlem yapmaktadır. Ancak bu çalışmada gerçek kuantum donanımı kullanılmamıştır. QML modelleri klasik veriyi kuantum devre simülasyonuna taşıyan araştırma modelleri olarak ele alınmıştır.": "Quantum computers operate on qubit states instead of classical bits. however, no real quantum hardware was used in this study. QML models were treated as research models that map classical data into quantum circuit simulation.",
     "Kuantum bilgisayar, QML model aileleri ve simülasyon düzeyini anlatan dinamik genel bakış": "Dynamic overview explaining quantum computers, QML model families, and simulation level",
     "Kuantum bilgisayar burada ne anlama gelmektedir?": "What does a quantum computer mean here?",
     "Bu seminerde kuantum tarafı fiziksel cihaz çalıştırma iddiası değildir. Klasik moleküler verinin kuantum özellik uzayı, parametrik devre veya hibrit kuantum başlık fikriyle nasıl temsil edildiğini inceleyen simülasyon tabanlı karşılaştırmadır.": "In this seminar, the quantum side is not a claim of running a physical device. it is a simulation-based comparison that examines how classical molecular data is represented through quantum feature spaces, parametric circuits, or a hybrid quantum head.",
     "Kuantum bilgisayar": "Quantum computer",
     "Kubit, kapı, dolanıklık ve ölçüm ilkeleriyle çalışan hesaplama modelidir.": "A computing model based on qubits, gates, entanglement, and measurement principles.",
+    "Kubit, kapı türleri, dolanıklık ve ölçüm ilkeleriyle çalışan hesaplama modelidir.": "A computing model based on qubits, gate types, entanglement, and measurement principles.",
     "QML modelleri": "QML models",
     "QSVM, VQC, QGNN ve Hybrid QHead bu çalışmadaki kuantum ilişkili model aileleridir.": "QSVM, VQC, QGNN, and Hybrid QHead are the quantum-related model families in this study.",
     "Simülasyon düzeyi": "Simulation level",
@@ -663,27 +667,43 @@ const i18n = {
     "alpha dikkat katsayılarıyla ağırlıklı mesaj": "Weighted message with alpha attention coefficients",
     "ClinTox için güçlü klasik grafik alternatifi": "Strong classical graph alternative for ClinTox",
     "Kubit": "Qubit",
+    "Kapılar": "Gates",
     "Süperpozisyon": "Superposition",
     "Ölçüm": "Measurement",
     "Dolanıklık": "Entanglement",
     "Derinlik": "Depth",
     "Denetimli öğrenme": "Supervised learning",
     "Kubit nedir?": "What is a qubit?",
+    "Kuantum kapıları ne yapmaktadır?": "What do quantum gates do?",
     "Süperpozisyon nasıl okunmaktadır?": "How should superposition be interpreted?",
     "Ölçüm neden kritik?": "Why is measurement critical?",
     "Dolanıklık ne sağlar?": "What does entanglement provide?",
     "Devre derinliği neyi değiştirir?": "What does circuit depth change?",
     "Seminerde öğrenme problemi nasıl kuruldu?": "How was the learning problem formulated in the seminar?",
-    "Kubit, klasik bit gibi yalnızca 0 veya 1 değildir. Ölçülene kadar iki temel durumun karmaşık katsayılı birleşimi olarak temsil edilmektedir.": "A qubit is not restricted to 0 or 1 like a classical bit. until measurement, it is represented as a complex-coefficient combination of two basis states.",
+    "Kubit, klasik bit gibi yalnızca 0 veya 1 değildir. Ölçülene kadar iki temel durumun karmaşık katsayılı birleşimi olarak temsil edilmektedir. Kuantum kapıları bu durumun yönünü, fazını ve diğer kubitlerle etkileşimini değiştirmektedir.": "A qubit is not restricted to 0 or 1 like a classical bit. until measurement, it is represented as a complex-coefficient combination of two basis states. quantum gates change its direction, phase, and interaction with other qubits.",
+    "Kuantum kapıları, kubit durumuna uygulanan matematiksel dönüşümlerdir. H kapısı süperpozisyon kurmakta, X kapısı durumu çevirmekte, RX/RY/RZ kapıları Bloch küresinde döndürme yapmakta, CNOT ve CZ kapıları kubitler arasında kontrollü etkileşim oluşturmaktadır.": "Quantum gates are mathematical transformations applied to qubit states. The H gate creates superposition, the X gate flips the state, RX/RY/RZ gates rotate on the Bloch sphere, and CNOT and CZ gates create controlled interactions between qubits.",
     "Süperpozisyon, bir kubitin ölçümden önce birden fazla olası sonucu aynı anda taşıyan olasılık genliği durumudur.": "Superposition is the probability-amplitude state in which a qubit carries multiple possible outcomes before measurement.",
     "Kuantum devre sonunda ölçüm yapıldığında sürekli durum, klasik modele aktarılabilecek ayrık istatistiklere dönüşmektedir.": "When measurement is performed at the end of a quantum circuit, the continuous state is converted into discrete statistics that can be transferred to a classical model.",
     "Dolanıklık, kubitlerin bağımsız okunamayacak biçimde ortak bir durum üretmesidir. Özellikler arası etkileşimleri temsil etmek için kullanılmaktadır.": "Entanglement is the production of a joint state that cannot be read as independent qubits. it is used to represent interactions among features.",
-    "Derinlik, ardışık kuantum kapı katmanı sayısıdır. Daha derin devre daha esnek olabilir, ancak küçük veri ve gürültü altında her zaman daha iyi değildir.": "Depth is the number of successive quantum-gate layers. A deeper circuit can be more flexible, but it is not always better under small-data and noisy conditions.",
+    "Derinlik, ardışık kuantum kapı katmanı sayısıdır. Tek kubit kapıları özellikleri döndürürken, kontrollü iki kubit kapıları etkileşim üretmektedir. Daha derin devre daha esnek olabilir, ancak küçük veri ve gürültü altında her zaman daha iyi değildir.": "Depth is the number of successive quantum-gate layers. Single-qubit gates rotate features, while controlled two-qubit gates produce interactions. A deeper circuit can be more flexible, but it is not always better under small-data and noisy conditions.",
     "BACE, BBBP ve ClinTox ikili sınıflandırma görevleri olarak ele alınmıştır. Model, molekülden etikete giden karar fonksiyonunu öğrenmektedir.": "BACE, BBBP, and ClinTox were treated as binary classification tasks. the model learns the decision function from molecule to label.",
     "Durum": "State",
     "Koşul": "Condition",
     "Seminerdeki rol": "Role in the seminar",
     "ECFP/PCA özellikleri kubit durumlarına kodlandı": "ECFP/PCA features were encoded into qubit states",
+    "Kapı etkisi": "Gate effect",
+    "H süperpozisyon kurar, X durumu çevirir, RY/RZ genlik ve fazı döndürmektedir": "H creates superposition, X flips the state, and RY/RZ rotate amplitude and phase",
+    "Tek kubit": "Single-qubit",
+    "H, X, RX/RY/RZ kapıları tek kubitin yönünü ve fazını değiştirmektedir": "H, X, and RX/RY/RZ gates change the direction and phase of a single qubit",
+    "İki kubit": "Two-qubit",
+    "CNOT ve CZ kontrollü etkileşim kurarak dolanıklık üretmektedir": "CNOT and CZ create entanglement through controlled interaction",
+    "Measure kapısı kuantum durumu klasik 0/1 istatistiğine çevirmektedir": "The Measure gate converts the quantum state into classical 0/1 statistics",
+    "süperpozisyon": "superposition",
+    "durum çevirme": "state flip",
+    "döndürme": "rotation",
+    "etkileşim": "interaction",
+    "ölçüm": "measurement",
+    "Kapılar kubit durumunu değiştirir. Tek kubit kapıları yön ve fazı düzenlemektedir. Kontrollü kapılar kubitler arası etkileşim kurmaktadır.": "Gates change the qubit state. Single-qubit gates regulate direction and phase. Controlled gates establish interactions between qubits.",
     "Genlik": "Amplitude",
     "Faz": "Phase",
     "Model etkisi": "Model effect",
@@ -702,8 +722,8 @@ const i18n = {
     "Özellik çiftleri arasında doğrusal olmayan ilişki": "Nonlinear relationship between feature pairs",
     "Risk": "Risk",
     "Küçük veride yüksek kapasite kararsızlık yaratabilir": "High capacity on small data can create instability",
-    "Daha yalın, daha kontrollü kapasite": "Simpler, more controlled capacity",
-    "Daha fazla etkileşim ve parametre": "More interactions and parameters",
+    "H, RY/RZ gibi az sayıda tek kubit kapısı ile daha kontrollü kapasite": "More controlled capacity with a small number of single-qubit gates such as H and RY/RZ",
+    "CNOT/CZ gibi kontrollü kapılarla daha fazla etkileşim ve parametre": "More interactions and parameters with controlled gates such as CNOT/CZ",
     "En iyi derinlik veri setine göre değişti": "The best depth varied by dataset",
     "Hedef": "Target",
     "0/1 sınıf etiketi": "0/1 class label",
@@ -1604,11 +1624,24 @@ const quantumConcepts = [
     label: "Kubit",
     title: "Kubit nedir?",
     accent: "#00a6c8",
-    summary: "Kubit, klasik bit gibi yalnızca 0 veya 1 değildir. Ölçülene kadar iki temel durumun karmaşık katsayılı birleşimi olarak temsil edilmektedir.",
+    summary: "Kubit, klasik bit gibi yalnızca 0 veya 1 değildir. Ölçülene kadar iki temel durumun karmaşık katsayılı birleşimi olarak temsil edilmektedir. Kuantum kapıları bu durumun yönünü, fazını ve diğer kubitlerle etkileşimini değiştirmektedir.",
     facts: [
       ["Durum", "|psi> = alpha|0> + beta|1>"],
       ["Koşul", "|alpha|^2 + |beta|^2 = 1"],
+      ["Kapı etkisi", "H süperpozisyon kurar, X durumu çevirir, RY/RZ genlik ve fazı döndürmektedir"],
       ["Seminerdeki rol", "ECFP/PCA özellikleri kubit durumlarına kodlandı"],
+    ],
+  },
+  {
+    key: "gates",
+    label: "Kapılar",
+    title: "Kuantum kapıları ne yapmaktadır?",
+    accent: "#f28e2b",
+    summary: "Kuantum kapıları, kubit durumuna uygulanan matematiksel dönüşümlerdir. H kapısı süperpozisyon kurmakta, X kapısı durumu çevirmekte, RX/RY/RZ kapıları Bloch küresinde döndürme yapmakta, CNOT ve CZ kapıları kubitler arasında kontrollü etkileşim oluşturmaktadır.",
+    facts: [
+      ["Tek kubit", "H, X, RX/RY/RZ kapıları tek kubitin yönünü ve fazını değiştirmektedir"],
+      ["İki kubit", "CNOT ve CZ kontrollü etkileşim kurarak dolanıklık üretmektedir"],
+      ["Ölçüm", "Measure kapısı kuantum durumu klasik 0/1 istatistiğine çevirmektedir"],
     ],
   },
   {
@@ -1652,10 +1685,10 @@ const quantumConcepts = [
     label: "Derinlik",
     title: "Devre derinliği neyi değiştirir?",
     accent: "#e65f4f",
-    summary: "Derinlik, ardışık kuantum kapı katmanı sayısıdır. Daha derin devre daha esnek olabilir, ancak küçük veri ve gürültü altında her zaman daha iyi değildir.",
+    summary: "Derinlik, ardışık kuantum kapı katmanı sayısıdır. Tek kubit kapıları özellikleri döndürürken, kontrollü iki kubit kapıları etkileşim üretmektedir. Daha derin devre daha esnek olabilir, ancak küçük veri ve gürültü altında her zaman daha iyi değildir.",
     facts: [
-      ["d=1", "Daha yalın, daha kontrollü kapasite"],
-      ["d=2", "Daha fazla etkileşim ve parametre"],
+      ["d=1", "H, RY/RZ gibi az sayıda tek kubit kapısı ile daha kontrollü kapasite"],
+      ["d=2", "CNOT/CZ gibi kontrollü kapılarla daha fazla etkileşim ve parametre"],
       ["Bulgular", "En iyi derinlik veri setine göre değişti"],
     ],
   },
@@ -2344,7 +2377,7 @@ function renderConceptTabs() {
   const target = document.getElementById("conceptTabs");
   target.innerHTML = quantumConcepts.map((concept) => `
     <button class="tab-button" type="button" data-concept="${concept.key}" aria-pressed="${concept.key === selectedConcept}">
-      ${concept.label}
+      ${tx(concept.label)}
     </button>
   `).join("");
   target.querySelectorAll("button").forEach((button) => {
@@ -3995,6 +4028,7 @@ function drawQuantumConceptCanvas() {
   drawConceptBackground(ctx, width, height, concept);
 
   if (concept.key === "qubit") drawQubitConcept(ctx, width, height, concept);
+  if (concept.key === "gates") drawGateConcept(ctx, width, height, concept);
   if (concept.key === "superposition") drawSuperpositionConcept(ctx, width, height, concept);
   if (concept.key === "measurement") drawMeasurementConcept(ctx, width, height, concept);
   if (concept.key === "entanglement") drawEntanglementConcept(ctx, width, height, concept);
@@ -4073,6 +4107,105 @@ function drawQubitConcept(ctx, width, height, concept) {
 
   drawProbabilityBars(ctx, width * 0.68, height * 0.38, width * 0.22, [["P(0)", p0], ["P(1)", p1]], concept.accent);
   drawWrappedText(ctx, "Bir kubit ölçülmeden önce Bloch küresi üzerinde bir yön gibi düşünülebilir. Yön değiştikçe ölçüm olasılıkları değişmektedir.", 34, height - 68, width * 0.86, 18, "rgba(255,255,255,0.74)", "600 14px Inter, sans-serif");
+}
+
+function drawGateConcept(ctx, width, height, concept) {
+  const compact = width < 620;
+  const left = compact ? width * 0.13 : width * 0.11;
+  const right = compact ? width * 0.86 : width * 0.68;
+  const top = compact ? height * 0.23 : height * 0.25;
+  const gap = compact ? height * 0.105 : height * 0.095;
+  const t = conceptFrame;
+  const wires = 3;
+  const gateW = compact ? 34 : 44;
+  const gateH = compact ? 28 : 34;
+
+  for (let i = 0; i < wires; i += 1) {
+    const y = top + i * gap;
+    ctx.strokeStyle = "rgba(255,255,255,0.3)";
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(left, y);
+    ctx.lineTo(right, y);
+    ctx.stroke();
+    ctx.fillStyle = "rgba(255,255,255,0.76)";
+    ctx.font = compact ? "800 11px JetBrains Mono, monospace" : "800 12px JetBrains Mono, monospace";
+    ctx.fillText(`q${i}`, left - (compact ? 26 : 34), y + 4);
+  }
+
+  const columns = [
+    { x: 0.16, row: 0, label: "H", color: "#00a6c8", type: "single" },
+    { x: 0.3, row: 1, label: "RY", color: "#7b61ff", type: "single" },
+    { x: 0.43, row: 2, label: "RZ", color: "#c93d8d", type: "single" },
+    { x: 0.58, control: 0, target: 1, label: "CNOT", color: "#24a148", type: "control" },
+    { x: 0.75, control: 1, target: 2, label: "CZ", color: "#e65f4f", type: "control" },
+    { x: 0.9, row: 2, label: "M", color: "#e0a100", type: "single" },
+  ];
+
+  columns.forEach((gate, index) => {
+    const x = left + (right - left) * gate.x;
+    const alpha = 0.62 + Math.sin(t * 2.4 + index) * 0.16;
+    if (gate.type === "control") {
+      const y1 = top + gate.control * gap;
+      const y2 = top + gate.target * gap;
+      ctx.strokeStyle = withAlpha(gate.color, 0.82);
+      ctx.lineWidth = 2.2;
+      ctx.beginPath();
+      ctx.moveTo(x, y1);
+      ctx.lineTo(x, y2);
+      ctx.stroke();
+      ctx.fillStyle = gate.color;
+      ctx.beginPath();
+      ctx.arc(x, y1, compact ? 5 : 6, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = withAlpha(gate.color, alpha);
+      roundRect(ctx, x - gateW / 2, y2 - gateH / 2, gateW, gateH, 6);
+      ctx.fill();
+      ctx.strokeStyle = "rgba(255,255,255,0.38)";
+      ctx.stroke();
+      ctx.fillStyle = "#ffffff";
+      ctx.font = compact ? "800 8px JetBrains Mono, monospace" : "800 10px JetBrains Mono, monospace";
+      drawBoundedWrappedText(ctx, gate.label, x - gateW / 2 + 4, y2 + 3, gateW - 8, 10, "#ffffff", ctx.font, 1);
+      return;
+    }
+
+    const y = top + gate.row * gap;
+    ctx.fillStyle = withAlpha(gate.color, alpha);
+    roundRect(ctx, x - gateW / 2, y - gateH / 2, gateW, gateH, 6);
+    ctx.fill();
+    ctx.strokeStyle = "rgba(255,255,255,0.38)";
+    ctx.stroke();
+    ctx.fillStyle = "#ffffff";
+    ctx.font = compact ? "800 10px JetBrains Mono, monospace" : "800 12px JetBrains Mono, monospace";
+    drawBoundedWrappedText(ctx, gate.label, x - gateW / 2 + 4, y + 4, gateW - 8, 12, "#ffffff", ctx.font, 1);
+  });
+
+  const legendX = compact ? width * 0.1 : width * 0.73;
+  const legendY = compact ? height * 0.57 : height * 0.26;
+  const legendW = compact ? width * 0.8 : width * 0.21;
+  const legendRows = [
+    ["H", "süperpozisyon"],
+    ["X", "durum çevirme"],
+    ["RY/RZ", "döndürme"],
+    ["CNOT/CZ", "etkileşim"],
+    ["M", "ölçüm"],
+  ];
+  ctx.fillStyle = "rgba(255,255,255,0.1)";
+  roundRect(ctx, legendX, legendY, legendW, compact ? 104 : 154, 8);
+  ctx.fill();
+  ctx.strokeStyle = withAlpha(concept.accent, 0.58);
+  ctx.stroke();
+  legendRows.forEach(([label, value], rowIndex) => {
+    const y = legendY + 24 + rowIndex * (compact ? 16 : 24);
+    ctx.fillStyle = concept.accent;
+    ctx.font = compact ? "800 10px JetBrains Mono, monospace" : "800 11px JetBrains Mono, monospace";
+    ctx.fillText(label, legendX + 14, y);
+    ctx.fillStyle = "rgba(255,255,255,0.78)";
+    ctx.font = compact ? "700 10px Inter, sans-serif" : "700 12px Inter, sans-serif";
+    drawBoundedWrappedText(ctx, tx(value), legendX + (compact ? 74 : 82), y, legendW - (compact ? 88 : 96), compact ? 11 : 13, "rgba(255,255,255,0.78)", ctx.font, 1);
+  });
+
+  drawBoundedWrappedText(ctx, tx("Kapılar kubit durumunu değiştirir. Tek kubit kapıları yön ve fazı düzenlemektedir. Kontrollü kapılar kubitler arası etkileşim kurmaktadır."), width * 0.1, height * 0.83, width * 0.8, 17, "rgba(255,255,255,0.74)", "600 13px Inter, sans-serif", 2);
 }
 
 function drawSuperpositionConcept(ctx, width, height, concept) {
