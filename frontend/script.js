@@ -588,6 +588,50 @@ const i18n = {
     "ClinTox tek metrikle okunmaz": "ClinTox cannot be interpreted with a single metric",
     "Seed/tekrar ortalaması ve standart sapma raporlandı": "Seed/repetition mean and standard deviation were reported",
     "SVM sonuçları deterministik değerlerdir": "SVM results are deterministic values",
+    "Kullanılan modellerin açık adları ve amaçları": "Full names and purposes of the models used",
+    "Nedir?": "What is it?",
+    "Amacı nedir?": "What is its purpose?",
+    "Bu çalışmadaki rolü": "Role in this study",
+    "Support Vector Machine": "Support Vector Machine",
+    "Multi-Layer Perceptron": "Multi-Layer Perceptron",
+    "Graph Neural Network": "Graph Neural Network",
+    "Graph Attention Network": "Graph Attention Network",
+    "Quantum Support Vector Machine": "Quantum Support Vector Machine",
+    "Variational Quantum Classifier": "Variational Quantum Classifier",
+    "Quantum Graph Neural Network": "Quantum Graph Neural Network",
+    "Hybrid Quantum Head": "Hybrid Quantum Head",
+    "Klasik tanımlayıcı model": "Classical descriptor model",
+    "Klasik sinir ağı": "Classical neural network",
+    "Klasik grafik öğrenme modeli": "Classical graph learning model",
+    "Dikkat tabanlı grafik modeli": "Attention-based graph model",
+    "Saf kuantum çekirdek modeli": "Pure quantum kernel model",
+    "Saf kuantum parametrik devre modeli": "Pure quantum parametric-circuit model",
+    "Kuantum grafik araştırma modeli": "Quantum graph research model",
+    "Hibrit kuantum-klasik model": "Hybrid quantum-classical model",
+    "SVM, ECFP/Morgan özellik uzayında sınıfları ayıran en geniş marjlı karar sınırını aramaktadır.": "SVM searches for the maximum-margin decision boundary that separates classes in the ECFP/Morgan feature space.",
+    "Amaç, aktif ve pasif molekülleri yüksek boyutlu tanımlayıcı vektörlerde güvenilir biçimde ayırmaktır.": "Its purpose is to separate active and inactive molecules reliably in high-dimensional descriptor vectors.",
+    "Bu çalışmada güçlü klasik referans çizgisi olarak kullanılmaktadır ve özellikle BBBP üzerinde yüksek AUROC üretmektedir.": "In this study, it is used as a strong classical baseline and produces high AUROC especially on BBBP.",
+    "MLP, ECFP/Morgan vektörünü yoğun katmanlardan geçirerek doğrusal olmayan karar fonksiyonu öğrenmektedir.": "MLP learns a nonlinear decision function by passing the ECFP/Morgan vector through dense layers.",
+    "Amaç, sabit uzunluklu moleküler tanımlayıcıdan sınıf olasılığı üretmektir.": "Its purpose is to produce class probability from a fixed-length molecular descriptor.",
+    "Bu çalışmada hem güçlü klasik model hem de hibrit Quantum Head için dondurulmuş kodlayıcı zemini olarak yer almaktadır.": "In this study, it serves both as a strong classical model and as the frozen encoder base for the hybrid Quantum Head.",
+    "GNN, molekülü atom düğümleri ve bağ kenarları olan grafik olarak işlemektedir.": "GNN processes the molecule as a graph with atom nodes and bond edges.",
+    "Amaç, komşu atomlardan gelen mesajları toplayarak molekül düzeyinde temsil üretmektir.": "Its purpose is to aggregate messages from neighboring atoms and produce a molecule-level representation.",
+    "Bu çalışmada SMILES tabanlı tanımlayıcı modellere karşı atom-bağ grafiği kullanan klasik grafik referansı sağlamaktadır.": "In this study, it provides a classical graph baseline that uses the atom-bond graph against SMILES-based descriptor models.",
+    "GAT, GNN mesaj geçirme yapısını dikkat katsayılarıyla genişletmektedir.": "GAT extends the GNN message-passing structure with attention coefficients.",
+    "Amaç, her komşu atomun katkısını öğrenilebilir ağırlıklarla ayarlamaktır.": "Its purpose is to adjust each neighboring atom's contribution with learnable weights.",
+    "Bu çalışmada grafik temsili içinde hangi komşuluk bilgisinin daha etkili olduğunu modelleyen klasik grafik alternatifi olarak kullanılmaktadır.": "In this study, it is used as a classical graph alternative that models which neighborhood information is more influential.",
+    "QSVM, klasik özellikleri kuantum özellik uzayına taşıyarak örnekler arası çekirdek benzerliği hesaplamaktadır.": "QSVM maps classical features into a quantum feature space and computes kernel similarity between samples.",
+    "Amaç, klasik SVM karar mantığını kuantum özellik haritasından gelen benzerlik matrisiyle beslemektir.": "Its purpose is to feed the classical SVM decision logic with a similarity matrix obtained from a quantum feature map.",
+    "Bu çalışmada saf kuantum model ailesinde VQC'ye göre daha kararlı davranan karşılaştırma çizgisi olarak yer almaktadır.": "In this study, it is the comparison line in the pure quantum family that behaves more stably than VQC.",
+    "VQC, veri kodlama devresi ve eğitilebilir ansatz katmanlarıyla sınıf olasılığı üretmektedir.": "VQC produces class probability through a data-encoding circuit and trainable ansatz layers.",
+    "Amaç, parametrik kuantum devrenin ölçüm çıktısını klasik kayıp fonksiyonuyla optimize etmektir.": "Its purpose is to optimize the measurement output of a parametric quantum circuit with a classical loss function.",
+    "Bu çalışmada öğretici saf kuantum model olarak kullanılmaktadır, ancak küçük veri rejiminde değişkenlik göstermektedir.": "In this study, it is used as an instructive pure quantum model, but it shows variability in the small-data regime.",
+    "QGNN, grafik temsili ile kuantum katman fikrini aynı karar hattında birleştirmektedir.": "QGNN combines graph representation and the idea of a quantum layer in the same decision pipeline.",
+    "Amaç, moleküler grafik bilgisini kuantum esinli veya kuantum katmanlı mesaj işleme yapısıyla değerlendirmektir.": "Its purpose is to evaluate molecular graph information through quantum-inspired or quantum-layered message processing.",
+    "Bu çalışmada bazı görevlerde ayırt etme sinyali üretmekte, ancak genel üstünlük iddiası için kararlı bir sonuç vermemektedir.": "In this study, it produces discriminative signal on some tasks, but does not provide a stable result for a general superiority claim.",
+    "Hybrid QHead, dondurulmuş MLP kodlayıcıdan gelen kompakt temsili parametrik kuantum başlıkta işlemektedir.": "Hybrid QHead processes the compact representation from a frozen MLP encoder in a parametric quantum head.",
+    "Amaç, klasik temsil öğrenmenin kararlılığını kuantum devre tabanlı karar katmanıyla birleştirmektir.": "Its purpose is to combine the stability of classical representation learning with a quantum-circuit-based decision layer.",
+    "Bu çalışmada BACE ve ClinTox üzerinde klasik referanslara en çok yaklaşan kuantum-klasik yapı olarak değerlendirilmektedir.": "In this study, it is evaluated as the quantum-classical structure that comes closest to classical baselines on BACE and ClinTox.",
     "tanımlayıcı tabanlı sinir ağı": "descriptor-based neural network",
     "klasik tanımlayıcı sinir ağı": "classical descriptor neural network",
     "SVM ve MLP, radius 2 ve 1024 bit ECFP/Morgan parmak izleri üzerinde güçlü klasik referans ailesini oluşturur.": "SVM and MLP form the strong classical baseline family on radius-2, 1024-bit ECFP/Morgan fingerprints.",
@@ -1414,6 +1458,89 @@ const modelFamilies = [
   },
 ];
 
+const modelDetails = [
+  {
+    key: "svm",
+    short: "SVM",
+    full: "Support Vector Machine",
+    family: "Klasik tanımlayıcı model",
+    color: "#00a6c8",
+    what: "SVM, ECFP/Morgan özellik uzayında sınıfları ayıran en geniş marjlı karar sınırını aramaktadır.",
+    purpose: "Amaç, aktif ve pasif molekülleri yüksek boyutlu tanımlayıcı vektörlerde güvenilir biçimde ayırmaktır.",
+    role: "Bu çalışmada güçlü klasik referans çizgisi olarak kullanılmaktadır ve özellikle BBBP üzerinde yüksek AUROC üretmektedir.",
+  },
+  {
+    key: "mlp",
+    short: "MLP",
+    full: "Multi-Layer Perceptron",
+    family: "Klasik sinir ağı",
+    color: "#00a6c8",
+    what: "MLP, ECFP/Morgan vektörünü yoğun katmanlardan geçirerek doğrusal olmayan karar fonksiyonu öğrenmektedir.",
+    purpose: "Amaç, sabit uzunluklu moleküler tanımlayıcıdan sınıf olasılığı üretmektir.",
+    role: "Bu çalışmada hem güçlü klasik model hem de hibrit Quantum Head için dondurulmuş kodlayıcı zemini olarak yer almaktadır.",
+  },
+  {
+    key: "gnn",
+    short: "GNN",
+    full: "Graph Neural Network",
+    family: "Klasik grafik öğrenme modeli",
+    color: "#24a148",
+    what: "GNN, molekülü atom düğümleri ve bağ kenarları olan grafik olarak işlemektedir.",
+    purpose: "Amaç, komşu atomlardan gelen mesajları toplayarak molekül düzeyinde temsil üretmektir.",
+    role: "Bu çalışmada SMILES tabanlı tanımlayıcı modellere karşı atom-bağ grafiği kullanan klasik grafik referansı sağlamaktadır.",
+  },
+  {
+    key: "gat",
+    short: "GAT",
+    full: "Graph Attention Network",
+    family: "Dikkat tabanlı grafik modeli",
+    color: "#24a148",
+    what: "GAT, GNN mesaj geçirme yapısını dikkat katsayılarıyla genişletmektedir.",
+    purpose: "Amaç, her komşu atomun katkısını öğrenilebilir ağırlıklarla ayarlamaktır.",
+    role: "Bu çalışmada grafik temsili içinde hangi komşuluk bilgisinin daha etkili olduğunu modelleyen klasik grafik alternatifi olarak kullanılmaktadır.",
+  },
+  {
+    key: "qsvm",
+    short: "QSVM",
+    full: "Quantum Support Vector Machine",
+    family: "Saf kuantum çekirdek modeli",
+    color: "#7b61ff",
+    what: "QSVM, klasik özellikleri kuantum özellik uzayına taşıyarak örnekler arası çekirdek benzerliği hesaplamaktadır.",
+    purpose: "Amaç, klasik SVM karar mantığını kuantum özellik haritasından gelen benzerlik matrisiyle beslemektir.",
+    role: "Bu çalışmada saf kuantum model ailesinde VQC'ye göre daha kararlı davranan karşılaştırma çizgisi olarak yer almaktadır.",
+  },
+  {
+    key: "vqc",
+    short: "VQC",
+    full: "Variational Quantum Classifier",
+    family: "Saf kuantum parametrik devre modeli",
+    color: "#7b61ff",
+    what: "VQC, veri kodlama devresi ve eğitilebilir ansatz katmanlarıyla sınıf olasılığı üretmektedir.",
+    purpose: "Amaç, parametrik kuantum devrenin ölçüm çıktısını klasik kayıp fonksiyonuyla optimize etmektir.",
+    role: "Bu çalışmada öğretici saf kuantum model olarak kullanılmaktadır, ancak küçük veri rejiminde değişkenlik göstermektedir.",
+  },
+  {
+    key: "qgnn",
+    short: "QGNN",
+    full: "Quantum Graph Neural Network",
+    family: "Kuantum grafik araştırma modeli",
+    color: "#c93d8d",
+    what: "QGNN, grafik temsili ile kuantum katman fikrini aynı karar hattında birleştirmektedir.",
+    purpose: "Amaç, moleküler grafik bilgisini kuantum esinli veya kuantum katmanlı mesaj işleme yapısıyla değerlendirmektir.",
+    role: "Bu çalışmada bazı görevlerde ayırt etme sinyali üretmekte, ancak genel üstünlük iddiası için kararlı bir sonuç vermemektedir.",
+  },
+  {
+    key: "hybrid_qhead",
+    short: "Hybrid QHead",
+    full: "Hybrid Quantum Head",
+    family: "Hibrit kuantum-klasik model",
+    color: "#e0a100",
+    what: "Hybrid QHead, dondurulmuş MLP kodlayıcıdan gelen kompakt temsili parametrik kuantum başlıkta işlemektedir.",
+    purpose: "Amaç, klasik temsil öğrenmenin kararlılığını kuantum devre tabanlı karar katmanıyla birleştirmektir.",
+    role: "Bu çalışmada BACE ve ClinTox üzerinde klasik referanslara en çok yaklaşan kuantum-klasik yapı olarak değerlendirilmektedir.",
+  },
+];
+
 const classicalVisuals = [
   {
     key: "svm",
@@ -2125,16 +2252,46 @@ function renderDatasetCards() {
 
 function renderModelFamilies() {
   const target = document.getElementById("modelFamilies");
-  target.innerHTML = modelFamilies.map((model) => `
-    <article class="model-card" style="border-top: 4px solid ${model.color}">
-      <div class="model-top">
-        <h3>${tx(model.title)}</h3>
-        <span class="model-tag">${tx(model.tag)}</span>
+  if (target) {
+    target.innerHTML = modelFamilies.map((model) => `
+      <article class="model-card" style="border-top: 4px solid ${model.color}">
+        <div class="model-top">
+          <h3>${tx(model.title)}</h3>
+          <span class="model-tag">${tx(model.tag)}</span>
+        </div>
+        <p>${tx(model.text)}</p>
+        <ul>
+          ${model.points.map((point) => `<li>${tx(point)}</li>`).join("")}
+        </ul>
+      </article>
+    `).join("");
+  }
+
+  const glossary = document.getElementById("modelGlossary");
+  if (!glossary) return;
+  glossary.innerHTML = modelDetails.map((model) => `
+    <article class="model-detail-card" style="border-top-color: ${model.color}">
+      <div class="model-detail-head">
+        <span class="model-short" style="background: ${model.color}">${tx(model.short)}</span>
+        <div>
+          <h3>${tx(model.full)}</h3>
+          <p>${tx(model.family)}</p>
+        </div>
       </div>
-      <p>${tx(model.text)}</p>
-      <ul>
-        ${model.points.map((point) => `<li>${tx(point)}</li>`).join("")}
-      </ul>
+      <dl>
+        <div>
+          <dt>${tx("Nedir?")}</dt>
+          <dd>${tx(model.what)}</dd>
+        </div>
+        <div>
+          <dt>${tx("Amacı nedir?")}</dt>
+          <dd>${tx(model.purpose)}</dd>
+        </div>
+        <div>
+          <dt>${tx("Bu çalışmadaki rolü")}</dt>
+          <dd>${tx(model.role)}</dd>
+        </div>
+      </dl>
     </article>
   `).join("");
 }

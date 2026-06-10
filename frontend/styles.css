@@ -524,6 +524,82 @@ p,
   color: #30343a;
 }
 
+.model-glossary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.model-detail-card {
+  min-width: 0;
+  padding: 0.95rem;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--ink-soft);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 12px 36px rgba(15, 17, 21, 0.08);
+}
+
+.model-detail-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.65rem;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.model-short {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.1rem;
+  min-height: 2.25rem;
+  padding: 0.28rem 0.45rem;
+  border-radius: 7px;
+  color: #fff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.model-detail-head h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.98rem;
+  line-height: 1.2;
+}
+
+.model-detail-head p {
+  margin: 0.18rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.model-detail-card dl {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+}
+
+.model-detail-card dt {
+  margin-bottom: 0.18rem;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.model-detail-card dd {
+  margin: 0;
+  color: #30343a;
+  font-size: 0.84rem;
+  font-weight: 650;
+  line-height: 1.48;
+  text-align: justify;
+}
+
 .dataset-card .split {
   display: flex;
   gap: 0.6rem;
@@ -2371,6 +2447,7 @@ p,
   .dataset-example-panel,
   .dataset-grid,
   .model-grid,
+  .model-glossary,
   .figure-grid,
   .intro-grid,
   .intro-grid .thesis-points,
